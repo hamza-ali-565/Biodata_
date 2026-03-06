@@ -7,6 +7,7 @@ import { TemplateCarousel } from "../components/TemplateCarousel";
 import { BiodataFormatExplanation } from "../components/BiodataFormatExplanation";
 import { FeatureBanner } from "../components/FeatureBanner";
 import { FAQ } from "../components/FAQ";
+import { CTASection } from "../components/CTASection";
 
 export default function Home() {
   return (
@@ -20,9 +21,9 @@ export default function Home() {
         <BiodataForm />
         <FeatureBanner />
         <FAQ />
+        <CTASection />
       </main>
       <Footer />
     </>
   );
 }
-
