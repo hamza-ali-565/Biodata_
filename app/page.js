@@ -4,6 +4,8 @@ import { Hero } from "../components/Hero";
 import { HowItWorks } from "../components/HowItWorks";
 import { BiodataForm } from "../components/BiodataForm";
 import { TemplateCarousel } from "../components/TemplateCarousel";
+import { BiodataFormatExplanation } from "../components/BiodataFormatExplanation";
+import { FAQ } from "../components/FAQ";
 
 export default function Home() {
   return (
@@ -13,7 +15,9 @@ export default function Home() {
         <Hero />
         <HowItWorks />
         <TemplateCarousel />
+        <BiodataFormatExplanation />
         <BiodataForm />
+        <FAQ />
       </main>
       <Footer />
     </>
