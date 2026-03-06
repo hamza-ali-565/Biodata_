@@ -67,11 +67,24 @@ export function TemplateDetailClient({ templateId }) {
         link.download = `${fileName}.jpeg`;
         link.click();
       } else {
-        const imgWidth = 210;
-        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+        const a4Width = 210;
+        const a4Height = 297;
+
+        // Initially scale width to A4 width
+        let imgWidth = a4Width;
+        let imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+        // If the scaled height exceeds A4 height, scale it down to fit perfectly on A4
+        if (imgHeight > a4Height) {
+          imgHeight = a4Height;
+          imgWidth = (canvas.width * imgHeight) / canvas.height;
+        }
+
+        // Center horizontally if scaled down by height
+        const xOffset = (a4Width - imgWidth) / 2;
 
         const pdf = new jsPDF({
-          orientation: imgHeight > imgWidth ? "portrait" : "landscape",
+          orientation: "portrait",
           unit: "mm",
           format: "a4",
         });
@@ -79,8 +92,8 @@ export function TemplateDetailClient({ templateId }) {
         pdf.addImage(
           imageData,
           "JPEG",
-          0,
-          0,
+          xOffset,
+          0, // Top aligned
           imgWidth,
           imgHeight,
           undefined,

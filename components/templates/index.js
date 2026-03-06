@@ -16,3 +16,7 @@ export { TemplateRoyal } from "./TemplateRoyal";
 export { TemplateGaneshaClassic } from "./TemplateGaneshaClassic";
 export { TemplateArchMandala } from "./TemplateArchMandala";
 export { TemplateMaroonPillars } from "./TemplateMaroonPillars";
+export { TemplateSample1 } from "./TemplateSample1";
+export { TemplateSample2 } from "./TemplateSample2";
+export { TemplateSample3 } from "./TemplateSample3";
+export { TemplateSample4 } from "./TemplateSample4";

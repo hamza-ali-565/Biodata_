@@ -82,5 +82,9 @@ export const TEMPLATE_DEFINITIONS = [
   { id: "TemplateGaneshaClassic", name: "Ganesha Classic", style: "traditional", description: "Classic dual border with Indian Temple motifs.", layout: "TemplateGaneshaClassic", defaultThemeId: "maroon" },
   { id: "TemplateArchMandala", name: "Blue Arch Mandala", style: "premium", description: "Regal blue arch framing with mandala background.", layout: "TemplateArchMandala", defaultThemeId: "royal-blue" },
   { id: "TemplateMaroonPillars", name: "Maroon & Gold", style: "premium", description: "Deep maroon background with gold rounded headers.", layout: "TemplateMaroonPillars", defaultThemeId: "maroon" },
+  { id: "TemplateSample1", name: "Cyan Diamond", style: "modern", description: "Cyan-Yellow gradient with black diamond borders.", layout: "TemplateSample1", defaultThemeId: "classic-black" },
+  { id: "TemplateSample2", name: "Autumn Leaves", style: "elegant", description: "Soft watercolor background with maple leaves.", layout: "TemplateSample2", defaultThemeId: "gold" },
+  { id: "TemplateSample3", name: "Royal Gold", style: "premium", description: "Ornate gold curly borders with a beige background.", layout: "TemplateSample3", defaultThemeId: "gold" },
+  { id: "TemplateSample4", name: "Floral Mandala", style: "premium", description: "Purple and orange flourish corner borders.", layout: "TemplateSample4", defaultThemeId: "maroon" },
 ];
 
