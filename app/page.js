@@ -3,6 +3,7 @@ import { Footer } from "../components/Footer";
 import { Hero } from "../components/Hero";
 import { HowItWorks } from "../components/HowItWorks";
 import { BiodataForm } from "../components/BiodataForm";
+import { TemplateCarousel } from "../components/TemplateCarousel";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <HowItWorks />
+        <TemplateCarousel />
         <BiodataForm />
       </main>
       <Footer />
