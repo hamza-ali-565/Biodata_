@@ -23,6 +23,31 @@ export function CTASection() {
                 <div className="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 rounded-full bg-brand-500/10 blur-[80px]" />
                 <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-64 h-64 rounded-full bg-rose-500/10 blur-[80px]" />
 
+                {/* Asian Wedding Theme Background Art: Mandala Motif */}
+                <div className="absolute top-[-10%] left-[-5%] w-48 h-48 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] opacity-[0.03] pointer-events-none rotate-45">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-white" preserveAspectRatio="xMidYMid meet">
+                        <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="1" />
+                        <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
+                        <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="1" />
+                        <path d="M50 20 C65 20 65 35 50 50 C35 35 35 20 50 20 Z" stroke="currentColor" strokeWidth="1" />
+                        <path d="M50 80 C65 80 65 65 50 50 C35 65 35 80 50 80 Z" stroke="currentColor" strokeWidth="1" />
+                        <path d="M20 50 C20 65 35 65 50 50 C35 35 20 35 20 50 Z" stroke="currentColor" strokeWidth="1" />
+                        <path d="M80 50 C80 65 65 65 50 50 C65 35 80 35 80 50 Z" stroke="currentColor" strokeWidth="1" />
+                    </svg>
+                </div>
+
+                <div className="absolute bottom-[-10%] right-[-5%] w-48 h-48 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] opacity-[0.03] pointer-events-none -rotate-12">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-white" preserveAspectRatio="xMidYMid meet">
+                        <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="1" />
+                        <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
+                        <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="1" />
+                        <path d="M50 20 C65 20 65 35 50 50 C35 35 35 20 50 20 Z" stroke="currentColor" strokeWidth="1" />
+                        <path d="M50 80 C65 80 65 65 50 50 C35 65 35 80 50 80 Z" stroke="currentColor" strokeWidth="1" />
+                        <path d="M20 50 C20 65 35 65 50 50 C35 35 20 35 20 50 Z" stroke="currentColor" strokeWidth="1" />
+                        <path d="M80 50 C80 65 65 65 50 50 C65 35 80 35 80 50 Z" stroke="currentColor" strokeWidth="1" />
+                    </svg>
+                </div>
+
                 <div className="relative z-10 max-w-2xl mx-auto space-y-6">
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-tight">
                         Creating a Marriage Biodata is a meaningful step in your journey towards finding the right life partner.

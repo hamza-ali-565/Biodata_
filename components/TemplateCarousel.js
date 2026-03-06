@@ -77,6 +77,31 @@ export function TemplateCarousel() {
             <div className="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-brand-500/10 blur-[100px] pointer-events-none" />
             <div className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full bg-rose-500/10 blur-[100px] pointer-events-none" />
 
+            {/* Asian Wedding Theme Background Art: Mandala Motif */}
+            <div className="absolute top-[5%] left-[-5%] w-48 h-48 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] opacity-[0.03] pointer-events-none rotate-12">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-white" preserveAspectRatio="xMidYMid meet">
+                    <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="1" />
+                    <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
+                    <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="1" />
+                    <path d="M50 20 C65 20 65 35 50 50 C35 35 35 20 50 20 Z" stroke="currentColor" strokeWidth="1" />
+                    <path d="M50 80 C65 80 65 65 50 50 C35 65 35 80 50 80 Z" stroke="currentColor" strokeWidth="1" />
+                    <path d="M20 50 C20 65 35 65 50 50 C35 35 20 35 20 50 Z" stroke="currentColor" strokeWidth="1" />
+                    <path d="M80 50 C80 65 65 65 50 50 C65 35 80 35 80 50 Z" stroke="currentColor" strokeWidth="1" />
+                </svg>
+            </div>
+
+            <div className="absolute bottom-[-5%] right-[-5%] w-48 h-48 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] opacity-[0.03] pointer-events-none -rotate-12">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-white" preserveAspectRatio="xMidYMid meet">
+                    <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="1" />
+                    <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
+                    <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="1" />
+                    <path d="M50 20 C65 20 65 35 50 50 C35 35 35 20 50 20 Z" stroke="currentColor" strokeWidth="1" />
+                    <path d="M50 80 C65 80 65 65 50 50 C35 65 35 80 50 80 Z" stroke="currentColor" strokeWidth="1" />
+                    <path d="M20 50 C20 65 35 65 50 50 C35 35 20 35 20 50 Z" stroke="currentColor" strokeWidth="1" />
+                    <path d="M80 50 C80 65 65 65 50 50 C65 35 80 35 80 50 Z" stroke="currentColor" strokeWidth="1" />
+                </svg>
+            </div>
+
             <div className="max-w-[1400px] mx-auto relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-14">
                     <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-4 sm:text-4xl">
