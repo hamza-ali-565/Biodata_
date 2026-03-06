@@ -37,7 +37,7 @@ export function TemplateMaroonPillars({ data, theme = {}, fontFamily }) {
                     <div className="flex-1 space-y-12">
 
                         {/* Header section with Name hidden here if photo is present, or shown if no photo */}
-                        {!personal?.photo && (
+                        {!data?.photoDataUrl && (
                             <div className="text-center md:text-left mb-8">
                                 <h1 className="text-4xl font-bold uppercase tracking-wider text-white">
                                     {personal?.name || "Your Name"}
@@ -45,40 +45,46 @@ export function TemplateMaroonPillars({ data, theme = {}, fontFamily }) {
                             </div>
                         )}
 
-                        <Section title="PERSONAL DETAILS" accentColor={accentColor} textColor={textColor}>
-                            <Row label="Name" value={personal?.name} textColor={textColor} />
-                            <Row label="Time Of Birth" value={personal?.timeOfBirth} textColor={textColor} />
-                            <Row label="Date Of Birth" value={personal?.dateOfBirth} textColor={textColor} />
-                            <Row label="Place Of Birth" value={personal?.placeOfBirth} textColor={textColor} />
-                            <Row label="Rashi" value={personal?.rashi} textColor={textColor} />
-                            <Row label="Nakshatra" value={personal?.nakshatra} textColor={textColor} />
-                            <Row label="Complexion" value={personal?.complexion} textColor={textColor} />
-                            <Row label="Height" value={personal?.height} textColor={textColor} />
-                            <Row label="Education" value={personal?.education} textColor={textColor} />
-                            <Row label="Profession" value={personal?.profession} textColor={textColor} />
+                        <Section title="PERSONAL DETAILS" accentColor={accentColor}>
+                            {personal?.dateOfBirth ? <Row label="Date of Birth" value={personal.dateOfBirth} textColor={textColor} /> : null}
+                            {personal?.timeOfBirth ? <Row label="Time of Birth" value={personal.timeOfBirth} textColor={textColor} /> : null}
+                            {personal?.placeOfBirth ? <Row label="Place of Birth" value={personal.placeOfBirth} textColor={textColor} /> : null}
+                            {personal?.rashi ? <Row label="Rashi" value={personal.rashi} textColor={textColor} /> : null}
+                            {personal?.nakshatra ? <Row label="Nakshatra" value={personal.nakshatra} textColor={textColor} /> : null}
+                            {personal?.gotra ? <Row label="Gotra" value={personal.gotra} textColor={textColor} /> : null}
+                            {personal?.complexion ? <Row label="Complexion" value={personal.complexion} textColor={textColor} /> : null}
+                            {personal?.height ? <Row label="Height" value={personal.height} textColor={textColor} /> : null}
+                            {personal?.bachelors ? <Row label="Education" value={personal.bachelors} textColor={textColor} /> : null}
+                            {personal?.occupation ? <Row label="Occupation" value={personal.occupation} textColor={textColor} /> : null}
+                            {personal?.customFields?.map(f => f.value ? <Row key={f.id} label={f.label} value={f.value} textColor={textColor} /> : null)}
                         </Section>
 
-                        <Section title="FAMILY DETAILS" accentColor={accentColor} textColor={textColor}>
-                            <Row label="Father's Name" value={family?.fatherName} textColor={textColor} />
-                            <Row label="Mother's Name" value={family?.motherName} textColor={textColor} />
-                            <Row label="Siblings" value={family?.siblings} textColor={textColor} />
+                        <Section title="FAMILY DETAILS" accentColor={accentColor}>
+                            {family?.fatherName ? <Row label="Father's Name" value={family.fatherName} textColor={textColor} /> : null}
+                            {family?.fatherOccupation ? <Row label="Father's Occ." value={family.fatherOccupation} textColor={textColor} /> : null}
+                            {family?.motherName ? <Row label="Mother's Name" value={family.motherName} textColor={textColor} /> : null}
+                            {family?.motherOccupation ? <Row label="Mother's Occ." value={family.motherOccupation} textColor={textColor} /> : null}
+                            {family?.siblings ? <Row label="Siblings" value={family.siblings} textColor={textColor} /> : null}
+                            {family?.customFields?.map(f => f.value ? <Row key={f.id} label={f.label} value={f.value} textColor={textColor} /> : null)}
                         </Section>
 
-                        <Section title="CONTACT DETAILS" accentColor={accentColor} textColor={textColor}>
-                            <Row label="Mobile" value={contact?.phone} textColor={textColor} />
-                            <Row label="Email" value={contact?.email} textColor={textColor} />
-                            <Row label="Address" value={contact?.address} textColor={textColor} />
+                        <Section title="CONTACT DETAILS" accentColor={accentColor}>
+                            {contact?.contactPerson ? <Row label="Contact Person" value={contact.contactPerson} textColor={textColor} /> : null}
+                            {contact?.contactNumber ? <Row label="Phone" value={contact.contactNumber} textColor={textColor} /> : null}
+                            {contact?.email ? <Row label="Email" value={contact.email} textColor={textColor} /> : null}
+                            {contact?.address ? <Row label="Address" value={contact.address} textColor={textColor} /> : null}
+                            {contact?.customFields?.map(f => f.value ? <Row key={f.id} label={f.label} value={f.value} textColor={textColor} /> : null)}
                         </Section>
 
                     </div>
 
                     {/* Photo Column */}
-                    {personal?.photo && (
+                    {data?.photoDataUrl && (
                         <div className="md:w-[280px] flex-shrink-0 flex flex-col items-center mb-8 md:mb-0">
                             <div className="w-[180px] h-[180px] rounded-full overflow-hidden border-[4px] shadow-2xl mb-6 relative z-10" style={{ borderColor: accentColor }}>
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
-                                    src={personal.photo}
+                                    src={data.photoDataUrl}
                                     alt={personal.name}
                                     className="w-full h-full object-cover"
                                 />
@@ -117,7 +123,7 @@ function Section({ title, children, accentColor }) {
 }
 
 function Row({ label, value, textColor }) {
-    if (!label && !value) return null;
+    if (!value) return null;
     return (
         <div className="flex flex-col sm:flex-row gap-1 sm:gap-6 text-[15px] leading-tight">
             <div className="sm:w-[140px] flex-shrink-0 font-medium" style={{ color: `${textColor}f0`, textShadow: '0 1px 2px rgba(0,0,0,0.1)' }}>

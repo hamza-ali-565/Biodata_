@@ -40,41 +40,44 @@ export function TemplateGaneshaClassic({ data, theme = {}, fontFamily }) {
                     {/* Details Column */}
                     <div className="flex-1 space-y-8">
                         <Section title="PERSONAL DETAILS" color={primaryColor}>
-                            <Row label="Name" value={personal?.name} />
-                            <Row label="Date of Birth" value={personal?.dateOfBirth} />
-                            <Row label="Time of Birth" value={personal?.timeOfBirth} />
-                            <Row label="Place of Birth" value={personal?.placeOfBirth} />
-                            <Row label="Rashi" value={personal?.rashi} />
-                            <Row label="Nakshatra" value={personal?.nakshatra} />
-                            <Row label="Complexion" value={personal?.complexion} />
-                            <Row label="Height" value={personal?.height} />
-                            <Row label="Gotra" value={personal?.gotra} />
-                            <Row label="Education" value={personal?.education} />
-                            <Row label="Profession" value={personal?.profession} />
+                            {personal?.dateOfBirth ? <Row label="Date of Birth" value={personal.dateOfBirth} color={primaryColor} /> : null}
+                            {personal?.timeOfBirth ? <Row label="Time of Birth" value={personal.timeOfBirth} color={primaryColor} /> : null}
+                            {personal?.placeOfBirth ? <Row label="Place of Birth" value={personal.placeOfBirth} color={primaryColor} /> : null}
+                            {personal?.rashi ? <Row label="Rashi" value={personal.rashi} color={primaryColor} /> : null}
+                            {personal?.nakshatra ? <Row label="Nakshatra" value={personal.nakshatra} color={primaryColor} /> : null}
+                            {personal?.gotra ? <Row label="Gotra" value={personal.gotra} color={primaryColor} /> : null}
+                            {personal?.complexion ? <Row label="Complexion" value={personal.complexion} color={primaryColor} /> : null}
+                            {personal?.height ? <Row label="Height" value={personal.height} color={primaryColor} /> : null}
+                            {personal?.bachelors ? <Row label="Education" value={personal.bachelors} color={primaryColor} /> : null}
+                            {personal?.occupation ? <Row label="Occupation" value={personal.occupation} color={primaryColor} /> : null}
+                            {personal?.customFields?.map(f => f.value ? <Row key={f.id} label={f.label} value={f.value} color={primaryColor} /> : null)}
                         </Section>
 
                         <Section title="FAMILY DETAILS" color={primaryColor}>
-                            <Row label="Father's Name" value={family?.fatherName} />
-                            <Row label="Father's Occupation" value={family?.fatherOccupation} />
-                            <Row label="Mother's Name" value={family?.motherName} />
-                            <Row label="Mother's Occupation" value={family?.motherOccupation} />
-                            <Row label="Siblings" value={family?.siblings} />
+                            {family?.fatherName ? <Row label="Father's Name" value={family.fatherName} color={primaryColor} /> : null}
+                            {family?.fatherOccupation ? <Row label="Father's Occ." value={family.fatherOccupation} color={primaryColor} /> : null}
+                            {family?.motherName ? <Row label="Mother's Name" value={family.motherName} color={primaryColor} /> : null}
+                            {family?.motherOccupation ? <Row label="Mother's Occ." value={family.motherOccupation} color={primaryColor} /> : null}
+                            {family?.siblings ? <Row label="Siblings" value={family.siblings} color={primaryColor} /> : null}
+                            {family?.customFields?.map(f => f.value ? <Row key={f.id} label={f.label} value={f.value} color={primaryColor} /> : null)}
                         </Section>
 
                         <Section title="CONTACT DETAILS" color={primaryColor}>
-                            <Row label="Contact Number" value={contact?.phone} />
-                            <Row label="Email ID" value={contact?.email} />
-                            <Row label="Residential Address" value={contact?.address} />
+                            {contact?.contactPerson ? <Row label="Contact Person" value={contact.contactPerson} color={primaryColor} /> : null}
+                            {contact?.contactNumber ? <Row label="Phone" value={contact.contactNumber} color={primaryColor} /> : null}
+                            {contact?.email ? <Row label="Email" value={contact.email} color={primaryColor} /> : null}
+                            {contact?.address ? <Row label="Address" value={contact.address} color={primaryColor} /> : null}
+                            {contact?.customFields?.map(f => f.value ? <Row key={f.id} label={f.label} value={f.value} color={primaryColor} /> : null)}
                         </Section>
                     </div>
 
                     {/* Photo Column */}
-                    {personal?.photo && (
+                    {data?.photoDataUrl && (
                         <div className="md:w-1/3 flex-shrink-0 flex justify-end">
                             <div className="w-full max-w-[220px] aspect-[3/4] overflow-hidden border-2 border-slate-200 shadow-sm bg-slate-100">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
-                                    src={personal.photo}
+                                    src={data.photoDataUrl}
                                     alt={personal.name || "Profile"}
                                     className="w-full h-full object-cover"
                                 />
@@ -101,7 +104,7 @@ function Section({ title, children, color }) {
 }
 
 function Row({ label, value }) {
-    if (!label && !value) return null;
+    if (!value) return null;
     return (
         <div className="flex items-start text-[13px] leading-snug">
             <div className="w-[140px] flex-shrink-0 text-slate-700">{label}</div>

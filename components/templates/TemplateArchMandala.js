@@ -45,10 +45,10 @@ export function TemplateArchMandala({ data, theme = {}, fontFamily }) {
                 <div className="relative z-10 -mt-[140px] px-8 pb-16 flex flex-col items-center">
 
                     {/* Circular Photo */}
-                    {personal?.photo ? (
+                    {data?.photoDataUrl ? (
                         /* eslint-disable-next-line @next/next/no-img-element */
                         <img
-                            src={personal.photo}
+                            src={data.photoDataUrl}
                             alt={personal.name}
                             className="w-[200px] h-[200px] object-cover rounded-full border-[6px] shadow-xl z-20"
                             style={{ borderColor: bgColor }}
@@ -76,30 +76,38 @@ export function TemplateArchMandala({ data, theme = {}, fontFamily }) {
                     {/* Details Tables */}
                     <div className="w-full max-w-2xl mt-8 space-y-12">
                         <Section title="PERSONAL DETAILS" color={primaryColor}>
-                            <Row label="Date of Birth" value={personal?.dateOfBirth} color={primaryColor} />
-                            <Row label="Time of Birth" value={personal?.timeOfBirth} color={primaryColor} />
-                            <Row label="Place of Birth" value={personal?.placeOfBirth} color={primaryColor} />
-                            <Row label="Height" value={personal?.height} color={primaryColor} />
-                            <Row label="Complexion" value={personal?.complexion} color={primaryColor} />
-                            <Row label="Education" value={personal?.education} color={primaryColor} />
-                            <Row label="Profession" value={personal?.profession} color={primaryColor} />
+                            {personal?.dateOfBirth ? <Row label="Date of Birth" value={personal.dateOfBirth} color={primaryColor} /> : null}
+                            {personal?.timeOfBirth ? <Row label="Time of Birth" value={personal.timeOfBirth} color={primaryColor} /> : null}
+                            {personal?.placeOfBirth ? <Row label="Place of Birth" value={personal.placeOfBirth} color={primaryColor} /> : null}
+                            {personal?.rashi ? <Row label="Rashi" value={personal.rashi} color={primaryColor} /> : null}
+                            {personal?.nakshatra ? <Row label="Nakshatra" value={personal.nakshatra} color={primaryColor} /> : null}
+                            {personal?.gotra ? <Row label="Gotra" value={personal.gotra} color={primaryColor} /> : null}
+                            {personal?.complexion ? <Row label="Complexion" value={personal.complexion} color={primaryColor} /> : null}
+                            {personal?.height ? <Row label="Height" value={personal.height} color={primaryColor} /> : null}
+                            {personal?.bachelors ? <Row label="Education" value={personal.bachelors} color={primaryColor} /> : null}
+                            {personal?.occupation ? <Row label="Occupation" value={personal.occupation} color={primaryColor} /> : null}
+                            {personal?.customFields?.map(f => f.value ? <Row key={f.id} label={f.label} value={f.value} color={primaryColor} /> : null)}
                         </Section>
 
                         <OrnateDivider color={primaryColor} />
 
                         <Section title="FAMILY DETAILS" color={primaryColor}>
-                            <Row label="Father's Name" value={family?.fatherName} color={primaryColor} />
-                            <Row label="Mother's Name" value={family?.motherName} color={primaryColor} />
-                            <Row label="Siblings" value={family?.siblings} color={primaryColor} />
-                            <Row label="Family Native" value={family?.nativePlace} color={primaryColor} />
+                            {family?.fatherName ? <Row label="Father's Name" value={family.fatherName} color={primaryColor} /> : null}
+                            {family?.fatherOccupation ? <Row label="Father's Occ." value={family.fatherOccupation} color={primaryColor} /> : null}
+                            {family?.motherName ? <Row label="Mother's Name" value={family.motherName} color={primaryColor} /> : null}
+                            {family?.motherOccupation ? <Row label="Mother's Occ." value={family.motherOccupation} color={primaryColor} /> : null}
+                            {family?.siblings ? <Row label="Siblings" value={family.siblings} color={primaryColor} /> : null}
+                            {family?.customFields?.map(f => f.value ? <Row key={f.id} label={f.label} value={f.value} color={primaryColor} /> : null)}
                         </Section>
 
                         <OrnateDivider color={primaryColor} />
 
                         <Section title="CONTACT DETAILS" color={primaryColor}>
-                            <Row label="Phone" value={contact?.phone} color={primaryColor} />
-                            <Row label="Email" value={contact?.email} color={primaryColor} />
-                            <Row label="Address" value={contact?.address} color={primaryColor} />
+                            {contact?.contactPerson ? <Row label="Contact Person" value={contact.contactPerson} color={primaryColor} /> : null}
+                            {contact?.contactNumber ? <Row label="Phone" value={contact.contactNumber} color={primaryColor} /> : null}
+                            {contact?.email ? <Row label="Email" value={contact.email} color={primaryColor} /> : null}
+                            {contact?.address ? <Row label="Address" value={contact.address} color={primaryColor} /> : null}
+                            {contact?.customFields?.map(f => f.value ? <Row key={f.id} label={f.label} value={f.value} color={primaryColor} /> : null)}
                         </Section>
                     </div>
                 </div>
@@ -119,7 +127,7 @@ function Section({ title, children, color }) {
 }
 
 function Row({ label, value, color }) {
-    if (!label && !value) return null;
+    if (!value) return null;
     return (
         <div className="flex justify-center text-[15px] leading-relaxed">
             <div className="w-[160px] text-right font-medium" style={{ color: `${color}cc` }}>{label}</div>
