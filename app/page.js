@@ -5,6 +5,7 @@ import { HowItWorks } from "../components/HowItWorks";
 import { BiodataForm } from "../components/BiodataForm";
 import { TemplateCarousel } from "../components/TemplateCarousel";
 import { BiodataFormatExplanation } from "../components/BiodataFormatExplanation";
+import { FeatureBanner } from "../components/FeatureBanner";
 import { FAQ } from "../components/FAQ";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <TemplateCarousel />
         <BiodataFormatExplanation />
         <BiodataForm />
+        <FeatureBanner />
         <FAQ />
       </main>
       <Footer />
