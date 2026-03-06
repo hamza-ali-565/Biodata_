@@ -1,5 +1,7 @@
-import { FileText, LayoutTemplate, Download } from "lucide-react";
+"use client";
 
+import { motion } from "framer-motion";
+import { FileText, LayoutTemplate, Download } from "lucide-react";
 const steps = [
   {
     title: "Enter your details",
@@ -42,12 +44,20 @@ export function HowItWorks() {
         </div>
       </div>
 
-      <ol className="relative grid gap-8 md:grid-cols-3" aria-label="3-step process">
+      <ol className="relative grid gap-8 md:grid-cols-3" aria-label="3-step process" style={{ perspective: 1000 }}>
         {steps.map((step, index) => {
           const Icon = step.icon;
           return (
-            <li
+            <motion.li
               key={step.title}
+              initial={{ opacity: 0, y: 50, filter: "blur(8px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{
+                duration: 0.7,
+                delay: index * 0.15,
+                ease: [0.25, 0.4, 0.1, 1],
+              }}
               className="group relative flex flex-col items-center text-center rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-md p-8 hover:bg-slate-800/60 transition-all duration-300 cursor-default"
             >
               <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)] group-hover:scale-110 transition-transform duration-300">
@@ -59,7 +69,7 @@ export function HowItWorks() {
               <p className="text-sm leading-relaxed text-slate-300">
                 {step.description}
               </p>
-            </li>
+            </motion.li>
           );
         })}
       </ol>

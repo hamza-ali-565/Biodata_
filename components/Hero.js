@@ -1,8 +1,27 @@
+"use client";
+
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Hero3D } from "./Hero3D";
 
 export function Hero() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  // 3D parallax effect on scroll
+  const cardY = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const cardRotateX = useTransform(scrollYProgress, [0, 1], [0, 25]);
+  const cardRotateY = useTransform(scrollYProgress, [0, 1], [0, -15]);
+  const cardScale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
+  const cardOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+
   return (
     <section
+      ref={ref}
+      style={{ perspective: 1200 }}
       aria-labelledby="hero-heading"
       className="relative grid gap-10 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-950 px-6 py-10 shadow-soft sm:px-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:py-14"
     >
@@ -37,7 +56,16 @@ export function Hero() {
           </p>
         </div>
       </div>
-      <div className="relative z-10 hidden min-h-[300px] items-center justify-center rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-md p-5 sm:flex shadow-2xl">
+      <motion.div
+        style={{
+          y: cardY,
+          rotateX: cardRotateX,
+          rotateY: cardRotateY,
+          scale: cardScale,
+          opacity: cardOpacity,
+        }}
+        className="relative z-10 hidden min-h-[300px] items-center justify-center rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-md p-5 sm:flex shadow-2xl transition-transform"
+      >
         <div className="absolute -left-5 top-6 h-14 w-14 rounded-2xl bg-gradient-to-tr from-brand-400/60 via-brand-500/40 to-rose-500/40 blur-2xl" />
         <div className="absolute -right-4 bottom-4 h-16 w-16 rounded-full bg-gradient-to-tr from-sky-400/40 via-cyan-400/30 to-emerald-400/40 blur-2xl" />
         <div className="relative flex w-full max-w-sm flex-col gap-3 rounded-2xl bg-slate-950/80 p-5 text-xs text-slate-100 shadow-2xl border border-white/5">
@@ -61,7 +89,7 @@ export function Hero() {
           </div>
           <div className="mt-2 h-10 w-full rounded-xl bg-gradient-to-r from-brand-500/80 to-rose-500/80 shadow-inner" />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
