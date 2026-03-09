@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const customFieldSchema = z.object({
   id: z.string(),
@@ -103,6 +104,17 @@ export function BiodataForm() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
+
+    if (sessionStorage.getItem("scrollToForm") === "true") {
+      sessionStorage.removeItem("scrollToForm");
+      setTimeout(() => {
+        const formElement = document.getElementById("biodata-form");
+        if (formElement) {
+          formElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 150);
+    }
+
     const stored = window.localStorage.getItem(STORAGE_KEY);
     if (stored) {
       try {
@@ -687,13 +699,14 @@ export function BiodataForm() {
               <p className="text-xs font-medium text-slate-200">
                 Preview in biodata
               </p>
-              <div className="flex h-32 items-center justify-center rounded-2xl border border-white/10 bg-slate-900/80">
+              <div className="relative flex h-32 overflow-hidden items-center justify-center rounded-2xl border border-white/10 bg-slate-900/80">
                 {preview ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
+                  <Image
                     src={preview}
-                    alt="Selected profile"
-                    className="h-full w-full rounded-2xl object-cover"
+                    alt="Selected profile preview for marriage biodata"
+                    fill
+                    unoptimized
+                    className="object-cover"
                   />
                 ) : (
                   <p className="px-4 text-center text-[11px] text-slate-400">

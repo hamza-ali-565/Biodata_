@@ -1,9 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 export function CTASection() {
+    const router = useRouter();
+
     const scrollToForm = () => {
+        if (window.location.pathname !== "/") {
+            sessionStorage.setItem("scrollToForm", "true");
+            router.push("/");
+            return;
+        }
         const formElement = document.getElementById("biodata-form");
         if (formElement) {
             formElement.scrollIntoView({ behavior: "smooth" });

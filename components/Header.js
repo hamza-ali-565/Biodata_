@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -7,6 +10,19 @@ const navItems = [
 ];
 
 export function Header() {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleCreateBiodata = (e) => {
+    e.preventDefault();
+    if (pathname === "/") {
+      document.getElementById("biodata-form")?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      sessionStorage.setItem("scrollToForm", "true");
+      router.push("/");
+    }
+  };
+
   return (
     <header className="sticky top-0 z-30 mb-8 bg-slate-950/60 backdrop-blur">
       <nav
@@ -34,12 +50,12 @@ export function Header() {
               </li>
             ))}
           </ul>
-          <Link
-            href="/#biodata-form"
+          <button
+            onClick={handleCreateBiodata}
             className="rounded-full bg-gradient-to-r from-brand-400 via-brand-500 to-rose-500 px-4 py-2 text-xs font-semibold text-white shadow-soft transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 sm:text-sm"
           >
             Create Biodata
-          </Link>
+          </button>
         </div>
       </nav>
     </header>

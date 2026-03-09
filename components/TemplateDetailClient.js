@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { toCanvas } from "html-to-image";
 import jsPDF from "jspdf";
+import Link from "next/link";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { TemplatePreview } from "./TemplatePreview";
@@ -210,12 +211,15 @@ export function TemplateDetailClient({ templateId }) {
           </div>
 
           <div className="mt-8 flex flex-wrap items-center justify-between gap-3 text-xs relative z-10 border-t border-white/10 pt-6">
-            <a
-              href="/#biodata-form"
+            <button
+              onClick={() => {
+                sessionStorage.setItem("scrollToForm", "true");
+                window.location.href = "/";
+              }}
               className="inline-flex text-xs font-medium text-brand-300 underline-offset-4 hover:underline transition-colors"
             >
               ← Back to Edit Details
-            </a>
+            </button>
             <div className="flex gap-3">
               <button
                 type="button"
