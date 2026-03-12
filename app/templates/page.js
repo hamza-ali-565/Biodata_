@@ -8,6 +8,20 @@ export const metadata = {
   title: "Marriage Biodata Templates | Biodata for Marriage",
   description:
     "Browse premium marriage biodata templates in minimal, traditional, modern and elegant styles. Download your biodata as PDF or JPEG.",
+  alternates: {
+    canonical: "/templates",
+  },
+  openGraph: {
+    title: "Marriage Biodata Templates | Biodata for Marriage",
+    description: "Browse premium marriage biodata templates in minimal, traditional, modern and elegant styles. Download your biodata as PDF or JPEG.",
+    url: "/templates",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Marriage Biodata Templates | Biodata for Marriage",
+    description: "Browse premium marriage biodata templates in minimal, traditional, modern and elegant styles. Download your biodata as PDF or JPEG.",
+  },
 };
 
 export default function TemplatesPage() {

@@ -6,6 +6,20 @@ export const metadata = {
   title: "Blog | Biodata for Marriage",
   description:
     "Guides and tips on writing a perfect marriage biodata, choosing formats, and sharing with families.",
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "Blog | Biodata for Marriage",
+    description: "Guides and tips on writing a perfect marriage biodata, choosing formats, and sharing with families.",
+    url: "/blog",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Biodata for Marriage",
+    description: "Guides and tips on writing a perfect marriage biodata, choosing formats, and sharing with families.",
+  },
 };
 
 const posts = [

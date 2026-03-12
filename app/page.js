@@ -10,6 +10,12 @@ import { FeatureBanner } from "../components/FeatureBanner";
 import { FAQ } from "../components/FAQ";
 import { CTASection } from "../components/CTASection";
 
+export const metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
+
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",

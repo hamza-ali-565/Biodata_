@@ -2,7 +2,11 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Hero3D } from "./Hero3D";
+import dynamic from "next/dynamic";
+
+const Hero3D = dynamic(() => import('./Hero3D').then((mod) => mod.Hero3D), {
+  ssr: false,
+});
 
 export function Hero() {
   const ref = useRef(null);
@@ -26,8 +30,8 @@ export function Hero() {
       className="relative grid gap-10 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-950 px-6 py-10 shadow-soft sm:px-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:py-14"
     >
       {/* Asian Wedding Theme Background Art: Mandala Motif */}
-      <div className="absolute top-[-10%] left-[-5%] w-64 h-64 md:w-[400px] md:h-[400px] lg:w-[600px] lg:h-[600px] opacity-[0.03] pointer-events-none rotate-12">
-        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-white" preserveAspectRatio="xMidYMid meet">
+      <div className="absolute top-[-10%] left-[-5%] w-64 h-64 md:w-[400px] md:h-[400px] lg:w-[600px] lg:h-[600px] opacity-[0.03] pointer-events-none rotate-12" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-white" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
           <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="1" />
           <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
           <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="1" />
@@ -38,8 +42,8 @@ export function Hero() {
         </svg>
       </div>
 
-      <div className="absolute bottom-[-10%] right-[-5%] w-64 h-64 md:w-[400px] md:h-[400px] lg:w-[600px] lg:h-[600px] opacity-[0.03] pointer-events-none -rotate-45">
-        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-white" preserveAspectRatio="xMidYMid meet">
+      <div className="absolute bottom-[-10%] right-[-5%] w-64 h-64 md:w-[400px] md:h-[400px] lg:w-[600px] lg:h-[600px] opacity-[0.03] pointer-events-none -rotate-45" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-white" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
           <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="1" />
           <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
           <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="1" />
