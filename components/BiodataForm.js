@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { motion, AnimatePresence } from "framer-motion";
+import { AlertTriangle, CheckCircle2 } from "lucide-react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
@@ -55,12 +57,26 @@ const STORAGE_KEY = "biodata-for-marriage:data";
 export function BiodataForm() {
   const router = useRouter();
   const [preview, setPreview] = useState(null);
+  const [isResetModalOpen, setIsResetModalOpen] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+
+  const handleConfirmReset = () => {
+    reset();
+    setPreview(null);
+    if (typeof window !== "undefined") {
+      window.localStorage.removeItem(STORAGE_KEY);
+    }
+    setIsResetModalOpen(false);
+    setToastMessage("Form reset successfully");
+    setTimeout(() => setToastMessage(""), 3000);
+  };
 
   const {
     register,
     handleSubmit,
     setValue,
     watch,
+    reset,
     formState: { errors, isSubmitting },
   } = useForm({
     resolver: zodResolver(biodataSchema),
@@ -719,7 +735,16 @@ export function BiodataForm() {
           </div>
         </fieldset>
 
-        <div className="flex justify-end">
+        <div className="flex items-center justify-end gap-3 sm:gap-4 mt-8">
+          <button
+            type="button"
+            disabled={isSubmitting}
+            onClick={() => setIsResetModalOpen(true)}
+            className="inline-flex items-center justify-center rounded-full border border-rose-500/30 bg-slate-900/40 px-6 py-2.5 text-sm font-semibold text-rose-300 transition-all duration-300 hover:bg-rose-500/10 hover:border-rose-500/50 hover:text-rose-200 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+          >
+            Reset Form
+          </button>
+          
           <button
             type="submit"
             disabled={isSubmitting}
@@ -729,6 +754,72 @@ export function BiodataForm() {
           </button>
         </div>
       </form>
+
+      {/* Toast Notification */}
+      <AnimatePresence>
+        {toastMessage && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-3 text-sm font-medium text-emerald-400 backdrop-blur-md shadow-2xl"
+          >
+            <CheckCircle2 className="h-5 w-5" />
+            {toastMessage}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Confirmation Modal */}
+      <AnimatePresence>
+        {isResetModalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsResetModalOpen(false)}
+              className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 10 }}
+              className="relative w-full max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-slate-900 p-6 shadow-2xl"
+            >
+              <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-rose-500/10 blur-[80px]" />
+              
+              <div className="relative z-10 flex flex-col items-center text-center">
+                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 shadow-inner">
+                  <AlertTriangle className="h-6 w-6" />
+                </div>
+                <h3 className="mb-2 text-xl font-bold text-white tracking-tight">
+                  Reset Biodata?
+                </h3>
+                <p className="mb-8 text-sm leading-relaxed text-slate-300">
+                  Are you sure you want to clear all your details? This action cannot be undone and will delete your unsaved progress.
+                </p>
+                <div className="flex w-full gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setIsResetModalOpen(false)}
+                    className="flex-1 rounded-xl border border-white/10 bg-slate-800/50 px-4 py-3 text-sm font-semibold text-slate-200 transition duration-200 hover:bg-slate-700 hover:text-white"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleConfirmReset}
+                    className="flex-1 rounded-xl bg-gradient-to-r from-rose-500 to-rose-600 px-4 py-3 text-sm font-bold text-white shadow-lg transition duration-200 hover:brightness-110"
+                  >
+                    Yes, Reset
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

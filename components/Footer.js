@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SocialLinks } from "./SocialLinks";
 
 export function Footer() {
   return (
@@ -37,14 +38,14 @@ export function Footer() {
           </p>
           <ul className="space-y-2 text-xs">
             <li>
-              <Link href="/privacy" className="hover:text-white">
+              <Link href="/privacy-policy" className="hover:text-white">
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <a href="mailto:support@example.com" className="hover:text-white">
-                support@example.com
-              </a>
+              <Link href="/contact-us" className="hover:text-white">
+                Contact Us
+              </Link>
             </li>
           </ul>
         </div>
@@ -55,23 +56,8 @@ export function Footer() {
           reserved.
         </p>
         <div className="flex items-center gap-3 text-xs">
-          <span className="text-slate-500">Follow</span>
-          <div className="flex gap-2">
-            <button
-              type="button"
-              className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/10 text-[11px] text-slate-200 hover:border-white/25 hover:text-white"
-              aria-label="Visit our Instagram"
-            >
-              IG
-            </button>
-            <button
-              type="button"
-              className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/10 text-[11px] text-slate-200 hover:border-white/25 hover:text-white"
-              aria-label="Visit our LinkedIn"
-            >
-              in
-            </button>
-          </div>
+          <span className="text-slate-500 mr-2">Follow Us</span>
+          <SocialLinks />
         </div>
       </div>
     </footer>

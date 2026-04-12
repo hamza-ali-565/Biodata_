@@ -6,15 +6,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const templates = [
-    { id: 1, src: "/images/elegant-marriage-biodata-sample-girl.webp", alt: "Elegant Girl", isNew: false },
-    { id: 2, src: "/images/popular-hindu-marriage-biodata-format.webp", alt: "Popular Hindu", isNew: true },
-    { id: 3, src: "/images/flowers-marriage-biodata-format.webp", alt: "Flowers Format", isNew: false },
-    { id: 4, src: "/images/traditional-theme-marriage-biodata-format.webp", alt: "Traditional Theme", isNew: false },
-    { id: 5, src: "/images/sample-marriage-biodata-word-format.webp", alt: "Word Format", isNew: true },
-    { id: 6, src: "/images/red-bordered-marriage-biodata-format.webp", alt: "Red Bordered", isNew: false },
-    { id: 7, src: "/images/red-and-gold-two-column-marriage-biodata-format-example.webp", alt: "Red and Gold", isNew: false },
-    { id: 8, src: "/images/orange-bordered-marriage-biodata-format.webp", alt: "Orange Bordered", isNew: false },
-    { id: 9, src: "/images/elegant-marriage-biodata-sample-boy.webp", alt: "Elegant Boy", isNew: false },
+    { id: 1, src: "/images/elegant-marriage-biodata-sample-girl.webp", alt: "elegant-marriage-biodata-sample-girl", isNew: false },
+    { id: 2, src: "/images/flowers-marriage-biodata-format.webp", alt: "flowers-marriage-biodata-format", isNew: false },
+    { id: 3, src: "/images/traditional-theme-marriage-biodata-format.webp", alt: "traditional-theme-marriage-biodata-format", isNew: false },
+    { id: 4, src: "/images/sample-marriage-biodata-word-format.webp", alt: "sample-marriage-biodata-word-format", isNew: true },
+    { id: 5, src: "/images/red-bordered-marriage-biodata-format.webp", alt: "red-bordered-marriage-biodata-format", isNew: false },
+    { id: 6, src: "/images/red-and-gold-two-column-marriage-biodata-format-example.webp", alt: "red-and-gold-two-column-marriage-biodata-format-example", isNew: false },
+    { id: 7, src: "/images/orange-bordered-marriage-biodata-format.webp", alt: "orange-bordered-marriage-biodata-format", isNew: false },
+    { id: 8, src: "/images/elegant-marriage-biodata-sample-boy.webp", alt: "elegant-marriage-biodata-sample-boy", isNew: false },
 ];
 
 export function TemplateCarousel() {
