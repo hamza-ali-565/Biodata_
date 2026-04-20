@@ -62,7 +62,7 @@ export function FeatureBanner() {
             <div className="relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-6">
-                        Why Choose Our Marriage Biodata Maker
+                        Why Our Marriage Biodata Builder Different?
                     </h2>
                     <div className="mt-4 flex justify-center">
                         <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-rose-500 rounded-full" />

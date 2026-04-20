@@ -104,12 +104,10 @@ export function TemplateCarousel() {
             <div className="max-w-[1400px] mx-auto relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-14">
                     <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-4 sm:text-4xl">
-                        Beautifully Handcrafted Marriage Biodata Templates
+                        Beautiful & Elegant Marriage Biodata Templates
                     </h2>
                     <p className="text-sm text-slate-300 sm:text-base font-medium leading-relaxed px-4">
-                        We have designed the best looking, well formatted marriage biodata formats for you to
-                        just choose and make biodata without any hassle. No need to invest time on layouts,
-                        designs and getting that perfect biodata for marriage.
+                        There is a saying that the first impression is the last impression; that’s why choosing the right marriage biodata is important. Here we’re offering you the best templates designed to present your personal, family, and professional details in a clean, well-designed, and attractive way. Select template and create your biodata for marriage.
                     </p>
                     <div className="mt-8 flex justify-center">
                         <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-rose-500 rounded-full" />

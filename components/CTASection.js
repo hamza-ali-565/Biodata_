@@ -58,11 +58,10 @@ export function CTASection() {
 
                 <div className="relative z-10 max-w-2xl mx-auto space-y-6">
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-tight">
-                        Creating a Marriage Biodata is a meaningful step in your journey towards finding the right life partner.
+                        A Meaningful Marriage Biodata Helps You Finds the Right Life Partner
                     </h2>
-
                     <p className="text-lg text-brand-200 font-medium">
-                        Start your journey with us today!
+                        Start your beautiful journey with us today!
                     </p>
 
                     <div className="pt-4">
