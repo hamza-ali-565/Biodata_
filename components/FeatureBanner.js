@@ -6,21 +6,21 @@ import { Zap, Settings, Layout } from "lucide-react";
 const features = [
     {
         title: "Easy to use",
-        description: "No Sign up / Registration required. Enter your details, choose template and voila! Your biodata in PDF format is ready.",
+        description: "There is no need to sign up or register. Your biodata for marriage is ready just by entering personal details. And don’t forget to select a beautiful template.",
         icon: Zap,
         color: "from-amber-400 to-orange-500",
         bg: "bg-amber-500/10"
     },
     {
         title: "Customization made simple",
-        description: "You have full control of what you want in your marriage biodata. You can add new fields and delete or rename the existing fields.",
+        description: "Here, you’ll feel like everything is under your control as you can add new, fully customized fields. After selecting a template, you can also change the theme of the template.",
         icon: Settings,
         color: "from-sky-400 to-blue-500",
         bg: "bg-sky-500/10"
     },
     {
         title: "Great Looking Templates",
-        description: "We have designed these templates which are unique, clean and perfect for a matrimonial biodata.",
+        description: "We’ve carefully structured each template to showcase your personal, family, and professional details in the most clear and elegant way. We are offering both simple and stylish layouts, so you can select according to your preference.",
         icon: Layout,
         color: "from-emerald-400 to-teal-500",
         bg: "bg-emerald-500/10"

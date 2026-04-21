@@ -19,11 +19,10 @@ export function BiodataFormatExplanation() {
             <div className="max-w-[1400px] mx-auto relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-4 sm:text-4xl">
-                        Marriage Biodata Format: Crafting Your Perfect Introduction
+                        Marriage Biodata Format: Designing Your Best Introduction
                     </h2>
                     <p className="text-sm text-slate-300 sm:text-base font-medium leading-relaxed px-4">
-                        A well-structured marriage biodata serves as your first impression. It helps families
-                        understand who you are, your background, and your values, making the matchmaking process smoother and more meaningful.
+                        Presenting biodata for marriage to someone means presenting yourself. Focus on keeping it clean, well-structured, and visually appealing, which should be easy to read to make a strong impression. Selecting the right format is essential so you can highlight the important information without making it messy and confusing.
                     </p>
                     <div className="mt-8 flex justify-center">
                         <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-rose-500 rounded-full" />
