@@ -8,6 +8,12 @@ import { TemplateCarousel } from "../components/TemplateCarousel";
 import { BiodataFormatExplanation } from "../components/BiodataFormatExplanation";
 import { FeatureBanner } from "../components/FeatureBanner";
 import { FAQ } from "../components/FAQ";
+import { WhyNeedBiodata } from "../components/WhyNeedBiodata";
+import { BenefitsSection } from "../components/BenefitsSection";
+import { WhyPeopleLoveUs } from "../components/WhyPeopleLoveUs";
+import { HowToShareBiodata } from "../components/HowToShareBiodata";
+import { HowToCreateBiodata } from "../components/HowToCreateBiodata";
+import { DesignTips } from "../components/DesignTips";
 import { CTASection } from "../components/CTASection";
 
 export const metadata = {
@@ -48,6 +54,12 @@ export default function Home() {
         <BiodataForm />
         <FeatureBanner />
         <FAQ />
+        <WhyNeedBiodata />
+        <BenefitsSection />
+        <WhyPeopleLoveUs />
+        <HowToShareBiodata />
+        <HowToCreateBiodata />
+        <DesignTips />
         <CTASection />
       </main>
       <Footer />
