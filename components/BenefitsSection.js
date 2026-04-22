@@ -1,23 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Clock, LayoutTemplate, PenTool } from "lucide-react";
+import { Sparkles, FileImage, FileText } from "lucide-react";
 
 const benefits = [
     {
-        title: "Time-Saving & Convenience",
-        description: "Creating a marriage biodata online eliminates the hassle of formatting a document from scratch. With an intuitive interface, you can enter your details and have a beautiful, ready-to-print format in just a few minutes, from the comfort of your home.",
-        icon: Clock,
+        title: "Professional & Attractive Template Designs",
+        description: "Choosing the right format, which should be clean, readable, and presentable, is essential to make a strong impression and convince them to think about how serious you are about starting your new journey. In this app, you will find many template design options and theme selection.",
+        icon: Sparkles,
     },
     {
-        title: "Professional & Attractive Design",
-        description: "First impressions matter. Our platform provides clean, premium templates that balance tradition with a modern aesthetic, ensuring your details are presented in a well-structured, eye-catching, and respectable manner.",
-        icon: LayoutTemplate,
+        title: "JPEG/Image format download option",
+        description: "Creating marriage biodata is another thing, and presenting it to someone is another thing. Now, one thing should come to your mind: what to do after creating biodata? How to share it with someone? Don’t worry, we are offering you to download your biodata in JPEG or image format for free.",
+        icon: FileImage,
     },
     {
-        title: "Easy Editing & Accessibility",
-        description: "An online platform gives you the flexibility to build your biodata exactly how you want it. Update your information or change your template design anytime, and download a high-quality PDF from anywhere, on any device.",
-        icon: PenTool,
+        title: "PDF format download option",
+        description: "This online platform gives you the leverage to build a format exactly how you want. And update your information or change template format anytime, and download it in the most downloaded format, which is PDF format.",
+        icon: FileText,
     },
 ];
 
@@ -33,7 +33,7 @@ export function BenefitsSection() {
                         <circle cx="50" cy="50" r="8" stroke="currentColor" strokeWidth="0.5" strokeDasharray="1 1" />
                     </svg>
                 </div>
-                
+
                 <div className="absolute bottom-[5%] left-[5%] w-64 h-64 md:w-[400px] md:h-[400px] opacity-[0.03] text-rose-200">
                     <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-current" preserveAspectRatio="xMidYMid meet">
                         <path d="M50 90 C35 80 20 65 15 50 C10 35 25 20 40 15 C55 10 70 20 80 30 C90 45 85 70 70 80 C60 85 55 90 50 90 Z" stroke="currentColor" strokeWidth="0.5" />
@@ -48,7 +48,7 @@ export function BenefitsSection() {
             <div className="absolute bottom-0 left-1/4 w-40 h-40 md:w-72 md:h-72 rounded-full bg-rose-500/10 blur-[80px] pointer-events-none" />
 
             <div className="relative z-10 max-w-6xl mx-auto">
-                <div className="text-center mb-16">
+                <div className="text-center mb-7">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -56,12 +56,18 @@ export function BenefitsSection() {
                         transition={{ duration: 0.6 }}
                     >
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-6 sm:text-4xl leading-tight max-w-3xl mx-auto">
-                            What are the benefits of creating a bio data format online?
+                            Advantages of creating a biodata format online?
                         </h2>
                         <div className="flex justify-center">
                             <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-rose-500 rounded-full" />
                         </div>
                     </motion.div>
+                </div>
+                <div className=" text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-medium mb-15">
+                    <p>
+                        In this app, you can easily create your marriage biodata in minutes by using your pc or laptop. We’ve designed our app in such a way that you can get what you want. We are adding multiple values to create your marriage biodata online.
+                    </p>
+
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
@@ -77,11 +83,11 @@ export function BenefitsSection() {
                             <div className="mb-6 p-4 bg-brand-500/10 rounded-2xl text-brand-400">
                                 <benefit.icon className="w-8 h-8 md:w-10 md:h-10" />
                             </div>
-                            
+
                             <h3 className="text-lg md:text-xl font-bold text-white mb-4">
                                 {benefit.title}
                             </h3>
-                            
+
                             <p className="text-slate-300 text-sm md:text-base leading-relaxed">
                                 {benefit.description}
                             </p>

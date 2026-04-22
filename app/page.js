@@ -50,16 +50,16 @@ export default function Home() {
         <Hero />
         <HowItWorks />
         <TemplateCarousel />
-        <BiodataFormatExplanation />
+        <HowToCreateBiodata />
         <BiodataForm />
+        <BiodataFormatExplanation />
         <FeatureBanner />
-        <FAQ />
         <WhyNeedBiodata />
         <BenefitsSection />
         <WhyPeopleLoveUs />
         <HowToShareBiodata />
-        <HowToCreateBiodata />
         <DesignTips />
+        <FAQ />
         <CTASection />
       </main>
       <Footer />

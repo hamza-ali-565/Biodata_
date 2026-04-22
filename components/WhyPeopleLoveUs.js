@@ -6,8 +6,8 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const features = [
-    "Premium Templates",
-    "Highly Impressive",
+    "Free Premium Templates",
+    "Easy to use",
     "Data Security",
     "Editable Format"
 ];
@@ -35,7 +35,7 @@ export function WhyPeopleLoveUs() {
 
             <div className="max-w-6xl mx-auto relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    
+
                     {/* Left Column: Text & Features */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -46,10 +46,10 @@ export function WhyPeopleLoveUs() {
                     >
                         <div>
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-                                Why do people love our marriage biodata format?
+                                Why are our marriage biodata being loved by people?
                             </h2>
                             <p className="text-slate-300 text-lg md:text-xl leading-relaxed max-w-lg">
-                                Loved for its premium feel, customizable sections, and attractive design that makes every biodata stand out.
+                                We’re gathering love around the globe because we are secure, we offer free premium templates, we are editable, and we are offering theme color selection.
                             </p>
                         </div>
 

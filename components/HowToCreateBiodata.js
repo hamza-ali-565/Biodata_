@@ -103,7 +103,7 @@ export function HowToCreateBiodata() {
                         viewport={{ once: true }}
                         className="text-slate-300 text-base md:text-xl leading-relaxed"
                     >
-                        Creating a marriage biodata is simple. With our platform, you can build and download your biodata in PNG or PDF format within minutes—no design skills required.
+                        Building a marriage biodata is very easy if you follow a clear roadmap. Start with your personal details, introduce yourself in this section, then jump to professional details, describe your professional life, and lastly, describe your family details.
                     </motion.p>
                 </div>
 
@@ -198,11 +198,11 @@ export function HowToCreateBiodata() {
                                 <ul className="space-y-4">
                                     <li className="flex items-center gap-3 text-slate-300">
                                         <div className="w-2 h-2 rounded-full bg-brand-500" />
-                                        Father's Name & Occupation (Business / Service)
+                                        Father’s Name & Occupation (Business / Service)
                                     </li>
                                     <li className="flex items-center gap-3 text-slate-300">
                                         <div className="w-2 h-2 rounded-full bg-brand-500" />
-                                        Mother's Name & Occupation (Homemaker)
+                                        Mother’s Name & Occupation (Homemaker)
                                     </li>
                                 </ul>
                             </div>

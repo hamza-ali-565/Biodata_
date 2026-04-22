@@ -66,7 +66,7 @@ export function DesignTips() {
                         transition={{ duration: 0.6 }}
                     >
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-6 sm:text-4xl">
-                            Design tips to create biodata for marriage?
+                            Some design tips to create biodata for marriage
                         </h2>
                         <div className="flex justify-center mb-6">
                             <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-rose-500 rounded-full" />
@@ -82,14 +82,13 @@ export function DesignTips() {
                         const isEven = index % 2 === 0;
 
                         return (
-                            <div 
-                                key={index} 
-                                className={`flex flex-col gap-10 lg:gap-16 items-center ${
-                                    isEven ? "lg:flex-row" : "lg:flex-row-reverse"
-                                }`}
+                            <div
+                                key={index}
+                                className={`flex flex-col gap-10 lg:gap-16 items-center ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"
+                                    }`}
                             >
                                 {/* Text Content */}
-                                <motion.div 
+                                <motion.div
                                     initial={{ opacity: 0, x: isEven ? -40 : 40 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true, amount: 0.3 }}
@@ -102,7 +101,7 @@ export function DesignTips() {
                                     <h3 className="text-2xl md:text-3xl font-bold text-white capitalize leading-snug">
                                         {tip.title}
                                     </h3>
-                                    
+
                                     <ul className="space-y-4 pt-2">
                                         {tip.points.map((point, pointIndex) => (
                                             <li key={pointIndex} className="flex items-start gap-4">
@@ -118,7 +117,7 @@ export function DesignTips() {
                                 </motion.div>
 
                                 {/* Visual Element (Mockup) */}
-                                <motion.div 
+                                <motion.div
                                     initial={{ opacity: 0, scale: 0.95, y: 20 }}
                                     whileInView={{ opacity: 1, scale: 1, y: 0 }}
                                     viewport={{ once: true, amount: 0.3 }}
