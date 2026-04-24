@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SocialLinks } from "./SocialLinks";
 
 export function Footer() {
@@ -6,13 +7,23 @@ export function Footer() {
     <footer className="mt-16 border-t border-white/5 pt-8 text-sm text-slate-300/80">
       <div className="grid gap-8 md:grid-cols-4">
         <div className="space-y-2 md:col-span-2">
-          <p className="text-sm font-semibold text-slate-50">
-            Biodata for Marriage
+          <div className="flex flex-col gap-2 mb-4">
+            <Image
+              src="/images/Marriage-biodata-hub.png"
+              alt="Marriage Biodata Hub Logo"
+              width={200}
+              height={60}
+              className="h-22 w-auto object-contain drop-shadow-md"
+            />
+            {/* <p className="text-sm font-semibold text-slate-50">
+              Biodata for Marriage
+            </p> */}
+          </div>
+          <p className="max-w-md text-xs leading-relaxed text-slate-300/80">
+            A marriage biodata maker app dedicated to providing the easiest way to create your biodata in minutes. We understand why it’s important to find the right match, as it is about to spend the whole life with someone, and creating biodata is the initial stage of this long, beautiful walk. Our app will help you to create biodata in three easy steps: fill, choose, and download.
           </p>
           <p className="max-w-md text-xs leading-relaxed text-slate-300/80">
-            Create elegant, ready-to-share marriage biodata cards with
-            thoughtfully crafted templates designed for modern arranged
-            marriages.
+            We have the most popular, elegant, and premium template to make a strong impact. We hope you will enjoy our service, and once again, best of luck with your future endeavor.
           </p>
         </div>
         <div>
@@ -25,11 +36,11 @@ export function Footer() {
                 Templates
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/blog" className="hover:text-white">
                 Blog
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div>

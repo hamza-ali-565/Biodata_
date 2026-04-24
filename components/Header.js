@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/templates", label: "Templates" },
-  { href: "/blog", label: "Blog" },
+  // { href: "/blog", label: "Blog" },
 ];
 
 export function Header() {
@@ -30,12 +31,17 @@ export function Header() {
         aria-label="Main navigation"
       >
         <Link href="/" className="flex items-center gap-2">
-          <span className="rounded-full bg-gradient-to-tr from-brand-400 via-brand-500 to-rose-500 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white shadow-soft">
-            Biodata
-          </span>
-          <span className="text-sm font-semibold tracking-tight text-slate-50 sm:text-base">
+          <Image
+            src="/images/Marriage-biodata-hub.png"
+            alt="Marriage Biodata Hub Logo"
+            width={240}
+            height={80}
+            className="h-14 sm:h-16 w-auto object-contain drop-shadow-md"
+            priority
+          />
+          {/* <span className="text-sm font-semibold tracking-tight text-slate-50 sm:text-base hidden sm:inline-block">
             Biodata for Marriage
-          </span>
+          </span> */}
         </Link>
         <div className="flex items-center gap-6">
           <ul className="hidden items-center gap-5 text-xs font-medium text-slate-200/80 sm:flex sm:text-sm">

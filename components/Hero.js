@@ -64,13 +64,10 @@ export function Hero() {
             id="hero-heading"
             className="text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl lg:leading-[1.15]"
           >
-            Create Beautiful Marriage Biodata in Minutes
+            Create & Download Marriage Biodata For Free in Minutes
           </h1>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base font-medium">
-            Craft an elegant, well-organised biodata that highlights who you
-            are. Choose from premium templates, personalise every detail, and
-            download as PDF or JPEG—ready to share with families and
-            matchmakers.
+            Create your fully customizable marriage biodata instantly with our free, elegant, popular, and premium templates. We’re just 3 steps away from creating a beautiful biodata for marriage fill information, choose a template & download. No login required, as our services are free, and lastly, best of luck with your new chapter.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4">

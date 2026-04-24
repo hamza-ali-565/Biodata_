@@ -16,7 +16,7 @@ export const metadata = {
   creator: "Biodata for Marriage",
   metadataBase: new URL("https://biodata-for-marriage.example.com"),
   openGraph: {
-    title: "Biodata for Marriage | Create Beautiful Marriage Biodata",
+    title: "Create & Download Marriage Biodata For Free In Minutes",
     description:
       "Design premium, ready-to-share marriage biodata cards with elegant templates in minutes.",
     url: "/",
