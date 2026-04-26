@@ -6,17 +6,17 @@ export function TemplateMinimal({ data, theme, fontFamily }) {
   const textHeading = theme?.textHeading || "#1f2937";
 
   return (
-    <div 
+    <div
       className="relative mx-auto flex min-h-[600px] w-[450px] flex-col overflow-hidden bg-white text-slate-900 shadow-2xl "
-      style={{ fontFamily: fontFamily || "inherit",  }}
+      style={{ fontFamily: fontFamily || "inherit", }}
     >
-      
+
       <div className="p-8 pb-4 text-center">
-        
+
         <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-2">Marriage Biodata</p>
         <h1 className="text-3xl font-serif" style={{ color: textHeading }}>{personal.name || "Your Name"}</h1>
       </div>
-      
+
 
       <div className="p-6 pt-2 grid gap-5 flex-1 text-[11px] leading-relaxed">
         <section>
@@ -68,11 +68,11 @@ export function TemplateMinimal({ data, theme, fontFamily }) {
           </div>
         </section>
       </div>
-      
-      
-      
+
+
+
       <div className="p-3 text-center text-[9px] opacity-40 uppercase tracking-widest bg-slate-50/50 mt-auto">
-        Created with Antigravity
+        Created with ❤ by Marriage Biodata Hub
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import { AlertTriangle, CheckCircle2 } from "lucide-react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+import NextImage from "next/image";
 
 const customFieldSchema = z.object({
   id: z.string(),
@@ -717,7 +717,7 @@ export function BiodataForm() {
               </p>
               <div className="relative flex h-32 overflow-hidden items-center justify-center rounded-2xl border border-white/10 bg-slate-900/80">
                 {preview ? (
-                  <Image
+                  <NextImage
                     src={preview}
                     alt="Selected profile preview for marriage biodata"
                     fill

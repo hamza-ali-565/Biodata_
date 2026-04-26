@@ -1,48 +1,48 @@
 const fs = require('fs');
 
 const templates = [
-    { name: "TemplateModern", layout: "modern", photo: "right", border: "left" },
-    { name: "TemplateClassic", layout: "traditional", photo: "center", border: "top" },
-    { name: "TemplateElegant", layout: "elegant", photo: "left", border: "all" },
-    { name: "TemplateMinimal", layout: "minimal", photo: "none", border: "none" },
-    { name: "TemplateFloral", layout: "floral", photo: "right", border: "corners" },
-    { name: "TemplateGeometric", layout: "geometric", photo: "left", border: "bottom" },
-    { name: "TemplateCard", layout: "card", photo: "center", border: "rounded" },
-    { name: "TemplateTwoColumn", layout: "twocol", photo: "sidebar", border: "none" },
-    { name: "TemplateSidebar", layout: "sidebar", photo: "sidebar-top", border: "none" },
-    { name: "TemplateCentered", layout: "centered", photo: "center", border: "box" },
-    { name: "TemplateGold", layout: "luxury", photo: "right", border: "gold-frame" },
-    { name: "TemplateDark", layout: "dark", photo: "left", border: "none" },
-    { name: "TemplateVintage", layout: "vintage", photo: "center", border: "dashed" },
-    { name: "TemplateLuxury", layout: "luxury-bold", photo: "left", border: "double" },
-    { name: "TemplateRoyal", layout: "royal", photo: "center", border: "arch" },
+  { name: "TemplateModern", layout: "modern", photo: "right", border: "left" },
+  { name: "TemplateClassic", layout: "traditional", photo: "center", border: "top" },
+  { name: "TemplateElegant", layout: "elegant", photo: "left", border: "all" },
+  { name: "TemplateMinimal", layout: "minimal", photo: "none", border: "none" },
+  { name: "TemplateFloral", layout: "floral", photo: "right", border: "corners" },
+  { name: "TemplateGeometric", layout: "geometric", photo: "left", border: "bottom" },
+  { name: "TemplateCard", layout: "card", photo: "center", border: "rounded" },
+  { name: "TemplateTwoColumn", layout: "twocol", photo: "sidebar", border: "none" },
+  { name: "TemplateSidebar", layout: "sidebar", photo: "sidebar-top", border: "none" },
+  { name: "TemplateCentered", layout: "centered", photo: "center", border: "box" },
+  { name: "TemplateGold", layout: "luxury", photo: "right", border: "gold-frame" },
+  { name: "TemplateDark", layout: "dark", photo: "left", border: "none" },
+  { name: "TemplateVintage", layout: "vintage", photo: "center", border: "dashed" },
+  { name: "TemplateLuxury", layout: "luxury-bold", photo: "left", border: "double" },
+  { name: "TemplateRoyal", layout: "royal", photo: "center", border: "arch" },
 ];
 
 templates.forEach(({ name, photo, border, layout }) => {
-    const isDark = layout === "dark";
-    const bgClass = isDark ? "bg-slate-900 text-slate-100" : "bg-white text-slate-900";
-    const borderStyle = border === "top" ? "borderTop: `8px solid ${accent}`" :
-        border === "left" ? "borderLeft: `12px solid ${accent}`" :
-            border === "double" ? "border: `4px double ${accent}`" :
-                border === "all" ? "border: `2px solid ${accentSoft}`" :
-                    "";
+  const isDark = layout === "dark";
+  const bgClass = isDark ? "bg-slate-900 text-slate-100" : "bg-white text-slate-900";
+  const borderStyle = border === "top" ? "borderTop: `8px solid ${accent}`" :
+    border === "left" ? "borderLeft: `12px solid ${accent}`" :
+      border === "double" ? "border: `4px double ${accent}`" :
+        border === "all" ? "border: `2px solid ${accentSoft}`" :
+          "";
 
-    let photoMarkup = ``;
-    if (photo !== "none") {
-        let photoWrapperClass = "w-24 h-32 rounded-lg object-cover overflow-hidden";
-        if (photo === "center") photoWrapperClass += " mx-auto mb-4 border-2";
-        if (photo === "sidebar" || photo === "sidebar-top") photoWrapperClass = "w-32 h-40 rounded-xl object-cover mb-4 shadow-lg";
+  let photoMarkup = ``;
+  if (photo !== "none") {
+    let photoWrapperClass = "w-24 h-32 rounded-lg object-cover overflow-hidden";
+    if (photo === "center") photoWrapperClass += " mx-auto mb-4 border-2";
+    if (photo === "sidebar" || photo === "sidebar-top") photoWrapperClass = "w-32 h-40 rounded-xl object-cover mb-4 shadow-lg";
 
-        photoMarkup = `
+    photoMarkup = `
         {photoDataUrl ? (
           <img src={photoDataUrl} alt="Profile" className="${photoWrapperClass}" style={{ borderColor: accent }} />
         ) : (
           <div className="${photoWrapperClass} bg-slate-100 flex items-center justify-center text-[10px] text-slate-400 border border-dashed border-slate-300">Photo</div>
         )}
     `;
-    }
+  }
 
-    const content = `
+  const content = `
 export function ${name}({ data, theme, fontFamily }) {
   if (!data) return null;
   const { personal, family, contact, photoDataUrl } = data;
@@ -123,16 +123,16 @@ export function ${name}({ data, theme, fontFamily }) {
       ${photo === 'sidebar' ? '</div></div>' : ''}
       
       <div className="p-3 text-center text-[9px] opacity-40 uppercase tracking-widest bg-slate-50/50 mt-auto">
-        Created with Antigravity
+        Created with ❤ by Marriage Biodata Hub
       </div>
     </div>
   );
 }
 `;
-    fs.writeFileSync('components/templates/' + name + '.js', content.trim());
+  fs.writeFileSync('components/templates/' + name + '.js', content.trim());
 });
 
 fs.writeFileSync('components/templates/index.js',
-    templates.map(t => 'export { ' + t.name + ' } from "./' + t.name + '";').join('\\n')
+  templates.map(t => 'export { ' + t.name + ' } from "./' + t.name + '";').join('\\n')
 );
 console.log("All templates created successfully.");

@@ -6,26 +6,26 @@ export function TemplateElegant({ data, theme, fontFamily }) {
   const textHeading = theme?.textHeading || "#1f2937";
 
   return (
-    <div 
+    <div
       className="relative mx-auto flex min-h-[600px] w-[450px] flex-col overflow-hidden bg-white text-slate-900 shadow-2xl "
       style={{ fontFamily: fontFamily || "inherit", border: `2px solid ${accentSoft}` }}
     >
-      
+
       <div className="p-6 flex flex-row gap-6 items-center bg-slate-50/50">
-        
+
         {photoDataUrl ? (
           <img src={photoDataUrl} alt="Profile" className="w-24 h-32 rounded-lg object-cover overflow-hidden" style={{ borderColor: accent }} />
         ) : (
           <div className="w-24 h-32 rounded-lg object-cover overflow-hidden bg-slate-100 flex items-center justify-center text-[10px] text-slate-400 border border-dashed border-slate-300">Photo</div>
         )}
-    
+
         <div className="flex-1 text-left">
           <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Marriage Biodata</p>
           <h1 className="text-2xl font-bold" style={{ color: textHeading }}>{personal.name || "Your Name"}</h1>
           <p className="text-xs text-slate-600 mt-1">{personal.occupation || "Occupation"}</p>
         </div>
       </div>
-      
+
 
       <div className="p-6 pt-2 grid gap-5 flex-1 text-[11px] leading-relaxed">
         <section>
@@ -77,11 +77,11 @@ export function TemplateElegant({ data, theme, fontFamily }) {
           </div>
         </section>
       </div>
-      
-      
-      
+
+
+
       <div className="p-3 text-center text-[9px] opacity-40 uppercase tracking-widest bg-slate-50/50 mt-auto">
-        Created with Antigravity
+        Created with ❤ by Marriage Biodata Hub
       </div>
     </div>
   );
