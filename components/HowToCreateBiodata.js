@@ -7,6 +7,7 @@ import {
     Users, BookOpen, Search, Moon
 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const steps = [
     {
@@ -93,7 +94,7 @@ export function HowToCreateBiodata() {
                         viewport={{ once: true }}
                         className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-6"
                     >
-                        How to Create a Marriage Biodata?
+                        How to Create a Stunning Marriage Biodata?
                     </motion.h2>
 
                     <motion.p
@@ -106,6 +107,25 @@ export function HowToCreateBiodata() {
                         Building a marriage biodata is very easy if you follow a clear roadmap. Start with your personal details, introduce yourself in this section, then jump to professional details, describe your professional life, and lastly, describe your family details.
                     </motion.p>
                 </div>
+
+                {/* Infographic */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="relative w-full max-w-5xl mx-auto rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-white/[0.02]"
+                >
+                    <Image
+                        src="/images/how-to-create-marriage-biodata.png"
+                        alt="Step-by-step guide to create a marriage biodata infographic"
+                        width={1200}
+                        height={630}
+                        className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity"
+                        sizes="(max-width: 1024px) 100vw, 1200px"
+                        loading="lazy"
+                    />
+                </motion.div>
 
                 {/* Overview Cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">

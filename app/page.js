@@ -48,9 +48,9 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <HowItWorks />
-        <TemplateCarousel />
         <HowToCreateBiodata />
+        {/* <HowItWorks /> */}
+        <TemplateCarousel />
         <BiodataForm />
         <BiodataFormatExplanation />
         <FeatureBanner />
