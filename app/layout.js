@@ -51,7 +51,7 @@ export const metadata = {
     },
   },
   verification: {
-    google:<meta name="google-site-verification" content="SWErkN6mrIIpREHtIRhmRTsBneFsCJQ_wsKEI01HtDM" />,
+    google: "SWErkN6mrIIpREHtIRhmRTsBneFsCJQ_wsKEI01HtDM",
   },
 };
 
