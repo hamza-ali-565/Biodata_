@@ -107,8 +107,8 @@ export default function PrivacyPolicy() {
           <div className="bg-slate-900/80 rounded-2xl p-6 sm:p-8 text-center border border-white/5">
             <h2 className="text-xl md:text-2xl font-semibold text-brand-400 mb-3">10. Contact Information</h2>
             <p className="mb-2">If you have any questions or suggestions regarding our Privacy Policy, or if you need clarification on how your data is processed locally, please contact us at:</p>
-            <a href="mailto:info@biodata-for-marriage.example.com" className="text-white font-medium hover:text-brand-400 transition-colors inline-block mt-2">
-              info@biodata-for-marriage.example.com
+            <a href="mailto:info@marriagebiodatahub.com" className="text-white font-medium hover:text-brand-400 transition-colors inline-block mt-2">
+              info@marriagebiodatahub.com
             </a>
           </div>
         </section>

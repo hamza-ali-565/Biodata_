@@ -53,8 +53,8 @@ export default function ContactUs() {
                 <div>
                   <h3 className="text-lg font-medium text-white mb-1">Direct Email</h3>
                   <p className="text-sm leading-relaxed text-slate-400 mb-2">Prefer to send an email from your own client? Send us a message anytime directly at:</p>
-                  <a href="mailto:support@biodata-for-marriage.example.com" className="text-brand-400 font-semibold hover:text-brand-300 transition-colors">
-                    support@biodata-for-marriage.example.com
+                  <a href="mailto:support@marriagebiodatahub.com" className="text-brand-400 font-semibold hover:text-brand-300 transition-colors">
+                    support@marriagebiodatahub.com
                   </a>
                 </div>
               </div>
@@ -104,7 +104,7 @@ export default function ContactUs() {
                   id="email"
                   type="email"
                   required
-                  placeholder="name@example.com"
+                  placeholder="name@marriagebiodatahub.com"
                   className="w-full rounded-xl border border-white/10 bg-slate-950/50 px-4 py-3 text-sm text-slate-50 placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 transition-all"
                 />
               </div>

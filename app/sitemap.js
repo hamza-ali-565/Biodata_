@@ -1,7 +1,7 @@
 import { TEMPLATE_DEFINITIONS } from "../components/templatesConfig";
 
 export default function sitemap() {
-    const baseUrl = "https://biodata-for-marriage.example.com";
+    const baseUrl = "https://marriagebiodatahub.com";
 
     const templates = TEMPLATE_DEFINITIONS.map((template) => ({
         url: `${baseUrl}/templates/${template.id}`,

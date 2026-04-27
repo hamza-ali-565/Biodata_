@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
   const template = TEMPLATE_DEFINITIONS.find((t) => t.id === templateId);
   const safeName = template ? template.name : "Marriage Biodata Template";
   const safeDescription = template?.description || "Premium marriage biodata template with modern, customisable design.";
-  const url = `https://biodata-for-marriage.example.com/templates/${templateId}`;
+  const url = `https://marriagebiodatahub.com/templates/${templateId}`;
 
   return {
     title: `${safeName} | Biodata for Marriage`,

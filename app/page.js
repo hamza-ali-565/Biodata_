@@ -28,7 +28,7 @@ export default function Home() {
     "@type": "WebApplication",
     name: "Biodata for Marriage",
     description: "Create beautiful, modern marriage biodata cards in minutes. Choose from premium templates, customise details, and download in PDF or JPEG formats.",
-    url: "https://biodata-for-marriage.example.com",
+    url: "https://marriagebiodatahub.com",
     applicationCategory: "UtilityApplication",
     operatingSystem: "Any",
     offers: {

@@ -31,7 +31,7 @@ export function SocialLinks() {
 
       {/* Email / Gmail */}
       <a
-        href="mailto:support@biodata-for-marriage.example.com"
+        href="mailto:support@marriagebiodatahub.com"
         className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-slate-900/50 text-slate-300 hover:border-amber-400 hover:text-amber-400 hover:scale-110 transition-all duration-300 shadow-md"
         aria-label="Send us an Email"
       >

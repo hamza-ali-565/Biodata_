@@ -37,7 +37,7 @@ const DEMO_DATA = {
     contact: {
         contactPerson: "Rajesh Sharma",
         contactNumber: "+91 9876543210",
-        email: "aarav.sharma@example.com",
+        email: "aarav.sharma@marriagebiodatahub.com",
         address: "Andheri West, Mumbai, Maharashtra 400053",
     },
     photoDataUrl: PLACEHOLDER_AVATAR,
