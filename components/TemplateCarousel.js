@@ -6,14 +6,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const templates = [
-    { id: 1, src: "/images/elegant-marriage-biodata-sample-girl.webp", alt: "elegant-marriage-biodata-sample-girl", isNew: false },
-    { id: 2, src: "/images/flowers-marriage-biodata-format.webp", alt: "flowers-marriage-biodata-format", isNew: false },
-    { id: 3, src: "/images/traditional-theme-marriage-biodata-format.webp", alt: "traditional-theme-marriage-biodata-format", isNew: false },
-    { id: 4, src: "/images/sample-marriage-biodata-word-format.webp", alt: "sample-marriage-biodata-word-format", isNew: true },
-    { id: 5, src: "/images/red-bordered-marriage-biodata-format.webp", alt: "red-bordered-marriage-biodata-format", isNew: false },
-    { id: 6, src: "/images/red-and-gold-two-column-marriage-biodata-format-example.webp", alt: "red-and-gold-two-column-marriage-biodata-format-example", isNew: false },
-    { id: 7, src: "/images/orange-bordered-marriage-biodata-format.webp", alt: "orange-bordered-marriage-biodata-format", isNew: false },
-    { id: 8, src: "/images/elegant-marriage-biodata-sample-boy.webp", alt: "elegant-marriage-biodata-sample-boy", isNew: false },
+    { id: 1, src: "/images/new-templates/beautiful-golden-border-marriage-biodata.png", alt: "beautiful-golden-border-marriage-biodata", isNew: true },
+    { id: 2, src: "/images/new-templates/beautiful-green-and-off-white-marriage-biodata-contrast.png", alt: "beautiful-green-and-off-white-marriage-biodata-contrast", isNew: true },
+    { id: 3, src: "/images/new-templates/beautiful-green-border-art-marriage-biodata.png", alt: "beautiful-green-border-art-marriage-biodata", isNew: true },
+    { id: 4, src: "/images/new-templates/beautiful-leafs-effect-marriage-biodata.png", alt: "beautiful-leafs-effect-marriage-biodata", isNew: true },
+    { id: 5, src: "/images/new-templates/beautiful-light-green-and-arted-dark-green-marriage-biodata-contrast.png", alt: "beautiful-light-green-and-arted-dark-green-marriage-biodata-contrast", isNew: true },
+    { id: 6, src: "/images/new-templates/beautiful-sea-green-and-off-white-marriage-biodata-contrast.png", alt: "beautiful-sea-green-and-off-white-marriage-biodata-contrast", isNew: true },
+    { id: 7, src: "/images/new-templates/beautiful-sober-marriage-biodata.png", alt: "beautiful-sober-marriage-biodata", isNew: true },
+    { id: 8, src: "/images/new-templates/beautiful-traditional-marriage-biodata.png", alt: "beautiful-traditional-marriage-biodata", isNew: true },
 ];
 
 export function TemplateCarousel() {

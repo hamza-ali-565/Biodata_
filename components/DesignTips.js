@@ -7,7 +7,7 @@ import Image from "next/image";
 const tips = [
     {
         title: "Marriage Biodata Format With Photo",
-        image: "/images/elegant-marriage-biodata-sample-boy.webp",
+        image: "/images/new-templates/beautiful-green-border-art-marriage-biodata.png",
         points: [
             "Use a clear, high-resolution, recent photograph.",
             "Display the photo prominently at the top-center or side.",
@@ -18,7 +18,7 @@ const tips = [
     },
     {
         title: "Marriage Biodata Format Without Photo",
-        image: "/images/sample-marriage-biodata-word-format.webp",
+        image: "/images/new-templates/beautiful-sober-marriage-biodata.png",
         points: [
             "Opt for a clean, highly text-focused structural layout.",
             "Ensure distinct horizontal spacing between critical sections.",
@@ -29,7 +29,7 @@ const tips = [
     },
     {
         title: "Add High-Quality Religious Elements",
-        image: "/images/traditional-theme-marriage-biodata-format.webp",
+        image: "/images/new-templates/beautiful-traditional-marriage-biodata.png",
         points: [
             "Incorporate subtle, beautiful Islamic or religious motifs (e.g., Bismillah calligraphy, subtle mosque patterns or mandalas).",
             "Maintain an elegant implementation that acts as an accent rather than a distraction.",
@@ -39,7 +39,7 @@ const tips = [
     },
     {
         title: "Maintain Clean & Balanced Layout",
-        image: "/images/red-and-gold-two-column-marriage-biodata-format-example.webp",
+        image: "/images/new-templates/beautiful-leafs-effect-marriage-biodata.png",
         points: [
             "Establish proper text alignment (typically left-aligned for data, center for headings).",
             "Pick a maximum of two complimentary, elegant fonts to ensure reading comfort.",

@@ -101,8 +101,8 @@ export function WhyPeopleLoveUs() {
                             style={{ zIndex: 10 }}
                         >
                             <Image
-                                src="/images/traditional-theme-marriage-biodata-format.webp"
-                                alt="Traditional Biodata Template"
+                                src="/images/new-templates/beautiful-green-and-off-white-marriage-biodata-contrast.png"
+                                alt="Beautiful Green Biodata Template"
                                 fill
                                 className="object-cover"
                             />
@@ -116,8 +116,8 @@ export function WhyPeopleLoveUs() {
                             style={{ zIndex: 20 }}
                         >
                             <Image
-                                src="/images/flowers-marriage-biodata-format.webp"
-                                alt="Floral Biodata Template"
+                                src="/images/new-templates/beautiful-light-green-and-arted-dark-green-marriage-biodata-contrast.png"
+                                alt="Beautiful Art Biodata Template"
                                 fill
                                 className="object-cover"
                             />
@@ -131,8 +131,8 @@ export function WhyPeopleLoveUs() {
                             style={{ zIndex: 30 }}
                         >
                             <Image
-                                src="/images/elegant-marriage-biodata-sample-boy.webp"
-                                alt="Elegant Biodata Template"
+                                src="/images/new-templates/beautiful-golden-border-marriage-biodata.png"
+                                alt="Golden Border Biodata Template"
                                 fill
                                 className="object-cover"
                             />

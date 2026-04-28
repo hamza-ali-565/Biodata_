@@ -1,7 +1,8 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 
 const Hero3D = dynamic(() => import('./Hero3D').then((mod) => mod.Hero3D), {
@@ -21,6 +22,22 @@ export function Hero() {
   const cardRotateY = useTransform(scrollYProgress, [0, 1], [0, -15]);
   const cardScale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
   const cardOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+
+  const heroImages = [
+    "/images/new-templates/beautiful-golden-border-marriage-biodata.png",
+    "/images/new-templates/beautiful-leafs-effect-marriage-biodata.png",
+    "/images/new-templates/beautiful-traditional-marriage-biodata.png",
+    "/images/new-templates/beautiful-green-border-art-marriage-biodata.png"
+  ];
+  
+  const [currentHeroImg, setCurrentHeroImg] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentHeroImg((prev) => (prev + 1) % heroImages.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section
@@ -97,26 +114,28 @@ export function Hero() {
       >
         <div className="absolute -left-5 top-6 h-14 w-14 rounded-2xl bg-gradient-to-tr from-brand-400/60 via-brand-500/40 to-rose-500/40 blur-2xl" />
         <div className="absolute -right-4 bottom-4 h-16 w-16 rounded-full bg-gradient-to-tr from-sky-400/40 via-cyan-400/30 to-emerald-400/40 blur-2xl" />
-        <div className="relative flex w-full max-w-sm flex-col gap-3 rounded-2xl bg-slate-950/80 p-5 text-xs text-slate-100 shadow-2xl border border-white/5">
-          <div className="flex gap-3">
-            <div className="h-16 w-16 rounded-xl bg-slate-800/80" aria-hidden />
-            <div className="space-y-1.5">
-              <div className="h-2.5 w-28 rounded-full bg-slate-700" />
-              <div className="h-2 w-24 rounded-full bg-slate-800" />
-              <div className="h-2 w-20 rounded-full bg-slate-800" />
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-2 mt-2">
-            <div className="space-y-1">
-              <div className="h-2 w-16 rounded-full bg-slate-700" />
-              <div className="h-2 w-20 rounded-full bg-slate-800" />
-            </div>
-            <div className="space-y-1">
-              <div className="h-2 w-16 rounded-full bg-slate-700" />
-              <div className="h-2 w-20 rounded-full bg-slate-800" />
-            </div>
-          </div>
-          <div className="mt-2 h-10 w-full rounded-xl bg-gradient-to-r from-brand-500/80 to-rose-500/80 shadow-inner" />
+        
+        <div className="relative w-full max-w-[280px] aspect-[1/1.414] rounded-2xl bg-slate-950/80 shadow-2xl border border-white/10 overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentHeroImg}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 1.05 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              className="absolute inset-0 w-full h-full"
+            >
+              <Image
+                src={heroImages[currentHeroImg]}
+                alt="Premium Marriage Biodata Template"
+                fill
+                className="object-cover"
+                priority
+                sizes="280px"
+              />
+            </motion.div>
+          </AnimatePresence>
+          <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none" />
         </div>
       </motion.div>
     </section>
