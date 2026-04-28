@@ -64,6 +64,14 @@ export const THEME_OPTIONS = [
 ];
 
 export const TEMPLATE_DEFINITIONS = [
+  { id: "TemplateCrimsonSwirlContrast", name: "Crimson Swirl Contrast", style: "premium", description: "Elegant red swirl flourishes with classic personal, family, and contact blocks.", layout: "TemplateCrimsonSwirlContrast", defaultThemeId: "maroon" },
+  { id: "TemplateGreenBorderArt", name: "Green Border Art", style: "premium", description: "Elegant green decorative border with right-side portrait layout.", layout: "TemplateGreenBorderArt", defaultThemeId: "emerald" },
+  { id: "TemplateBeautifulGoldenBorder", name: "Beautiful Golden Border", style: "premium", description: "Classic beige biodata with decorative golden border and side photo.", layout: "TemplateBeautifulGoldenBorder", defaultThemeId: "gold" },
+  { id: "TemplateLeafsEffect", name: "Leafs Effect", style: "premium", description: "Nature-inspired leaf corner artwork with oval portrait and classic sections.", layout: "TemplateLeafsEffect", defaultThemeId: "emerald" },
+  { id: "TemplateSeaGreenContrast", name: "Sea Green Contrast", style: "premium", description: "Soft sea-green hero panel with profile oval and clean family background section.", layout: "TemplateSeaGreenContrast", defaultThemeId: "emerald" },
+  { id: "TemplateGreenOffWhiteContrast", name: "Green Off-White Contrast", style: "premium", description: "Dark green hero with circular photo and clean off-white detail sections.", layout: "TemplateGreenOffWhiteContrast", defaultThemeId: "emerald" },
+  { id: "TemplateSoberBlueGold", name: "Sober Blue Gold", style: "premium", description: "Formal navy and gold biodata style with framed portrait and classic sectioning.", layout: "TemplateSoberBlueGold", defaultThemeId: "royal-blue" },
+  { id: "TemplateBeautifulTraditional", name: "Beautiful Traditional", style: "premium", description: "Mosque-style arch with Islamic geometric patterns and central golden photo frame.", layout: "TemplateBeautifulTraditional", defaultThemeId: "emerald" },
   { id: "TemplateModern", name: "Modern", style: "modern", description: "Clean, photo-right layout suitable for professionals.", layout: "TemplateModern", defaultThemeId: "royal-blue" },
   { id: "TemplateClassic", name: "Classic", style: "traditional", description: "Traditional layout with top-centered photo.", layout: "TemplateClassic", defaultThemeId: "maroon" },
   { id: "TemplateElegant", name: "Elegant", style: "elegant", description: "Sophisticated left-photo with full border.", layout: "TemplateElegant", defaultThemeId: "classic-black" },
@@ -86,5 +94,6 @@ export const TEMPLATE_DEFINITIONS = [
   { id: "TemplateSample2", name: "Autumn Leaves", style: "elegant", description: "Soft watercolor background with maple leaves.", layout: "TemplateSample2", defaultThemeId: "gold" },
   { id: "TemplateSample3", name: "Royal Gold", style: "premium", description: "Ornate gold curly borders with a beige background.", layout: "TemplateSample3", defaultThemeId: "gold" },
   { id: "TemplateSample4", name: "Floral Mandala", style: "premium", description: "Purple and orange flourish corner borders.", layout: "TemplateSample4", defaultThemeId: "maroon" },
+
 ];
 
