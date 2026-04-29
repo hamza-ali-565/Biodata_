@@ -6,14 +6,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const templates = [
-    { id: 1, src: "/images/new-templates/beautiful-golden-border-marriage-biodata.png", alt: "beautiful-golden-border-marriage-biodata", isNew: true },
-    { id: 2, src: "/images/new-templates/beautiful-green-and-off-white-marriage-biodata-contrast.png", alt: "beautiful-green-and-off-white-marriage-biodata-contrast", isNew: true },
-    { id: 3, src: "/images/new-templates/beautiful-green-border-art-marriage-biodata.png", alt: "beautiful-green-border-art-marriage-biodata", isNew: true },
-    { id: 4, src: "/images/new-templates/beautiful-leafs-effect-marriage-biodata.png", alt: "beautiful-leafs-effect-marriage-biodata", isNew: true },
-    { id: 5, src: "/images/new-templates/beautiful-light-green-and-arted-dark-green-marriage-biodata-contrast.png", alt: "beautiful-light-green-and-arted-dark-green-marriage-biodata-contrast", isNew: true },
-    { id: 6, src: "/images/new-templates/beautiful-sea-green-and-off-white-marriage-biodata-contrast.png", alt: "beautiful-sea-green-and-off-white-marriage-biodata-contrast", isNew: true },
-    { id: 7, src: "/images/new-templates/beautiful-sober-marriage-biodata.png", alt: "beautiful-sober-marriage-biodata", isNew: true },
-    { id: 8, src: "/images/new-templates/beautiful-traditional-marriage-biodata.png", alt: "beautiful-traditional-marriage-biodata", isNew: true },
+    { id: 1, src: "/images/new-templates/beautiful-golden-border-marriage-biodata.webp", alt: "beautiful-golden-border-marriage-biodata", isNew: true },
+    { id: 2, src: "/images/new-templates/beautiful-green-and-off-white-marriage-biodata-contrast.webp", alt: "beautiful-green-and-off-white-marriage-biodata-contrast", isNew: true },
+    { id: 3, src: "/images/new-templates/beautiful-green-border-art-marriage-biodata.webp", alt: "beautiful-green-border-art-marriage-biodata", isNew: true },
+    { id: 4, src: "/images/new-templates/beautiful-leafs-effect-marriage-biodata.webp", alt: "beautiful-leafs-effect-marriage-biodata", isNew: true },
+    { id: 5, src: "/images/new-templates/beautiful-light-green-and-arted-dark-green-marriage-biodata-contrast.webp", alt: "beautiful-light-green-and-arted-dark-green-marriage-biodata-contrast", isNew: true },
+    { id: 6, src: "/images/new-templates/beautiful-sea-green-and-off-white-marriage-biodata-contrast.webp", alt: "beautiful-sea-green-and-off-white-marriage-biodata-contrast", isNew: true },
+    { id: 7, src: "/images/new-templates/beautiful-sober-marriage-biodata.webp", alt: "beautiful-sober-marriage-biodata", isNew: true },
+    { id: 8, src: "/images/new-templates/beautiful-traditional-marriage-biodata.webp", alt: "beautiful-traditional-marriage-biodata", isNew: true },
 ];
 
 export function TemplateCarousel() {

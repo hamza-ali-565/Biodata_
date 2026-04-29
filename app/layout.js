@@ -1,5 +1,8 @@
 import Script from "next/script";
+import { Inter } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata = {
   title: "Biodata for Marriage | Create Beautiful Marriage Biodata in Minutes",
@@ -58,7 +61,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-RR32YP6S8H"
@@ -81,4 +84,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-

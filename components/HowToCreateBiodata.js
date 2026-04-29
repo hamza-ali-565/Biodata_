@@ -117,7 +117,7 @@ export function HowToCreateBiodata() {
                     className="relative w-full max-w-5xl mx-auto rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-white/[0.02]"
                 >
                     <Image
-                        src="/images/how-to-create-marriage-biodata.png"
+                        src="/images/how-to-create-marriage-biodata.webp"
                         alt="Step-by-step guide to create a marriage biodata infographic"
                         width={1200}
                         height={630}

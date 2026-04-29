@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { toCanvas } from "html-to-image";
-import jsPDF from "jspdf";
 import Link from "next/link";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
@@ -54,6 +52,7 @@ export function TemplateDetailClient({ templateId }) {
     await new Promise(resolve => setTimeout(resolve, 100));
 
     try {
+      const { toCanvas } = await import("html-to-image");
       const element = previewRef.current.querySelector("[data-preview-root]") || previewRef.current;
       const canvas = await toCanvas(element, {
         pixelRatio: 2,
@@ -84,6 +83,7 @@ export function TemplateDetailClient({ templateId }) {
         // Center horizontally if scaled down by height
         const xOffset = (a4Width - imgWidth) / 2;
 
+        const { default: jsPDF } = await import("jspdf");
         const pdf = new jsPDF({
           orientation: "portrait",
           unit: "mm",

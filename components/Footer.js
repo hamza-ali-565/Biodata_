@@ -9,7 +9,7 @@ export function Footer() {
         <div className="space-y-2 md:col-span-2">
           <div className="flex flex-col gap-2 mb-4">
             <Image
-              src="/images/Marriage-biodata-hub.png"
+              src="/images/Marriage-biodata-hub.webp"
               alt="Marriage Biodata Hub Logo"
               width={200}
               height={60}

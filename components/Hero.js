@@ -24,10 +24,10 @@ export function Hero() {
   const cardOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   const heroImages = [
-    "/images/new-templates/beautiful-golden-border-marriage-biodata.png",
-    "/images/new-templates/beautiful-leafs-effect-marriage-biodata.png",
-    "/images/new-templates/beautiful-traditional-marriage-biodata.png",
-    "/images/new-templates/beautiful-green-border-art-marriage-biodata.png"
+    "/images/new-templates/beautiful-golden-border-marriage-biodata.webp",
+    "/images/new-templates/beautiful-leafs-effect-marriage-biodata.webp",
+    "/images/new-templates/beautiful-traditional-marriage-biodata.webp",
+    "/images/new-templates/beautiful-green-border-art-marriage-biodata.webp"
   ];
   
   const [currentHeroImg, setCurrentHeroImg] = useState(0);

@@ -32,7 +32,7 @@ export function Header() {
       >
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/images/Marriage-biodata-hub.png"
+            src="/images/Marriage-biodata-hub.webp"
             alt="Marriage Biodata Hub Logo"
             width={240}
             height={80}
