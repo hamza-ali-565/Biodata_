@@ -16,7 +16,7 @@ export function BiodataFormatExplanation() {
             <div className="absolute top-10 left-10 w-72 h-72 rounded-full bg-brand-500/10 blur-[100px] pointer-events-none" />
             <div className="absolute bottom-10 right-10 w-72 h-72 rounded-full bg-rose-500/10 blur-[100px] pointer-events-none" />
 
-            <div className="max-w-[1400px] mx-auto relative z-10">
+            <div className="w-full mx-auto relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-4 sm:text-4xl">
                         Marriage Biodata Format: Designing Your Best Introduction

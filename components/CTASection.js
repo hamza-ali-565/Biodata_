@@ -19,7 +19,7 @@ export function CTASection() {
     };
 
     return (
-        <section className="mt-14 mb-20 max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
+        <section className="mt-14 mb-20 w-full mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

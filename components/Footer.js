@@ -4,71 +4,117 @@ import { SocialLinks } from "./SocialLinks";
 
 export function Footer() {
   return (
-    <footer className="mt-16 border-t border-white/5 pt-8 text-sm text-slate-300/80">
-      <div className="grid gap-8 md:grid-cols-4">
-        <div className="space-y-2 md:col-span-2">
-          <div className="flex flex-col gap-2 mb-4">
-            <Image
-              src="/images/Marriage-biodata-hub.webp"
-              alt="Marriage Biodata Hub Logo"
-              width={200}
-              height={60}
-              className="h-22 w-auto object-contain drop-shadow-md"
-            />
-            {/* <p className="text-sm font-semibold text-slate-50">
-              Biodata for Marriage
-            </p> */}
+    <footer className="mt-14 w-full relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl">
+      <div className="w-full mx-auto px-8 sm:px-12 lg:px-16 pt-20 lg:pt-24 pb-12 relative z-10">
+
+        {/* Top Footer Section */}
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 mb-20">
+
+          {/* Brand & About (Left Side - Anchor) */}
+          <div className="lg:w-5/12 space-y-8 lg:pr-16">
+            <Link href="/" className="inline-block">
+              <Image
+                src="/images/Marriage-biodata-hub.webp"
+                alt="Marriage Biodata Hub Logo"
+                width={280}
+                height={85}
+                className="h-16 w-auto object-contain drop-shadow-sm transition-opacity hover:opacity-90"
+              />
+            </Link>
+            <p className="text-base leading-relaxed text-slate-300 max-w-sm font-medium">
+              A marriage biodata maker app dedicated to providing the easiest way to create your biodata in minutes. We understand why it’s important to find the right match, as it is about to spend the whole life with someone, and creating biodata is the initial stage of this long, beautiful walk. Our app will help you to create biodata in three easy steps: fill, choose, and download.
+            </p>
+            <p className="text-base leading-relaxed text-slate-300 max-w-sm font-medium">
+              We have the most popular, elegant, and premium template to make a strong impact. We hope you will enjoy our service, and once again, best of luck with your future endeavor.
+            </p>
           </div>
-          <p className="max-w-md text-xs leading-relaxed text-slate-300/80">
-            A marriage biodata maker app dedicated to providing the easiest way to create your biodata in minutes. We understand why it’s important to find the right match, as it is about to spend the whole life with someone, and creating biodata is the initial stage of this long, beautiful walk. Our app will help you to create biodata in three easy steps: fill, choose, and download.
-          </p>
-          <p className="max-w-md text-xs leading-relaxed text-slate-300/80">
-            We have the most popular, elegant, and premium template to make a strong impact. We hope you will enjoy our service, and once again, best of luck with your future endeavor.
-          </p>
-        </div>
-        <div>
-          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-400">
-            Quick links
-          </p>
-          <ul className="space-y-2 text-xs">
-            <li>
-              <Link href="/templates" className="hover:text-white">
+
+          {/* Links (Right Side - Evenly Spaced Columns) */}
+          <div className="lg:w-7/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 lg:gap-8 pt-4 lg:pt-0">
+
+            {/* Column 1: Platform */}
+            <div className="space-y-8">
+              <h3 className="text-white font-bold tracking-wider uppercase text-sm">
+                Platform
+              </h3>
+              <ul className="space-y-5">
+                <li>
+                  <Link href="/" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/templates" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium">
+                    Template Library
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#biodata-form" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium">
+                    Biodata Builder
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 2: Templates */}
+            <div className="space-y-8">
+              <h3 className="text-white font-bold tracking-wider uppercase text-sm">
                 Templates
-              </Link>
-            </li>
-            {/* <li>
-              <Link href="/blog" className="hover:text-white">
-                Blog
-              </Link>
-            </li> */}
-          </ul>
+              </h3>
+              <ul className="space-y-5">
+                <li>
+                  <Link href="/templates" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium">
+                    Traditional Biodata
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/templates" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium">
+                    Modern & Minimalist
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/templates" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium">
+                    Premium & Gold
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 3: Support & Legal */}
+            <div className="space-y-8">
+              <h3 className="text-white font-bold tracking-wider uppercase text-sm">
+                Support & Legal
+              </h3>
+              <ul className="space-y-5">
+                <li>
+                  <Link href="/contact-us" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium">
+                    Contact Us
+                  </Link>
+                </li>
+                <li>
+                  <a href="mailto:support@marriagebiodatahub.com" className="text-base text-slate-400 hover:text-white transition-colors duration-200 block truncate font-medium">
+                    support@marriagebiodatahub.com
+                  </a>
+                </li>
+                <li>
+                  <Link href="/privacy-policy" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium">
+                    Privacy Policy
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+          </div>
         </div>
-        <div>
-          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-400">
-            Legal &amp; contact
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-white/[0.08] flex flex-col md:flex-row items-center justify-between gap-6">
+          <p className="text-sm text-slate-500 font-medium">
+            © {new Date().getFullYear()} Biodata for Marriage. All rights reserved.
           </p>
-          <ul className="space-y-2 text-xs">
-            <li>
-              <Link href="/privacy-policy" className="hover:text-white">
-                Privacy Policy
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact-us" className="hover:text-white">
-                Contact Us
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-white/5 pt-4">
-        <p className="text-xs text-slate-500">
-          © {new Date().getFullYear()} Biodata for Marriage. All rights
-          reserved.
-        </p>
-        <div className="flex items-center gap-3 text-xs">
-          <span className="text-slate-500 mr-2">Follow Us</span>
-          <SocialLinks />
+          <div className="flex items-center gap-6">
+            <SocialLinks />
+          </div>
         </div>
       </div>
     </footer>

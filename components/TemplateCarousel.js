@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -101,13 +102,17 @@ export function TemplateCarousel() {
                 </svg>
             </div>
 
-            <div className="max-w-[1400px] mx-auto relative z-10">
+            <div className="w-full relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-14">
                     <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-4 sm:text-4xl">
                         Beautiful & Elegant Marriage Biodata Templates
                     </h2>
                     <p className="text-sm text-slate-300 sm:text-base font-medium leading-relaxed px-4">
-                        There is a saying that the first impression is the last impression; that’s why choosing the right marriage biodata is important. Here we’re offering you the best templates designed to present your personal, family, and professional details in a clean, well-designed, and attractive way. Select template and create your biodata for marriage.
+                        There is a saying that the first impression is the last impression; that’s why choosing the right marriage biodata is important. Here we’re offering you the{" "}
+                        <Link href="/templates" className="text-brand-400 hover:text-brand-300 transition-colors">
+                            best templates
+                        </Link>{" "}
+                        designed to present your personal, family, and professional details in a clean, well-designed, and attractive way. Select template and create your biodata for marriage.
                     </p>
                     <div className="mt-8 flex justify-center">
                         <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-rose-500 rounded-full" />
@@ -154,7 +159,7 @@ export function TemplateCarousel() {
                                         className="flex-none w-[260px] md:w-[280px] lg:w-[300px] rounded-2xl border border-white/10 bg-slate-900/60 p-2 backdrop-blur-md transition-colors cursor-pointer relative z-10"
                                         style={{ transformStyle: "preserve-3d" }}
                                     >
-                                        <div className="relative aspect-[1/1.414] w-full rounded-xl overflow-hidden bg-slate-950/80 group-hover:bg-slate-900 shadow-inner">
+                                        <Link href="/templates" className="block relative aspect-[1/1.414] w-full rounded-xl overflow-hidden bg-slate-950/80 group-hover:bg-slate-900 shadow-inner">
                                             <Image
                                                 src={template.src}
                                                 alt={template.alt}
@@ -169,7 +174,7 @@ export function TemplateCarousel() {
                                                     </span>
                                                 </div>
                                             )}
-                                        </div>
+                                        </Link>
                                     </motion.div>
                                 ))}
                             </AnimatePresence>

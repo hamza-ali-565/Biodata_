@@ -53,7 +53,7 @@ const itemVariants = {
 
 export function HowToShareBiodata() {
     return (
-        <section className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl max-w-[1400px] mx-auto">
+        <section className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl w-full">
             
             {/* Background Subtle Art */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none blur-[2px]">
@@ -71,7 +71,7 @@ export function HowToShareBiodata() {
             <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-brand-500/10 blur-[90px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-rose-500/10 blur-[90px] pointer-events-none" />
 
-            <div className="relative z-10 max-w-6xl mx-auto">
+            <div className="relative z-10 w-full">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

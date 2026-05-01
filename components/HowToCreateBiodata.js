@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 const steps = [
     {
@@ -49,7 +50,7 @@ export function HowToCreateBiodata() {
     };
 
     return (
-        <section className="mt-14 relative overflow-hidden py-24 px-4 sm:px-8 lg:px-12 rounded-[2.5rem] border border-white/5 bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-slate-950/90 shadow-2xl max-w-[1400px] mx-auto min-h-[900px]">
+        <section className="mt-14 relative overflow-hidden py-24 px-4 sm:px-8 lg:px-12 rounded-[2.5rem] border border-white/5 bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-slate-950/90 shadow-2xl w-full min-h-[900px]">
 
             {/* Wedding/Mehndi Theme Background Art */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none blur-[1px]">
@@ -74,7 +75,7 @@ export function HowToCreateBiodata() {
                 <div className="absolute bottom-0 right-0 w-96 h-96 bg-rose-500/10 blur-[120px] rounded-full mix-blend-screen" />
             </div>
 
-            <div className="relative z-10 max-w-6xl mx-auto flex flex-col gap-16">
+            <div className="relative z-10 w-full flex flex-col gap-16">
 
                 {/* Header Sequence */}
                 <div className="text-center max-w-3xl mx-auto">
@@ -104,7 +105,7 @@ export function HowToCreateBiodata() {
                         viewport={{ once: true }}
                         className="text-slate-300 text-base md:text-xl leading-relaxed"
                     >
-                        Building a marriage biodata is very easy if you follow a clear roadmap. Start with your personal details, introduce yourself in this section, then jump to professional details, describe your professional life, and lastly, describe your family details.
+                        Building a <Link href="/#biodata-form" className="text-brand-400 hover:text-brand-300 transition-colors">marriage biodata</Link> is very easy if you follow a clear roadmap. Start with your personal details, introduce yourself in this section, then jump to professional details, describe your professional life, and lastly, describe your family details.
                     </motion.p>
                 </div>
 

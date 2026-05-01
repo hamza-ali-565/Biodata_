@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function WhyNeedBiodata() {
     return (
-        <section className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl max-w-[1400px] mx-auto">
+        <section className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl w-full">
             {/* Background Art - Abstract Islamic Geometric / Mandala style */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none blur-[1px]">
                 <div className="absolute -top-[10%] -left-[5%] w-64 h-64 md:w-[500px] md:h-[500px] opacity-[0.03] rotate-45 text-white">

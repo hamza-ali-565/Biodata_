@@ -2,25 +2,26 @@
 
 import { motion } from "framer-motion";
 import { Zap, Settings, Layout } from "lucide-react";
+import Link from "next/link";
 
 const features = [
     {
         title: "Easy to use",
-        description: "There is no need to sign up or register. Your biodata for marriage is ready just by entering personal details. And don’t forget to select a beautiful template.",
+        description: <>There is no need to sign up or register. Your <Link href="/#biodata-form" className="text-brand-400 hover:text-brand-300 transition-colors">biodata for marriage</Link> is ready just by entering personal details. And don’t forget to select a <Link href="/templates" className="text-brand-400 hover:text-brand-300 transition-colors">beautiful template</Link>.</>,
         icon: Zap,
         color: "from-amber-400 to-orange-500",
         bg: "bg-amber-500/10"
     },
     {
         title: "Customization made simple",
-        description: "Here, you’ll feel like everything is under your control as you can add new, fully customized fields. After selecting a template, you can also change the theme of the template.",
+        description: <>Here, you’ll feel like everything is under your control as you can add new, fully customized fields. After selecting a <Link href="/templates" className="text-brand-400 hover:text-brand-300 transition-colors">template</Link>, you can also change the theme of the template.</>,
         icon: Settings,
         color: "from-sky-400 to-blue-500",
         bg: "bg-sky-500/10"
     },
     {
         title: "Great Looking Templates",
-        description: "We’ve carefully structured each template to showcase your personal, family, and professional details in the most clear and elegant way. We are offering both simple and stylish layouts, so you can select according to your preference.",
+        description: <>We’ve carefully structured each <Link href="/templates" className="text-brand-400 hover:text-brand-300 transition-colors">template</Link> to showcase your personal, family, and professional details in the most clear and elegant way. We are offering both simple and stylish layouts, so you can select according to your preference.</>,
         icon: Layout,
         color: "from-emerald-400 to-teal-500",
         bg: "bg-emerald-500/10"
@@ -29,7 +30,7 @@ const features = [
 
 export function FeatureBanner() {
     return (
-        <section className="mt-14 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 max-w-[1400px] mx-auto px-6 py-16 sm:px-12 relative overflow-hidden shadow-2xl">
+        <section className="mt-14 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 w-full px-6 py-16 sm:px-12 relative overflow-hidden shadow-2xl">
             {/* Decorative Glows */}
             <div className="absolute top-0 right-1/4 w-80 h-80 rounded-full bg-brand-500/10 blur-[100px] pointer-events-none" />
             <div className="absolute bottom-0 left-1/4 w-80 h-80 rounded-full bg-rose-500/10 blur-[100px] pointer-events-none" />

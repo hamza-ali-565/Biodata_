@@ -23,7 +23,7 @@ const benefits = [
 
 export function BenefitsSection() {
     return (
-        <section className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl max-w-[1400px] mx-auto">
+        <section className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl w-full">
             {/* Soft Wedding/Floral Background Art */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none blur-[1px]">
                 <div className="absolute top-[5%] right-[5%] w-64 h-64 md:w-[400px] md:h-[400px] opacity-[0.03] text-brand-200">
@@ -47,7 +47,7 @@ export function BenefitsSection() {
             <div className="absolute top-0 right-1/4 w-40 h-40 md:w-72 md:h-72 rounded-full bg-brand-500/10 blur-[80px] pointer-events-none" />
             <div className="absolute bottom-0 left-1/4 w-40 h-40 md:w-72 md:h-72 rounded-full bg-rose-500/10 blur-[80px] pointer-events-none" />
 
-            <div className="relative z-10 max-w-6xl mx-auto">
+            <div className="relative z-10 w-full">
                 <div className="text-center mb-7">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

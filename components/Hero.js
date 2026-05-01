@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 
 const Hero3D = dynamic(() => import('./Hero3D').then((mod) => mod.Hero3D), {
@@ -84,7 +85,11 @@ export function Hero() {
             Create & Download Marriage Biodata For Free in Minutes
           </h1>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base font-medium">
-            Create your fully customizable marriage biodata instantly with our free, elegant, popular, and premium templates. We’re just 3 steps away from creating a beautiful biodata for marriage fill information, choose a template & download. No login required, as our services are free, and lastly, best of luck with your new chapter.
+            Create your fully customizable marriage biodata instantly with our{" "}
+            <Link href="/templates" className="text-brand-400 hover:text-brand-300 transition-colors">
+              free, elegant, popular, and premium templates
+            </Link>
+            . We’re just 3 steps away from creating a beautiful biodata for marriage fill information, choose a template & download. No login required, as our services are free, and lastly, best of luck with your new chapter.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4">

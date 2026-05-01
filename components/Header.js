@@ -34,9 +34,9 @@ export function Header() {
           <Image
             src="/images/Marriage-biodata-hub.webp"
             alt="Marriage Biodata Hub Logo"
-            width={240}
-            height={80}
-            className="h-14 sm:h-16 w-auto object-contain drop-shadow-md"
+            width={320}
+            height={100}
+            className="h-16 sm:h-20 w-auto object-contain drop-shadow-md"
             priority
           />
           {/* <span className="text-sm font-semibold tracking-tight text-slate-50 sm:text-base hidden sm:inline-block">
