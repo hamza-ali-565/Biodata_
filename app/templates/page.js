@@ -32,14 +32,14 @@ export default function TemplatesPage() {
         <section className="rounded-3xl border border-white/10 bg-slate-900/80 px-6 py-8 sm:px-10">
           <header className="max-w-2xl">
             <h1 className="text-lg font-semibold tracking-tight text-slate-50 sm:text-xl">
-              Choose your biodata template
+              Trending Marriage Biodata Templates In 2026
             </h1>
             <p className="mt-2 text-sm text-slate-300">
               Explore premium matrimonial biodata designs. Open a template to
               customise fonts, colours and download a high-quality PDF or JPEG.
             </p>
           </header>
-<TemplateList templates={TEMPLATE_DEFINITIONS} />
+          <TemplateList templates={TEMPLATE_DEFINITIONS} />
         </section>
       </main>
       <Footer />

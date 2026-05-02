@@ -87,7 +87,7 @@ export const TEMPLATE_DEFINITIONS = [
   { id: "TemplateVintage", name: "Vintage", style: "traditional", description: "Dashed borders and center photo.", layout: "TemplateVintage", defaultThemeId: "maroon" },
   { id: "TemplateLuxury", name: "Luxury Bold", style: "luxury", description: "Elegant double border styling.", layout: "TemplateLuxury", defaultThemeId: "gold" },
   { id: "TemplateRoyal", name: "Royal", style: "luxury", description: "Premium center alignment.", layout: "TemplateRoyal", defaultThemeId: "emerald" },
-  { id: "TemplateGaneshaClassic", name: "Ganesha Classic", style: "traditional", description: "Classic dual border with Indian Temple motifs.", layout: "TemplateGaneshaClassic", defaultThemeId: "maroon" },
+  { id: "TemplateClassicRoyal", name: "Classic Royal", style: "traditional", description: "Classic dual border with elegant motifs.", layout: "TemplateClassicRoyal", defaultThemeId: "maroon" },
   { id: "TemplateArchMandala", name: "Blue Arch Mandala", style: "premium", description: "Regal blue arch framing with mandala background.", layout: "TemplateArchMandala", defaultThemeId: "royal-blue" },
   { id: "TemplateMaroonPillars", name: "Maroon & Gold", style: "premium", description: "Deep maroon background with gold rounded headers.", layout: "TemplateMaroonPillars", defaultThemeId: "maroon" },
   { id: "TemplateSample1", name: "Cyan Diamond", style: "modern", description: "Cyan-Yellow gradient with black diamond borders.", layout: "TemplateSample1", defaultThemeId: "classic-black" },

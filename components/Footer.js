@@ -14,7 +14,7 @@ export function Footer() {
           <div className="lg:w-5/12 space-y-8 lg:pr-16">
             <Link href="/" className="inline-block">
               <Image
-                src="/images/Marriage-biodata-hub.webp"
+                src="/images/Logo-of-marriage-biodata-hub.png"
                 alt="Marriage Biodata Hub Logo"
                 width={280}
                 height={85}

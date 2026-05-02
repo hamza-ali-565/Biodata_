@@ -1,4 +1,4 @@
-export function TemplateGaneshaClassic({ data, theme = {}, fontFamily }) {
+export function TemplateClassicRoyal({ data, theme = {}, fontFamily }) {
     const { personal, family, contact } = data || {};
 
     // A classic orange/brown palette from the image
@@ -20,22 +20,7 @@ export function TemplateGaneshaClassic({ data, theme = {}, fontFamily }) {
                 <CornerOrnament position="bottom-left" color={primaryColor} />
                 <CornerOrnament position="bottom-right" color={primaryColor} />
 
-                {/* Header: Ganesha & Om Shree Ganeshay Namah */}
-                <div className="flex flex-col items-center justify-center mb-8">
-                    <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        {/* Simple Ganesha interpretation for SVG */}
-                        <path d="M50 10C35 10 25 25 25 40C25 55 40 60 45 75C45 80 50 90 60 90C70 90 75 80 75 70C75 60 65 55 60 60C55 65 55 70 55 70" stroke={primaryColor} strokeWidth="3" strokeLinecap="round" />
-                        <path d="M40 35C30 35 20 40 15 50C10 60 15 75 25 80" stroke={primaryColor} strokeWidth="3" strokeLinecap="round" />
-                        <path d="M60 35C70 35 80 40 85 50C90 60 85 75 75 80" stroke={primaryColor} strokeWidth="3" strokeLinecap="round" />
-                        <circle cx="50" cy="30" r="5" fill={primaryColor} />
-                        <path d="M40 15Q50 5 60 15" stroke={primaryColor} strokeWidth="3" fill="none" />
-                        <path d="M45 20L55 20" stroke={primaryColor} strokeWidth="2" strokeLinecap="round" />
-                    </svg>
-                    <h2 className="mt-3 text-lg font-bold tracking-wider" style={{ color: primaryColor }}>
-                        ॐ श्री गणेशाय नमः
-                    </h2>
-                </div>
-
+                {/* Header Section Removed */}
                 <div className="flex flex-col md:flex-row gap-8">
                     {/* Details Column */}
                     <div className="flex-1 space-y-8">

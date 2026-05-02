@@ -13,7 +13,7 @@ export { TemplateDark } from "./TemplateDark";
 export { TemplateVintage } from "./TemplateVintage";
 export { TemplateLuxury } from "./TemplateLuxury";
 export { TemplateRoyal } from "./TemplateRoyal";
-export { TemplateGaneshaClassic } from "./TemplateGaneshaClassic";
+export { TemplateClassicRoyal } from "./TemplateClassicRoyal";
 export { TemplateArchMandala } from "./TemplateArchMandala";
 export { TemplateMaroonPillars } from "./TemplateMaroonPillars";
 export { TemplateSample1 } from "./TemplateSample1";
