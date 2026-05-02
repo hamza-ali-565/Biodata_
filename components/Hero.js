@@ -136,6 +136,7 @@ export function Hero() {
                 fill
                 className="object-cover"
                 priority
+                fetchPriority="high"
                 sizes="280px"
               />
             </motion.div>

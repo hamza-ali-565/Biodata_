@@ -74,8 +74,8 @@ export function TemplateCarousel() {
             className="mt-14 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 py-16 px-4 sm:px-8 relative overflow-hidden shadow-2xl"
         >
             {/* Interactive Glowing Atmospheric Blurs matching HowItWorks */}
-            <div className="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-brand-500/10 blur-[100px] pointer-events-none" />
-            <div className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full bg-rose-500/10 blur-[100px] pointer-events-none" />
+            <div className="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-brand-500/10 blur-[100px] pointer-events-none hidden md:block" />
+            <div className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full bg-rose-500/10 blur-[100px] pointer-events-none hidden md:block" />
 
             {/* Asian Wedding Theme Background Art: Mandala Motif */}
             <div className="absolute top-[5%] left-[-5%] w-48 h-48 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] opacity-[0.03] pointer-events-none rotate-12">

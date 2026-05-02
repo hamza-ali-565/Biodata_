@@ -39,17 +39,17 @@ export function Footer() {
               </h3>
               <ul className="space-y-5">
                 <li>
-                  <Link href="/" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium">
+                  <Link href="/" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium p-2 inline-block min-h-[44px] flex items-center">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/templates" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium">
+                  <Link href="/templates" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium p-2 inline-block min-h-[44px] flex items-center">
                     Template Library
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#biodata-form" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium">
+                  <Link href="/#biodata-form" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium p-2 inline-block min-h-[44px] flex items-center">
                     Biodata Builder
                   </Link>
                 </li>
@@ -63,17 +63,17 @@ export function Footer() {
               </h3>
               <ul className="space-y-5">
                 <li>
-                  <Link href="/templates" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium">
+                  <Link href="/templates" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium p-2 inline-block min-h-[44px] flex items-center">
                     Traditional Biodata
                   </Link>
                 </li>
                 <li>
-                  <Link href="/templates" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium">
+                  <Link href="/templates" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium p-2 inline-block min-h-[44px] flex items-center">
                     Modern & Minimalist
                   </Link>
                 </li>
                 <li>
-                  <Link href="/templates" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium">
+                  <Link href="/templates" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium p-2 inline-block min-h-[44px] flex items-center">
                     Premium & Gold
                   </Link>
                 </li>
@@ -87,17 +87,17 @@ export function Footer() {
               </h3>
               <ul className="space-y-5">
                 <li>
-                  <Link href="/contact-us" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium">
+                  <Link href="/contact-us" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium p-2 inline-block min-h-[44px] flex items-center">
                     Contact Us
                   </Link>
                 </li>
                 <li>
-                  <a href="mailto:support@marriagebiodatahub.com" className="text-base text-slate-400 hover:text-white transition-colors duration-200 block truncate font-medium">
+                  <a href="mailto:support@marriagebiodatahub.com" className="text-base text-slate-400 hover:text-white transition-colors duration-200 truncate font-medium p-2 inline-block min-h-[44px] flex items-center">
                     support@marriagebiodatahub.com
                   </a>
                 </li>
                 <li>
-                  <Link href="/privacy-policy" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium">
+                  <Link href="/privacy-policy" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium p-2 inline-block min-h-[44px] flex items-center">
                     Privacy Policy
                   </Link>
                 </li>

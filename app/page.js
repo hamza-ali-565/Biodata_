@@ -5,17 +5,18 @@ import { Footer } from "../components/Footer";
 import { Hero } from "../components/Hero";
 import { HowToCreateBiodata } from "../components/HowToCreateBiodata";
 
+import { BiodataFormatExplanation } from "../components/BiodataFormatExplanation";
+import { FeatureBanner } from "../components/FeatureBanner";
+import { WhyNeedBiodata } from "../components/WhyNeedBiodata";
+import { BenefitsSection } from "../components/BenefitsSection";
+import { WhyPeopleLoveUs } from "../components/WhyPeopleLoveUs";
+import { HowToShareBiodata } from "../components/HowToShareBiodata";
+import { DesignTips } from "../components/DesignTips";
+import { CTASection } from "../components/CTASection";
+
 const TemplateCarousel = dynamic(() => import('../components/TemplateCarousel').then(mod => mod.TemplateCarousel));
 const BiodataForm = dynamic(() => import('../components/BiodataForm').then(mod => mod.BiodataForm));
-const BiodataFormatExplanation = dynamic(() => import('../components/BiodataFormatExplanation').then(mod => mod.BiodataFormatExplanation));
-const FeatureBanner = dynamic(() => import('../components/FeatureBanner').then(mod => mod.FeatureBanner));
-const WhyNeedBiodata = dynamic(() => import('../components/WhyNeedBiodata').then(mod => mod.WhyNeedBiodata));
-const BenefitsSection = dynamic(() => import('../components/BenefitsSection').then(mod => mod.BenefitsSection));
-const WhyPeopleLoveUs = dynamic(() => import('../components/WhyPeopleLoveUs').then(mod => mod.WhyPeopleLoveUs));
-const HowToShareBiodata = dynamic(() => import('../components/HowToShareBiodata').then(mod => mod.HowToShareBiodata));
-const DesignTips = dynamic(() => import('../components/DesignTips').then(mod => mod.DesignTips));
 const FAQ = dynamic(() => import('../components/FAQ').then(mod => mod.FAQ));
-const CTASection = dynamic(() => import('../components/CTASection').then(mod => mod.CTASection));
 
 export const metadata = {
   alternates: {
@@ -24,20 +25,59 @@ export const metadata = {
 };
 
 export default function Home() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: "Biodata for Marriage",
-    description: "Create beautiful, modern marriage biodata cards in minutes. Choose from premium templates, customise details, and download in PDF or JPEG formats.",
-    url: "https://marriagebiodatahub.com",
-    applicationCategory: "UtilityApplication",
-    operatingSystem: "Any",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      name: "Biodata for Marriage",
+      description: "Create beautiful, modern marriage biodata cards in minutes. Choose from premium templates, customise details, and download in PDF or JPEG formats.",
+      url: "https://marriagebiodatahub.com",
+      applicationCategory: "UtilityApplication",
+      operatingSystem: "Any",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+      },
     },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Biodata for Marriage",
+      url: "https://marriagebiodatahub.com",
+      logo: "https://marriagebiodatahub.com/images/Logo-of-marriage-biodata-hub.png",
+      sameAs: []
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Biodata for Marriage",
+      url: "https://marriagebiodatahub.com",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      name: "How to Create a Marriage Biodata",
+      description: "Create your marriage biodata in 3 easy steps.",
+      step: [
+        {
+          "@type": "HowToStep",
+          name: "Fill Details",
+          text: "Enter your personal, family, and contact information into the biodata form."
+        },
+        {
+          "@type": "HowToStep",
+          name: "Choose a Template",
+          text: "Select from our premium and elegant biodata templates."
+        },
+        {
+          "@type": "HowToStep",
+          name: "Download",
+          text: "Download your completed marriage biodata in PDF or JPEG format."
+        }
+      ]
+    }
+  ];
 
   return (
     <>

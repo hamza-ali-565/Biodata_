@@ -30,7 +30,7 @@ export function Header() {
         className="flex items-center justify-between gap-4 border-b border-white/5 pb-3 pt-3"
         aria-label="Main navigation"
       >
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2 p-2" aria-label="Go to Homepage">
           <Image
             src="/images/Logo-of-marriage-biodata-hub.png"
             alt="Marriage Biodata Hub Logo"
@@ -39,9 +39,6 @@ export function Header() {
             className="h-16 sm:h-20 w-auto object-contain drop-shadow-md"
             priority
           />
-          {/* <span className="text-sm font-semibold tracking-tight text-slate-50 sm:text-base hidden sm:inline-block">
-            Biodata for Marriage
-          </span> */}
         </Link>
         <div className="flex items-center gap-6">
           <ul className="hidden items-center gap-5 text-xs font-medium text-slate-200/80 sm:flex sm:text-sm">
@@ -49,7 +46,7 @@ export function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="transition-colors hover:text-white"
+                  className="transition-colors hover:text-white p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
                 >
                   {item.label}
                 </Link>
@@ -58,7 +55,8 @@ export function Header() {
           </ul>
           <button
             onClick={handleCreateBiodata}
-            className="rounded-full bg-gradient-to-r from-brand-400 via-brand-500 to-rose-500 px-4 py-2 text-xs font-semibold text-white shadow-soft transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 sm:text-sm"
+            aria-label="Create Biodata Form"
+            className="rounded-full bg-gradient-to-r from-brand-400 via-brand-500 to-rose-500 px-4 py-2 text-xs font-semibold text-white shadow-soft transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 sm:text-sm min-h-[44px] flex items-center justify-center"
           >
             Create Biodata
           </button>
