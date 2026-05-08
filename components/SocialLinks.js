@@ -5,7 +5,7 @@ export function SocialLinks() {
     <div className="flex items-center gap-3">
       {/* Facebook */}
       <a
-        href="https://facebook.com"
+        href="https://www.facebook.com/profile.php?id=61589515107640"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-slate-900/50 text-slate-300 hover:border-brand-400 hover:text-brand-400 hover:scale-110 transition-all duration-300 shadow-md"
@@ -18,7 +18,7 @@ export function SocialLinks() {
 
       {/* Pinterest */}
       <a
-        href="https://pinterest.com"
+        href="https://www.pinterest.com/marriagebiodatahub/"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-slate-900/50 text-slate-300 hover:border-rose-400 hover:text-rose-400 hover:scale-110 transition-all duration-300 shadow-md"
@@ -31,7 +31,7 @@ export function SocialLinks() {
 
       {/* Email / Gmail */}
       <a
-        href="mailto:support@marriagebiodatahub.com"
+        href="mailto:marriagebiodatahub@gmail.com"
         className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-slate-900/50 text-slate-300 hover:border-amber-400 hover:text-amber-400 hover:scale-110 transition-all duration-300 shadow-md"
         aria-label="Send us an Email"
       >

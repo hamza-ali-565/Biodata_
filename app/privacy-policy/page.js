@@ -2,8 +2,8 @@ import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 
 export const metadata = {
-  title: "Privacy Policy | Biodata for Marriage",
-  description: "Read the Privacy Policy for Biodata for Marriage. We prioritize your privacy with local storage data management.",
+  title: "Privacy Policy | Marriage Biodata Hub",
+  description: "Read the Privacy Policy for Marriage Biodata Hub. We prioritize your privacy with local storage data management.",
   alternates: {
     canonical: "/privacy-policy",
   },
@@ -26,8 +26,8 @@ export default function PrivacyPolicy() {
         <section className="space-y-10">
           <div>
             <h2 className="text-xl md:text-2xl font-semibold text-brand-400 mb-3">1. Introduction</h2>
-            <p className="mb-2">Welcome to <strong>Biodata for Marriage</strong>. Your privacy is critically important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our website to create and download your marriage biodata.</p>
-            <p>By using Biodata for Marriage, you agree to the collection and use of information in accordance with this policy.</p>
+            <p className="mb-2">Welcome to <strong>Marriage Biodata Hub</strong>. Your privacy is critically important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our website to create and download your marriage biodata.</p>
+            <p>By using Marriage Biodata Hub, you agree to the collection and use of information in accordance with this policy.</p>
           </div>
 
           <div>
@@ -96,7 +96,7 @@ export default function PrivacyPolicy() {
 
           <div>
             <h2 className="text-xl md:text-2xl font-semibold text-brand-400 mb-3">8. Children’s Information</h2>
-            <p>Biodata for Marriage does not knowingly target or collect personal identifiable information from children under the age of 13. Given the nature of marriage-related services, our platform is intended for use by adults or families acting on behalf of adults.</p>
+            <p>Marriage Biodata Hub does not knowingly target or collect personal identifiable information from children under the age of 13. Given the nature of marriage-related services, our platform is intended for use by adults or families acting on behalf of adults.</p>
           </div>
 
           <div>
@@ -107,8 +107,8 @@ export default function PrivacyPolicy() {
           <div className="bg-slate-900/80 rounded-2xl p-6 sm:p-8 text-center border border-white/5">
             <h2 className="text-xl md:text-2xl font-semibold text-brand-400 mb-3">10. Contact Information</h2>
             <p className="mb-2">If you have any questions or suggestions regarding our Privacy Policy, or if you need clarification on how your data is processed locally, please contact us at:</p>
-            <a href="mailto:info@marriagebiodatahub.com" className="text-white font-medium hover:text-brand-400 transition-colors inline-block mt-2">
-              info@marriagebiodatahub.com
+            <a href="mailto:marriagebiodatahub@gmail.com" className="text-white font-medium hover:text-brand-400 transition-colors inline-block mt-2">
+              marriagebiodatahub@gmail.com
             </a>
           </div>
         </section>

@@ -5,8 +5,8 @@ import { ContactSubmitButton } from "../../components/ContactSubmitButton";
 import { SocialLinks } from "../../components/SocialLinks";
 
 export const metadata = {
-  title: "Contact Us | Biodata for Marriage",
-  description: "Get in touch with the Biodata for Marriage team for support, feature requests, or inquiries. We are here to help you craft the perfect marriage profile.",
+  title: "Contact Us | Marriage Biodata Hub",
+  description: "Get in touch with the Marriage Biodata Hub team for support, feature requests, or inquiries. We are here to help you craft the perfect marriage profile.",
   alternates: {
     canonical: "/contact-us",
   },
@@ -53,8 +53,8 @@ export default function ContactUs() {
                 <div>
                   <h3 className="text-lg font-medium text-white mb-1">Direct Email</h3>
                   <p className="text-sm leading-relaxed text-slate-400 mb-2">Prefer to send an email from your own client? Send us a message anytime directly at:</p>
-                  <a href="mailto:support@marriagebiodatahub.com" className="text-brand-400 font-semibold hover:text-brand-300 transition-colors">
-                    support@marriagebiodatahub.com
+                  <a href="mailto:marriagebiodatahub@gmail.com" className="text-brand-400 font-semibold hover:text-brand-300 transition-colors">
+                    marriagebiodatahub@gmail.com
                   </a>
                 </div>
               </div>

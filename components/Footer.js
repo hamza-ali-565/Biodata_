@@ -92,8 +92,8 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <a href="mailto:support@marriagebiodatahub.com" className="text-base text-slate-400 hover:text-white transition-colors duration-200 truncate font-medium p-2 inline-block min-h-[44px] flex items-center">
-                    support@marriagebiodatahub.com
+                  <a href="mailto:marriagebiodatahub@gmail.com" className="text-base text-slate-400 hover:text-white transition-colors duration-200 truncate font-medium p-2 inline-block min-h-[44px] flex items-center">
+                    marriagebiodatahub@gmail.com
                   </a>
                 </li>
                 <li>
@@ -110,7 +110,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/[0.08] flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-sm text-slate-500 font-medium">
-            © {new Date().getFullYear()} Biodata for Marriage. All rights reserved.
+            © {new Date().getFullYear()} Marriage Biodata Hub. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <SocialLinks />

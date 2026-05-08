@@ -29,7 +29,7 @@ export default function Home() {
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      name: "Biodata for Marriage",
+      name: "Marriage Biodata Hub",
       description: "Create beautiful, modern marriage biodata cards in minutes. Choose from premium templates, customise details, and download in PDF or JPEG formats.",
       url: "https://marriagebiodatahub.com",
       applicationCategory: "UtilityApplication",
@@ -43,15 +43,18 @@ export default function Home() {
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      name: "Biodata for Marriage",
+      name: "Marriage Biodata Hub",
       url: "https://marriagebiodatahub.com",
       logo: "https://marriagebiodatahub.com/images/Logo-of-marriage-biodata-hub.png",
-      sameAs: []
+      sameAs: [
+        "https://www.facebook.com/profile.php?id=61589515107640",
+        "https://www.pinterest.com/marriagebiodatahub/"
+      ]
     },
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      name: "Biodata for Marriage",
+      name: "Marriage Biodata Hub",
       url: "https://marriagebiodatahub.com",
     },
     {

@@ -58,7 +58,7 @@ export function ContactSubmitButton() {
       // 5. Build Mailto link and Trigger Client
       const mailtoSubject = encodeURIComponent(`Contact Form: ${subject} from ${fullName}`);
       const mailtoBody = encodeURIComponent(`Name: ${fullName}\nEmail: ${email}\n\nMessage:\n${message}`);
-      window.location.href = `mailto:alimuhammadhamza402@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+      window.location.href = `mailto:marriagebiodatahub@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
 
       // Reset form visually
       inputs.forEach((id) => {

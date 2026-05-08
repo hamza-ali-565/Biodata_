@@ -16,20 +16,20 @@ export async function generateMetadata({ params }) {
   const url = `https://marriagebiodatahub.com/templates/${templateId}`;
 
   return {
-    title: `${safeName} | Biodata for Marriage`,
+    title: `${safeName} | Marriage Biodata Hub`,
     description: safeDescription,
     alternates: {
       canonical: url,
     },
     openGraph: {
-      title: `${safeName} | Biodata for Marriage`,
+      title: `${safeName} | Marriage Biodata Hub`,
       description: safeDescription,
       url: url,
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${safeName} | Biodata for Marriage`,
+      title: `${safeName} | Marriage Biodata Hub`,
       description: safeDescription,
     },
   };

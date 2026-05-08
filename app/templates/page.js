@@ -5,21 +5,21 @@ import { TEMPLATE_DEFINITIONS } from "../../components/templatesConfig";
 import { TemplateList } from "../../components/TemplateList";
 
 export const metadata = {
-  title: "Marriage Biodata Templates | Biodata for Marriage",
+  title: "Marriage Biodata Templates | Marriage Biodata Hub",
   description:
     "Browse premium marriage biodata templates in minimal, traditional, modern and elegant styles. Download your biodata as PDF or JPEG.",
   alternates: {
     canonical: "/templates",
   },
   openGraph: {
-    title: "Marriage Biodata Templates | Biodata for Marriage",
+    title: "Marriage Biodata Templates | Marriage Biodata Hub",
     description: "Browse premium marriage biodata templates in minimal, traditional, modern and elegant styles. Download your biodata as PDF or JPEG.",
     url: "/templates",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marriage Biodata Templates | Biodata for Marriage",
+    title: "Marriage Biodata Templates | Marriage Biodata Hub",
     description: "Browse premium marriage biodata templates in minimal, traditional, modern and elegant styles. Download your biodata as PDF or JPEG.",
   },
 };

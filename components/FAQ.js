@@ -39,9 +39,9 @@ const faqs = [
     },
     {
         question: "How and where can I reach out for queries or feedback?",
-        answer: "You can contact us anytime by sending an email to support@biodatamaker.app.",
+        answer: "You can contact us anytime by sending an email to marriagebiodatahub@gmail.com.",
         isHtml: true,
-        htmlAnswer: "You can contact us anytime by sending an email to <a href='mailto:support@biodatamaker.app' class='text-brand-400 hover:text-brand-300 underline underline-offset-2'>support@biodatamaker.app</a>."
+        htmlAnswer: "You can contact us anytime by sending an email to <a href='mailto:marriagebiodatahub@gmail.com' class='text-brand-400 hover:text-brand-300 underline underline-offset-2'>marriagebiodatahub@gmail.com</a>."
     },
     {
         question: "Can I see examples of marriage biodata formats?",
