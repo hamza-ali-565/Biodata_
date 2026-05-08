@@ -36,7 +36,7 @@ export const metadata = {
     siteName: "Marriage Biodata Hub",
     images: [
       {
-        url: "/images/og-image.png",
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Marriage Biodata Hub Preview",
@@ -50,7 +50,7 @@ export const metadata = {
     title: "Create & Download Marriage Biodata For Free | Marriage Biodata Hub",
     description:
       "Create beautiful marriage biodata online with modern and traditional templates. Design, customize, and download biodata in minutes.",
-    images: ["/images/og-image.png"],
+    images: ["/images/og-image.jpg"],
   },
   robots: {
     index: true,
