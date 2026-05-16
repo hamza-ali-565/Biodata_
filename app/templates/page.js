@@ -1,8 +1,6 @@
-import Link from "next/link";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
-import { TEMPLATE_DEFINITIONS } from "../../components/templatesConfig";
-import { TemplateList } from "../../components/TemplateList";
+import { AnimatedTemplateSections } from "./AnimatedTemplateSections";
 
 export const metadata = {
   title: "Marriage Biodata Templates | Marriage Biodata Hub",
@@ -28,19 +26,8 @@ export default function TemplatesPage() {
   return (
     <>
       <Header />
-      <main className="mt-2 flex-1">
-        <section className="rounded-3xl border border-white/10 bg-slate-900/80 px-6 py-8 sm:px-10">
-          <header className="max-w-2xl">
-            <h1 className="text-lg font-semibold tracking-tight text-slate-50 sm:text-xl">
-              Trending Marriage Biodata Templates In 2026
-            </h1>
-            <p className="mt-2 text-sm text-slate-300">
-              Explore premium matrimonial biodata designs. Open a template to
-              customise fonts, colours and download a high-quality PDF or JPEG.
-            </p>
-          </header>
-          <TemplateList templates={TEMPLATE_DEFINITIONS} />
-        </section>
+      <main className="mt-2 flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+        <AnimatedTemplateSections />
       </main>
       <Footer />
     </>
