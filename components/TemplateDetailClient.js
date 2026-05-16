@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { TemplatePreview } from "./TemplatePreview";
+import { ResponsivePreviewScaler } from "./ResponsivePreviewScaler";
 import {
   STORAGE_KEY,
   TEMPLATE_DEFINITIONS,
@@ -24,6 +25,7 @@ export function TemplateDetailClient({ templateId }) {
   const [isExporting, setIsExporting] = useState(null);
   const previewRef = useRef(null);
 
+  // Load saved data
   useEffect(() => {
     if (typeof window === "undefined") return;
     const stored = window.localStorage.getItem(STORAGE_KEY);
@@ -127,8 +129,8 @@ export function TemplateDetailClient({ templateId }) {
   return (
     <>
       <Header />
-      <main className="mt-2 flex-1 flex flex-col lg:flex-row gap-6 p-4 md:px-10">
-        <aside className="w-full lg:w-[320px] flex-shrink-0 bg-slate-900/60 rounded-3xl border border-white/10 p-5 shadow-2xl h-[calc(100vh-140px)] flex flex-col">
+      <main className="mt-2 flex-1 flex flex-col lg:flex-row gap-6 p-4 md:px-10 overflow-x-hidden min-w-0">
+        <aside className="w-full lg:w-[320px] flex-shrink-0 bg-slate-900/60 rounded-3xl border border-white/10 p-5 shadow-2xl h-auto max-h-[38vh] lg:max-h-none lg:h-[calc(100vh-140px)] flex flex-col min-w-0">
           <h2 className="text-lg font-bold text-white mb-4 tracking-tight">Select Template</h2>
           <div className="grid gap-4 overflow-y-auto pr-2 pb-10 styled-scrollbar">
             {TEMPLATE_DEFINITIONS.map((tpl) => (
@@ -152,7 +154,7 @@ export function TemplateDetailClient({ templateId }) {
           </div>
         </aside>
 
-        <section className="flex-1 flex flex-col bg-slate-900/60 rounded-3xl border border-white/10 px-6 py-8 shadow-2xl relative overflow-hidden min-h-[calc(100vh-140px)]">
+        <section className="flex-1 flex flex-col bg-slate-900/60 rounded-3xl border border-white/10 px-4 py-6 sm:px-6 sm:py-8 shadow-2xl relative overflow-hidden min-h-0 min-w-0 lg:min-h-[calc(100vh-140px)]">
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-brand-500/5 blur-[100px] pointer-events-none" />
 
           <div className="flex flex-wrap items-start justify-between gap-6 relative z-10 mb-8">
@@ -200,32 +202,34 @@ export function TemplateDetailClient({ templateId }) {
             </div>
           </div>
 
-          <div className="flex-1 flex items-center justify-center bg-slate-950/40 rounded-2xl border border-white/5 p-8 overflow-y-auto relative z-10 shadow-inner">
-            <TemplatePreview
-              ref={previewRef}
-              data={data}
-              template={template}
-              theme={selectedTheme}
-              fontFamily={selectedFont.css}
-            />
+          <div className="flex-1 min-h-0 flex flex-col bg-slate-950/60 lg:bg-slate-950/40 rounded-2xl border border-white/5 w-full max-w-full h-auto overflow-x-hidden overflow-y-auto overscroll-contain max-h-[min(72dvh,920px)] lg:max-h-none relative z-10 shadow-inner backdrop-blur-[2px] lg:backdrop-blur-none">
+            <ResponsivePreviewScaler>
+              <TemplatePreview
+                ref={previewRef}
+                data={data}
+                template={template}
+                theme={selectedTheme}
+                fontFamily={selectedFont.css}
+              />
+            </ResponsivePreviewScaler>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center justify-between gap-3 text-xs relative z-10 border-t border-white/10 pt-6">
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs relative z-10 border-t border-white/10 pt-6 w-full">
             <button
               onClick={() => {
                 sessionStorage.setItem("scrollToForm", "true");
                 window.location.href = "/";
               }}
-              className="inline-flex text-xs font-medium text-brand-300 underline-offset-4 hover:underline transition-colors"
+              className="inline-flex text-xs font-medium text-brand-300 underline-offset-4 hover:underline transition-colors whitespace-nowrap"
             >
               ← Back to Edit Details
             </button>
-            <div className="flex gap-3">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <button
                 type="button"
                 onClick={() => handleExport("pdf")}
                 disabled={!data || isExporting !== null}
-                className="inline-flex items-center rounded-full bg-gradient-to-r from-slate-100 to-white px-6 py-2.5 text-xs font-semibold text-slate-900 shadow-[0_0_15px_rgba(255,255,255,0.1)] transition hover:scale-105 disabled:cursor-not-allowed disabled:opacity-60"
+                className="inline-flex justify-center items-center rounded-full bg-gradient-to-r from-slate-100 to-white px-6 py-3 sm:py-2.5 text-xs font-semibold text-slate-900 shadow-[0_0_15px_rgba(255,255,255,0.1)] transition hover:scale-105 disabled:cursor-not-allowed disabled:opacity-60 w-full sm:w-auto"
               >
                 {isExporting === "pdf" ? "Processing PDF…" : "Download PDF"}
               </button>
@@ -233,7 +237,7 @@ export function TemplateDetailClient({ templateId }) {
                 type="button"
                 onClick={() => handleExport("jpeg")}
                 disabled={!data || isExporting !== null}
-                className="inline-flex items-center rounded-full border border-slate-500 bg-slate-900/50 px-6 py-2.5 text-xs font-semibold text-slate-100 transition hover:border-slate-300 hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-60"
+                className="inline-flex justify-center items-center rounded-full border border-slate-500 bg-slate-900/50 px-6 py-3 sm:py-2.5 text-xs font-semibold text-slate-100 transition hover:border-slate-300 hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-60 w-full sm:w-auto"
               >
                 {isExporting === "jpeg" ? "Processing JPEG…" : "Download JPEG"}
               </button>
