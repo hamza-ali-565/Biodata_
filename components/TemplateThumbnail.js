@@ -58,14 +58,11 @@ export function TemplateThumbnail({ templateDefinition }) {
         );
     }
 
-    // To fit standard A4-like proportions (e.g., w-[450px]) into our thumbnail box 
-    // without losing quality, we scale it natively using Tailwind transform
+    // Reverted to EXACT original desktop styling for lg breakpoint
+    // Fixed mobile overflow using absolute centering and responsive scale
     return (
-        <div className="relative w-full h-[300px] overflow-hidden bg-slate-300 rounded-t-2xl pointer-events-none select-none flex justify-center border-b border-white/10 group-hover:brightness-105 transition-all">
-            <div
-                className="origin-top flex justify-center pt-4"
-                style={{ transform: "scale(0.55)", width: "450px" }}
-            >
+        <div className="relative w-full h-[250px] sm:h-[280px] lg:h-[300px] overflow-hidden bg-slate-300 rounded-t-2xl pointer-events-none select-none flex justify-center border-b border-white/10 group-hover:brightness-105 transition-all">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 pt-4 flex justify-center origin-top transform scale-[0.45] sm:scale-[0.50] lg:scale-[0.55]" style={{ width: "450px" }}>
                 <div className="shadow-2xl">
                     <TemplateComponent data={DEMO_DATA} theme={theme} fontFamily="Playfair Display, serif" />
                 </div>
