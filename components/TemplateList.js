@@ -22,9 +22,9 @@ export function TemplateList({ templates }) {
 
             <div className="p-4 sm:p-5 md:p-6 lg:p-5 flex-1 flex flex-col">
               <div className="space-y-1 lg:space-y-0">
-                <h2 className="text-base lg:text-[15px] font-bold text-slate-50 group-hover:text-brand-400 transition-colors line-clamp-1 lg:line-clamp-none">
+                <h3 className="text-base lg:text-[15px] font-bold text-slate-50 group-hover:text-brand-400 transition-colors line-clamp-1 lg:line-clamp-none">
                   {template.name}
-                </h2>
+                </h3>
                 <p className="mt-1 lg:mt-1.5 text-[10px] font-semibold uppercase tracking-widest text-slate-500 truncate">
                   {template.style}
                 </p>

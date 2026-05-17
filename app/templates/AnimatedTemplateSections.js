@@ -50,7 +50,11 @@ export function AnimatedTemplateSections() {
         animate="visible" 
         variants={fadeUpVariant}
         className="rounded-3xl border border-white/10 bg-slate-900/80 px-6 py-8 sm:px-10"
+        aria-labelledby="template-library-heading"
       >
+        <h2 id="template-library-heading" className="sr-only">
+          Browse Marriage Biodata Templates
+        </h2>
         <TemplateList templates={TEMPLATE_DEFINITIONS} />
       </motion.section>
 

@@ -59,12 +59,12 @@ export function TemplateBeautifulGoldenBorder({ data, theme = {}, fontFamily }) 
         <div className="grid grid-cols-[1.45fr_0.95fr] gap-6">
           <div className="pt-5">
             <OrnamentDivider color={accent} compact />
-            <h1
+            <div
               className="mt-3 text-center text-5xl font-semibold uppercase leading-none tracking-[0.08em]"
               style={{ color: textHeading }}
             >
               Biodata
-            </h1>
+            </div>
             <OrnamentDivider color={accent} className="mt-3" />
           </div>
 
@@ -138,12 +138,12 @@ export function TemplateBeautifulGoldenBorder({ data, theme = {}, fontFamily }) 
 function TemplateSection({ title, color, lineColor, className = "", children }) {
   return (
     <section className={className}>
-      <h2
+      <div
         className="text-[17px] font-bold uppercase tracking-wide"
         style={{ color }}
       >
         {title}
-      </h2>
+      </div>
       <div className="mb-3 mt-1 flex max-w-[190px] items-center gap-2">
         <div className="h-px flex-1" style={{ backgroundColor: `${lineColor}80` }} />
         <svg

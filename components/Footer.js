@@ -34,9 +34,9 @@ export function Footer() {
 
             {/* Column 1: Platform */}
             <div className="space-y-8">
-              <h3 className="text-white font-bold tracking-wider uppercase text-sm">
+              <p className="text-white font-bold tracking-wider uppercase text-sm">
                 Platform
-              </h3>
+              </p>
               <ul className="space-y-5">
                 <li>
                   <Link href="/" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium p-2 inline-block min-h-[44px] flex items-center">
@@ -58,9 +58,9 @@ export function Footer() {
 
             {/* Column 2: Templates */}
             <div className="space-y-8">
-              <h3 className="text-white font-bold tracking-wider uppercase text-sm">
+              <p className="text-white font-bold tracking-wider uppercase text-sm">
                 Templates
-              </h3>
+              </p>
               <ul className="space-y-5">
                 <li>
                   <Link href="/templates" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium p-2 inline-block min-h-[44px] flex items-center">
@@ -82,9 +82,9 @@ export function Footer() {
 
             {/* Column 3: Support & Legal */}
             <div className="space-y-8">
-              <h3 className="text-white font-bold tracking-wider uppercase text-sm">
+              <p className="text-white font-bold tracking-wider uppercase text-sm">
                 Support & Legal
-              </h3>
+              </p>
               <ul className="space-y-5">
                 <li>
                   <Link href="/contact-us" className="text-base text-slate-400 hover:text-white transition-colors duration-200 font-medium p-2 inline-block min-h-[44px] flex items-center">

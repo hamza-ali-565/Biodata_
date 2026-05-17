@@ -54,9 +54,9 @@ export function TemplateSoberBlueGold({ data, theme = {}, fontFamily }) {
       <CornerBracket position="bottom-right" color={navy} />
 
       <div className="relative z-10 px-8 pt-3">
-        <h1 className="text-center text-[46px] font-bold uppercase tracking-wide" style={{ color: navy }}>
+        <div className="text-center text-[46px] font-bold uppercase tracking-wide" style={{ color: navy }}>
           Biodata
-        </h1>
+        </div>
         <OrnamentLine color={gold} className="mt-1" />
 
         <div className="mt-3 grid grid-cols-[1.12fr_0.88fr] gap-5">
@@ -106,9 +106,9 @@ export function TemplateSoberBlueGold({ data, theme = {}, fontFamily }) {
 function Section({ title, headingColor, lineColor, className = "", children }) {
   return (
     <section className={className}>
-      <h2 className="text-[17px] font-bold uppercase tracking-wide" style={{ color: headingColor }}>
+      <div className="text-[17px] font-bold uppercase tracking-wide" style={{ color: headingColor }}>
         {title}
-      </h2>
+      </div>
       <OrnamentLine color={lineColor} short className="mt-1" />
       <div className="mt-2.5 space-y-1.5">{children}</div>
     </section>

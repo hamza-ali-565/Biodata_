@@ -78,9 +78,9 @@ export function TemplateBeautifulTraditional({ data, theme = {}, fontFamily }) {
         </div>
 
         {/* Name */}
-        <h1 className="mt-4 max-w-[480px] text-center text-[36px] font-bold leading-tight tracking-wide" style={{ color: gold }}>
+        <div className="mt-4 max-w-[480px] text-center text-[36px] font-bold leading-tight tracking-wide" style={{ color: gold }}>
           {personal?.name || "Your Name"}
-        </h1>
+        </div>
 
         <div className="mt-6 flex w-full flex-col space-y-6">
           <Section title="Personal Details" color={gold}>
@@ -131,9 +131,9 @@ function Section({ title, color, children }) {
     <section className="w-full">
       <div className="mb-3 flex items-center justify-center">
         <DecorativeLine color={color} />
-        <h2 className="mx-4 text-[17px] font-bold uppercase tracking-widest" style={{ color }}>
+        <div className="mx-4 text-[17px] font-bold uppercase tracking-widest" style={{ color }}>
           {title}
-        </h2>
+        </div>
         <DecorativeLine color={color} reversed />
       </div>
       {children}

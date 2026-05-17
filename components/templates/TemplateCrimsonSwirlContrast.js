@@ -59,9 +59,9 @@ export function TemplateCrimsonSwirlContrast({ data, theme = {}, fontFamily }) {
       <SideSwirls side="right" color={accent} />
 
       <div className="relative z-10 px-8 pt-4">
-        <h1 className="text-[56px] italic leading-none" style={{ color: heading, fontFamily: '"Playfair Display", serif' }}>
+        <div className="text-[56px] italic leading-none" style={{ color: heading, fontFamily: '"Playfair Display", serif' }}>
           Biodata
-        </h1>
+        </div>
 
         <Section title="Personal Details" color={heading}>
           <div className="grid grid-cols-[1.1fr_0.9fr] gap-4">
@@ -115,9 +115,9 @@ export function TemplateCrimsonSwirlContrast({ data, theme = {}, fontFamily }) {
 function Section({ title, color, className = "", children }) {
   return (
     <section className={className}>
-      <h2 className="text-[17px] font-bold" style={{ color }}>
+      <div className="text-[17px] font-bold" style={{ color }}>
         {title}
-      </h2>
+      </div>
       <div className="mt-1 flex max-w-[150px] items-center gap-1.5">
         <div className="h-px flex-1" style={{ backgroundColor: `${color}66` }} />
         <svg width="22" height="8" viewBox="0 0 44 16" fill="none" xmlns="http://www.w3.org/2000/svg">

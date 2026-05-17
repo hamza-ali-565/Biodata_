@@ -64,9 +64,9 @@ export function TemplateGreenOffWhiteContrast({ data, theme = {}, fontFamily }) 
           </div>
 
           <div className="pt-1">
-            <h1 className="text-[50px] font-semibold leading-none">
+            <div className="text-[50px] font-semibold leading-none">
               {personal?.name || "Your Name"}
-            </h1>
+            </div>
             <div className="mt-2 h-[2px] w-[82px] bg-[#d7ddd5]" />
 
             <div className="mt-4 space-y-1.5 text-[13px] leading-relaxed text-[#edf2eb]">
@@ -168,9 +168,9 @@ function SectionTitle({ title, icon, color, className = "" }) {
       <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border-2" style={{ color, borderColor: color }}>
         <SectionIcon type={icon} />
       </span>
-      <h2 className="text-[17px] font-bold uppercase tracking-wide" style={{ color }}>
+      <div className="text-[17px] font-bold uppercase tracking-wide" style={{ color }}>
         {title}
-      </h2>
+      </div>
     </div>
   );
 }

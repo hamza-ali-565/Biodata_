@@ -20,14 +20,14 @@ export function TemplateCentered({ data, theme, fontFamily }) {
         )}
 
         <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-2">Marriage Biodata</p>
-        <h1 className="text-3xl font-serif" style={{ color: textHeading }}>{personal.name || "Your Name"}</h1>
+        <div className="text-3xl font-serif" style={{ color: textHeading }}>{personal.name || "Your Name"}</div>
       </div>
 
 
       <div className="p-6 pt-2 grid gap-5 flex-1 text-[11px] leading-relaxed">
         <section>
           <div className="flex items-center gap-2 mb-3">
-            <h2 className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Personal Details</h2>
+            <div className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Personal Details</div>
             <div className="h-px flex-1 opacity-50" style={{ backgroundColor: accentSoft }}></div>
           </div>
           <div className="grid grid-cols-2 gap-x-4 gap-y-2">
@@ -47,7 +47,7 @@ export function TemplateCentered({ data, theme, fontFamily }) {
 
         <section>
           <div className="flex items-center gap-2 mb-3">
-            <h2 className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Family Details</h2>
+            <div className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Family Details</div>
             <div className="h-px flex-1 opacity-50" style={{ backgroundColor: accentSoft }}></div>
           </div>
           <div className="grid gap-2">
@@ -62,7 +62,7 @@ export function TemplateCentered({ data, theme, fontFamily }) {
 
         <section>
           <div className="flex items-center gap-2 mb-3">
-            <h2 className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Contact</h2>
+            <div className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Contact</div>
             <div className="h-px flex-1 opacity-50" style={{ backgroundColor: accentSoft }}></div>
           </div>
           <div className="grid gap-2">

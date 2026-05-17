@@ -78,9 +78,9 @@ export function TemplateClassicRoyal({ data, theme = {}, fontFamily }) {
 function Section({ title, children, color }) {
     return (
         <div className="mb-6">
-            <h3 className="text-sm font-bold tracking-wide uppercase mb-4" style={{ color }}>
+            <div className="text-sm font-bold tracking-wide uppercase mb-4" style={{ color }}>
                 {title}
-            </h3>
+            </div>
             <div className="space-y-2.5">
                 {children}
             </div>

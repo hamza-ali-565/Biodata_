@@ -39,9 +39,9 @@ export function TemplateMaroonPillars({ data, theme = {}, fontFamily }) {
                         {/* Header section with Name hidden here if photo is present, or shown if no photo */}
                         {!data?.photoDataUrl && (
                             <div className="text-center md:text-left mb-8">
-                                <h1 className="text-4xl font-bold uppercase tracking-wider text-white">
+                                <div className="text-4xl font-bold uppercase tracking-wider text-white">
                                     {personal?.name || "Your Name"}
-                                </h1>
+                                </div>
                             </div>
                         )}
 
@@ -89,9 +89,9 @@ export function TemplateMaroonPillars({ data, theme = {}, fontFamily }) {
                                     className="w-full h-full object-cover"
                                 />
                             </div>
-                            <h1 className="text-2xl font-bold uppercase tracking-widest text-center text-white drop-shadow-md">
+                            <div className="text-2xl font-bold uppercase tracking-widest text-center text-white drop-shadow-md">
                                 {personal?.name || "Your Name"}
-                            </h1>
+                            </div>
                         </div>
                     )}
 
@@ -109,9 +109,9 @@ function Section({ title, children, accentColor }) {
                 className="inline-block px-8 py-2.5 rounded-full mb-6 shadow-lg shadow-black/20"
                 style={{ backgroundColor: accentColor }}
             >
-                <h2 className="text-[16px] font-bold text-white tracking-widest font-serif drop-shadow-sm uppercase">
+                <div className="text-[16px] font-bold text-white tracking-widest font-serif drop-shadow-sm uppercase">
                     {title}
-                </h2>
+                </div>
             </div>
 
             {/* Content */}

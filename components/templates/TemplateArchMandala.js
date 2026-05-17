@@ -63,12 +63,12 @@ export function TemplateArchMandala({ data, theme = {}, fontFamily }) {
                     )}
 
                     {/* Name */}
-                    <h1
+                    <div
                         className="mt-6 text-3xl md:text-5xl font-bold uppercase tracking-widest text-center"
                         style={{ color: primaryColor }}
                     >
                         {personal?.name || "Your Name"}
-                    </h1>
+                    </div>
 
                     {/* Ornate Divider */}
                     <OrnateDivider color={primaryColor} />

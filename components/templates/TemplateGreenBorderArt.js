@@ -61,9 +61,9 @@ export function TemplateGreenBorderArt({ data, theme = {}, fontFamily }) {
       <SideVine side="right" color={accent} />
 
       <div className="relative z-10 px-8 pt-4">
-        <h1 className="text-center text-[46px] font-bold uppercase tracking-wide" style={{ color: heading }}>
+        <div className="text-center text-[46px] font-bold uppercase tracking-wide" style={{ color: heading }}>
           Bio Data
-        </h1>
+        </div>
         <OrnamentLine color={accent} className="mt-1" />
 
         <div className="mt-4 grid grid-cols-[1.15fr_0.85fr] gap-6">
@@ -133,9 +133,9 @@ export function TemplateGreenBorderArt({ data, theme = {}, fontFamily }) {
 function Section({ title, color, lineColor, className = "", children }) {
   return (
     <section className={className}>
-      <h2 className="text-[17px] font-bold uppercase tracking-wide" style={{ color }}>
+      <div className="text-[17px] font-bold uppercase tracking-wide" style={{ color }}>
         {title}
-      </h2>
+      </div>
       <OrnamentLine color={lineColor} short className="mt-1" />
       <div className="mt-2.5 space-y-1.5">{children}</div>
     </section>

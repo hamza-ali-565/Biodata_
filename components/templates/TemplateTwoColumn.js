@@ -20,7 +20,7 @@ export function TemplateTwoColumn({ data, theme, fontFamily }) {
             <div className="w-32 h-40 rounded-xl object-cover mb-4 shadow-lg bg-slate-100 flex items-center justify-center text-[10px] text-slate-400 border border-dashed border-slate-300">Photo</div>
           )}
 
-          <h1 className="text-lg font-bold mt-2" style={{ color: textHeading }}>{personal.name}</h1>
+          <div className="text-lg font-bold mt-2" style={{ color: textHeading }}>{personal.name}</div>
           <p className="text-[10px] uppercase tracking-widest text-slate-600 mt-2">Marriage Biodata</p>
         </div>
         <div className="w-2/3 p-6">
@@ -29,7 +29,7 @@ export function TemplateTwoColumn({ data, theme, fontFamily }) {
           <div className=" grid gap-5 flex-1 text-[11px] leading-relaxed">
             <section>
               <div className="flex items-center gap-2 mb-3">
-                <h2 className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Personal Details</h2>
+                <div className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Personal Details</div>
                 <div className="h-px flex-1 opacity-50" style={{ backgroundColor: accentSoft }}></div>
               </div>
               <div className="grid grid-cols-2 gap-x-4 gap-y-2">
@@ -49,7 +49,7 @@ export function TemplateTwoColumn({ data, theme, fontFamily }) {
 
             <section>
               <div className="flex items-center gap-2 mb-3">
-                <h2 className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Family Details</h2>
+                <div className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Family Details</div>
                 <div className="h-px flex-1 opacity-50" style={{ backgroundColor: accentSoft }}></div>
               </div>
               <div className="grid gap-2">
@@ -64,7 +64,7 @@ export function TemplateTwoColumn({ data, theme, fontFamily }) {
 
             <section>
               <div className="flex items-center gap-2 mb-3">
-                <h2 className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Contact</h2>
+                <div className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Contact</div>
                 <div className="h-px flex-1 opacity-50" style={{ backgroundColor: accentSoft }}></div>
               </div>
               <div className="grid gap-2">

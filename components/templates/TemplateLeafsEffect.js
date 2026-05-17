@@ -56,9 +56,9 @@ export function TemplateLeafsEffect({ data, theme = {}, fontFamily }) {
       <ThinCorner side="bottom-right" color={accent} />
 
       <div className="relative z-10 px-8 pt-4">
-        <h1 className="text-center text-[45px] font-bold uppercase tracking-wide" style={{ color: heading }}>
+        <div className="text-center text-[45px] font-bold uppercase tracking-wide" style={{ color: heading }}>
           Biodata
-        </h1>
+        </div>
 
         <Section title="Personal Information" color={heading} lineColor={accent} className="mt-2">
           <div className="grid grid-cols-[1.1fr_0.9fr] gap-4">
@@ -125,9 +125,9 @@ export function TemplateLeafsEffect({ data, theme = {}, fontFamily }) {
 function Section({ title, color, lineColor, className = "", children }) {
   return (
     <section className={className}>
-      <h2 className="text-[17px] font-bold uppercase tracking-wide text-center" style={{ color }}>
+      <div className="text-[17px] font-bold uppercase tracking-wide text-center" style={{ color }}>
         {title}
-      </h2>
+      </div>
       <OrnamentLine color={lineColor} className="mt-1" />
       <div className="mt-3">{children}</div>
     </section>

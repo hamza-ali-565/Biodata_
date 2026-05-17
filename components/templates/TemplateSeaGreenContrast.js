@@ -59,9 +59,9 @@ export function TemplateSeaGreenContrast({ data, theme = {}, fontFamily }) {
         <div className="relative z-10 grid h-full grid-cols-[1.15fr_0.85fr] gap-5">
           <div className="pt-1">
             <div className="text-[30px] font-semibold leading-none text-[#f2f4f3]">-</div>
-            <h1 className="mt-2 text-[50px] font-bold leading-none text-[#f7f9f8]">
+            <div className="mt-2 text-[50px] font-bold leading-none text-[#f7f9f8]">
               {personal?.name || "Your Name"}
-            </h1>
+            </div>
 
             <div className="mt-6 space-y-2 text-[13px] leading-relaxed">
               {heroRows.map(([label, value]) =>
@@ -101,9 +101,9 @@ export function TemplateSeaGreenContrast({ data, theme = {}, fontFamily }) {
       </section>
 
       <section className="flex-1 bg-[#f7f7f6] px-8 pb-8 pt-6">
-        <h2 className="text-[17px] font-bold" style={{ color: heading }}>
+        <div className="text-[17px] font-bold" style={{ color: heading }}>
           Family Background
-        </h2>
+        </div>
         <ul className="mt-3 space-y-2 text-[13px] leading-relaxed text-[#454545]">
           {familyRows.map(([label, value]) =>
             value ? (
@@ -125,9 +125,9 @@ export function TemplateSeaGreenContrast({ data, theme = {}, fontFamily }) {
           )}
         </ul>
 
-        <h3 className="mt-6 text-[17px] font-bold" style={{ color: heading }}>
+        <div className="mt-6 text-[17px] font-bold" style={{ color: heading }}>
           Contact Details
-        </h3>
+        </div>
         <div className="mt-3 space-y-1.5 text-[13px] leading-relaxed">
           {contactRows.map(([label, value]) =>
             value ? <SimpleRow key={label} label={label} value={value} /> : null
