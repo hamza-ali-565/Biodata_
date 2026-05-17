@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useScrollMotion } from "./ScrollMotionProvider";
 import { LayoutTemplate, User, Users, Camera, Download, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
@@ -38,6 +39,8 @@ const steps = [
 ];
 
 export function HowItWorks() {
+  const { revealProps } = useScrollMotion();
+
   return (
     <section
       aria-labelledby="how-it-works-heading"
@@ -100,13 +103,7 @@ export function HowItWorks() {
             return (
               <motion.div
                 key={step.title}
-                initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
-                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                viewport={{ once: false, margin: "-100px" }}
-                transition={{
-                  duration: 0.8,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
+                {...revealProps(index * 0.04)}
                 className={`relative flex items-start md:items-center w-full ${isLeft ? "md:justify-start" : "md:justify-end"
                   }`}
               >
@@ -144,10 +141,7 @@ export function HowItWorks() {
 
       {/* CTA Footer */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        {...revealProps(0.06)}
         className="mt-20 md:mt-28 text-center relative z-10 flex flex-col items-center"
       >
         <p className="text-slate-300 mb-6 text-lg">Ready to make the perfect first impression?</p>

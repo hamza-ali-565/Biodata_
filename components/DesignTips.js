@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
+import { useScrollMotion } from "./ScrollMotionProvider";
 import Image from "next/image";
 
 const tips = [
@@ -51,6 +52,8 @@ const tips = [
 ];
 
 export function DesignTips() {
+    const { revealProps, revealFromSide } = useScrollMotion();
+
     return (
         <section className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl w-full">
             {/* Background Decor Glows */}
@@ -60,10 +63,7 @@ export function DesignTips() {
             <div className="w-full relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.6 }}
+                        {...revealProps()}
                     >
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-6 sm:text-4xl">
                             Some design tips to create biodata for marriage
@@ -89,10 +89,7 @@ export function DesignTips() {
                             >
                                 {/* Text Content */}
                                 <motion.div
-                                    initial={{ opacity: 0, x: isEven ? -40 : 40 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true, amount: 0.3 }}
-                                    transition={{ duration: 0.6 }}
+                                    {...revealFromSide(isEven ? -16 : 16)}
                                     className="flex-1 space-y-6 w-full"
                                 >
                                     <div className="inline-block px-3 py-1 bg-brand-500/10 border border-brand-500/20 text-brand-400 font-semibold rounded-full text-xs md:text-sm mb-2">
@@ -118,10 +115,7 @@ export function DesignTips() {
 
                                 {/* Visual Element (Mockup) */}
                                 <motion.div
-                                    initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                                    viewport={{ once: true, amount: 0.3 }}
-                                    transition={{ duration: 0.7 }}
+                                    {...revealProps(0.04)}
                                     className="flex-1 w-full max-w-sm lg:max-w-md relative flex justify-center"
                                 >
                                     {/* Accent Decoration behind the image */}

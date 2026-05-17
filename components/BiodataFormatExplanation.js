@@ -2,6 +2,7 @@
 
 import { BookOpen, Scale, SlidersHorizontal } from "lucide-react";
 import { motion } from "framer-motion";
+import { useScrollMotion } from "./ScrollMotionProvider";
 
 const articleSections = [
     {
@@ -27,26 +28,16 @@ const articleSections = [
     },
 ];
 
-const fadeUp = {
-    hidden: { opacity: 0, y: 24 },
-    visible: (delay = 0) => ({
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] },
-    }),
-};
-
 export function BiodataFormatExplanation() {
+    const { revealProps, fadeUp, stagger, viewport } = useScrollMotion();
+
     return (
         <section
             aria-labelledby="biodata-format-heading"
             className="relative mt-14 w-full overflow-hidden"
         >
             <motion.div
-                initial={{ opacity: 0, y: 32 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                {...revealProps()}
                 className="relative rounded-[2rem] p-[1px] shadow-[0_24px_80px_rgba(0,0,0,0.45)] sm:rounded-[2.5rem]"
             >
                 <motion.div
@@ -96,14 +87,16 @@ export function BiodataFormatExplanation() {
 
                     <article className="relative z-10 px-5 py-14 sm:px-10 sm:py-16 lg:px-14 lg:py-20">
                         {/* H2 — Hero title */}
-                        <header className="mx-auto max-w-4xl text-center">
+                        <motion.header
+                            className="mx-auto max-w-4xl text-center"
+                            variants={stagger}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={viewport}
+                        >
                             <motion.h2
                                 id="biodata-format-heading"
                                 variants={fadeUp}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true, amount: 0.4 }}
-                                custom={0}
                                 className="text-3xl font-bold leading-[1.15] tracking-tight sm:text-4xl md:text-5xl lg:text-[3.25rem] lg:leading-[1.1]"
                             >
                                 <span className="bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">
@@ -113,10 +106,6 @@ export function BiodataFormatExplanation() {
 
                             <motion.div
                                 variants={fadeUp}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true, amount: 0.4 }}
-                                custom={0.05}
                                 className="mx-auto mt-6 flex justify-center"
                                 aria-hidden
                             >
@@ -128,23 +117,15 @@ export function BiodataFormatExplanation() {
 
                             <motion.p
                                 variants={fadeUp}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true, amount: 0.4 }}
-                                custom={0.1}
                                 className="mx-auto mt-8 max-w-2xl text-base font-normal leading-[1.85] text-slate-300/95 sm:text-lg sm:leading-[1.9]"
                             >
                                 Presenting biodata for marriage to someone means presenting yourself. Focus on keeping it clean, well-structured, and visually appealing, which should be easy to read to make a strong impression. Selecting the right format is essential so you can highlight the important information without making it messy and confusing.
                             </motion.p>
-                        </header>
+                        </motion.header>
 
                         {/* Visual separator */}
                         <motion.div
-                            variants={fadeUp}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, amount: 0.3 }}
-                            custom={0.15}
+                            {...revealProps()}
                             className="mx-auto my-14 flex max-w-6xl items-center gap-4 sm:my-16 lg:my-20"
                             aria-hidden
                         >
@@ -155,11 +136,7 @@ export function BiodataFormatExplanation() {
 
                         {/* H3 — Section heading */}
                         <motion.div
-                            variants={fadeUp}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, amount: 0.25 }}
-                            custom={0.2}
+                            {...revealProps()}
                             className="relative mx-auto mb-12 max-w-6xl sm:mb-14 lg:mb-16"
                         >
                             <div
@@ -178,17 +155,19 @@ export function BiodataFormatExplanation() {
                         </motion.div>
 
                         {/* H4 article cards */}
-                        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:gap-7 lg:grid-cols-3 lg:gap-8">
+                        <motion.div
+                            className="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:gap-7 lg:grid-cols-3 lg:gap-8"
+                            variants={stagger}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={viewport}
+                        >
                             {articleSections.map((section, index) => {
                                 const Icon = section.icon;
                                 return (
                                     <motion.div
                                         key={index}
                                         variants={fadeUp}
-                                        initial="hidden"
-                                        whileInView="visible"
-                                        viewport={{ once: true, amount: 0.15 }}
-                                        custom={0.25 + index * 0.08}
                                         className={
                                             index === 2
                                                 ? "lg:col-span-1"
@@ -235,7 +214,7 @@ export function BiodataFormatExplanation() {
                                     </motion.div>
                                 );
                             })}
-                        </div>
+                        </motion.div>
                     </article>
                 </motion.div>
             </motion.div>

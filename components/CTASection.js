@@ -2,9 +2,11 @@
 
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { useScrollMotion } from "./ScrollMotionProvider";
 
 export function CTASection() {
     const router = useRouter();
+    const { revealProps } = useScrollMotion();
 
     const scrollToForm = () => {
         if (window.location.pathname !== "/") {
@@ -21,10 +23,7 @@ export function CTASection() {
     return (
         <section className="mt-14 mb-20 w-full mx-auto px-4 sm:px-6 relative z-10">
             <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6 }}
+                {...revealProps()}
                 className="relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-gradient-to-b from-slate-900/80 to-slate-950/80 p-10 md:p-16 text-center shadow-2xl backdrop-blur-xl"
             >
                 {/* Decorative Glows inside the card */}

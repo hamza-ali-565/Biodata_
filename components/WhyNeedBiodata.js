@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useScrollMotion } from "./ScrollMotionProvider";
 
 export function WhyNeedBiodata() {
+    const { revealProps } = useScrollMotion();
+
     return (
         <section className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl w-full">
             {/* Background Art - Abstract Islamic Geometric / Mandala style */}
@@ -35,12 +38,7 @@ export function WhyNeedBiodata() {
             <div className="absolute bottom-10 left-10 w-40 h-40 md:w-72 md:h-72 rounded-full bg-rose-500/10 blur-[80px] pointer-events-none" />
 
             <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center text-center">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.6 }}
-                >
+                <motion.div {...revealProps()}>
                     <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-6 sm:text-4xl leading-tight">
                         Why I should create a matrimonial biodata format?
                     </h2>

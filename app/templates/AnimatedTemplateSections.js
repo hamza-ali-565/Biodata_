@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useScrollMotion } from "../../components/ScrollMotionProvider";
 import NextImage from "next/image";
 import Link from "next/link";
 import { 
@@ -19,18 +20,7 @@ import { TemplateList } from "../../components/TemplateList";
 import { TEMPLATE_DEFINITIONS } from "../../components/templatesConfig";
 
 export function AnimatedTemplateSections() {
-  const fadeUpVariant = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15 }
-    }
-  };
+  const { fadeUp: fadeUpVariant, stagger: staggerContainer, viewport } = useScrollMotion();
 
   return (
     <div className="space-y-12 pb-16">
@@ -68,7 +58,7 @@ export function AnimatedTemplateSections() {
       <motion.section 
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={viewport}
         variants={fadeUpVariant}
         className="relative overflow-hidden rounded-3xl border border-white/5 bg-slate-800/40 px-6 py-12 sm:px-10 lg:px-16"
       >
@@ -95,7 +85,7 @@ export function AnimatedTemplateSections() {
       <motion.section 
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={viewport}
         variants={fadeUpVariant}
         className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900/80 to-slate-800/80 px-6 py-12 sm:px-10 lg:px-16"
       >
@@ -122,7 +112,7 @@ export function AnimatedTemplateSections() {
       <motion.section 
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={viewport}
         variants={staggerContainer}
         className="relative px-2 sm:px-0"
       >
@@ -171,7 +161,7 @@ export function AnimatedTemplateSections() {
       <motion.section 
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={viewport}
         variants={staggerContainer}
         className="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-800/40 px-6 py-12 sm:px-10 lg:px-16"
       >
@@ -234,7 +224,7 @@ export function AnimatedTemplateSections() {
       <motion.section 
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={viewport}
         variants={staggerContainer}
         className="relative pt-12"
       >
@@ -377,7 +367,7 @@ export function AnimatedTemplateSections() {
       <motion.section 
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={viewport}
         variants={staggerContainer}
         className="relative pt-12"
       >

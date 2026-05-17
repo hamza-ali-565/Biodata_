@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useScrollMotion } from "./ScrollMotionProvider";
 import {
     User, Home, Phone, Sparkles, Clock, ArrowRight,
     MapPin, Calendar, Heart, Briefcase, Activity, Droplets,
@@ -36,6 +37,7 @@ const steps = [
 
 export function HowToCreateBiodata() {
     const router = useRouter();
+    const { revealProps } = useScrollMotion();
 
     const scrollToForm = () => {
         if (window.location.pathname !== "/") {
@@ -80,9 +82,7 @@ export function HowToCreateBiodata() {
                 {/* Header Sequence */}
                 <div className="text-center max-w-3xl mx-auto">
                     <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        {...revealProps()}
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/10 text-brand-300 text-sm font-medium mb-6 shadow-sm shadow-brand-500/20"
                     >
                         <Clock className="w-4 h-4" />
@@ -90,19 +90,14 @@ export function HowToCreateBiodata() {
                     </motion.div>
 
                     <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        {...revealProps(0.03)}
                         className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-6"
                     >
                         How to Create a Stunning Marriage Biodata?
                     </motion.h2>
 
                     <motion.p
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ delay: 0.2 }}
-                        viewport={{ once: true }}
+                        {...revealProps(0.06)}
                         className="text-slate-300 text-base md:text-xl leading-relaxed"
                     >
                         Building a <Link href="/#biodata-form" className="text-brand-400 hover:text-brand-300 transition-colors">marriage biodata</Link> is very easy if you follow a clear roadmap. Start with your personal details, introduce yourself in this section, then jump to professional details, describe your professional life, and lastly, describe your family details.
@@ -111,10 +106,7 @@ export function HowToCreateBiodata() {
 
                 {/* Infographic */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 }}
-                    viewport={{ once: true }}
+                    {...revealProps(0.08)}
                     className="relative w-full max-w-5xl mx-auto rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-white/[0.02]"
                 >
                     <Image
@@ -133,10 +125,7 @@ export function HowToCreateBiodata() {
                     {steps.map((step, index) => (
                         <motion.div
                             key={step.id}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
+                            {...revealProps(index * 0.04)}
                             whileHover={{ scale: 1.05 }}
                             className="relative text-left p-6 md:p-8 rounded-[1.5rem] border backdrop-blur-sm transition-all duration-300 border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-brand-500/30 group"
                         >
@@ -294,9 +283,7 @@ export function HowToCreateBiodata() {
 
                 {/* Final CTA */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    {...revealProps()}
                     className="flex justify-center mt-20"
                 >
                     <button
@@ -327,17 +314,7 @@ export function HowToCreateBiodata() {
 
 // Sub-components to keep code clean
 function DetailSection({ children }) {
-    return (
-        <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 0.6 }}
-            className="w-full"
-        >
-            {children}
-        </motion.div>
-    );
+    return <motion.div className="w-full">{children}</motion.div>;
 }
 
 function PanelHeader({ title, desc, icon: Icon }) {

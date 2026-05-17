@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Sparkles, FileImage, FileText } from "lucide-react";
+import { useScrollMotion } from "./ScrollMotionProvider";
 
 const benefits = [
     {
@@ -22,6 +23,8 @@ const benefits = [
 ];
 
 export function BenefitsSection() {
+    const { revealProps } = useScrollMotion();
+
     return (
         <section className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl w-full">
             {/* Soft Wedding/Floral Background Art */}
@@ -49,12 +52,7 @@ export function BenefitsSection() {
 
             <div className="relative z-10 w-full">
                 <div className="text-center mb-7">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.6 }}
-                    >
+                    <motion.div {...revealProps()}>
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-6 sm:text-4xl leading-tight max-w-3xl mx-auto">
                             Advantages of creating a biodata format online?
                         </h2>
@@ -74,10 +72,7 @@ export function BenefitsSection() {
                     {benefits.map((benefit, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ duration: 0.5, delay: index * 0.2 }}
+                            {...revealProps(index * 0.04)}
                             className="flex flex-col items-center md:items-start text-center md:text-left bg-white/[0.02] p-8 rounded-2xl border border-white/[0.05] hover:border-brand-500/30 transition-colors backdrop-blur-sm"
                         >
                             <div className="mb-6 p-4 bg-brand-500/10 rounded-2xl text-brand-400">

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { DownloadCloud, Mail, Link, UploadCloud, Printer, RefreshCw } from "lucide-react";
+import { useScrollMotion } from "./ScrollMotionProvider";
 
 const shareSteps = [
     {
@@ -36,22 +37,9 @@ const shareSteps = [
     },
 ];
 
-const containerVariants = {
-    hidden: { opacity: 0 },
-    show: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.15
-        }
-    }
-};
-
-const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-};
-
 export function HowToShareBiodata() {
+    const { revealProps, stagger, fadeUp, viewport } = useScrollMotion();
+
     return (
         <section className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl w-full">
             
@@ -73,12 +61,7 @@ export function HowToShareBiodata() {
 
             <div className="relative z-10 w-full">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.6 }}
-                    >
+                    <motion.div {...revealProps()}>
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-4 sm:text-4xl">
                             How to share a biodata for marriage online?
                         </h2>
@@ -92,16 +75,16 @@ export function HowToShareBiodata() {
                 </div>
 
                 <motion.div
-                    variants={containerVariants}
+                    variants={stagger}
                     initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.1 }}
+                    whileInView="visible"
+                    viewport={viewport}
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                 >
                     {shareSteps.map((step, index) => (
                         <motion.div
                             key={index}
-                            variants={itemVariants}
+                            variants={fadeUp}
                             whileHover={{ y: -5, transition: { duration: 0.2 } }}
                             className="bg-white/[0.02] border border-white/[0.05] rounded-2xl p-6 sm:p-8 backdrop-blur-sm hover:bg-white/[0.04] hover:border-brand-500/30 transition-all group"
                         >

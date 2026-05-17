@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import { useScrollMotion } from "./ScrollMotionProvider";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -14,6 +15,7 @@ const features = [
 
 export function WhyPeopleLoveUs() {
     const router = useRouter();
+    const { revealProps, revealFromSide } = useScrollMotion();
 
     const scrollToForm = () => {
         if (window.location.pathname !== "/") {
@@ -38,10 +40,7 @@ export function WhyPeopleLoveUs() {
 
                     {/* Left Column: Text & Features */}
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.7 }}
+                        {...revealFromSide(-16)}
                         className="space-y-8"
                     >
                         <div>
@@ -57,10 +56,7 @@ export function WhyPeopleLoveUs() {
                             {features.map((feature, index) => (
                                 <motion.div
                                     key={index}
-                                    initial={{ opacity: 0, y: 10 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: index * 0.15 + 0.3 }}
+                                    {...revealProps(index * 0.03)}
                                     className="flex items-center gap-3"
                                 >
                                     <div className="bg-brand-500/20 p-1 rounded-full text-brand-400">
@@ -84,10 +80,7 @@ export function WhyPeopleLoveUs() {
 
                     {/* Right Column: Floating Templates */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.8 }}
+                        {...revealFromSide(16, 0.05)}
                         className="relative h-[400px] md:h-[500px] flex items-center justify-center -mx-4 lg:mx-0 mt-10 lg:mt-0 perspective-1000"
                     >
                         {/* Background subtle shape */}
