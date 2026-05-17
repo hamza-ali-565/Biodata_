@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata = {
-  title: "Create & Download Marriage Biodata For Free | Marriage Biodata Hub",
+  title: "Create & Download Biodata For Marriage Free | Marriage Biodata Hub",
   description:
     "Create beautiful marriage biodata online with modern and traditional templates. Design, customize, and download biodata in minutes.",
   keywords: [
@@ -29,7 +29,7 @@ export const metadata = {
   },
   metadataBase: new URL("https://marriagebiodatahub.com"),
   openGraph: {
-    title: "Create & Download Marriage Biodata For Free | Marriage Biodata Hub",
+    title: "Create & Download Biodata For Marriage Free | Marriage Biodata Hub",
     description:
       "Create beautiful marriage biodata online with modern and traditional templates. Design, customize, and download biodata in minutes.",
     url: "/",
@@ -47,7 +47,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Create & Download Marriage Biodata For Free | Marriage Biodata Hub",
+    title: "Create & Download Biodata For Marriage Free | Marriage Biodata Hub",
     description:
       "Create beautiful marriage biodata online with modern and traditional templates. Design, customize, and download biodata in minutes.",
     images: ["/images/og-image.jpg"],
