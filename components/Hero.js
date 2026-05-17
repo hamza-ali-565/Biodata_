@@ -30,7 +30,7 @@ export function Hero() {
     "/images/new-templates/beautiful-traditional-marriage-biodata.webp",
     "/images/new-templates/beautiful-green-border-art-marriage-biodata.webp"
   ];
-  
+
   const [currentHeroImg, setCurrentHeroImg] = useState(0);
 
   useEffect(() => {
@@ -82,7 +82,7 @@ export function Hero() {
             id="hero-heading"
             className="text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl lg:leading-[1.15]"
           >
-            Create & Download Marriage Biodata For Free in Minutes
+            Create & Download Biodata For Marriage Free in Minutes
           </h1>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base font-medium">
             Create your fully customizable marriage biodata instantly with our{" "}
@@ -119,7 +119,7 @@ export function Hero() {
       >
         <div className="absolute -left-5 top-6 h-14 w-14 rounded-2xl bg-gradient-to-tr from-brand-400/60 via-brand-500/40 to-rose-500/40 blur-2xl" />
         <div className="absolute -right-4 bottom-4 h-16 w-16 rounded-full bg-gradient-to-tr from-sky-400/40 via-cyan-400/30 to-emerald-400/40 blur-2xl" />
-        
+
         <div className="relative w-full max-w-[280px] aspect-[1/1.414] rounded-2xl bg-slate-950/80 shadow-2xl border border-white/10 overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div
