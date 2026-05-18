@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useScrollMotion } from "../../components/ScrollMotionProvider";
+import { ViewportSection } from "../../components/ViewportSection";
 import NextImage from "next/image";
 import Link from "next/link";
 import { 
@@ -20,7 +21,7 @@ import { TemplateList } from "../../components/TemplateList";
 import { TEMPLATE_DEFINITIONS } from "../../components/templatesConfig";
 
 export function AnimatedTemplateSections() {
-  const { fadeUp: fadeUpVariant, stagger: staggerContainer, viewport } = useScrollMotion();
+  const { fadeUp: fadeUpVariant } = useScrollMotion();
 
   return (
     <div className="space-y-12 pb-16">
@@ -59,10 +60,7 @@ export function AnimatedTemplateSections() {
       </motion.section>
 
       {/* SECTION 2: IMPORTANCE */}
-      <motion.section 
-        initial="hidden"
-        whileInView="visible"
-        viewport={viewport}
+      <ViewportSection
         variants={fadeUpVariant}
         className="relative overflow-hidden rounded-3xl border border-white/5 bg-slate-800/40 px-6 py-12 sm:px-10 lg:px-16"
       >
@@ -83,13 +81,10 @@ export function AnimatedTemplateSections() {
             </p>
           </div>
         </div>
-      </motion.section>
+      </ViewportSection>
 
       {/* SECTION 3: HOW TO SELECT */}
-      <motion.section 
-        initial="hidden"
-        whileInView="visible"
-        viewport={viewport}
+      <ViewportSection
         variants={fadeUpVariant}
         className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900/80 to-slate-800/80 px-6 py-12 sm:px-10 lg:px-16"
       >
@@ -110,16 +105,10 @@ export function AnimatedTemplateSections() {
             </p>
           </div>
         </div>
-      </motion.section>
+      </ViewportSection>
 
       {/* SECTION 4: THINGS TO AVOID */}
-      <motion.section 
-        initial="hidden"
-        whileInView="visible"
-        viewport={viewport}
-        variants={staggerContainer}
-        className="relative px-2 sm:px-0"
-      >
+      <ViewportSection stagger className="relative px-2 sm:px-0">
         <div className="mb-12 text-center max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-slate-50 sm:text-4xl">
             Things to Avoid When Selecting a Wedding Biodata Design.
@@ -159,14 +148,11 @@ export function AnimatedTemplateSections() {
             </p>
           </motion.div>
         </div>
-      </motion.section>
+      </ViewportSection>
 
       {/* SECTION 5: EXAMPLES */}
-      <motion.section 
-        initial="hidden"
-        whileInView="visible"
-        viewport={viewport}
-        variants={staggerContainer}
+      <ViewportSection
+        stagger
         className="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-800/40 px-6 py-12 sm:px-10 lg:px-16"
       >
         <BookOpen className="absolute right-0 bottom-0 h-80 w-80 translate-y-1/4 translate-x-1/4 text-slate-100 opacity-5" />
@@ -222,16 +208,10 @@ export function AnimatedTemplateSections() {
             </motion.div>
           </div>
         </div>
-      </motion.section>
+      </ViewportSection>
 
       {/* SECTION 6: CREATE EYE-PLEASING BIODATA */}
-      <motion.section 
-        initial="hidden"
-        whileInView="visible"
-        viewport={viewport}
-        variants={staggerContainer}
-        className="relative pt-12"
-      >
+      <ViewportSection stagger className="relative pt-12">
         <div className="mb-12 text-center max-w-3xl mx-auto px-4 sm:px-0">
           <h2 className="text-3xl font-bold text-slate-50 sm:text-4xl mb-4">
             How to Create an Eye-pleasing Biodata Resume for Marriage.
@@ -365,16 +345,10 @@ export function AnimatedTemplateSections() {
             </div>
           </motion.div>
         </div>
-      </motion.section>
+      </ViewportSection>
 
       {/* SECTION 7: ROLE OF COLOR */}
-      <motion.section 
-        initial="hidden"
-        whileInView="visible"
-        viewport={viewport}
-        variants={staggerContainer}
-        className="relative pt-12"
-      >
+      <ViewportSection stagger className="relative pt-12">
         <Palette className="absolute left-0 top-1/4 h-[600px] w-[600px] -translate-x-1/2 text-rose-500 opacity-5 blur-xl" />
         
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-0">
@@ -452,7 +426,7 @@ export function AnimatedTemplateSections() {
             </motion.div>
           </div>
         </div>
-      </motion.section>
+      </ViewportSection>
 
     </div>
   );

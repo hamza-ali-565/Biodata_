@@ -52,7 +52,7 @@ export function HowToCreateBiodata() {
     };
 
     return (
-        <section className="mt-14 relative overflow-hidden py-24 px-4 sm:px-8 lg:px-12 rounded-[2.5rem] border border-white/5 bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-slate-950/90 shadow-2xl w-full min-h-[900px]">
+        <section id="how-to-create" className="mt-14 relative overflow-hidden py-24 px-4 sm:px-8 lg:px-12 rounded-[2.5rem] border border-white/5 bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-slate-950/90 shadow-2xl w-full min-h-[900px] scroll-mt-24">
 
             {/* Wedding/Mehndi Theme Background Art */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none blur-[1px]">

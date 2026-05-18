@@ -14,9 +14,24 @@ import { HowToShareBiodata } from "../components/HowToShareBiodata";
 import { DesignTips } from "../components/DesignTips";
 import { CTASection } from "../components/CTASection";
 
-const TemplateCarousel = dynamic(() => import('../components/TemplateCarousel').then(mod => mod.TemplateCarousel));
-const BiodataForm = dynamic(() => import('../components/BiodataForm').then(mod => mod.BiodataForm));
-const FAQ = dynamic(() => import('../components/FAQ').then(mod => mod.FAQ));
+const sectionPlaceholder = (
+  <div
+    className="my-8 h-48 animate-pulse rounded-3xl border border-white/10 bg-slate-900/50"
+    aria-hidden="true"
+  />
+);
+
+const TemplateCarousel = dynamic(
+  () => import("../components/TemplateCarousel").then((mod) => mod.TemplateCarousel),
+  { loading: () => sectionPlaceholder }
+);
+const BiodataForm = dynamic(
+  () => import("../components/BiodataForm").then((mod) => mod.BiodataForm),
+  { loading: () => sectionPlaceholder }
+);
+const FAQ = dynamic(() => import("../components/FAQ").then((mod) => mod.FAQ), {
+  loading: () => sectionPlaceholder,
+});
 
 export const metadata = {
   alternates: {

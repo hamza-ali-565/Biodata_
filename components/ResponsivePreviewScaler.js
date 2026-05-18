@@ -17,10 +17,7 @@ function getMaxScale(viewportWidth) {
 export function ResponsivePreviewScaler({ children }) {
   const containerRef = useRef(null);
   const measureRef = useRef(null);
-  const [isDesktop, setIsDesktop] = useState(() => {
-    if (typeof window === "undefined") return true;
-    return window.matchMedia(`(min-width: ${LG_BREAKPOINT}px)`).matches;
-  });
+  const [isDesktop, setIsDesktop] = useState(false);
   const [layout, setLayout] = useState(null);
 
   useEffect(() => {
@@ -78,34 +75,25 @@ export function ResponsivePreviewScaler({ children }) {
     return <div className="flex w-full justify-center">{children}</div>;
   }
 
-  const isReady = layout !== null;
-
   return (
     <div
       ref={containerRef}
       className="flex w-full justify-center px-3 py-4 sm:px-5 md:px-6"
     >
       <div
-        className={`relative mx-auto shrink-0 transition-opacity duration-200 ${
-          isReady ? "opacity-100" : "opacity-0"
-        }`}
+        className="relative mx-auto shrink-0 min-h-[280px] w-full"
         style={
           layout
-            ? { width: layout.width, height: layout.height }
-            : { minHeight: 280 }
+            ? { width: layout.width, height: layout.height, maxWidth: "100%" }
+            : undefined
         }
-        aria-hidden={!isReady}
       >
         <div
           ref={measureRef}
           className="absolute left-1/2 top-0 w-max max-w-none origin-top"
-          style={
-            layout
-              ? {
-                  transform: `translateX(-50%) scale(${layout.scale})`,
-                }
-              : { transform: "translateX(-50%)" }
-          }
+          style={{
+            transform: `translateX(-50%) scale(${layout?.scale ?? 0.65})`,
+          }}
         >
           {children}
         </div>

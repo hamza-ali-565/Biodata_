@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useContext, useMemo } from "react";
 import { MotionConfig, useReducedMotion } from "framer-motion";
 import {
     SCROLL_DURATION,
@@ -11,6 +11,7 @@ import {
     motionDisabledStagger,
     motionDisabledVariants,
     scrollViewport,
+    slideFromVariant,
     staggerContainer,
 } from "../lib/motion";
 
@@ -18,7 +19,7 @@ const ScrollMotionContext = createContext(null);
 
 function buildFallback() {
     const reveal = (delay = 0) => ({
-        initial: { opacity: 0, y: SCROLL_Y },
+        initial: { opacity: 1, y: SCROLL_Y },
         whileInView: { opacity: 1, y: 0 },
         viewport: scrollViewport,
         transition: { duration: SCROLL_DURATION, delay, ease: SCROLL_EASE },
@@ -29,29 +30,27 @@ function buildFallback() {
         viewport: scrollViewport,
         revealProps: reveal,
         revealFromSide: (x = SCROLL_X, delay = 0) => ({
-            initial: { opacity: 0, x },
+            initial: { opacity: 1, x },
             whileInView: { opacity: 1, x: 0 },
             viewport: scrollViewport,
             transition: { duration: SCROLL_DURATION, delay, ease: SCROLL_EASE },
         }),
         fadeUp: fadeUpVariant,
+        slideFrom: slideFromVariant,
         stagger: staggerContainer,
+        motionProps: (delay = 0) => ({
+            variants: fadeUpVariant,
+            initial: "hidden",
+            whileInView: "visible",
+            viewport: scrollViewport,
+            custom: delay,
+        }),
     };
 }
 
 export function ScrollMotionProvider({ children }) {
     const prefersReduced = useReducedMotion();
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const mq = window.matchMedia("(max-width: 767px)");
-        const sync = () => setIsMobile(mq.matches);
-        sync();
-        mq.addEventListener("change", sync);
-        return () => mq.removeEventListener("change", sync);
-    }, []);
-
-    const disabled = Boolean(prefersReduced || isMobile);
+    const disabled = Boolean(prefersReduced);
 
     const value = useMemo(() => {
         if (disabled) {
@@ -61,7 +60,11 @@ export function ScrollMotionProvider({ children }) {
                 revealProps: () => ({ initial: false }),
                 revealFromSide: () => ({ initial: false }),
                 fadeUp: motionDisabledVariants,
+                slideFrom: () => motionDisabledVariants,
                 stagger: motionDisabledStagger,
+                motionProps: () => ({
+                    initial: false,
+                }),
             };
         }
 
@@ -69,19 +72,27 @@ export function ScrollMotionProvider({ children }) {
             disabled: false,
             viewport: scrollViewport,
             revealProps: (delay = 0) => ({
-                initial: { opacity: 0, y: SCROLL_Y },
+                initial: { opacity: 1, y: SCROLL_Y },
                 whileInView: { opacity: 1, y: 0 },
                 viewport: scrollViewport,
                 transition: { duration: SCROLL_DURATION, delay, ease: SCROLL_EASE },
             }),
             revealFromSide: (x = SCROLL_X, delay = 0) => ({
-                initial: { opacity: 0, x },
+                initial: { opacity: 1, x },
                 whileInView: { opacity: 1, x: 0 },
                 viewport: scrollViewport,
                 transition: { duration: SCROLL_DURATION, delay, ease: SCROLL_EASE },
             }),
             fadeUp: fadeUpVariant,
+            slideFrom: slideFromVariant,
             stagger: staggerContainer,
+            motionProps: (delay = 0) => ({
+                variants: fadeUpVariant,
+                initial: "hidden",
+                whileInView: "visible",
+                viewport: scrollViewport,
+                custom: delay,
+            }),
         };
     }, [disabled]);
 

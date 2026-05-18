@@ -88,7 +88,7 @@ export function FAQ() {
     const isAllOpen = openIndexes.length === faqs.length;
 
     return (
-        <section className="mt-14 w-full mx-auto px-4 sm:px-6 relative z-10 py-10" aria-labelledby="faq-heading">
+        <section id="faq" className="mt-14 w-full mx-auto scroll-mt-24 px-4 py-10 sm:px-6 relative z-10" aria-labelledby="faq-heading">
 
             {/* Asian Wedding Theme Background Art: Mandala Motif */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none blur-[1px]">
