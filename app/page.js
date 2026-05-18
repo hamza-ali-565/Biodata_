@@ -7,6 +7,7 @@ import { HowToCreateBiodata } from "../components/HowToCreateBiodata";
 
 import { BiodataFormatExplanation } from "../components/BiodataFormatExplanation";
 import { EditableBiodataArticle } from "../components/EditableBiodataArticle";
+import { MarriageBiodataProblemsArticle } from "../components/MarriageBiodataProblemsArticle";
 import { FeatureBanner } from "../components/FeatureBanner";
 import { WhyNeedBiodata } from "../components/WhyNeedBiodata";
 import { BenefitsSection } from "../components/BenefitsSection";
@@ -112,13 +113,14 @@ export default function Home() {
         {/* <HowItWorks /> */}
         <TemplateCarousel />
         <BiodataForm />
-        <EditableBiodataArticle />
         <BiodataFormatExplanation />
+        <EditableBiodataArticle />
+        <MarriageBiodataProblemsArticle />
         <FeatureBanner />
         <WhyNeedBiodata />
         <BenefitsSection />
-        <WhyPeopleLoveUs />
         <HowToShareBiodata />
+        <WhyPeopleLoveUs />
         <DesignTips />
         <FAQ />
         <CTASection />
