@@ -6,6 +6,7 @@ import { Hero } from "../components/Hero";
 import { HowToCreateBiodata } from "../components/HowToCreateBiodata";
 
 import { BiodataFormatExplanation } from "../components/BiodataFormatExplanation";
+import { EditableBiodataArticle } from "../components/EditableBiodataArticle";
 import { FeatureBanner } from "../components/FeatureBanner";
 import { WhyNeedBiodata } from "../components/WhyNeedBiodata";
 import { BenefitsSection } from "../components/BenefitsSection";
@@ -111,6 +112,7 @@ export default function Home() {
         {/* <HowItWorks /> */}
         <TemplateCarousel />
         <BiodataForm />
+        <EditableBiodataArticle />
         <BiodataFormatExplanation />
         <FeatureBanner />
         <WhyNeedBiodata />
