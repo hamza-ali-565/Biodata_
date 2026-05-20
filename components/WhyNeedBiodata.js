@@ -60,6 +60,72 @@ export function WhyNeedBiodata() {
                     </div>
                 </motion.div>
             </div>
+
+            {/* New Premium Cards Section */}
+            <div className="relative z-10 max-w-7xl mx-auto mt-16 md:mt-24 w-full">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full">
+                    {[
+                        {
+                            title: "First step toward a new journey:",
+                            content: "Getting married and starting a new life is very important, because you may spend your life alone, but to tackle loneliness, you always need someone who can spend quality time with you, understands you, laughs with you, and makes you feel complete. Creating biodata for marriage is the very first step toward your new life journey that is marriage. That time has gone when you had to go to a computer shop and ask them to create and get a hard copy; now you can create it yourself in just three easy steps, download it, and share it for free.",
+                            delay: 0.1
+                        },
+                        {
+                            title: "Helps to avoid repetition of information:",
+                            content: "When you are making a match through a marriage bureau, you have to share information with them, or if you are finding a match by yourself, in this case, too, you have to convey information repeatedly. Marriage biodata maker helps you save time. For example, you create a marriage biodata and download it in the form of a PDF or image format. Now, you can share that format when needed, no need to type information again and again. The wedding biodata hub not only saves your time but also your efforts, so you do not have to bother yourself by typing information every time someone asks for it.",
+                            delay: 0.2
+                        },
+                        {
+                            title: "Helps you to find a compatible match:",
+                            content: "When you enter all information correctly in the marriage biodata template, the only compatible match contacts you, and no one who does not meet your expectations will contact you. Because you have entered all details about yourself, education, family details, and professional details, the only good match will contact you. This will save you time to handle non-serious matches because they will not bother you after reading your serious details.",
+                            delay: 0.3
+                        }
+                    ].map((card, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.7, delay: card.delay, ease: [0.21, 0.47, 0.32, 0.98] }}
+                            className="relative group rounded-3xl transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] flex flex-col text-left"
+                        >
+                            {/* Gradient Border Background */}
+                            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/10 to-white/0 group-hover:from-brand-500/40 group-hover:to-rose-500/40 transition-colors duration-500" />
+
+                            {/* Card Content Wrapper */}
+                            <div className="absolute inset-[1px] rounded-[calc(1.5rem-1px)] bg-slate-900/90 backdrop-blur-2xl transition-colors duration-500 group-hover:bg-slate-900/80" />
+
+                            {/* Animated SVG background art for cards */}
+                            <div className="absolute inset-[1px] pointer-events-none overflow-hidden rounded-[calc(1.5rem-1px)]">
+                                {/* Glowing Gradients */}
+                                <div className="absolute -top-24 -right-24 w-48 h-48 bg-brand-500/20 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 transform group-hover:scale-125" />
+                                <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-rose-500/20 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 transform group-hover:scale-125" />
+
+                                {/* Floating Particles & Mesh Pattern */}
+                                <svg className="absolute inset-0 w-full h-full opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-700" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <pattern id={`card-mesh-${index}`} width="32" height="32" patternUnits="userSpaceOnUse">
+                                            <path d="M 32 0 L 0 0 0 32" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-white" />
+                                            <circle cx="16" cy="16" r="1" fill="currentColor" className="text-white" />
+                                        </pattern>
+                                    </defs>
+                                    <rect width="100%" height="100%" fill={`url(#card-mesh-${index})`} />
+                                </svg>
+                            </div>
+
+                            <div className="relative z-10 flex flex-col h-full p-8 lg:p-10">
+                                <h3 className="text-xl md:text-2xl font-bold text-white mb-5 leading-snug group-hover:text-brand-300 transition-colors duration-300">
+                                    {card.title}
+                                </h3>
+                                <div className="w-12 h-[3px] bg-gradient-to-r from-brand-500 to-rose-500 rounded-full mb-6 group-hover:w-20 transition-all duration-500 ease-out opacity-70 group-hover:opacity-100" />
+                                <p className="text-slate-300 text-sm md:text-base leading-relaxed flex-grow font-medium">
+                                    {card.content}
+                                </p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
         </section>
     );
 }
