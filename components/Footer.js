@@ -5,6 +5,7 @@ import { SocialLinks } from "./SocialLinks";
 
 const quickNavigation = [
   { name: "Home", path: "/" },
+  { name: "About Us", path: "/about-us" },
   { name: "Template Library", path: "/templates" },
   { name: "Biodata Builder", path: "/#biodata-form" },
 ];
@@ -31,6 +32,7 @@ const supportLegal = [
   { name: "Contact Us", path: "/contact-us" },
   { name: "marriagebiodatahub@gmail.com", path: "mailto:marriagebiodatahub@gmail.com", external: true },
   { name: "Privacy Policy", path: "/privacy-policy" },
+  { name: "Terms & Conditions", path: "/terms-and-conditions" },
 ];
 
 function FooterColumn({ title, children }) {
