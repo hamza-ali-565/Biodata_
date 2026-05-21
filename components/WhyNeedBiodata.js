@@ -1,10 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useScrollMotion } from "./ScrollMotionProvider";
-
 export function WhyNeedBiodata() {
-    const { revealProps } = useScrollMotion();
 
     return (
         <section className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl w-full">
@@ -38,7 +34,7 @@ export function WhyNeedBiodata() {
             <div className="absolute bottom-10 left-10 w-40 h-40 md:w-72 md:h-72 rounded-full bg-rose-500/10 blur-[80px] pointer-events-none" />
 
             <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center text-center">
-                <motion.div {...revealProps()}>
+                <div>
                     <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-6 sm:text-4xl leading-tight">
                         Why I should create a matrimonial biodata format?
                     </h2>
@@ -58,7 +54,7 @@ export function WhyNeedBiodata() {
                             Now you must be thinking, how can I convey my information, which is personal, professional, and family details, to someone? So, you just don’t need to worry about it. Here, you can create your biodata for marriage, as well as matrimonial biodata.
                         </p>
                     </div>
-                </motion.div>
+                </div>
             </div>
 
             {/* New Premium Cards Section */}
@@ -81,12 +77,8 @@ export function WhyNeedBiodata() {
                             delay: 0.3
                         }
                     ].map((card, index) => (
-                        <motion.div
+                        <div
                             key={index}
-                            initial={{ opacity: 0, y: 40 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.7, delay: card.delay, ease: [0.21, 0.47, 0.32, 0.98] }}
                             className="relative group rounded-3xl transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] flex flex-col text-left"
                         >
                             {/* Gradient Border Background */}
@@ -122,7 +114,7 @@ export function WhyNeedBiodata() {
                                     {card.content}
                                 </p>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>

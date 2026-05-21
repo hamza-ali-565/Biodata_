@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const faqs = [
@@ -163,74 +162,67 @@ export function FAQ() {
                                 </div>
                             </button>
 
-                            <AnimatePresence initial={false}>
-                                {isOpen && (
-                                    <motion.div
-                                        initial={{ height: 0, opacity: 0 }}
-                                        animate={{ height: "auto", opacity: 1 }}
-                                        exit={{ height: 0, opacity: 0 }}
-                                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                                        id={`faq-answer-${index}`}
-                                        itemScope
-                                        itemProp="acceptedAnswer"
-                                        itemType="https://schema.org/Answer"
-                                    >
-                                        <div className="px-5 md:px-6 pb-6 pt-0 text-slate-300 leading-relaxed text-sm lg:text-base">
-                                            <div itemProp="text">
-                                                {faq.isHtml ? (
-                                                    <p dangerouslySetInnerHTML={{ __html: faq.htmlAnswer }} />
-                                                ) : (
-                                                    <p>{faq.answer}</p>
-                                                )}
+                            {isOpen && (
+                                <div
+                                    id={`faq-answer-${index}`}
+                                    itemScope
+                                    itemProp="acceptedAnswer"
+                                    itemType="https://schema.org/Answer"
+                                >
+                                    <div className="px-5 md:px-6 pb-6 pt-0 text-slate-300 leading-relaxed text-sm lg:text-base">
+                                        <div itemProp="text">
+                                            {faq.isHtml ? (
+                                                <p dangerouslySetInnerHTML={{ __html: faq.htmlAnswer }} />
+                                            ) : (
+                                                <p>{faq.answer}</p>
+                                            )}
 
-                                                {faq.hasList && (
-                                                    <div className="mt-4 space-y-3">
-                                                        <p>Key highlights:</p>
-                                                        <ul className="list-disc pl-5 space-y-2">
-                                                            {faq.listItems.map((item, i) => {
-                                                                // Simple bold parsing for "Professionally Designed Templates" etc.
-                                                                const boldSplit = item.split(" created with ");
-                                                                if (boldSplit.length > 1) {
-                                                                    return (
-                                                                        <li key={i}>
-                                                                            <strong className="text-white font-semibold">{boldSplit[0]}</strong> created with {boldSplit[1]}
-                                                                        </li>
-                                                                    )
-                                                                }
-                                                                const boldSplit2 = item.split(" that makes ");
-                                                                if (boldSplit2.length > 1) {
-                                                                    return (
-                                                                        <li key={i}>
-                                                                            <strong className="text-white font-semibold">{boldSplit2[0]}</strong> that makes {boldSplit2[1]}
-                                                                        </li>
-                                                                    )
-                                                                }
-                                                                const boldSplit3 = item.split(" who use ");
-                                                                if (boldSplit3.length > 1) {
-                                                                    return (
-                                                                        <li key={i}>
-                                                                            <strong className="text-white font-semibold">{boldSplit3[0]}</strong> who use {boldSplit3[1]}
-                                                                        </li>
-                                                                    )
-                                                                }
-                                                                const boldSplit4 = item.split(" allowing users ");
-                                                                if (boldSplit4.length > 1) {
-                                                                    return (
-                                                                        <li key={i}>
-                                                                            <strong className="text-white font-semibold">{boldSplit4[0]}</strong> allowing users {boldSplit4[1]}
-                                                                        </li>
-                                                                    )
-                                                                }
-                                                                return <li key={i}>{item}</li>
-                                                            })}
-                                                        </ul>
-                                                    </div>
-                                                )}
-                                            </div>
+                                            {faq.hasList && (
+                                                <div className="mt-4 space-y-3">
+                                                    <p>Key highlights:</p>
+                                                    <ul className="list-disc pl-5 space-y-2">
+                                                        {faq.listItems.map((item, i) => {
+                                                            const boldSplit = item.split(" created with ");
+                                                            if (boldSplit.length > 1) {
+                                                                return (
+                                                                    <li key={i}>
+                                                                        <strong className="text-white font-semibold">{boldSplit[0]}</strong> created with {boldSplit[1]}
+                                                                    </li>
+                                                                )
+                                                            }
+                                                            const boldSplit2 = item.split(" that makes ");
+                                                            if (boldSplit2.length > 1) {
+                                                                return (
+                                                                    <li key={i}>
+                                                                        <strong className="text-white font-semibold">{boldSplit2[0]}</strong> that makes {boldSplit2[1]}
+                                                                    </li>
+                                                                )
+                                                            }
+                                                            const boldSplit3 = item.split(" who use ");
+                                                            if (boldSplit3.length > 1) {
+                                                                return (
+                                                                    <li key={i}>
+                                                                        <strong className="text-white font-semibold">{boldSplit3[0]}</strong> who use {boldSplit3[1]}
+                                                                    </li>
+                                                                )
+                                                            }
+                                                            const boldSplit4 = item.split(" allowing users ");
+                                                            if (boldSplit4.length > 1) {
+                                                                return (
+                                                                    <li key={i}>
+                                                                        <strong className="text-white font-semibold">{boldSplit4[0]}</strong> allowing users {boldSplit4[1]}
+                                                                    </li>
+                                                                )
+                                                            }
+                                                            return <li key={i}>{item}</li>
+                                                        })}
+                                                    </ul>
+                                                </div>
+                                            )}
                                         </div>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
+                                    </div>
+                                </div>
+                            )}
                         </article>
                     );
                 })}

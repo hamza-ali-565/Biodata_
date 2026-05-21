@@ -1,8 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-import { useScrollMotion } from "./ScrollMotionProvider";
 import Image from "next/image";
 
 const tips = [
@@ -52,7 +50,6 @@ const tips = [
 ];
 
 export function DesignTips() {
-    const { revealProps, revealFromSide } = useScrollMotion();
 
     return (
         <section id="design-tips" className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl w-full scroll-mt-24">
@@ -62,9 +59,7 @@ export function DesignTips() {
 
             <div className="w-full relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-20">
-                    <motion.div
-                        {...revealProps()}
-                    >
+                    <div>
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-6 sm:text-4xl">
                             Some design tips to create biodata for marriage
                         </h2>
@@ -74,7 +69,7 @@ export function DesignTips() {
                         <p className="text-slate-300 text-base md:text-lg leading-relaxed font-medium">
                             Create an attractive, well-structured format that makes a lasting first impression. Follow these professional design principles.
                         </p>
-                    </motion.div>
+                    </div>
                 </div>
 
                 <div className="space-y-24 lg:space-y-32">
@@ -88,8 +83,7 @@ export function DesignTips() {
                                     }`}
                             >
                                 {/* Text Content */}
-                                <motion.div
-                                    {...revealFromSide(isEven ? -16 : 16)}
+                                <div
                                     className="flex-1 space-y-6 w-full"
                                 >
                                     <div className="inline-block px-3 py-1 bg-brand-500/10 border border-brand-500/20 text-brand-400 font-semibold rounded-full text-xs md:text-sm mb-2">
@@ -111,11 +105,10 @@ export function DesignTips() {
                                             </li>
                                         ))}
                                     </ul>
-                                </motion.div>
+                                </div>
 
                                 {/* Visual Element (Mockup) */}
-                                <motion.div
-                                    {...revealProps(0.04)}
+                                <div
                                     className="flex-1 w-full max-w-sm lg:max-w-md relative flex justify-center"
                                 >
                                     {/* Accent Decoration behind the image */}
@@ -129,7 +122,7 @@ export function DesignTips() {
                                             className="object-cover transition-transform duration-700 hover:scale-105"
                                         />
                                     </div>
-                                </motion.div>
+                                </div>
                             </div>
                         );
                     })}

@@ -80,12 +80,10 @@ function FooterBackground() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
       <div
-        className="absolute -left-[15%] top-0 h-[55%] w-[50%] rounded-full bg-brand-500/12 blur-[120px] motion-safe:animate-pulse"
-        style={{ animationDuration: "9s" }}
+        className="absolute -left-[15%] top-0 h-[55%] w-[50%] rounded-full bg-brand-500/12 blur-[120px]"
       />
       <div
-        className="absolute -right-[10%] bottom-0 h-[60%] w-[55%] rounded-full bg-rose-500/10 blur-[130px] motion-safe:animate-pulse"
-        style={{ animationDuration: "11s" }}
+        className="absolute -right-[10%] bottom-0 h-[60%] w-[55%] rounded-full bg-rose-500/10 blur-[130px]"
       />
       <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500/5 blur-[90px]" />
 
@@ -99,7 +97,7 @@ function FooterBackground() {
       />
 
       <svg
-        className="absolute -right-8 top-8 h-48 w-48 text-white/[0.04] motion-safe:animate-[spin_120s_linear_infinite]"
+        className="absolute -right-8 top-8 h-48 w-48 text-white/[0.04]"
         viewBox="0 0 100 100"
         fill="none"
       >
@@ -112,7 +110,7 @@ function FooterBackground() {
       </svg>
 
       <svg
-        className="absolute -left-6 bottom-16 h-40 w-40 text-brand-400/[0.06] motion-safe:animate-[spin_90s_linear_infinite_reverse]"
+        className="absolute -left-6 bottom-16 h-40 w-40 text-brand-400/[0.06]"
         viewBox="0 0 100 100"
         fill="none"
       >
@@ -129,8 +127,6 @@ function FooterBackground() {
       >
         <path
           d="M0,64 C240,96 480,32 720,48 C960,64 1200,16 1440,40 L1440,120 L0,120 Z"
-          className="motion-safe:animate-pulse"
-          style={{ animationDuration: "14s" }}
         />
       </svg>
 

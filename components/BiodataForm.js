@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { motion, AnimatePresence } from "framer-motion";
 import { AlertTriangle, CheckCircle2, Trash2 } from "lucide-react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -74,28 +73,18 @@ function RemoveFieldButton({ onClick, label = "Remove field" }) {
 function FieldShell({ fieldKey, section, hiddenFields, onRemove, required, children, className = "" }) {
   const isVisible = !hiddenFields[section]?.includes(fieldKey);
 
+  if (!isVisible) return null;
+
   return (
-    <AnimatePresence mode="popLayout" initial={false}>
-      {isVisible && (
-        <motion.div
-          key={`${section}-${fieldKey}`}
-          layout
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.96, filter: "blur(2px)" }}
-          transition={{ duration: 0.2, ease: "easeOut" }}
-          className={className}
-        >
-          <div className="flex items-start gap-2">
-            <div className="min-w-0 flex-1 space-y-1.5">{children}</div>
-            <RemoveFieldButton
-              label={`Remove ${fieldKey} field`}
-              onClick={() => onRemove(section, fieldKey, required)}
-            />
-          </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <div className={className}>
+      <div className="flex items-start gap-2">
+        <div className="min-w-0 flex-1 space-y-1.5">{children}</div>
+        <RemoveFieldButton
+          label={`Remove ${fieldKey} field`}
+          onClick={() => onRemove(section, fieldKey, required)}
+        />
+      </div>
+    </div>
   );
 }
 
@@ -323,18 +312,12 @@ export function BiodataForm() {
     if (!fields || !fields.length) return null;
     return (
       <div className="mt-4 space-y-3">
-        <AnimatePresence mode="popLayout" initial={false}>
-          {fields.map((field) => (
-            <motion.div
-              key={field.id}
-              layout
-              initial={{ opacity: 0, scale: 0.98, y: -4 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.96, height: 0, marginTop: 0, marginBottom: 0 }}
-              transition={{ duration: 0.2, ease: "easeOut" }}
-              className="relative grid gap-3 rounded-xl border border-white/10 bg-slate-950/60 p-3 pr-12 sm:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] sm:pr-3"
-            >
-              <button
+        {fields.map((field) => (
+          <div
+            key={field.id}
+            className="relative grid gap-3 rounded-xl border border-white/10 bg-slate-950/60 p-3 pr-12 sm:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] sm:pr-3"
+          >
+            <button
                 type="button"
                 onClick={() => handleRemoveCustomField(section, field.id)}
                 aria-label="Remove custom field"
@@ -380,9 +363,8 @@ export function BiodataForm() {
                   placeholder="Enter value"
                 />
               </div>
-            </motion.div>
+            </div>
           ))}
-        </AnimatePresence>
       </div>
     );
   };
@@ -683,40 +665,24 @@ export function BiodataForm() {
       </form>
 
       {/* Toast Notification */}
-      <AnimatePresence>
-        {toastMessage && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-3 text-sm font-medium text-emerald-400 backdrop-blur-md shadow-2xl"
-          >
-            <CheckCircle2 className="h-5 w-5" />
-            {toastMessage}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {toastMessage && (
+        <div className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-3 text-sm font-medium text-emerald-400 backdrop-blur-md shadow-2xl">
+          <CheckCircle2 className="h-5 w-5" />
+          {toastMessage}
+        </div>
+      )}
 
       {/* Remove required field confirmation */}
-      <AnimatePresence>
-        {isRemoveModalOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => {
-                setIsRemoveModalOpen(false);
-                setPendingRemove(null);
-              }}
-              className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
-            />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 10 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 10 }}
-              className="relative w-full max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-slate-900 p-6 shadow-2xl"
-            >
+      {isRemoveModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+          <div
+            onClick={() => {
+              setIsRemoveModalOpen(false);
+              setPendingRemove(null);
+            }}
+            className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
+          />
+          <div className="relative w-full max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-slate-900 p-6 shadow-2xl">
               <div className="relative z-10 flex flex-col items-center text-center">
                 <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-rose-500/20 bg-rose-500/10 text-rose-400 shadow-inner">
                   <Trash2 className="h-6 w-6" />
@@ -747,28 +713,18 @@ export function BiodataForm() {
                   </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         )}
-      </AnimatePresence>
 
       {/* Confirmation Modal */}
-      <AnimatePresence>
-        {isResetModalOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsResetModalOpen(false)}
-              className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
-            />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 10 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 10 }}
-              className="relative w-full max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-slate-900 p-6 shadow-2xl"
-            >
+      {isResetModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+          <div
+            onClick={() => setIsResetModalOpen(false)}
+            className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
+          />
+          <div className="relative w-full max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-slate-900 p-6 shadow-2xl">
               <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-rose-500/10 blur-[80px]" />
 
               <div className="relative z-10 flex flex-col items-center text-center">
@@ -798,10 +754,9 @@ export function BiodataForm() {
                   </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         )}
-      </AnimatePresence>
     </section>
   );
 }

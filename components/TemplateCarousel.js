@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const templates = [
     { id: 1, src: "/images/new-templates/beautiful-golden-border-marriage-biodata.webp", alt: "beautiful-golden-border-marriage-biodata", isNew: true },
@@ -135,29 +134,13 @@ export function TemplateCarousel() {
 
                     {/* Carousel Track Container */}
                     <div className="overflow-hidden py-8 px-4" style={{ perspective: "1000px" }}>
-                        <motion.div
-                            className="flex gap-6 lg:gap-8 justify-center items-center"
-                            layout
+                        <div
+                            className="flex gap-6 lg:gap-8 justify-center items-center transition-all duration-500 ease-in-out"
                         >
-                            <AnimatePresence mode="popLayout" initial={false} custom={direction}>
                                 {getVisibleTemplates().map((template) => (
-                                    <motion.div
-                                        key={`${template.id}-${currentIndex}`} // Unique key ensures forced re-render per slide
-                                        layout
-                                        custom={direction}
-                                        initial={{ opacity: 0, x: direction > 0 ? 100 : -100, scale: 0.9, rotateY: direction > 0 ? -15 : 15 }}
-                                        animate={{ opacity: 1, x: 0, scale: 1, rotateY: 0 }}
-                                        exit={{ opacity: 0, x: direction > 0 ? -100 : 100, scale: 0.9, rotateY: direction > 0 ? 15 : -15, position: "absolute" }}
-                                        transition={{ type: "spring", stiffness: 300, damping: 30, mass: 1 }}
-                                        whileHover={{
-                                            scale: 1.05,
-                                            y: -10,
-                                            rotateX: 5,
-                                            rotateY: -5,
-                                            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
-                                        }}
-                                        className="flex-none w-[260px] md:w-[280px] lg:w-[300px] rounded-2xl border border-white/10 bg-slate-900/60 p-2 backdrop-blur-md transition-colors cursor-pointer relative z-10"
-                                        style={{ transformStyle: "preserve-3d" }}
+                                    <div
+                                        key={`${template.id}-${currentIndex}`}
+                                        className="flex-none w-[260px] md:w-[280px] lg:w-[300px] rounded-2xl border border-white/10 bg-slate-900/60 p-2 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl cursor-pointer relative z-10"
                                     >
                                         <Link href="/templates" className="block relative aspect-[1/1.414] w-full rounded-xl overflow-hidden bg-slate-950/80 group-hover:bg-slate-900 shadow-inner">
                                             <Image
@@ -175,10 +158,9 @@ export function TemplateCarousel() {
                                                 </div>
                                             )}
                                         </Link>
-                                    </motion.div>
+                                    </div>
                                 ))}
-                            </AnimatePresence>
-                        </motion.div>
+                        </div>
                     </div>
 
                     {/* Scroll Right Button */}

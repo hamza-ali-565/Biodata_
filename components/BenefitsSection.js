@@ -1,8 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Sparkles, FileImage, FileText } from "lucide-react";
-import { useScrollMotion } from "./ScrollMotionProvider";
 
 const benefits = [
     {
@@ -23,7 +21,6 @@ const benefits = [
 ];
 
 export function BenefitsSection() {
-    const { revealProps } = useScrollMotion();
 
     return (
         <section className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl w-full">
@@ -52,14 +49,14 @@ export function BenefitsSection() {
 
             <div className="relative z-10 w-full">
                 <div className="text-center mb-7">
-                    <motion.div {...revealProps()}>
+                    <div>
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-6 sm:text-4xl leading-tight max-w-3xl mx-auto">
                             Advantages of creating a biodata format online?
                         </h2>
                         <div className="flex justify-center">
                             <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-rose-500 rounded-full" />
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
                 <div className=" text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-medium mb-15">
                     <p>
@@ -70,9 +67,8 @@ export function BenefitsSection() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                     {benefits.map((benefit, index) => (
-                        <motion.div
+                        <div
                             key={index}
-                            {...revealProps(index * 0.04)}
                             className="flex flex-col items-center md:items-start text-center md:text-left bg-white/[0.02] p-8 rounded-2xl border border-white/[0.05] hover:border-brand-500/30 transition-colors backdrop-blur-sm"
                         >
                             <div className="mb-6 p-4 bg-brand-500/10 rounded-2xl text-brand-400">
@@ -86,7 +82,7 @@ export function BenefitsSection() {
                             <p className="text-slate-300 text-sm md:text-base leading-relaxed">
                                 {benefit.description}
                             </p>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>

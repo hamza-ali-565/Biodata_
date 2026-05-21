@@ -1,9 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Zap, Settings, Layout } from "lucide-react";
 import Link from "next/link";
-import { useScrollMotion } from "./ScrollMotionProvider";
+import { Zap, Settings, Layout } from "lucide-react";
 
 const features = [
     {
@@ -30,7 +28,6 @@ const features = [
 ];
 
 export function FeatureBanner() {
-    const { revealProps } = useScrollMotion();
 
     return (
         <section className="mt-14 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 w-full px-6 py-16 sm:px-12 relative overflow-hidden shadow-2xl">
@@ -77,11 +74,9 @@ export function FeatureBanner() {
                     {features.map((feature, index) => {
                         const Icon = feature.icon;
                         return (
-                            <motion.div
+                            <div
                                 key={index}
-                                {...revealProps(index * 0.04)}
-                                whileHover={{ y: -8, scale: 1.02 }}
-                                className="group relative rounded-2xl border border-white/10 bg-slate-900/60 backdrop-blur-md p-8 shadow-xl hover:shadow-2xl transition-all hover:bg-slate-800/80 hover:border-white/20 flex flex-col items-center text-center overflow-hidden"
+                                className="group relative rounded-2xl border border-white/10 bg-slate-900/60 backdrop-blur-md p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 hover:bg-slate-800/80 hover:border-white/20 flex flex-col items-center text-center overflow-hidden"
                             >
                                 {/* Subtle card glow on hover */}
                                 <div className={`absolute -inset-0.5 rounded-2xl bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-20 blur transition-opacity duration-500`} />
@@ -98,7 +93,7 @@ export function FeatureBanner() {
                                 <p className="text-sm md:text-base leading-relaxed text-slate-300">
                                     {feature.description}
                                 </p>
-                            </motion.div>
+                            </div>
                         );
                     })}
                 </div>

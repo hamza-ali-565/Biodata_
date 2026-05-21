@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useScrollMotion } from "./ScrollMotionProvider";
 import {
     User, Home, Phone, Sparkles, Clock, ArrowRight,
     MapPin, Calendar, Heart, Briefcase, Activity, Droplets,
@@ -37,7 +35,6 @@ const steps = [
 
 export function HowToCreateBiodata() {
     const router = useRouter();
-    const { revealProps } = useScrollMotion();
 
     const scrollToForm = () => {
         if (window.location.pathname !== "/") {
@@ -56,9 +53,7 @@ export function HowToCreateBiodata() {
 
             {/* Wedding/Mehndi Theme Background Art */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none blur-[1px]">
-                <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 150, repeat: Infinity, ease: "linear" }}
+                <div
                     className="absolute -top-[20%] -right-[15%] w-[800px] h-[800px] opacity-[0.02] text-brand-300"
                 >
                     <svg viewBox="0 0 100 100" fill="none" className="w-full h-full text-current">
@@ -71,7 +66,7 @@ export function HowToCreateBiodata() {
                             <path key={`p-${i}`} d={`M50 25 Q55 35 50 45 Q45 35 50 25`} stroke="currentColor" strokeWidth="0.5" fill="none" transform={`rotate(${i * 30} 50 50)`} />
                         ))}
                     </svg>
-                </motion.div>
+                </div>
 
                 <div className="absolute top-0 left-0 w-96 h-96 bg-brand-500/10 blur-[120px] rounded-full mix-blend-screen" />
                 <div className="absolute bottom-0 right-0 w-96 h-96 bg-rose-500/10 blur-[120px] rounded-full mix-blend-screen" />
@@ -81,32 +76,28 @@ export function HowToCreateBiodata() {
 
                 {/* Header Sequence */}
                 <div className="text-center max-w-3xl mx-auto">
-                    <motion.div
-                        {...revealProps()}
+                    <div
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/10 text-brand-300 text-sm font-medium mb-6 shadow-sm shadow-brand-500/20"
                     >
                         <Clock className="w-4 h-4" />
                         A quick 2-minute process
-                    </motion.div>
+                    </div>
 
-                    <motion.h2
-                        {...revealProps(0.03)}
+                    <h2
                         className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-6"
                     >
                         How to Create a Stunning Marriage Biodata?
-                    </motion.h2>
+                    </h2>
 
-                    <motion.p
-                        {...revealProps(0.06)}
+                    <p
                         className="text-slate-300 text-base md:text-xl leading-relaxed"
                     >
                         Building a <Link href="/#biodata-form" className="text-brand-400 hover:text-brand-300 transition-colors">marriage biodata</Link> is very easy if you follow a clear roadmap. Start with your personal details, introduce yourself in this section, then jump to professional details, describe your professional life, and lastly, describe your family details.
-                    </motion.p>
+                    </p>
                 </div>
 
                 {/* Infographic */}
-                <motion.div
-                    {...revealProps(0.08)}
+                <div
                     className="relative w-full max-w-5xl mx-auto rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-white/[0.02]"
                 >
                     <Image
@@ -118,16 +109,14 @@ export function HowToCreateBiodata() {
                         sizes="(max-width: 1024px) 100vw, 1200px"
                         loading="lazy"
                     />
-                </motion.div>
+                </div>
 
                 {/* Overview Cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                     {steps.map((step, index) => (
-                        <motion.div
+                        <div
                             key={step.id}
-                            {...revealProps(index * 0.04)}
-                            whileHover={{ scale: 1.05 }}
-                            className="relative text-left p-6 md:p-8 rounded-[1.5rem] border backdrop-blur-sm transition-all duration-300 border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-brand-500/30 group"
+                            className="relative text-left p-6 md:p-8 rounded-[1.5rem] border backdrop-blur-sm transition-all duration-300 border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-brand-500/30 hover:scale-[1.05] group"
                         >
                             <span className="absolute top-4 right-6 text-4xl font-extrabold text-white/[0.03] select-none pointer-events-none group-hover:text-brand-500/10 transition-colors">
                                 {step.number}
@@ -143,7 +132,7 @@ export function HowToCreateBiodata() {
                             <p className="text-sm leading-relaxed text-slate-400 group-hover:text-slate-300 transition-colors">
                                 {step.description}
                             </p>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
 
@@ -255,7 +244,7 @@ export function HowToCreateBiodata() {
                         <div className="max-w-3xl mx-auto">
                             <div className="relative overflow-hidden rounded-3xl p-[1px] bg-gradient-to-br from-brand-500 via-rose-500 to-indigo-500 shadow-[0_0_40px_rgba(244,63,94,0.2)] hover:shadow-[0_0_60px_rgba(244,63,94,0.4)] transition-shadow">
                                 <div className="bg-slate-950 px-8 py-12 rounded-3xl h-full flex flex-col items-center text-center">
-                                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-brand-500 to-rose-500 flex items-center justify-center text-white mb-6 shadow-xl animate-bounce">
+                                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-brand-500 to-rose-500 flex items-center justify-center text-white mb-6 shadow-xl">
                                         <Phone className="w-8 h-8" />
                                     </div>
                                     <h4 className="text-3xl font-bold text-white mb-8">Ready to Connect</h4>
@@ -282,39 +271,33 @@ export function HowToCreateBiodata() {
                 </div>
 
                 {/* Final CTA */}
-                <motion.div
-                    {...revealProps()}
+                <div
                     className="flex justify-center mt-20"
                 >
                     <button
                         onClick={scrollToForm}
                         className="group relative inline-flex items-center justify-center gap-3 rounded-full bg-slate-900 border border-brand-500/30 px-10 py-5 text-lg font-bold text-white transition-all hover:scale-105 hover:bg-slate-800 hover:border-brand-500/60 hover:shadow-[0_0_40px_rgba(244,63,94,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 overflow-hidden"
                     >
-                        {/* Shine Animation */}
-                        <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-[200%] group-hover:animate-[shine_1.5s_ease-out_infinite]" />
+                        {/* Static Subtle Glow */}
+                        <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent" />
 
                         <span className="relative z-10 bg-gradient-to-r from-brand-300 to-rose-300 bg-clip-text text-transparent group-hover:text-white transition-colors duration-300">
                             Start Creating Your Biodata Now
                         </span>
                         <ArrowRight className="w-6 h-6 text-rose-300 group-hover:text-white relative z-10 transition-transform group-hover:translate-x-1 duration-300" />
                     </button>
-                </motion.div>
+                </div>
 
             </div>
 
-            {/* Inline CSS for the shine animation */}
-            <style jsx global>{`
-                @keyframes shine {
-                    100% { transform: translateX(200%); }
-                }
-            `}</style>
+            {/* No inline CSS animations */}
         </section>
     );
 }
 
 // Sub-components to keep code clean
 function DetailSection({ children }) {
-    return <motion.div className="w-full">{children}</motion.div>;
+    return <div className="w-full">{children}</div>;
 }
 
 function PanelHeader({ title, desc, icon: Icon }) {

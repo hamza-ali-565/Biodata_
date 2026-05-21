@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useScrollMotion } from "./ScrollMotionProvider";
 import { LayoutTemplate, User, Users, Camera, Download, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
@@ -39,7 +37,6 @@ const steps = [
 ];
 
 export function HowItWorks() {
-  const { revealProps } = useScrollMotion();
 
   return (
     <section
@@ -101,9 +98,8 @@ export function HowItWorks() {
             const isLeft = index % 2 === 0;
 
             return (
-              <motion.div
+              <div
                 key={step.title}
-                {...revealProps(index * 0.04)}
                 className={`relative flex items-start md:items-center w-full ${isLeft ? "md:justify-start" : "md:justify-end"
                   }`}
               >
@@ -133,15 +129,14 @@ export function HowItWorks() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>
       </div>
 
       {/* CTA Footer */}
-      <motion.div
-        {...revealProps(0.06)}
+      <div
         className="mt-20 md:mt-28 text-center relative z-10 flex flex-col items-center"
       >
         <p className="text-slate-300 mb-6 text-lg">Ready to make the perfect first impression?</p>
@@ -159,7 +154,7 @@ export function HowItWorks() {
           {/* Subtle glow underneath button */}
           <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-brand-500 to-rose-500 opacity-40 blur-md transition-opacity group-hover:opacity-60" />
         </button>
-      </motion.div>
+      </div>
     </section>
   );
 }

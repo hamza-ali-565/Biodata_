@@ -1,8 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { FileEdit, LayoutTemplate, Type } from "lucide-react";
-import { useScrollMotion } from "./ScrollMotionProvider";
 
 const subsections = [
     {
@@ -46,32 +44,24 @@ function EditorialBackgroundArt() {
     ];
 
     return (
-        <motion.div
+        <div
             aria-hidden
             className="pointer-events-none absolute inset-0 overflow-hidden"
         >
             {/* Mesh gradient blobs */}
-            <motion.div
+            <div
                 className="absolute -left-24 top-1/4 h-[420px] w-[420px] rounded-full bg-brand-500/12 blur-[120px]"
-                animate={{ x: [0, 30, 0], y: [0, -20, 0], scale: [1, 1.08, 1] }}
-                transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
             />
-            <motion.div
+            <div
                 className="absolute -right-20 bottom-1/4 h-[380px] w-[380px] rounded-full bg-violet-500/10 blur-[110px]"
-                animate={{ x: [0, -25, 0], y: [0, 22, 0], scale: [1, 1.06, 1] }}
-                transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
             />
-            <motion.div
+            <div
                 className="absolute left-1/2 top-0 h-64 w-64 -translate-x-1/2 rounded-full bg-rose-500/8 blur-[100px]"
-                animate={{ opacity: [0.4, 0.7, 0.4] }}
-                transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
             />
 
             {/* Rotating mandala / mesh SVG */}
-            <motion.div
+            <div
                 className="absolute -right-[12%] top-[8%] h-[min(520px,55vw)] w-[min(520px,55vw)] opacity-[0.04] text-brand-300"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 180, repeat: Infinity, ease: "linear" }}
             >
                 <svg viewBox="0 0 200 200" fill="none" className="h-full w-full">
                     <defs>
@@ -96,31 +86,25 @@ function EditorialBackgroundArt() {
                         />
                     ))}
                 </svg>
-            </motion.div>
+            </div>
 
             {/* Glowing lines SVG */}
-            <motion.svg
+            <svg
                 viewBox="0 0 400 200"
                 className="absolute bottom-0 left-0 h-48 w-full opacity-[0.12] sm:h-56"
                 preserveAspectRatio="none"
             >
-                <motion.path
+                <path
                     d="M0 120 Q100 80 200 100 T400 90"
                     stroke="url(#edit-line-grad)"
                     strokeWidth="1"
                     fill="none"
-                    initial={{ pathLength: 0, opacity: 0 }}
-                    animate={{ pathLength: 1, opacity: 1 }}
-                    transition={{ duration: 2.5, ease: "easeOut" }}
                 />
-                <motion.path
+                <path
                     d="M0 150 Q120 110 240 130 T400 115"
                     stroke="url(#edit-line-grad)"
                     strokeWidth="0.6"
                     fill="none"
-                    initial={{ pathLength: 0, opacity: 0 }}
-                    animate={{ pathLength: 1, opacity: 0.6 }}
-                    transition={{ duration: 3, delay: 0.3, ease: "easeOut" }}
                 />
                 <defs>
                     <linearGradient id="edit-line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -130,23 +114,17 @@ function EditorialBackgroundArt() {
                         <stop offset="100%" stopColor="#a78bfa" stopOpacity="0" />
                     </linearGradient>
                 </defs>
-            </motion.svg>
+            </svg>
 
             {/* Abstract floating shapes */}
-            <motion.div
+            <div
                 className="absolute left-[6%] top-[18%] h-24 w-24 rounded-3xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm"
-                animate={{ y: [0, -14, 0], rotate: [0, 8, 0] }}
-                transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
             />
-            <motion.div
+            <div
                 className="absolute right-[10%] top-[42%] h-16 w-16 rounded-full border border-brand-500/15 bg-brand-500/5"
-                animate={{ y: [0, 12, 0], scale: [1, 1.05, 1] }}
-                transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
             />
-            <motion.div
+            <div
                 className="absolute bottom-[22%] left-[14%] h-3 w-3 rounded-full bg-brand-400/60 shadow-[0_0_12px_rgba(244,63,94,0.8)]"
-                animate={{ opacity: [0.4, 1, 0.4], scale: [1, 1.3, 1] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             />
 
             {/* Particle field */}
@@ -156,167 +134,127 @@ function EditorialBackgroundArt() {
                 preserveAspectRatio="xMidYMid slice"
             >
                 {particles.map((p, i) => (
-                    <motion.circle
+                    <circle
                         key={i}
                         cx={p.cx}
                         cy={p.cy}
                         r={p.r}
                         fill="currentColor"
                         className="text-brand-400/50"
-                        animate={{
-                            opacity: [0.2, 0.9, 0.2],
-                            cy: [p.cy, p.cy - 4, p.cy],
-                        }}
-                        transition={{
-                            duration: 5 + (i % 3),
-                            repeat: Infinity,
-                            ease: "easeInOut",
-                            delay: p.delay,
-                        }}
                     />
                 ))}
             </svg>
 
             {/* Top edge highlight */}
-            <motion.div
+            <div
                 className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent"
-                animate={{ opacity: [0.3, 0.8, 0.3] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             />
-        </motion.div>
+        </div>
     );
 }
 
 export function EditableBiodataArticle() {
-    const { revealProps, fadeUp, stagger, viewport } = useScrollMotion();
-
     return (
         <section
             id="editable-biodata"
             aria-labelledby="editable-biodata-heading"
             className="relative mt-14 w-full scroll-mt-24 overflow-hidden"
         >
-            <motion.div
-                {...revealProps()}
+            <div
                 className="relative rounded-[2rem] p-[1px] shadow-[0_28px_90px_rgba(0,0,0,0.5)] sm:rounded-[2.5rem]"
             >
-                {/* Animated gradient border */}
-                <motion.div
+                {/* Static gradient border */}
+                <div
                     aria-hidden
                     className="pointer-events-none absolute inset-0 rounded-[2rem] bg-gradient-to-br from-brand-500/50 via-white/10 to-violet-500/40 opacity-75 sm:rounded-[2.5rem]"
-                    animate={{ opacity: [0.5, 0.85, 0.5] }}
-                    transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
                 />
 
                 <div className="relative overflow-hidden rounded-[calc(2rem-1px)] bg-slate-950/80 backdrop-blur-2xl sm:rounded-[calc(2.5rem-1px)]">
                     <EditorialBackgroundArt />
 
-                    <motion.div
+                    <div
                         aria-hidden
                         className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-950/20 to-slate-950/85"
                     />
 
                     <article className="relative z-10 px-5 py-14 sm:px-10 sm:py-16 lg:px-14 lg:py-20">
                         {/* H2 — Hero heading */}
-                        <motion.header
+                        <header
                             className="mx-auto max-w-4xl text-center"
-                            variants={stagger}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={viewport}
                         >
-                            <motion.div
-                                variants={fadeUp}
+                            <div
                                 className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-xs font-medium tracking-wide text-brand-300 shadow-sm shadow-brand-500/10 backdrop-blur-md sm:text-sm"
                             >
                                 <span className="relative flex h-2 w-2">
-                                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-60" />
+                                    <span className="absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-60" />
                                     <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-500" />
                                 </span>
                                 Editorial
-                            </motion.div>
+                            </div>
 
-                            <motion.h2
+                            <h2
                                 id="editable-biodata-heading"
-                                variants={fadeUp}
                                 className="text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-5xl lg:text-[3.25rem] lg:leading-[1.08]"
                             >
                                 <span className="bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">
                                     Editable biodata for marriage:
                                 </span>
-                            </motion.h2>
+                            </h2>
 
-                            <motion.div
-                                variants={fadeUp}
+                            <div
                                 className="mx-auto mt-6 flex justify-center"
                                 aria-hidden
                             >
-                                <motion.div
+                                <div
                                     className="relative h-1 w-24 overflow-hidden rounded-full bg-white/10"
-                                    animate={{ scaleX: [0.85, 1, 0.85] }}
-                                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                                 >
-                                    <motion.div
-                                        className="absolute inset-0 bg-gradient-to-r from-brand-500 via-rose-400 to-violet-400"
-                                        animate={{ x: ["-20%", "20%", "-20%"] }}
-                                        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-r from-brand-500 via-rose-400 to-violet-400" />
                                     <div className="absolute inset-0 bg-gradient-to-r from-brand-500 via-rose-400 to-violet-400 blur-md opacity-70" />
-                                </motion.div>
-                            </motion.div>
+                                </div>
+                            </div>
 
-                            <motion.p
-                                variants={fadeUp}
+                            <p
                                 className="mx-auto mt-8 max-w-3xl text-base font-normal leading-[1.88] text-slate-300/95 sm:text-lg sm:leading-[1.92]"
                             >
                                 A fully customized marriage biodata maker platform offers you to create, edit, and download biodata for marriage. Here, not only is text information editable, but you can also change format style, font family, theme color, and download in a different format. Creating biodata is one thing, but making changes after creating it is another thing; this is very annoying to fill in details again and again. Here we provide you with some genuine solutions to overcome this problem. We make sure to save your data in the browser until you reset it manually.
-                            </motion.p>
-                        </motion.header>
+                            </p>
+                        </header>
 
                         {/* Separator */}
-                        <motion.div
-                            {...revealProps()}
+                        <div
                             className="mx-auto my-14 flex max-w-5xl items-center gap-4 sm:my-16 lg:my-20"
                             aria-hidden
                         >
-                            <motion.div
-                                className="h-px flex-1 bg-gradient-to-r from-transparent via-white/12 to-transparent"
-                                animate={{ opacity: [0.4, 1, 0.4] }}
-                                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                            <div
+                                className="h-px flex-1 bg-gradient-to-r from-transparent via-white/12 to-transparent opacity-40"
                             />
                             <div className="flex gap-1.5">
                                 <span className="h-1.5 w-1.5 rounded-full bg-brand-400/90 shadow-[0_0_10px_rgba(244,63,94,0.7)]" />
                                 <span className="h-1 w-1 rounded-full bg-violet-400/70" />
                                 <span className="h-1.5 w-1.5 rounded-full bg-rose-400/80 shadow-[0_0_8px_rgba(251,113,133,0.5)]" />
                             </div>
-                            <motion.div
-                                className="h-px flex-1 bg-gradient-to-r from-transparent via-white/12 to-transparent"
-                                animate={{ opacity: [0.4, 1, 0.4] }}
-                                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                            <div
+                                className="h-px flex-1 bg-gradient-to-r from-transparent via-white/12 to-transparent opacity-40"
                             />
-                        </motion.div>
+                        </div>
 
                         {/* H3 subsections */}
-                        <motion.div
+                        <div
                             className="mx-auto flex max-w-5xl flex-col gap-8 sm:gap-10 lg:gap-12"
-                            variants={stagger}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={viewport}
                         >
                             {subsections.map((section, index) => {
                                 const Icon = section.icon;
                                 return (
-                                    <motion.div key={index} variants={fadeUp}>
-                                        <motion.article
+                                    <div key={index}>
+                                        <article
                                             className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-slate-900/45 p-6 shadow-[0_12px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-brand-500/25 sm:p-8 lg:p-10 ${section.borderGlow}`}
                                         >
                                             {/* Card inner glow */}
-                                            <motion.div
+                                            <div
                                                 aria-hidden
                                                 className={`pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-gradient-to-br ${section.accent} opacity-60 transition-opacity duration-500 group-hover:opacity-100`}
                                             />
-                                            <motion.div
+                                            <div
                                                 aria-hidden
                                                 className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                                                 style={{
@@ -325,7 +263,7 @@ export function EditableBiodataArticle() {
                                                 }}
                                             />
 
-                                            <motion.div
+                                            <div
                                                 aria-hidden
                                                 className="pointer-events-none absolute inset-0 rounded-2xl p-[1px]"
                                                 style={{
@@ -339,7 +277,7 @@ export function EditableBiodataArticle() {
                                                 }}
                                             />
 
-                                            <motion.div className="relative flex flex-col gap-5 sm:flex-row sm:gap-8">
+                                            <div className="relative flex flex-col gap-5 sm:flex-row sm:gap-8">
                                                 <div className="flex shrink-0 flex-row items-start gap-4 sm:flex-col sm:items-center sm:gap-3">
                                                     <span
                                                         aria-hidden
@@ -347,12 +285,12 @@ export function EditableBiodataArticle() {
                                                     >
                                                         {section.number}
                                                     </span>
-                                                    <motion.div className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-500/25 bg-brand-500/10 text-brand-400 shadow-inner shadow-brand-500/10 transition-all duration-500 group-hover:scale-105 group-hover:border-brand-400/35 group-hover:bg-brand-500/15 group-hover:shadow-brand-500/20">
+                                                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-500/25 bg-brand-500/10 text-brand-400 shadow-inner shadow-brand-500/10 transition-all duration-500 group-hover:scale-105 group-hover:border-brand-400/35 group-hover:bg-brand-500/15 group-hover:shadow-brand-500/20">
                                                         <Icon className="h-5 w-5" aria-hidden />
-                                                    </motion.div>
+                                                    </div>
                                                 </div>
 
-                                                <motion.div className="min-w-0 flex-1">
+                                                <div className="min-w-0 flex-1">
                                                     <div
                                                         aria-hidden
                                                         className="mb-4 h-px w-16 bg-gradient-to-r from-brand-500/80 via-rose-500/40 to-transparent sm:w-20"
@@ -363,21 +301,21 @@ export function EditableBiodataArticle() {
                                                     <p className="max-w-none text-sm leading-[1.88] text-slate-300/95 sm:text-base sm:leading-[1.92] lg:max-w-[52rem]">
                                                         {section.body}
                                                     </p>
-                                                </motion.div>
-                                            </motion.div>
+                                                </div>
+                                            </div>
 
-                                            <motion.div
+                                            <div
                                                 aria-hidden
                                                 className="relative mt-7 h-px w-full bg-gradient-to-r from-brand-500/25 via-white/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                                             />
-                                        </motion.article>
-                                    </motion.div>
+                                        </article>
+                                    </div>
                                 );
                             })}
-                        </motion.div>
+                        </div>
                     </article>
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 }

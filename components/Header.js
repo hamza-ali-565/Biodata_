@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
@@ -93,41 +92,22 @@ export function Header() {
             aria-expanded={isMobileMenuOpen}
             className="flex lg:hidden relative p-2 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
           >
-            <AnimatePresence mode="wait">
               {isMobileMenuOpen ? (
-                <motion.div
-                  key="close"
-                  initial={{ opacity: 0, rotate: -90 }}
-                  animate={{ opacity: 1, rotate: 0 }}
-                  exit={{ opacity: 0, rotate: 90 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <div>
                   <X className="w-7 h-7" />
-                </motion.div>
+                </div>
               ) : (
-                <motion.div
-                  key="menu"
-                  initial={{ opacity: 0, rotate: 90 }}
-                  animate={{ opacity: 1, rotate: 0 }}
-                  exit={{ opacity: 0, rotate: -90 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <div>
                   <Menu className="w-7 h-7" />
-                </motion.div>
+                </div>
               )}
-            </AnimatePresence>
           </button>
         </div>
       </nav>
 
       {/* Mobile Menu Overlay */}
-      <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "100vh" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+          <div
             className="absolute top-full left-0 right-0 bg-slate-950/95 backdrop-blur-xl border-t border-white/10 lg:hidden overflow-hidden flex flex-col h-[calc(100vh-80px)] shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
           >
             <div className="flex-1 overflow-y-auto px-6 py-12 flex flex-col gap-8">
@@ -135,11 +115,8 @@ export function Header() {
                 {navItems.map((item, i) => {
                   const isActive = pathname === item.href;
                   return (
-                    <motion.li 
+                    <li 
                       key={item.href}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.1 + i * 0.1 }}
                     >
                       <Link
                         href={item.href}
@@ -152,15 +129,12 @@ export function Header() {
                       >
                         {item.label}
                       </Link>
-                    </motion.li>
+                    </li>
                   );
                 })}
               </ul>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
+              <div
                 className="mt-6 pt-10 border-t border-white/10 flex justify-center"
               >
                 <button
@@ -170,11 +144,10 @@ export function Header() {
                 >
                   Create Biodata
                 </button>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
     </header>
   );
 }

@@ -1,43 +1,22 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import { useScrollMotion } from "./ScrollMotionProvider";
+import { forwardRef } from "react";
 
-/**
- * Scroll-triggered reveal that stays visible even if IntersectionObserver
- * does not fire on mobile direct navigation (opacity is always 1 in variants).
- */
-export function ScrollReveal({
+export const ScrollReveal = forwardRef(function ScrollReveal({
     children,
     className,
-    delay = 0,
-    as = "motion.div",
+    as: Component = "div",
     ...rest
-}) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0, margin: "0px 0px -24px 0px" });
-    const { disabled, fadeUp, viewport, motionProps } = useScrollMotion();
-
-    const Component = motion[as] ?? motion.div;
-
-    if (disabled) {
-        return (
-            <div ref={ref} className={className} {...rest}>
-                {children}
-            </div>
-        );
-    }
+}, ref) {
+    // Stripped out framer-motion, using static component
+    // If Component was "motion.div", change it to "div"
+    const Tag = typeof Component === "string" && Component.startsWith("motion.") 
+        ? Component.replace("motion.", "") 
+        : Component;
 
     return (
-        <Component
-            ref={ref}
-            className={className}
-            {...motionProps(delay)}
-            animate={isInView ? "visible" : undefined}
-            {...rest}
-        >
+        <Tag ref={ref} className={className} {...rest}>
             {children}
-        </Component>
+        </Tag>
     );
-}
+});

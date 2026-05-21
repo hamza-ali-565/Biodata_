@@ -1,14 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { useScrollMotion } from "./ScrollMotionProvider";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export function WhyPeopleLoveUs() {
     const router = useRouter();
-    const { revealProps, revealFromSide } = useScrollMotion();
 
     const scrollToForm = () => {
         if (window.location.pathname !== "/") {
@@ -32,17 +29,13 @@ export function WhyPeopleLoveUs() {
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
                     {/* Left Column: Text & Features */}
-                    <motion.div
-                        {...revealFromSide(-16)}
-                        className="space-y-10 lg:pr-8 flex flex-col justify-center h-full relative"
-                    >
+                    <div className="space-y-10 lg:pr-8 flex flex-col justify-center h-full relative">
                         {/* Subtle Background Glow behind text to make it feel full */}
                         <div className="absolute -inset-6 bg-gradient-to-r from-brand-500/5 to-transparent rounded-3xl blur-2xl -z-10" />
 
                         <div>
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-brand-300 text-sm font-medium mb-8">
                                 <span className="relative flex h-2 w-2">
-                                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
                                   <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
                                 </span>
                                 Trusted Worldwide
@@ -62,21 +55,16 @@ export function WhyPeopleLoveUs() {
                             <div className="w-1.5 h-1.5 rounded-full bg-rose-400 shadow-[0_0_12px_rgba(244,63,94,0.9)]" />
                             <div className="h-[2px] w-12 bg-gradient-to-l from-rose-500 to-transparent rounded-full opacity-70" />
                         </div>
-                    </motion.div>
+                    </div>
 
                     {/* Right Column: Floating Templates */}
-                    <motion.div
-                        {...revealFromSide(16, 0.05)}
-                        className="relative h-[400px] md:h-[500px] flex items-center justify-center -mx-4 lg:mx-0 mt-10 lg:mt-0 perspective-1000"
-                    >
+                    <div className="relative h-[400px] md:h-[500px] flex items-center justify-center -mx-4 lg:mx-0 mt-10 lg:mt-0 perspective-1000">
                         {/* Background subtle shape */}
                         <div className="absolute inset-0 bg-gradient-to-tr from-brand-500/5 to-rose-500/5 rounded-full blur-3xl" />
 
                         {/* Template 1 (Back Left) */}
-                        <motion.div
-                            whileHover={{ scale: 1.05, rotate: -20, zIndex: 30 }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                            className="absolute left-[10%] md:left-[15%] w-[180px] md:w-[240px] aspect-[1/1.414] rounded-xl shadow-2xl border flex flex-col border-white/10 overflow-hidden transform -rotate-12 origin-bottom hover:shadow-brand-500/20"
+                        <div
+                            className="absolute left-[10%] md:left-[15%] w-[180px] md:w-[240px] aspect-[1/1.414] rounded-xl shadow-2xl border flex flex-col border-white/10 overflow-hidden transform -rotate-12 origin-bottom hover:scale-[1.05] hover:-rotate-[20deg] hover:z-30 hover:shadow-brand-500/20 transition-all duration-300 ease-out"
                             style={{ zIndex: 10 }}
                         >
                             <Image
@@ -85,13 +73,11 @@ export function WhyPeopleLoveUs() {
                                 fill
                                 className="object-cover"
                             />
-                        </motion.div>
+                        </div>
 
                         {/* Template 2 (Back Right) */}
-                        <motion.div
-                            whileHover={{ scale: 1.05, rotate: 15, zIndex: 30 }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                            className="absolute right-[10%] md:right-[15%] top-[10%] w-[180px] md:w-[240px] aspect-[1/1.414] rounded-xl shadow-2xl border border-white/10 overflow-hidden transform rotate-[15deg] origin-bottom hover:shadow-brand-500/20"
+                        <div
+                            className="absolute right-[10%] md:right-[15%] top-[10%] w-[180px] md:w-[240px] aspect-[1/1.414] rounded-xl shadow-2xl border border-white/10 overflow-hidden transform rotate-[15deg] origin-bottom hover:scale-[1.05] hover:rotate-[15deg] hover:z-30 hover:shadow-brand-500/20 transition-all duration-300 ease-out"
                             style={{ zIndex: 20 }}
                         >
                             <Image
@@ -100,13 +86,11 @@ export function WhyPeopleLoveUs() {
                                 fill
                                 className="object-cover"
                             />
-                        </motion.div>
+                        </div>
 
                         {/* Template 3 (Front Center) */}
-                        <motion.div
-                            whileHover={{ scale: 1.05, y: -10 }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                            className="absolute top-[20%] md:top-[15%] w-[200px] md:w-[280px] aspect-[1/1.414] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/20 overflow-hidden transform rotate-2 hover:shadow-brand-500/30"
+                        <div
+                            className="absolute top-[20%] md:top-[15%] w-[200px] md:w-[280px] aspect-[1/1.414] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/20 overflow-hidden transform rotate-2 hover:scale-[1.05] hover:-translate-y-2 hover:z-30 hover:shadow-brand-500/30 transition-all duration-300 ease-out"
                             style={{ zIndex: 30 }}
                         >
                             <Image
@@ -115,8 +99,8 @@ export function WhyPeopleLoveUs() {
                                 fill
                                 className="object-cover"
                             />
-                        </motion.div>
-                    </motion.div>
+                        </div>
+                    </div>
                 </div>
 
                 {/* New Premium Cards Section */}
@@ -144,12 +128,8 @@ export function WhyPeopleLoveUs() {
                                 delay: 0.4
                             }
                         ].map((card, index) => (
-                            <motion.div
+                            <div
                                 key={index}
-                                initial={{ opacity: 0, y: 40 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-50px" }}
-                                transition={{ duration: 0.7, delay: card.delay, ease: [0.21, 0.47, 0.32, 0.98] }}
                                 className="relative group rounded-3xl transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] flex flex-col text-left"
                             >
                                 {/* Gradient Border Background */}
@@ -185,16 +165,13 @@ export function WhyPeopleLoveUs() {
                                         {card.content}
                                     </p>
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
                 </div>
 
                 {/* Section CTA Button */}
-                <motion.div 
-                    {...revealProps()}
-                    className="mt-16 w-full flex justify-center pb-2"
-                >
+                <div className="mt-16 w-full flex justify-center pb-2">
                     <button
                         onClick={scrollToForm}
                         className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-500 to-rose-500 px-10 py-4 text-lg font-bold text-white shadow-[0_0_20px_rgba(244,63,94,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(244,63,94,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
@@ -202,7 +179,7 @@ export function WhyPeopleLoveUs() {
                         Create Biodata Now
                         <ArrowRight className="w-6 h-6" />
                     </button>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

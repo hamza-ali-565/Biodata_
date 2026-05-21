@@ -1,8 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { DownloadCloud, Mail, Link, UploadCloud, Printer, RefreshCw } from "lucide-react";
-import { useScrollMotion } from "./ScrollMotionProvider";
 
 const shareSteps = [
     {
@@ -38,7 +36,6 @@ const shareSteps = [
 ];
 
 export function HowToShareBiodata() {
-    const { revealProps, stagger, fadeUp, viewport } = useScrollMotion();
 
     return (
         <section className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl w-full">
@@ -61,7 +58,7 @@ export function HowToShareBiodata() {
 
             <div className="relative z-10 w-full">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <motion.div {...revealProps()}>
+                    <div>
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-4 sm:text-4xl">
                             How to share a biodata for marriage online?
                         </h2>
@@ -71,22 +68,16 @@ export function HowToShareBiodata() {
                         <p className="text-slate-300 text-base md:text-lg leading-relaxed font-medium">
                             Once your beautiful marriage biodata is ready, getting it into the right hands should be completely seamless. Here is how you can easily and efficiently share your profile with prospective families.
                         </p>
-                    </motion.div>
+                    </div>
                 </div>
 
-                <motion.div
-                    variants={stagger}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={viewport}
+                <div
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                 >
                     {shareSteps.map((step, index) => (
-                        <motion.div
+                        <div
                             key={index}
-                            variants={fadeUp}
-                            whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                            className="bg-white/[0.02] border border-white/[0.05] rounded-2xl p-6 sm:p-8 backdrop-blur-sm hover:bg-white/[0.04] hover:border-brand-500/30 transition-all group"
+                            className="bg-white/[0.02] border border-white/[0.05] rounded-2xl p-6 sm:p-8 backdrop-blur-sm hover:bg-white/[0.04] hover:-translate-y-1 hover:border-brand-500/30 transition-all duration-200 group"
                         >
                             <div className="mb-5 w-14 h-14 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 group-hover:bg-brand-500 group-hover:text-white transition-colors duration-300">
                                 <step.icon className="w-6 h-6" />
@@ -97,9 +88,9 @@ export function HowToShareBiodata() {
                             <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
                                 {step.description}
                             </p>
-                        </motion.div>
+                        </div>
                     ))}
-                </motion.div>
+                </div>
             </div>
         </section>
     );
