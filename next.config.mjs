@@ -52,10 +52,15 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/blog',
-        destination: '/',
+        source: '/blogs',
+        destination: '/blog',
         permanent: true,
-      }
+      },
+      {
+        source: '/blogs/:slug',
+        destination: '/blog/:slug',
+        permanent: true,
+      },
     ];
   },
 };

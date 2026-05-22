@@ -23,6 +23,7 @@ const weddingCategories = [
 ];
 
 const freeResources = [
+  { name: "Blog", path: "/blog" },
   { name: "Design Tips", path: "/#design-tips" },
   { name: "How to Create Biodata", path: "/#how-to-create" },
   { name: "FAQ", path: "/#faq" },
