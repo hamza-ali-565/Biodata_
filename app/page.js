@@ -18,7 +18,7 @@ import { CTASection } from "../components/CTASection";
 
 const sectionPlaceholder = (
   <div
-    className="my-8 h-48 animate-pulse rounded-3xl border border-white/10 bg-slate-900/50"
+    className="premium-card-static my-8 h-48 animate-pulse"
     aria-hidden="true"
   />
 );

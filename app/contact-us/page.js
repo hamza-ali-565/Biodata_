@@ -77,7 +77,7 @@ export default function ContactUs() {
           </div>
 
           {/* Right Column: Contact Form */}
-          <div className="rounded-3xl border border-white/5 bg-slate-900/60 backdrop-blur-xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+          <div className="premium-section relative overflow-hidden p-6 sm:p-10">
             <div className="absolute bottom-0 right-0 -mb-20 -mr-20 w-80 h-80 rounded-full bg-rose-500/10 blur-[100px] pointer-events-none" />
             
             <h2 className="text-xl font-semibold text-white mb-6">Send us a message</h2>

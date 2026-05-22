@@ -29,7 +29,7 @@ export function Hero() {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative grid gap-10 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-950 px-6 py-10 shadow-soft sm:px-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:py-14"
+      className="premium-section relative grid gap-10 px-6 py-10 sm:px-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:py-14"
     >
       {/* Asian Wedding Theme Background Art: Mandala Motif */}
       <div className="absolute top-[-10%] left-[-5%] w-64 h-64 md:w-[400px] md:h-[400px] lg:w-[600px] lg:h-[600px] opacity-[0.03] pointer-events-none rotate-12" aria-hidden="true">
@@ -58,7 +58,7 @@ export function Hero() {
 
       <Hero3D />
       <div className="relative z-10 space-y-6">
-        <p className="inline-flex rounded-full border border-white/10 bg-slate-900/80 backdrop-blur-sm px-3 py-1 text-[11px] font-medium tracking-wide text-brand-200 shadow-xl">
+        <p className="premium-chip px-3 py-1 text-[11px] font-medium tracking-wide text-brand-200">
           Premium Marriage Biodata Maker
         </p>
         <div>
@@ -91,11 +91,11 @@ export function Hero() {
           </p>
         </div>
       </div>
-      <div className="relative z-10 hidden min-h-[300px] items-center justify-center rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-md p-5 sm:flex shadow-2xl transition-transform">
+      <div className="premium-card-static relative z-10 hidden min-h-[300px] items-center justify-center p-5 transition-transform sm:flex">
         <div className="absolute -left-5 top-6 h-14 w-14 rounded-2xl bg-gradient-to-tr from-brand-400/60 via-brand-500/40 to-rose-500/40 blur-2xl" />
         <div className="absolute -right-4 bottom-4 h-16 w-16 rounded-full bg-gradient-to-tr from-sky-400/40 via-cyan-400/30 to-emerald-400/40 blur-2xl" />
 
-        <div className="relative w-full max-w-[280px] aspect-[1/1.414] rounded-2xl bg-slate-950/80 shadow-2xl border border-white/10 overflow-hidden">
+        <div className="premium-card-static relative aspect-[1/1.414] w-full max-w-[280px] overflow-hidden">
           <div className="absolute inset-0 w-full h-full transition-opacity duration-700">
             <Image
               src={heroImages[currentHeroImg]}

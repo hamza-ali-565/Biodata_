@@ -30,7 +30,7 @@ const features = [
 export function FeatureBanner() {
 
     return (
-        <section className="mt-14 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 w-full px-6 py-16 sm:px-12 relative overflow-hidden shadow-2xl">
+        <section className="premium-section mt-14 w-full px-6 py-16 sm:px-12">
             {/* Decorative Glows */}
             <div className="absolute top-0 right-1/4 w-80 h-80 rounded-full bg-brand-500/10 blur-[100px] pointer-events-none" />
             <div className="absolute bottom-0 left-1/4 w-80 h-80 rounded-full bg-rose-500/10 blur-[100px] pointer-events-none" />
@@ -76,7 +76,7 @@ export function FeatureBanner() {
                         return (
                             <div
                                 key={index}
-                                className="group relative rounded-2xl border border-white/10 bg-slate-900/60 backdrop-blur-md p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 hover:bg-slate-800/80 hover:border-white/20 flex flex-col items-center text-center overflow-hidden"
+                                className="premium-card group flex flex-col items-center p-8 text-center"
                             >
                                 {/* Subtle card glow on hover */}
                                 <div className={`absolute -inset-0.5 rounded-2xl bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-20 blur transition-opacity duration-500`} />

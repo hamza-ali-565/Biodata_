@@ -65,7 +65,7 @@ export default function AboutUs() {
         
         {/* Premium Hero Section */}
         <div className="text-center mb-24 max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 border border-white/10 text-slate-300 text-sm font-medium mb-8 shadow-inner shadow-white/5">
+          <div className="premium-chip mb-8 gap-2 px-4 py-2 text-sm font-medium text-slate-300 shadow-inner shadow-white/5">
             <Sparkles className="w-4 h-4 text-brand-400" />
             Welcome to Marriage Biodata Hub
           </div>
@@ -85,7 +85,7 @@ export default function AboutUs() {
           <section className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="order-2 lg:order-1 relative group">
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-brand-500/20 to-rose-500/20 blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-700" />
-              <div className="relative rounded-3xl border border-white/10 bg-slate-900/60 backdrop-blur-xl p-8 sm:p-12 shadow-2xl overflow-hidden">
+              <div className="premium-card-static relative overflow-hidden p-8 sm:p-12">
                 <div className="absolute -top-24 -right-24 w-48 h-48 bg-brand-500/20 rounded-full blur-[50px]" />
                 <h3 className="text-2xl font-bold text-white mb-6">What We Provide</h3>
                 <ul className="space-y-5">
@@ -120,7 +120,7 @@ export default function AboutUs() {
 
           {/* Section: Mission & Vision (Dual Cards) */}
           <section className="grid md:grid-cols-2 gap-6 sm:gap-8">
-            <div className="group relative rounded-3xl border border-white/10 bg-slate-900/40 p-8 sm:p-12 backdrop-blur-md transition-all duration-300 hover:bg-slate-900/60 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] hover:-translate-y-2">
+            <div className="premium-card group p-8 sm:p-12">
               <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                 <Target className="w-32 h-32 text-brand-500" />
               </div>
@@ -138,7 +138,7 @@ export default function AboutUs() {
               </div>
             </div>
 
-            <div className="group relative rounded-3xl border border-white/10 bg-slate-900/40 p-8 sm:p-12 backdrop-blur-md transition-all duration-300 hover:bg-slate-900/60 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] hover:-translate-y-2">
+            <div className="premium-card group p-8 sm:p-12">
               <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                 <Eye className="w-32 h-32 text-rose-500" />
               </div>
@@ -155,8 +155,8 @@ export default function AboutUs() {
           </section>
 
           {/* Section: Why Choose Us Grid */}
-          <section className="relative rounded-3xl border border-white/5 bg-slate-800/20 p-8 sm:p-12 lg:p-16 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/50" />
+          <section className="premium-section relative overflow-hidden p-8 sm:p-12 lg:p-16">
+            <div aria-hidden className="premium-panel-overlay absolute inset-0" />
             <div className="relative z-10">
               <div className="text-center max-w-2xl mx-auto mb-16">
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Why Choose Marriage Biodata Hub?</h2>
@@ -167,7 +167,7 @@ export default function AboutUs() {
                 {whyChooseUs.map((feature, idx) => (
                   <div 
                     key={idx}
-                    className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.05] hover:border-white/10 transition-colors"
+                    className="premium-card flex items-center gap-4 p-5"
                   >
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-500/10 flex items-center justify-center border border-brand-500/20">
                       <Zap className="w-5 h-5 text-brand-400" />
@@ -180,7 +180,10 @@ export default function AboutUs() {
           </section>
 
           {/* Section: Contact Us CTA */}
-          <section className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-brand-900/40 via-slate-900 to-rose-900/30 p-10 sm:p-16 text-center shadow-2xl">
+          <section className="premium-frame text-center">
+            <div aria-hidden className="premium-frame-glow" />
+            <div className="premium-panel p-10 sm:p-16">
+              <div aria-hidden className="premium-panel-overlay" />
             {/* Glowing Orbs */}
             <div className="absolute -top-24 -left-24 w-64 h-64 bg-brand-500/20 rounded-full blur-[80px]" />
             <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-rose-500/20 rounded-full blur-[80px]" />
@@ -211,6 +214,7 @@ export default function AboutUs() {
               <p className="text-slate-400 pt-6 font-medium">
                 Thank you for using Marriage Biodata Hub.
               </p>
+            </div>
             </div>
           </section>
 

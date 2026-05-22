@@ -49,7 +49,7 @@ export function HowToCreateBiodata() {
     };
 
     return (
-        <section id="how-to-create" className="mt-14 relative overflow-hidden py-24 px-4 sm:px-8 lg:px-12 rounded-[2.5rem] border border-white/5 bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-slate-950/90 shadow-2xl w-full min-h-[900px] scroll-mt-24">
+        <section id="how-to-create" className="premium-section mt-14 w-full min-h-[900px] scroll-mt-24 py-24 px-4 sm:px-8 lg:px-12">
 
             {/* Wedding/Mehndi Theme Background Art */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none blur-[1px]">
@@ -77,7 +77,7 @@ export function HowToCreateBiodata() {
                 {/* Header Sequence */}
                 <div className="text-center max-w-3xl mx-auto">
                     <div
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/10 text-brand-300 text-sm font-medium mb-6 shadow-sm shadow-brand-500/20"
+                        className="premium-chip mb-6 gap-2 px-4 py-2 text-sm font-medium text-brand-300 shadow-sm shadow-brand-500/20"
                     >
                         <Clock className="w-4 h-4" />
                         A quick 2-minute process
@@ -98,7 +98,7 @@ export function HowToCreateBiodata() {
 
                 {/* Infographic */}
                 <div
-                    className="relative w-full max-w-5xl mx-auto rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-white/[0.02]"
+                    className="premium-card-static relative mx-auto w-full max-w-5xl overflow-hidden"
                 >
                     <Image
                         src="/images/how-to-create-marriage-biodata.webp"
@@ -116,7 +116,7 @@ export function HowToCreateBiodata() {
                     {steps.map((step, index) => (
                         <div
                             key={step.id}
-                            className="relative text-left p-6 md:p-8 rounded-[1.5rem] border backdrop-blur-sm transition-all duration-300 border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-brand-500/30 hover:scale-[1.05] group"
+                            className="premium-card group rounded-[1.5rem] p-6 text-left md:p-8 hover:scale-[1.05]"
                         >
                             <span className="absolute top-4 right-6 text-4xl font-extrabold text-white/[0.03] select-none pointer-events-none group-hover:text-brand-500/10 transition-colors">
                                 {step.number}
@@ -186,7 +186,7 @@ export function HowToCreateBiodata() {
                         <PanelHeader title="02. Introduce Your Roots" icon={Home} desc="Provide details about your parents, siblings, and extended family background so matches know exactly who you are." />
 
                         <div className="flex flex-col md:flex-row gap-6">
-                            <div className="flex-1 bg-white/[0.02] border border-white/5 rounded-3xl p-8 hover:bg-white/[0.04] transition-colors relative overflow-hidden group">
+                            <div className="premium-card group relative flex-1 overflow-hidden p-8">
                                 <div className="absolute top-0 right-0 w-48 h-48 bg-brand-500/5 blur-[50px] group-hover:bg-brand-500/10 transition-all" />
                                 <h4 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
                                     <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-rose-400">
@@ -206,7 +206,7 @@ export function HowToCreateBiodata() {
                                 </ul>
                             </div>
 
-                            <div className="flex-1 bg-white/[0.02] border border-white/5 rounded-3xl p-8 hover:bg-white/[0.04] transition-colors relative overflow-hidden group">
+                            <div className="premium-card group relative flex-1 overflow-hidden p-8">
                                 <div className="absolute top-0 right-0 w-48 h-48 bg-rose-500/5 blur-[50px] group-hover:bg-rose-500/10 transition-all" />
                                 <h4 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
                                     <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-brand-400">
@@ -242,21 +242,23 @@ export function HowToCreateBiodata() {
                         <PanelHeader title="03. The Final Step" icon={Phone} desc="Add the definitive way for interested matches to securely get in touch with you." />
 
                         <div className="max-w-3xl mx-auto">
-                            <div className="relative overflow-hidden rounded-3xl p-[1px] bg-gradient-to-br from-brand-500 via-rose-500 to-indigo-500 shadow-[0_0_40px_rgba(244,63,94,0.2)] hover:shadow-[0_0_60px_rgba(244,63,94,0.4)] transition-shadow">
-                                <div className="bg-slate-950 px-8 py-12 rounded-3xl h-full flex flex-col items-center text-center">
+                            <div className="premium-frame">
+                                <div aria-hidden className="premium-frame-glow" />
+                                <div className="premium-panel flex h-full flex-col items-center px-8 py-12 text-center">
+                                    <div aria-hidden className="premium-panel-overlay" />
                                     <div className="w-20 h-20 rounded-full bg-gradient-to-br from-brand-500 to-rose-500 flex items-center justify-center text-white mb-6 shadow-xl">
                                         <Phone className="w-8 h-8" />
                                     </div>
                                     <h4 className="text-3xl font-bold text-white mb-8">Ready to Connect</h4>
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full text-left">
-                                        <div className="bg-white/5 rounded-2xl p-6 border border-white/5">
+                                        <div className="premium-card-static p-6">
                                             <h5 className="text-brand-300 text-sm font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
                                                 <Phone className="w-4 h-4" /> Phone Setup
                                             </h5>
                                             <p className="text-slate-300 leading-relaxed">Add up to 2 primary mobile numbers for parents or yourself to manage inquiries safely.</p>
                                         </div>
-                                        <div className="bg-white/5 rounded-2xl p-6 border border-white/5">
+                                        <div className="premium-card-static p-6">
                                             <h5 className="text-brand-300 text-sm font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
                                                 <MapPin className="w-4 h-4" /> Address Details
                                             </h5>
@@ -316,7 +318,7 @@ function PanelHeader({ title, desc, icon: Icon }) {
 
 function SubGroupCard({ title, icon: Icon, children }) {
     return (
-        <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-6 hover:border-brand-500/20 hover:bg-white/[0.04] transition-all group">
+        <div className="premium-card group p-6">
             <h4 className="text-brand-300 font-bold mb-5 flex items-center gap-2 border-b border-white/5 pb-3">
                 <Icon className="w-4 h-4" />
                 {title}

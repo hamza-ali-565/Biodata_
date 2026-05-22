@@ -23,7 +23,7 @@ const benefits = [
 export function BenefitsSection() {
 
     return (
-        <section className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl w-full">
+        <section className="premium-section mt-14 w-full py-16 px-6 sm:px-12">
             {/* Soft Wedding/Floral Background Art */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none blur-[1px]">
                 <div className="absolute top-[5%] right-[5%] w-64 h-64 md:w-[400px] md:h-[400px] opacity-[0.03] text-brand-200">
@@ -69,7 +69,7 @@ export function BenefitsSection() {
                     {benefits.map((benefit, index) => (
                         <div
                             key={index}
-                            className="flex flex-col items-center md:items-start text-center md:text-left bg-white/[0.02] p-8 rounded-2xl border border-white/[0.05] hover:border-brand-500/30 transition-colors backdrop-blur-sm"
+                            className="premium-card flex flex-col items-center p-8 text-center md:items-start md:text-left"
                         >
                             <div className="mb-6 p-4 bg-brand-500/10 rounded-2xl text-brand-400">
                                 <benefit.icon className="w-8 h-8 md:w-10 md:h-10" />

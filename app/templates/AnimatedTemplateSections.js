@@ -24,7 +24,7 @@ export function AnimatedTemplateSections() {
     <div className="space-y-12 pb-16">
       {/* SECTION 1: HERO */}
       <section 
-        className="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/80 px-6 py-12 sm:px-10 sm:py-16 text-center"
+        className="premium-section px-6 py-12 text-center sm:px-10 sm:py-16"
       >
         <Sparkles className="absolute -left-10 -top-10 h-64 w-64 text-slate-100 opacity-5 rotate-12" />
         <Sparkles className="absolute -right-10 -bottom-10 h-64 w-64 text-slate-100 opacity-5 -rotate-12" />
@@ -44,7 +44,7 @@ export function AnimatedTemplateSections() {
         initial="hidden" 
         animate="visible" 
        
-        className="rounded-3xl border border-white/10 bg-slate-900/80 px-6 py-8 sm:px-10"
+        className="premium-section px-6 py-8 sm:px-10"
         aria-labelledby="template-library-heading"
       >
         <h2 id="template-library-heading" className="sr-only">
@@ -56,7 +56,7 @@ export function AnimatedTemplateSections() {
       {/* SECTION 2: IMPORTANCE */}
       <ViewportSection
        
-        className="relative overflow-hidden rounded-3xl border border-white/5 bg-slate-800/40 px-6 py-12 sm:px-10 lg:px-16"
+        className="premium-section px-6 py-12 sm:px-10 lg:px-16"
       >
         <HeartHandshake className="absolute right-0 top-1/2 h-96 w-96 -translate-y-1/2 translate-x-1/4 text-slate-100 opacity-5" />
         
@@ -80,7 +80,7 @@ export function AnimatedTemplateSections() {
       {/* SECTION 3: HOW TO SELECT */}
       <ViewportSection
        
-        className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900/80 to-slate-800/80 px-6 py-12 sm:px-10 lg:px-16"
+        className="premium-section px-6 py-12 sm:px-10 lg:px-16"
       >
         <LayoutTemplate className="absolute left-0 top-1/2 h-[500px] w-[500px] -translate-y-1/2 -translate-x-1/3 text-slate-100 opacity-5" />
         
@@ -110,7 +110,7 @@ export function AnimatedTemplateSections() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10 max-w-5xl mx-auto">
-          <div className="rounded-2xl border border-white/5 bg-slate-900/60 p-6 sm:p-8 hover:bg-slate-800/80 transition-colors group">
+          <div className="premium-card group p-6 sm:p-8">
             <Palette className="h-8 w-8 text-rose-400 mb-4 opacity-70 group-hover:opacity-100 transition-opacity" />
             <h3 className="text-xl font-semibold text-slate-100 mb-3">Use of Heavy Colors:</h3>
             <p className="text-slate-400 leading-relaxed">
@@ -118,7 +118,7 @@ export function AnimatedTemplateSections() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-white/5 bg-slate-900/60 p-6 sm:p-8 hover:bg-slate-800/80 transition-colors group">
+          <div className="premium-card group p-6 sm:p-8">
             <Type className="h-8 w-8 text-blue-400 mb-4 opacity-70 group-hover:opacity-100 transition-opacity" />
             <h3 className="text-xl font-semibold text-slate-100 mb-3">Use of Difficult font:</h3>
             <p className="text-slate-400 leading-relaxed">
@@ -126,7 +126,7 @@ export function AnimatedTemplateSections() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-white/5 bg-slate-900/60 p-6 sm:p-8 hover:bg-slate-800/80 transition-colors group">
+          <div className="premium-card group p-6 sm:p-8">
             <FileWarning className="h-8 w-8 text-amber-400 mb-4 opacity-70 group-hover:opacity-100 transition-opacity" />
             <h3 className="text-xl font-semibold text-slate-100 mb-3">Overload biodata with Information:</h3>
             <p className="text-slate-400 leading-relaxed">
@@ -134,7 +134,7 @@ export function AnimatedTemplateSections() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-white/5 bg-slate-900/60 p-6 sm:p-8 hover:bg-slate-800/80 transition-colors group">
+          <div className="premium-card group p-6 sm:p-8">
             <ImageIcon className="h-8 w-8 text-emerald-400 mb-4 opacity-70 group-hover:opacity-100 transition-opacity" />
             <h3 className="text-xl font-semibold text-slate-100 mb-3">Low-Quality photos:</h3>
             <p className="text-slate-400 leading-relaxed">
@@ -147,7 +147,7 @@ export function AnimatedTemplateSections() {
       {/* SECTION 5: EXAMPLES */}
       <ViewportSection
         stagger
-        className="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-800/40 px-6 py-12 sm:px-10 lg:px-16"
+        className="premium-section px-6 py-12 sm:px-10 lg:px-16"
       >
         <BookOpen className="absolute right-0 bottom-0 h-80 w-80 translate-y-1/4 translate-x-1/4 text-slate-100 opacity-5" />
         
@@ -159,7 +159,7 @@ export function AnimatedTemplateSections() {
           </div>
           
           <div className="space-y-6">
-            <div className="bg-slate-900/50 rounded-2xl p-6 border-l-4 border-l-purple-500/50 hover:border-l-purple-500 transition-colors">
+            <div className="premium-card-static rounded-2xl border-l-4 border-l-emerald-500/50 p-6 hover:border-l-emerald-500">
               <div className="flex items-start gap-4">
                 <div className="mt-1 bg-purple-500/10 p-2 rounded-lg">
                   <List className="h-5 w-5 text-purple-400" />
@@ -173,7 +173,7 @@ export function AnimatedTemplateSections() {
               </div>
             </div>
 
-            <div className="bg-slate-900/50 rounded-2xl p-6 border-l-4 border-l-indigo-500/50 hover:border-l-indigo-500 transition-colors">
+            <div className="premium-card-static rounded-2xl border-l-4 border-l-emerald-500/40 p-6 hover:border-l-emerald-500">
               <div className="flex items-start gap-4">
                 <div className="mt-1 bg-indigo-500/10 p-2 rounded-lg">
                   <Paintbrush className="h-5 w-5 text-indigo-400" />
@@ -187,7 +187,7 @@ export function AnimatedTemplateSections() {
               </div>
             </div>
 
-            <div className="bg-slate-900/50 rounded-2xl p-6 border-l-4 border-l-blue-500/50 hover:border-l-blue-500 transition-colors">
+            <div className="premium-card-static rounded-2xl border-l-4 border-l-sky-500/50 p-6 hover:border-l-sky-500">
               <div className="flex items-start gap-4">
                 <div className="mt-1 bg-blue-500/10 p-2 rounded-lg">
                   <LayoutTemplate className="h-5 w-5 text-blue-400" />
@@ -214,7 +214,7 @@ export function AnimatedTemplateSections() {
 
         <div className="space-y-12 max-w-6xl mx-auto">
           {/* H3: Select simple and attractive layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center rounded-3xl border border-white/5 bg-slate-900/50 p-6 sm:p-10">
+          <div className="premium-section grid grid-cols-1 items-center gap-8 p-6 sm:p-10 lg:grid-cols-2">
             <div className="order-2 lg:order-1">
               <h3 className="text-2xl font-bold text-slate-100 mb-4">Select simple and attractive layout:</h3>
               <div className="space-y-4 text-slate-300 leading-relaxed text-lg">
@@ -239,7 +239,7 @@ export function AnimatedTemplateSections() {
           </div>
 
           {/* H3: Mobile-friendly format */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center rounded-3xl border border-white/5 bg-slate-800/40 p-6 sm:p-10">
+          <div className="premium-section grid grid-cols-1 items-center gap-8 p-6 sm:p-10 lg:grid-cols-2">
             <div className="flex justify-center lg:justify-start">
               <div className="relative h-[250px] w-full max-w-[400px] rounded-2xl overflow-hidden shadow-2xl border border-white/10 hover:scale-105 transition-transform duration-500">
                 <NextImage 
@@ -259,7 +259,7 @@ export function AnimatedTemplateSections() {
           </div>
 
           {/* H3: Organize information in a beautiful manner */}
-          <div className="rounded-3xl border border-white/5 bg-slate-900/40 p-6 sm:p-10 lg:p-14">
+          <div className="premium-section p-6 sm:p-10 lg:p-14">
             <div className="max-w-3xl mx-auto mb-16 text-center">
               <h3 className="text-3xl font-bold text-slate-100 mb-6">Organize information in a beautiful manner:</h3>
               <p className="text-slate-300 leading-relaxed text-lg sm:text-xl">
@@ -354,8 +354,7 @@ export function AnimatedTemplateSections() {
 
           <div className="space-y-8">
             {/* H3: First impression */}
-            <div className="rounded-3xl border border-white/5 bg-slate-900/60 p-6 sm:p-8 backdrop-blur-sm relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="premium-card group relative overflow-hidden p-6 sm:p-8">
               <h3 className="text-2xl font-bold text-slate-100 mb-4 relative z-10">First impression:</h3>
               <p className="text-slate-300 leading-relaxed text-lg relative z-10">
                 the color selection in the template is very important as it can create a good or bad impression. The color of fonts should match the theme of the biodata template. Colors make your biodata visually strong, attractive, and organized. The color combination should be soft and decent in your biodata format.
@@ -363,14 +362,14 @@ export function AnimatedTemplateSections() {
             </div>
 
             {/* H3: Emotional feel */}
-            <div className="rounded-3xl border border-white/5 bg-slate-800/40 p-6 sm:p-8 relative overflow-hidden">
+            <div className="premium-section relative overflow-hidden p-6 sm:p-8">
               <h3 className="text-2xl font-bold text-slate-100 mb-4 relative z-10">Emotional feel:</h3>
               <p className="text-slate-300 leading-relaxed text-lg mb-8 relative z-10">
                 colors have a strong impact on the human mind; you can say that colors have a direct connection to the human brain. Different colors make different feelings in humans, so select good, calm, soft, and professional color combinations while <Link href="/" className="text-blue-400 hover:underline hover:text-blue-300 transition-colors">creating biodata for marriage</Link>. Here are the examples of some colors and the science behind them:
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 relative z-10">
-                <div className="flex items-center gap-4 bg-slate-900/80 p-4 rounded-2xl border border-blue-500/20 hover:border-blue-500/50 transition-colors">
+                <div className="premium-card-static flex items-center gap-4 rounded-2xl p-4">
                   <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center border border-blue-500/30 flex-shrink-0 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
                     <div className="w-6 h-6 rounded-full bg-blue-400" />
                   </div>
@@ -379,7 +378,7 @@ export function AnimatedTemplateSections() {
                   </p>
                 </div>
 
-                <div className="flex items-center gap-4 bg-slate-900/80 p-4 rounded-2xl border border-amber-500/20 hover:border-amber-500/50 transition-colors">
+                <div className="premium-card-static flex items-center gap-4 rounded-2xl p-4">
                   <div className="w-12 h-12 rounded-full bg-amber-500/20 flex items-center justify-center border border-amber-500/30 flex-shrink-0 shadow-[0_0_15px_rgba(245,158,11,0.3)]">
                     <div className="w-6 h-6 rounded-full bg-amber-400" />
                   </div>
@@ -388,7 +387,7 @@ export function AnimatedTemplateSections() {
                   </p>
                 </div>
 
-                <div className="flex items-center gap-4 bg-slate-900/80 p-4 rounded-2xl border border-pink-500/20 hover:border-pink-500/50 transition-colors">
+                <div className="premium-card-static flex items-center gap-4 rounded-2xl p-4">
                   <div className="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center border border-pink-500/30 flex-shrink-0 shadow-[0_0_15px_rgba(236,72,153,0.3)]">
                     <div className="w-6 h-6 rounded-full bg-pink-400" />
                   </div>
@@ -397,7 +396,7 @@ export function AnimatedTemplateSections() {
                   </p>
                 </div>
 
-                <div className="flex items-center gap-4 bg-slate-900/80 p-4 rounded-2xl border border-white/20 hover:border-white/50 transition-colors">
+                <div className="premium-card-static flex items-center gap-4 rounded-2xl p-4">
                   <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center border border-white/20 flex-shrink-0 shadow-[0_0_15px_rgba(255,255,255,0.2)]">
                     <div className="w-6 h-6 rounded-full bg-slate-100" />
                   </div>
@@ -409,7 +408,7 @@ export function AnimatedTemplateSections() {
             </div>
 
             {/* H3: traditional and cultural preferences */}
-            <div className="rounded-3xl border border-white/5 bg-slate-900/60 p-6 sm:p-8 relative overflow-hidden group">
+            <div className="premium-card group relative overflow-hidden p-6 sm:p-8">
               <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
               

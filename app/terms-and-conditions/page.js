@@ -211,7 +211,7 @@ export default function TermsAndConditions() {
         
         {/* Hero Section */}
         <div className="text-center mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 border border-white/10 text-slate-300 text-sm font-medium mb-8 shadow-inner shadow-white/5">
+          <div className="premium-chip mb-8 gap-2 px-4 py-2 text-sm font-medium text-slate-300 shadow-inner shadow-white/5">
             <span className="w-2 h-2 rounded-full bg-brand-500 shadow-[0_0_8px_rgba(251,146,60,0.8)] animate-pulse" />
             Last Updated: May 21, 2026
           </div>
@@ -230,7 +230,7 @@ export default function TermsAndConditions() {
           {sections.map((section, index) => (
             <section 
               key={section.id}
-              className="group relative rounded-3xl border border-white/5 bg-slate-900/40 p-8 sm:p-10 backdrop-blur-xl transition-all duration-300 hover:bg-slate-900/60 hover:border-white/10 hover:shadow-2xl hover:shadow-brand-500/5"
+              className="premium-card group p-8 sm:p-10"
             >
               {/* Subtle top gradient line */}
               <div className="absolute top-0 left-8 right-8 h-[1px] bg-gradient-to-r from-transparent via-white/10 group-hover:via-brand-500/30 to-transparent transition-all duration-500" />

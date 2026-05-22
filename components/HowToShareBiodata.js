@@ -38,7 +38,7 @@ const shareSteps = [
 export function HowToShareBiodata() {
 
     return (
-        <section className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl w-full">
+        <section className="premium-section mt-14 w-full py-16 px-6 sm:px-12">
             
             {/* Background Subtle Art */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none blur-[2px]">
@@ -77,7 +77,7 @@ export function HowToShareBiodata() {
                     {shareSteps.map((step, index) => (
                         <div
                             key={index}
-                            className="bg-white/[0.02] border border-white/[0.05] rounded-2xl p-6 sm:p-8 backdrop-blur-sm hover:bg-white/[0.04] hover:-translate-y-1 hover:border-brand-500/30 transition-all duration-200 group"
+                            className="premium-card group p-6 sm:p-8"
                         >
                             <div className="mb-5 w-14 h-14 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 group-hover:bg-brand-500 group-hover:text-white transition-colors duration-300">
                                 <step.icon className="w-6 h-6" />

@@ -70,7 +70,7 @@ export function TemplateCarousel() {
 
     return (
         <section
-            className="mt-14 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 py-16 px-4 sm:px-8 relative overflow-hidden shadow-2xl"
+            className="premium-section mt-14 py-16 px-4 sm:px-8"
         >
             {/* Interactive Glowing Atmospheric Blurs matching HowItWorks */}
             <div className="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-brand-500/10 blur-[100px] pointer-events-none hidden md:block" />

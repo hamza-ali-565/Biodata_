@@ -315,7 +315,7 @@ export function BiodataForm() {
         {fields.map((field) => (
           <div
             key={field.id}
-            className="relative grid gap-3 rounded-xl border border-white/10 bg-slate-950/60 p-3 pr-12 sm:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] sm:pr-3"
+            className="premium-card-static relative grid gap-3 p-3 pr-12 sm:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] sm:pr-3"
           >
             <button
                 type="button"
@@ -373,7 +373,7 @@ export function BiodataForm() {
     <section
       id="biodata-form"
       aria-labelledby="biodata-form-heading"
-      className="mt-16 scroll-mt-24 rounded-3xl border border-white/5 bg-slate-900/80 px-6 py-10 sm:px-10"
+      className="premium-section mt-16 scroll-mt-24 px-6 py-10 sm:px-10"
     >
       <div className="max-w-2xl">
         <h2
@@ -394,7 +394,7 @@ export function BiodataForm() {
         noValidate
       >
         {/* Personal details */}
-        <fieldset className="space-y-4 rounded-2xl border border-white/10 bg-slate-950/60 p-5 sm:p-6">
+        <fieldset className="premium-card-static space-y-4 p-5 sm:p-6">
           <legend className="px-2 text-sm font-semibold text-slate-100">
             Personal details
           </legend>
@@ -505,7 +505,7 @@ export function BiodataForm() {
         </fieldset>
 
         {/* Family details */}
-        <fieldset className="space-y-4 rounded-2xl border border-white/10 bg-slate-950/60 p-5 sm:p-6">
+        <fieldset className="premium-card-static space-y-4 p-5 sm:p-6">
           <legend className="px-2 text-sm font-semibold text-slate-100">
             Family details
           </legend>
@@ -544,7 +544,7 @@ export function BiodataForm() {
         </fieldset>
 
         {/* Contact details */}
-        <fieldset className="space-y-4 rounded-2xl border border-white/10 bg-slate-950/60 p-5 sm:p-6">
+        <fieldset className="premium-card-static space-y-4 p-5 sm:p-6">
           <legend className="px-2 text-sm font-semibold text-slate-100">
             Contact details
           </legend>
@@ -585,7 +585,7 @@ export function BiodataForm() {
         </fieldset>
 
         {/* Upload photo */}
-        <fieldset className="space-y-4 rounded-2xl border border-white/10 bg-slate-950/60 p-5 sm:p-6">
+        <fieldset className="premium-card-static space-y-4 p-5 sm:p-6">
           <legend className="px-2 text-sm font-semibold text-slate-100">
             Upload photo (optional)
           </legend>
@@ -682,7 +682,7 @@ export function BiodataForm() {
             }}
             className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
           />
-          <div className="relative w-full max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-slate-900 p-6 shadow-2xl">
+          <div className="premium-card-static relative w-full max-w-sm overflow-hidden p-6">
               <div className="relative z-10 flex flex-col items-center text-center">
                 <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-rose-500/20 bg-rose-500/10 text-rose-400 shadow-inner">
                   <Trash2 className="h-6 w-6" />
@@ -724,7 +724,7 @@ export function BiodataForm() {
             onClick={() => setIsResetModalOpen(false)}
             className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
           />
-          <div className="relative w-full max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-slate-900 p-6 shadow-2xl">
+          <div className="premium-card-static relative w-full max-w-sm overflow-hidden p-6">
               <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-rose-500/10 blur-[80px]" />
 
               <div className="relative z-10 flex flex-col items-center text-center">

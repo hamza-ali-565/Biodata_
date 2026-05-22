@@ -3,8 +3,8 @@ export function TemplateCard({ template, isActive, onSelect }) {
     <button
       type="button"
       onClick={onSelect}
-      className={`flex h-full flex-col rounded-2xl border bg-slate-950/70 p-4 text-left text-xs transition hover:border-brand-400/70 hover:bg-slate-900/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 ${
-        isActive ? "border-brand-400 shadow-soft" : "border-white/10"
+      className={`premium-card flex h-full flex-col p-4 text-left text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 ${
+        isActive ? "border-emerald-500/30 shadow-[0_12px_40px_rgba(16,185,129,0.15)]" : ""
       }`}
       aria-pressed={isActive}
     >

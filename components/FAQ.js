@@ -139,7 +139,7 @@ export function FAQ() {
                     return (
                         <article
                             key={index}
-                            className="rounded-2xl border border-white/5 bg-slate-900/60 backdrop-blur-md overflow-hidden transition-colors hover:border-white/10"
+                            className="premium-card-static overflow-hidden"
                             itemScope
                             itemProp="mainEntity"
                             itemType="https://schema.org/Question"

@@ -149,16 +149,16 @@ export function Footer() {
     <footer className="relative mt-20 w-full">
       <div className="relative overflow-hidden rounded-t-[2.5rem] p-[1px] shadow-[0_-20px_80px_rgba(0,0,0,0.35)] sm:rounded-t-[3rem]">
         <div
-          className="absolute inset-0 rounded-t-[2.5rem] bg-gradient-to-br from-brand-500/30 via-white/10 to-rose-500/25 sm:rounded-t-[3rem]"
+          className="premium-frame-glow absolute inset-0 rounded-t-[2.5rem] sm:rounded-t-[3rem]"
           aria-hidden
         />
 
-        <div className="relative overflow-hidden rounded-t-[calc(2.5rem-1px)] border-t border-white/[0.06] bg-slate-950/90 backdrop-blur-xl sm:rounded-t-[calc(3rem-1px)]">
+        <div className="premium-panel rounded-t-[calc(2.5rem-1px)] border-t border-white/[0.08] sm:rounded-t-[calc(3rem-1px)]">
           <FooterBackground />
 
           <div className="relative z-10 mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
             {/* CTA */}
-            <div className="group relative mb-14 overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6 shadow-[0_12px_40px_rgba(0,0,0,0.25)] backdrop-blur-md transition-all duration-500 hover:border-brand-500/25 hover:bg-white/[0.05] hover:shadow-brand-500/10 sm:mb-16 sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
+            <div className="premium-card group relative mb-14 p-6 sm:mb-16 sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
               <div
                 className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand-500/15 blur-3xl opacity-70 transition-opacity duration-500 group-hover:opacity-100"
                 aria-hidden
@@ -215,7 +215,7 @@ export function Footer() {
                   </p>
                 </div>
 
-                <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4 backdrop-blur-sm transition-colors duration-300 hover:border-white/10 hover:bg-white/[0.04]">
+                <div className="premium-card-static p-4 transition-colors duration-300 hover:border-emerald-500/20">
                   <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-slate-500">
                     Connect with us
                   </p>

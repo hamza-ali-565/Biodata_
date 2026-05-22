@@ -33,15 +33,10 @@ export function BiodataFormatExplanation() {
             aria-labelledby="biodata-format-heading"
             className="relative mt-14 w-full overflow-hidden"
         >
-            <div
-                className="relative rounded-[2rem] p-[1px] shadow-[0_24px_80px_rgba(0,0,0,0.45)] sm:rounded-[2.5rem]"
-            >
-                <div
-                    aria-hidden
-                    className="pointer-events-none absolute inset-0 rounded-[2rem] bg-gradient-to-br from-brand-500/40 via-white/10 to-rose-500/30 opacity-70 sm:rounded-[2.5rem]"
-                />
+            <div className="premium-frame">
+                <div aria-hidden className="premium-frame-glow" />
 
-                <div className="relative overflow-hidden rounded-[calc(2rem-1px)] bg-slate-950/75 backdrop-blur-2xl sm:rounded-[calc(2.5rem-1px)]">
+                <div className="premium-panel">
                     <div
                         aria-hidden
                         className="pointer-events-none absolute -left-20 top-16 h-64 w-64 rounded-full bg-brand-500/15 blur-[100px]"
@@ -50,10 +45,7 @@ export function BiodataFormatExplanation() {
                         aria-hidden
                         className="pointer-events-none absolute -right-16 bottom-10 h-72 w-72 rounded-full bg-rose-500/12 blur-[110px]"
                     />
-                    <div
-                        aria-hidden
-                        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-950/30 to-slate-950/80"
-                    />
+                    <div aria-hidden className="premium-panel-overlay" />
                     <div
                         aria-hidden
                         className="pointer-events-none absolute right-8 top-8 h-28 w-28 rounded-full border border-white/[0.04] bg-white/[0.02] blur-sm"
@@ -147,7 +139,7 @@ export function BiodataFormatExplanation() {
                                         }
                                     >
                                         <article
-                                            className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.07] bg-slate-900/50 p-6 shadow-[0_8px_32px_rgba(0,0,0,0.25)] backdrop-blur-md transition-all duration-500 hover:-translate-y-1.5 hover:border-brand-500/25 sm:p-7 lg:p-8 ${section.glow}`}
+                                            className={`premium-card group flex h-full flex-col p-6 sm:p-7 lg:p-8 ${section.glow}`}
                                         >
                                             <div
                                                 aria-hidden

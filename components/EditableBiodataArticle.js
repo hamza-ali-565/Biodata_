@@ -160,22 +160,13 @@ export function EditableBiodataArticle() {
             aria-labelledby="editable-biodata-heading"
             className="relative mt-14 w-full scroll-mt-24 overflow-hidden"
         >
-            <div
-                className="relative rounded-[2rem] p-[1px] shadow-[0_28px_90px_rgba(0,0,0,0.5)] sm:rounded-[2.5rem]"
-            >
-                {/* Static gradient border */}
-                <div
-                    aria-hidden
-                    className="pointer-events-none absolute inset-0 rounded-[2rem] bg-gradient-to-br from-brand-500/50 via-white/10 to-violet-500/40 opacity-75 sm:rounded-[2.5rem]"
-                />
+            <div className="premium-frame">
+                <div aria-hidden className="premium-frame-glow" />
 
-                <div className="relative overflow-hidden rounded-[calc(2rem-1px)] bg-slate-950/80 backdrop-blur-2xl sm:rounded-[calc(2.5rem-1px)]">
+                <div className="premium-panel">
                     <EditorialBackgroundArt />
 
-                    <div
-                        aria-hidden
-                        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-950/20 to-slate-950/85"
-                    />
+                    <div aria-hidden className="premium-panel-overlay" />
 
                     <article className="relative z-10 px-5 py-14 sm:px-10 sm:py-16 lg:px-14 lg:py-20">
                         {/* H2 — Hero heading */}
@@ -183,7 +174,7 @@ export function EditableBiodataArticle() {
                             className="mx-auto max-w-4xl text-center"
                         >
                             <div
-                                className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-xs font-medium tracking-wide text-brand-300 shadow-sm shadow-brand-500/10 backdrop-blur-md sm:text-sm"
+                                className="premium-chip mb-6 gap-2 px-4 py-1.5 text-xs font-medium tracking-wide text-brand-300 shadow-sm shadow-brand-500/10 sm:text-sm"
                             >
                                 <span className="relative flex h-2 w-2">
                                     <span className="absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-60" />
@@ -247,7 +238,7 @@ export function EditableBiodataArticle() {
                                 return (
                                     <div key={index}>
                                         <article
-                                            className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-slate-900/45 p-6 shadow-[0_12px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-brand-500/25 sm:p-8 lg:p-10 ${section.borderGlow}`}
+                                            className={`premium-card group p-6 sm:p-8 lg:p-10 ${section.borderGlow}`}
                                         >
                                             {/* Card inner glow */}
                                             <div

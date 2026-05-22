@@ -158,21 +158,13 @@ export function MarriageBiodataProblemsArticle() {
             aria-labelledby="biodata-problems-heading"
             className="relative mt-14 w-full scroll-mt-24 overflow-hidden"
         >
-            <div
-                className="relative rounded-[2rem] p-[1px] shadow-[0_28px_90px_rgba(0,0,0,0.5)] sm:rounded-[2.5rem]"
-            >
-                <div
-                    aria-hidden
-                    className="pointer-events-none absolute inset-0 rounded-[2rem] bg-gradient-to-bl from-emerald-500/40 via-white/10 to-sky-500/35 opacity-70 sm:rounded-[2.5rem]"
-                />
+            <div className="premium-frame">
+                <div aria-hidden className="premium-frame-glow" />
 
-                <div className="relative overflow-hidden rounded-[calc(2rem-1px)] bg-slate-950/80 backdrop-blur-2xl sm:rounded-[calc(2.5rem-1px)]">
+                <div className="premium-panel">
                     <ProblemsSectionBackground />
 
-                    <div
-                        aria-hidden
-                        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-950/30 via-slate-900/25 to-slate-950/90"
-                    />
+                    <div aria-hidden className="premium-panel-overlay" />
 
                     <article className="relative z-10 px-5 py-14 sm:px-10 sm:py-16 lg:px-14 lg:py-20">
                         <header
@@ -226,7 +218,7 @@ export function MarriageBiodataProblemsArticle() {
                                 return (
                                     <div key={index}>
                                         <article
-                                            className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-slate-900/50 p-6 shadow-[0_12px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-emerald-500/20 sm:p-8 lg:p-10 ${section.borderGlow}`}
+                                            className={`premium-card group p-6 sm:p-8 lg:p-10 ${section.borderGlow}`}
                                         >
                                             <div
                                                 aria-hidden

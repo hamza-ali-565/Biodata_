@@ -19,9 +19,10 @@ export function CTASection() {
 
     return (
         <section className="mt-14 mb-20 w-full mx-auto px-4 sm:px-6 relative z-10">
-            <div
-                className="relative overflow-hidden rounded-[2.5rem] border border-white/5 bg-gradient-to-b from-slate-900/80 to-slate-950/80 p-10 md:p-16 text-center shadow-2xl backdrop-blur-xl"
-            >
+            <div className="premium-frame">
+                <div aria-hidden className="premium-frame-glow" />
+                <div className="premium-panel p-10 text-center md:p-16">
+                    <div aria-hidden className="premium-panel-overlay" />
                 {/* Decorative Glows inside the card */}
                 <div className="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 rounded-full bg-brand-500/10 blur-[80px]" />
                 <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-64 h-64 rounded-full bg-rose-500/10 blur-[80px]" />
@@ -51,7 +52,7 @@ export function CTASection() {
                     </svg>
                 </div>
 
-                <div className="relative z-10 max-w-2xl mx-auto space-y-6">
+                <div className="relative z-10 mx-auto max-w-2xl space-y-6">
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-tight">
                         A Meaningful Marriage Biodata Helps You Finds the Right Life Partner
                     </h2>
@@ -67,6 +68,7 @@ export function CTASection() {
                             Create My Biodata
                         </button>
                     </div>
+                </div>
                 </div>
             </div>
         </section>

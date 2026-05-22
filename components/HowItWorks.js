@@ -41,7 +41,7 @@ export function HowItWorks() {
   return (
     <section
       aria-labelledby="how-it-works-heading"
-      className="mt-14 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 px-6 py-16 sm:px-12 relative overflow-hidden shadow-2xl"
+      className="premium-section mt-14 px-6 py-16 sm:px-12"
     >
       {/* Background Glows */}
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-brand-500/10 blur-[100px]" />
@@ -108,7 +108,7 @@ export function HowItWorks() {
 
                 {/* Card Container */}
                 <div className={`ml-16 md:ml-0 md:w-[45%] ${isLeft ? "md:pr-12 lg:pr-16" : "md:pl-12 lg:pl-16"}`}>
-                  <div className="group relative flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left rounded-3xl border border-white/10 bg-slate-900/60 backdrop-blur-xl p-6 md:p-8 hover:bg-slate-800/80 hover:border-white/20 transition-all duration-500 hover:-translate-y-1 shadow-xl">
+                  <div className="premium-card group flex flex-col items-center p-6 text-center sm:flex-row sm:items-start sm:text-left md:p-8">
 
                     {/* Icon */}
                     <div className="mb-6 sm:mb-0 sm:mr-6 shrink-0 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-white/5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)] group-hover:scale-110 transition-transform duration-500 group-hover:border-brand-500/30">

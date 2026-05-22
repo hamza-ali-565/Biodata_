@@ -52,7 +52,7 @@ const tips = [
 export function DesignTips() {
 
     return (
-        <section id="design-tips" className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl w-full scroll-mt-24">
+        <section id="design-tips" className="premium-section mt-14 w-full scroll-mt-24 py-16 px-6 sm:px-12">
             {/* Background Decor Glows */}
             <div className="absolute top-20 right-0 w-72 h-72 rounded-full bg-brand-500/5 blur-[120px] pointer-events-none" />
             <div className="absolute bottom-20 left-0 w-72 h-72 rounded-full bg-rose-500/5 blur-[120px] pointer-events-none" />
@@ -114,7 +114,7 @@ export function DesignTips() {
                                     {/* Accent Decoration behind the image */}
                                     <div className={`absolute top-[5%] -bottom-[5%] w-[100%] bg-gradient-to-tr from-brand-500/10 to-rose-500/10 rounded-2xl -z-10 blur-xl ${isEven ? "-right-[5%]" : "-left-[5%]"}`} />
 
-                                    <div className="w-full aspect-[1/1.414] relative rounded-lg border border-white/10 shadow-2xl overflow-hidden bg-slate-800">
+                                    <div className="premium-card-static relative aspect-[1/1.414] w-full overflow-hidden rounded-lg">
                                         <Image
                                             src={tip.image}
                                             alt={tip.title}

@@ -52,7 +52,7 @@ export default function PrivacyPolicy() {
             </div>
           </div>
 
-          <div className="bg-slate-900/50 border border-brand-500/20 rounded-2xl p-6 sm:p-8 relative overflow-hidden">
+          <div className="premium-card-static relative overflow-hidden p-6 sm:p-8">
             <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-brand-500/10 blur-[80px]" />
             <h2 className="text-xl md:text-2xl font-semibold text-brand-400 mb-3 relative z-10">3. How We Use Your Information</h2>
             <p className="mb-3 relative z-10"><strong>Your Data Stays on Your Device:</strong> We want to be completely clear—the personal data, family details, and photos you enter into our forms are <strong>processed and stored locally on your own device</strong> (using your browser's local storage).</p>
@@ -104,7 +104,7 @@ export default function PrivacyPolicy() {
             <p>We may update our Privacy Policy from time to time to reflect changes in our tool or legal requirements. Any updates will be posted directly on this page with an updated "Effective Date." We encourage you to review this page periodically.</p>
           </div>
 
-          <div className="bg-slate-900/80 rounded-2xl p-6 sm:p-8 text-center border border-white/5">
+          <div className="premium-card-static rounded-2xl p-6 text-center sm:p-8">
             <h2 className="text-xl md:text-2xl font-semibold text-brand-400 mb-3">10. Contact Information</h2>
             <p className="mb-2">If you have any questions or suggestions regarding our Privacy Policy, or if you need clarification on how your data is processed locally, please contact us at:</p>
             <a href="mailto:marriagebiodatahub@gmail.com" className="text-white font-medium hover:text-brand-400 transition-colors inline-block mt-2">

@@ -3,7 +3,7 @@
 export function WhyNeedBiodata() {
 
     return (
-        <section className="mt-14 relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/60 to-slate-950/60 shadow-2xl w-full">
+        <section className="premium-section mt-14 w-full py-16 px-6 sm:px-12">
             {/* Background Art - Abstract Islamic Geometric / Mandala style */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none blur-[1px]">
                 <div className="absolute -top-[10%] -left-[5%] w-64 h-64 md:w-[500px] md:h-[500px] opacity-[0.03] rotate-45 text-white">
@@ -79,33 +79,9 @@ export function WhyNeedBiodata() {
                     ].map((card, index) => (
                         <div
                             key={index}
-                            className="relative group rounded-3xl transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] flex flex-col text-left"
+                            className="premium-card group flex flex-col text-left"
                         >
-                            {/* Gradient Border Background */}
-                            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/10 to-white/0 group-hover:from-brand-500/40 group-hover:to-rose-500/40 transition-colors duration-500" />
-
-                            {/* Card Content Wrapper */}
-                            <div className="absolute inset-[1px] rounded-[calc(1.5rem-1px)] bg-slate-900/90 backdrop-blur-2xl transition-colors duration-500 group-hover:bg-slate-900/80" />
-
-                            {/* Animated SVG background art for cards */}
-                            <div className="absolute inset-[1px] pointer-events-none overflow-hidden rounded-[calc(1.5rem-1px)]">
-                                {/* Glowing Gradients */}
-                                <div className="absolute -top-24 -right-24 w-48 h-48 bg-brand-500/20 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 transform group-hover:scale-125" />
-                                <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-rose-500/20 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 transform group-hover:scale-125" />
-
-                                {/* Floating Particles & Mesh Pattern */}
-                                <svg className="absolute inset-0 w-full h-full opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-700" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <pattern id={`card-mesh-${index}`} width="32" height="32" patternUnits="userSpaceOnUse">
-                                            <path d="M 32 0 L 0 0 0 32" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-white" />
-                                            <circle cx="16" cy="16" r="1" fill="currentColor" className="text-white" />
-                                        </pattern>
-                                    </defs>
-                                    <rect width="100%" height="100%" fill={`url(#card-mesh-${index})`} />
-                                </svg>
-                            </div>
-
-                            <div className="relative z-10 flex flex-col h-full p-8 lg:p-10">
+                            <div className="relative z-10 flex h-full flex-col p-8 lg:p-10">
                                 <h3 className="text-xl md:text-2xl font-bold text-white mb-5 leading-snug group-hover:text-brand-300 transition-colors duration-300">
                                     {card.title}
                                 </h3>
