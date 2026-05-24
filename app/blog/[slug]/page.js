@@ -41,6 +41,26 @@ export default async function BlogArticlePage({ params }) {
 
   if (!post) notFound();
 
+  // Extract the first paragraph(s) before any heading to use as the introduction
+  let introduction = null;
+  let bodySections = post.sections;
+  const firstHeadingIndex = post.sections.findIndex((s) => s.type === "heading");
+
+  if (firstHeadingIndex > 0) {
+    introduction = post.sections
+      .slice(0, firstHeadingIndex)
+      .filter((s) => s.type === "paragraph")
+      .map((s) => s.text)
+      .join("\n\n");
+    bodySections = post.sections.slice(firstHeadingIndex);
+  } else if (firstHeadingIndex === -1 && post.sections.length > 0) {
+    introduction = post.sections
+      .filter((s) => s.type === "paragraph")
+      .map((s) => s.text)
+      .join("\n\n");
+    bodySections = [];
+  }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -87,7 +107,7 @@ export default async function BlogArticlePage({ params }) {
             <BlogArticleHero
               slug={post.slug}
               title={post.title}
-              excerpt={post.excerpt}
+              introduction={introduction}
               image={post.image}
               publishedAt={post.publishedAt}
             />
@@ -102,7 +122,7 @@ export default async function BlogArticlePage({ params }) {
                     <div aria-hidden className="premium-panel-overlay" />
                     <div className="relative z-10" itemProp="articleBody">
                       <BlogArticleBody
-                        sections={post.sections}
+                        sections={bodySections}
                         slug={post.slug}
                         title={post.title}
                       />

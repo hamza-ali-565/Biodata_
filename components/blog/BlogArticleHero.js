@@ -2,7 +2,7 @@ import { Calendar } from "lucide-react";
 import { BlogFeaturedImage } from "./BlogFeaturedImage";
 import { formatBlogDate } from "../../lib/blog/utils";
 
-export function BlogArticleHero({ slug, title, excerpt, image, publishedAt }) {
+export function BlogArticleHero({ slug, title, introduction, image, publishedAt }) {
   const dateLabel = formatBlogDate(publishedAt);
 
   return (
@@ -31,9 +31,9 @@ export function BlogArticleHero({ slug, title, excerpt, image, publishedAt }) {
         <h1 className="blog-article-title" itemProp="headline">
           {title}
         </h1>
-        {excerpt && (
+        {introduction && (
           <p className="blog-article-deck mt-5" itemProp="description">
-            {excerpt}
+            {introduction}
           </p>
         )}
       </div>
