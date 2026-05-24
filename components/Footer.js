@@ -199,7 +199,7 @@ export function Footer() {
                     aria-hidden
                   />
                   <Image
-                    src="/images/Logo-of-marriage-biodata-hub.png"
+                    src="/images/Logo-of-marriage-biodata-hub.webp"
                     alt="Marriage Biodata Hub Logo"
                     width={280}
                     height={85}

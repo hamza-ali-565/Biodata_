@@ -62,7 +62,7 @@ export default function Home() {
       "@type": "Organization",
       name: "Marriage Biodata Hub",
       url: "https://marriagebiodatahub.com",
-      logo: "https://marriagebiodatahub.com/images/Logo-of-marriage-biodata-hub.png",
+      logo: "https://marriagebiodatahub.com/images/Logo-of-marriage-biodata-hub.webp",
       sameAs: [
         "https://www.facebook.com/profile.php?id=61589515107640",
         "https://www.pinterest.com/marriagebiodatahub/"

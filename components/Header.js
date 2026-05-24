@@ -53,7 +53,7 @@ export function Header() {
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <Image
-            src="/images/Logo-of-marriage-biodata-hub.png"
+            src="/images/Logo-of-marriage-biodata-hub.webp"
             alt="Marriage Biodata Hub Logo"
             width={320}
             height={100}

@@ -273,7 +273,7 @@ export function AnimatedTemplateSections() {
                 <div className="w-full lg:w-1/2 relative group perspective-1000">
                   <div className="absolute -inset-4 bg-gradient-to-tr from-blue-500/20 to-emerald-500/20 rounded-[2rem] blur-2xl opacity-40 group-hover:opacity-100 transition-opacity duration-700" />
                   <NextImage 
-                    src="/images/personal detail.png" 
+                    src="/images/personal detail.webp" 
                     alt="Personal Details Template" 
                     width={800} 
                     height={1130} 
@@ -305,7 +305,7 @@ export function AnimatedTemplateSections() {
                 <div className="w-full lg:w-1/2 relative group perspective-1000 order-1 lg:order-2">
                   <div className="absolute -inset-4 bg-gradient-to-tr from-emerald-500/20 to-amber-500/20 rounded-[2rem] blur-2xl opacity-40 group-hover:opacity-100 transition-opacity duration-700" />
                   <NextImage 
-                    src="/images/Family detail.png" 
+                    src="/images/Family detail.webp" 
                     alt="Family Details Template" 
                     width={800} 
                     height={1130} 
@@ -319,7 +319,7 @@ export function AnimatedTemplateSections() {
                 <div className="w-full lg:w-1/2 relative group perspective-1000">
                   <div className="absolute -inset-4 bg-gradient-to-tr from-amber-500/20 to-rose-500/20 rounded-[2rem] blur-2xl opacity-40 group-hover:opacity-100 transition-opacity duration-700" />
                   <NextImage 
-                    src="/images/contact details.png" 
+                    src="/images/contact details.webp" 
                     alt="Contact Details Template" 
                     width={800} 
                     height={1130} 
