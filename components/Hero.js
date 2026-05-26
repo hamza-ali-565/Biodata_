@@ -2,14 +2,19 @@
 
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { SmartLink } from "./SmartLink";
 import dynamic from "next/dynamic";
+import { useRouter, usePathname } from "next/navigation";
+import { navigateToForm } from "../lib/navigationUtils";
 
 const Hero3D = dynamic(() => import('./Hero3D').then((mod) => mod.Hero3D), {
   ssr: false,
 });
 
 export function Hero() {
+  const router = useRouter();
+  const pathname = usePathname();
+
   const heroImages = [
     "/images/new-templates/beautiful-golden-border-marriage-biodata.webp",
     "/images/new-templates/beautiful-leafs-effect-marriage-biodata.webp",
@@ -70,9 +75,9 @@ export function Hero() {
           </h1>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base font-medium">
             Create your fully customizable marriage biodata instantly with our{" "}
-            <Link href="/templates" className="text-brand-400 hover:text-brand-300 transition-colors">
+            <SmartLink href="/templates" className="text-brand-400 hover:text-brand-300 transition-colors">
               free, elegant, popular, and premium templates
-            </Link>
+            </SmartLink>
             . We’re just 3 steps away from creating a beautiful biodata for marriage fill information, choose a template & download. No login required, as our services are free, and lastly, best of luck with your new chapter.
           </p>
         </div>
@@ -80,7 +85,7 @@ export function Hero() {
           <button
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById("biodata-form")?.scrollIntoView({ behavior: "smooth" });
+              navigateToForm(router, pathname, "biodata-form");
             }}
             className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-500 to-rose-500 px-8 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(244,63,94,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(244,63,94,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >

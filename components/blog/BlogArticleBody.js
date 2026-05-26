@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BlogInlineImage } from "./BlogInlineImage";
 import { getBlogImageCandidates } from "../../lib/blog/utils";
+import { SmartLink } from "../SmartLink";
 
 function SectionBlock({ section, slug, title }) {
   switch (section.type) {
@@ -61,13 +62,13 @@ export function BlogArticleBody({ sections, slug, title }) {
       ))}
       <p className="blog-cta">
         Ready to create your own biodata?{" "}
-        <Link href="/#biodata-form" className="blog-inline-link">
+        <SmartLink href="/#biodata-form" className="blog-inline-link">
           Start with our free builder
-        </Link>{" "}
+        </SmartLink>{" "}
         or browse{" "}
-        <Link href="/templates" className="blog-inline-link">
+        <SmartLink href="/templates" className="blog-inline-link">
           premium templates
-        </Link>
+        </SmartLink>
         .
       </p>
     </div>

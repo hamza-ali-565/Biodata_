@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { SmartLink } from "./SmartLink";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const templates = [
@@ -108,9 +108,9 @@ export function TemplateCarousel() {
                     </h2>
                     <p className="text-sm text-slate-300 sm:text-base font-medium leading-relaxed px-4">
                         There is a saying that the first impression is the last impression; that’s why choosing the right marriage biodata is important. Here we’re offering you the{" "}
-                        <Link href="/templates" className="text-brand-400 hover:text-brand-300 transition-colors">
+                        <SmartLink href="/templates" className="text-brand-400 hover:text-brand-300 transition-colors">
                             best templates
-                        </Link>{" "}
+                        </SmartLink>{" "}
                         designed to present your personal, family, and professional details in a clean, well-designed, and attractive way. Select template and create your biodata for marriage.
                     </p>
                     <div className="mt-8 flex justify-center">
@@ -142,7 +142,7 @@ export function TemplateCarousel() {
                                         key={`${template.id}-${currentIndex}`}
                                         className="flex-none w-[260px] md:w-[280px] lg:w-[300px] rounded-2xl border border-white/10 bg-slate-900/60 p-2 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl cursor-pointer relative z-10"
                                     >
-                                        <Link href="/templates" className="block relative aspect-[1/1.414] w-full rounded-xl overflow-hidden bg-slate-950/80 group-hover:bg-slate-900 shadow-inner">
+                                        <SmartLink href="/templates" className="block relative aspect-[1/1.414] w-full rounded-xl overflow-hidden bg-slate-950/80 group-hover:bg-slate-900 shadow-inner">
                                             <Image
                                                 src={template.src}
                                                 alt={template.alt}
@@ -157,7 +157,7 @@ export function TemplateCarousel() {
                                                     </span>
                                                 </div>
                                             )}
-                                        </Link>
+                                        </SmartLink>
                                     </div>
                                 ))}
                         </div>

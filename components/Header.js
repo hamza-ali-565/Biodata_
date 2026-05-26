@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { SmartLink } from "./SmartLink";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { navigateToForm } from "../lib/navigationUtils";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -32,12 +33,7 @@ export function Header() {
   const handleCreateBiodata = (e) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
-    if (pathname === "/") {
-      document.getElementById("biodata-form")?.scrollIntoView({ behavior: "smooth" });
-    } else {
-      sessionStorage.setItem("scrollToForm", "true");
-      router.push("/");
-    }
+    navigateToForm(router, pathname, "biodata-form");
   };
 
   return (
@@ -46,7 +42,7 @@ export function Header() {
         className="flex items-center justify-between gap-4 border-b border-white/5 pb-3 pt-3"
         aria-label="Main navigation"
       >
-        <Link
+        <SmartLink
           href="/"
           className="flex items-center gap-2 p-2"
           aria-label="Go to Homepage"
@@ -60,19 +56,19 @@ export function Header() {
             className="h-16 sm:h-20 w-auto object-contain drop-shadow-md"
             priority
           />
-        </Link>
+        </SmartLink>
 
         {/* Desktop Header Content - Kept Exactly the Same! */}
         <div className="flex items-center gap-6">
           <ul className="hidden items-center gap-5 text-xs font-medium text-slate-200/80 lg:flex sm:text-sm">
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link
+                <SmartLink
                   href={item.href}
                   className="transition-colors hover:text-white p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
                 >
                   {item.label}
-                </Link>
+                </SmartLink>
               </li>
             ))}
           </ul>
@@ -118,7 +114,7 @@ export function Header() {
                   <li
                     key={item.href}
                   >
-                    <Link
+                    <SmartLink
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={`block text-xl font-medium p-3 outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-xl transition-all ${isActive
@@ -127,7 +123,7 @@ export function Header() {
                         }`}
                     >
                       {item.label}
-                    </Link>
+                    </SmartLink>
                   </li>
                 );
               })}

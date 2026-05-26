@@ -8,6 +8,7 @@ import {
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { SmartLink } from "./SmartLink";
 
 const steps = [
     {
@@ -92,7 +93,7 @@ export function HowToCreateBiodata() {
                     <p
                         className="text-slate-300 text-base md:text-xl leading-relaxed"
                     >
-                        Building a <Link href="/#biodata-form" className="text-brand-400 hover:text-brand-300 transition-colors">marriage biodata</Link> is very easy if you follow a clear roadmap. Start with your personal details, introduce yourself in this section, then jump to professional details, describe your professional life, and lastly, describe your family details.
+                        Building a <SmartLink href="/#biodata-form" className="text-brand-400 hover:text-brand-300 transition-colors">marriage biodata</SmartLink> is very easy if you follow a clear roadmap. Start with your personal details, introduce yourself in this section, then jump to professional details, describe your professional life, and lastly, describe your family details.
                     </p>
                 </div>
 

@@ -2,25 +2,26 @@
 
 import Link from "next/link";
 import { Zap, Settings, Layout } from "lucide-react";
+import { SmartLink } from "./SmartLink";
 
 const features = [
     {
         title: "Easy to use",
-        description: <>There is no need to sign up or register. Your <Link href="/#biodata-form" className="text-brand-400 hover:text-brand-300 transition-colors">biodata for marriage</Link> is ready just by entering personal details. And don’t forget to select a <Link href="/templates" className="text-brand-400 hover:text-brand-300 transition-colors">beautiful template</Link>.</>,
+        description: <>There is no need to sign up or register. Your <SmartLink href="/#biodata-form" className="text-brand-400 hover:text-brand-300 transition-colors">biodata for marriage</SmartLink> is ready just by entering personal details. And don’t forget to select a <SmartLink href="/templates" className="text-brand-400 hover:text-brand-300 transition-colors">beautiful template</SmartLink>.</>,
         icon: Zap,
         color: "from-amber-400 to-orange-500",
         bg: "bg-amber-500/10"
     },
     {
         title: "Customization made simple",
-        description: <>Here, you’ll feel like everything is under your control as you can add new, fully customized fields. After selecting a <Link href="/templates" className="text-brand-400 hover:text-brand-300 transition-colors">template</Link>, you can also change the theme of the template.</>,
+        description: <>Here, you’ll feel like everything is under your control as you can add new, fully customized fields. After selecting a <SmartLink href="/templates" className="text-brand-400 hover:text-brand-300 transition-colors">template</SmartLink>, you can also change the theme of the template.</>,
         icon: Settings,
         color: "from-sky-400 to-blue-500",
         bg: "bg-sky-500/10"
     },
     {
         title: "Great Looking Templates",
-        description: <>We’ve carefully structured each <Link href="/templates" className="text-brand-400 hover:text-brand-300 transition-colors">template</Link> to showcase your personal, family, and professional details in the most clear and elegant way. We are offering both simple and stylish layouts, so you can select according to your preference.</>,
+        description: <>We’ve carefully structured each <SmartLink href="/templates" className="text-brand-400 hover:text-brand-300 transition-colors">template</SmartLink> to showcase your personal, family, and professional details in the most clear and elegant way. We are offering both simple and stylish layouts, so you can select according to your preference.</>,
         icon: Layout,
         color: "from-emerald-400 to-teal-500",
         bg: "bg-emerald-500/10"

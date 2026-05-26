@@ -8,6 +8,7 @@ export const metadata = {
 
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
+import { SmartLink } from "../../components/SmartLink";
 
 export default function TermsAndConditions() {
   const sections = [
@@ -251,12 +252,12 @@ export default function TermsAndConditions() {
           <p className="text-slate-400 mb-6">
             Ready to start your beautiful journey with us?
           </p>
-          <a 
+          <SmartLink 
             href="/#biodata-form" 
             className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-500 to-rose-500 px-8 py-3.5 text-sm font-bold text-white shadow-[0_0_24px_rgba(244,63,94,0.25)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_32px_rgba(244,63,94,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400"
           >
             Create Biodata For Free
-          </a>
+          </SmartLink>
         </div>
 
       </main>

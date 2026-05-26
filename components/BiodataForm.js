@@ -6,6 +6,7 @@ import { AlertTriangle, CheckCircle2, Trash2 } from "lucide-react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
+import { useHomeAutoScroll } from "../lib/navigationUtils";
 import NextImage from "next/image";
 
 const customFieldSchema = z.object({
@@ -156,18 +157,10 @@ export function BiodataForm() {
   const familyCustomFields = watch("family.customFields");
   const contactCustomFields = watch("contact.customFields");
 
+  useHomeAutoScroll();
+
   useEffect(() => {
     if (typeof window === "undefined") return;
-
-    if (sessionStorage.getItem("scrollToForm") === "true") {
-      sessionStorage.removeItem("scrollToForm");
-      setTimeout(() => {
-        const formElement = document.getElementById("biodata-form");
-        if (formElement) {
-          formElement.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 150);
-    }
 
     const stored = window.localStorage.getItem(STORAGE_KEY);
     if (stored) {
@@ -301,6 +294,7 @@ export function BiodataForm() {
     if (typeof window !== "undefined") {
       try {
         window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+        sessionStorage.setItem("scrollToTemplates", "true");
       } catch (err) {
         console.error("Failed to save to localStorage:", err);
       }
@@ -659,7 +653,7 @@ export function BiodataForm() {
             disabled={isSubmitting}
             className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-400 via-brand-500 to-rose-500 px-7 py-2.5 text-sm font-semibold text-white shadow-soft transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
-            {isSubmitting ? "Preparing templates..." : "Create Biodata"}
+            {isSubmitting ? "Preparing templates..." : "Select Template"}
           </button>
         </div>
       </form>

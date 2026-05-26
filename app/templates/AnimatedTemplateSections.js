@@ -19,7 +19,11 @@ import {
 import { TemplateList } from "../../components/TemplateList";
 import { TEMPLATE_DEFINITIONS } from "../../components/templatesConfig";
 
+import { useTemplateAutoScroll } from "../../lib/navigationUtils";
+
 export function AnimatedTemplateSections() {
+  useTemplateAutoScroll();
+
   return (
     <div className="space-y-12 pb-16">
       {/* SECTION 1: HERO */}
@@ -43,7 +47,7 @@ export function AnimatedTemplateSections() {
       <section 
         initial="hidden" 
         animate="visible" 
-       
+        id="templates-grid"
         className="premium-section px-6 py-8 sm:px-10"
         aria-labelledby="template-library-heading"
       >
