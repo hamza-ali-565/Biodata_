@@ -19,7 +19,3 @@ export const BiodataForm = dynamic(
   { loading: () => sectionPlaceholder, ssr: false }
 );
 
-export const FAQ = dynamic(
-  () => import("./FAQ").then((mod) => mod.FAQ),
-  { loading: () => sectionPlaceholder }
-);

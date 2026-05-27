@@ -6,20 +6,20 @@ import { Hero } from "../components/Hero";
 import { HowToCreateBiodata } from "../components/HowToCreateBiodata";
 import { IntersectionObserverWrapper } from "../components/IntersectionObserverWrapper";
 
-// Dynamic Imports for ALL below-the-fold static sections
-const BiodataFormatExplanation = dynamic(() => import("../components/BiodataFormatExplanation").then(mod => mod.BiodataFormatExplanation));
-const EditableBiodataArticle = dynamic(() => import("../components/EditableBiodataArticle").then(mod => mod.EditableBiodataArticle));
-const MarriageBiodataProblemsArticle = dynamic(() => import("../components/MarriageBiodataProblemsArticle").then(mod => mod.MarriageBiodataProblemsArticle));
-const FeatureBanner = dynamic(() => import("../components/FeatureBanner").then(mod => mod.FeatureBanner));
-const WhyNeedBiodata = dynamic(() => import("../components/WhyNeedBiodata").then(mod => mod.WhyNeedBiodata));
-const BenefitsSection = dynamic(() => import("../components/BenefitsSection").then(mod => mod.BenefitsSection));
-const WhyPeopleLoveUs = dynamic(() => import("../components/WhyPeopleLoveUs").then(mod => mod.WhyPeopleLoveUs));
-const HowToShareBiodata = dynamic(() => import("../components/HowToShareBiodata").then(mod => mod.HowToShareBiodata));
-const DesignTips = dynamic(() => import("../components/DesignTips").then(mod => mod.DesignTips));
-const CTASection = dynamic(() => import("../components/CTASection").then(mod => mod.CTASection));
+import { BiodataFormatExplanation } from "../components/BiodataFormatExplanation";
+import { EditableBiodataArticle } from "../components/EditableBiodataArticle";
+import { MarriageBiodataProblemsArticle } from "../components/MarriageBiodataProblemsArticle";
+import { FeatureBanner } from "../components/FeatureBanner";
+import { WhyNeedBiodata } from "../components/WhyNeedBiodata";
+import { BenefitsSection } from "../components/BenefitsSection";
+import { WhyPeopleLoveUs } from "../components/WhyPeopleLoveUs";
+import { HowToShareBiodata } from "../components/HowToShareBiodata";
+import { DesignTips } from "../components/DesignTips";
+import { CTASection } from "../components/CTASection";
+import { FAQ } from "../components/FAQ";
 
-// High-value interactive sections (already dynamically imported but we keep them here)
-import { TemplateCarousel, BiodataForm, FAQ } from "../components/DynamicHomeComponents";
+// High-value interactive sections (kept dynamically imported)
+import { TemplateCarousel, BiodataForm } from "../components/DynamicHomeComponents";
 
 export const metadata = {
   alternates: {
@@ -99,9 +99,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <IntersectionObserverWrapper fallback={sectionPlaceholder} rootMargin="300px">
-          <HowToCreateBiodata />
-        </IntersectionObserverWrapper>
+        <HowToCreateBiodata />
         
         <IntersectionObserverWrapper fallback={sectionPlaceholder} rootMargin="400px">
           <TemplateCarousel />
@@ -111,49 +109,17 @@ export default function Home() {
           <BiodataForm />
         </IntersectionObserverWrapper>
 
-        <IntersectionObserverWrapper fallback={sectionPlaceholder} rootMargin="300px">
-          <BiodataFormatExplanation />
-        </IntersectionObserverWrapper>
-
-        <IntersectionObserverWrapper fallback={sectionPlaceholder} rootMargin="300px">
-          <EditableBiodataArticle />
-        </IntersectionObserverWrapper>
-
-        <IntersectionObserverWrapper fallback={sectionPlaceholder} rootMargin="300px">
-          <MarriageBiodataProblemsArticle />
-        </IntersectionObserverWrapper>
-
-        <IntersectionObserverWrapper fallback={sectionPlaceholder} rootMargin="300px">
-          <FeatureBanner />
-        </IntersectionObserverWrapper>
-
-        <IntersectionObserverWrapper fallback={sectionPlaceholder} rootMargin="300px">
-          <WhyNeedBiodata />
-        </IntersectionObserverWrapper>
-
-        <IntersectionObserverWrapper fallback={sectionPlaceholder} rootMargin="300px">
-          <BenefitsSection />
-        </IntersectionObserverWrapper>
-
-        <IntersectionObserverWrapper fallback={sectionPlaceholder} rootMargin="300px">
-          <HowToShareBiodata />
-        </IntersectionObserverWrapper>
-
-        <IntersectionObserverWrapper fallback={sectionPlaceholder} rootMargin="300px">
-          <WhyPeopleLoveUs />
-        </IntersectionObserverWrapper>
-
-        <IntersectionObserverWrapper fallback={sectionPlaceholder} rootMargin="300px">
-          <DesignTips />
-        </IntersectionObserverWrapper>
-
-        <IntersectionObserverWrapper fallback={sectionPlaceholder} rootMargin="300px">
-          <FAQ />
-        </IntersectionObserverWrapper>
-
-        <IntersectionObserverWrapper fallback={sectionPlaceholder} rootMargin="200px">
-          <CTASection />
-        </IntersectionObserverWrapper>
+        <BiodataFormatExplanation />
+        <EditableBiodataArticle />
+        <MarriageBiodataProblemsArticle />
+        <FeatureBanner />
+        <WhyNeedBiodata />
+        <BenefitsSection />
+        <HowToShareBiodata />
+        <WhyPeopleLoveUs />
+        <DesignTips />
+        <FAQ />
+        <CTASection />
       </main>
       <Footer />
     </>
