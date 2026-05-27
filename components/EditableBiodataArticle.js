@@ -1,5 +1,3 @@
-"use client";
-
 import { FileEdit, LayoutTemplate, Type } from "lucide-react";
 
 const subsections = [

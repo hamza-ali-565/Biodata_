@@ -1,5 +1,3 @@
-"use client";
-
 import { BookOpen, Scale, SlidersHorizontal } from "lucide-react";
 
 const articleSections = [

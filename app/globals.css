@@ -50,15 +50,15 @@ body {
   }
 
   .premium-section {
-    @apply relative overflow-hidden rounded-3xl border border-white/[0.08] bg-slate-950/80 shadow-[0_28px_90px_rgba(0,0,0,0.35)] backdrop-blur-2xl;
+    @apply relative overflow-hidden rounded-3xl border border-white/[0.08] bg-slate-950 shadow-lg md:bg-slate-950/80 md:shadow-[0_28px_90px_rgba(0,0,0,0.35)] md:backdrop-blur-2xl;
   }
 
   .premium-card {
-    @apply relative overflow-hidden rounded-2xl border border-white/[0.08] bg-slate-900/50 shadow-[0_12px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-emerald-500/20;
+    @apply relative overflow-hidden rounded-2xl border border-white/[0.08] bg-slate-900 shadow-md md:bg-slate-900/50 md:shadow-[0_12px_40px_rgba(0,0,0,0.35)] md:backdrop-blur-xl transition-transform duration-500 hover:-translate-y-1 hover:border-emerald-500/20 will-change-transform;
   }
 
   .premium-card-static {
-    @apply relative overflow-hidden rounded-2xl border border-white/[0.08] bg-slate-900/50 shadow-[0_12px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl;
+    @apply relative overflow-hidden rounded-2xl border border-white/[0.08] bg-slate-900 shadow-md md:bg-slate-900/50 md:shadow-[0_12px_40px_rgba(0,0,0,0.35)] md:backdrop-blur-xl;
   }
 
   .premium-chip {

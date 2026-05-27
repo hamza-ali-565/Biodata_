@@ -1,5 +1,3 @@
-"use client";
-
 import { Sparkles, FileImage, FileText } from "lucide-react";
 
 const benefits = [

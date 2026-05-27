@@ -1,23 +1,10 @@
-"use client";
-
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { SmartLink } from "./SmartLink";
 
 export function WhyPeopleLoveUs() {
-    const router = useRouter();
 
-    const scrollToForm = () => {
-        if (window.location.pathname !== "/") {
-            sessionStorage.setItem("scrollToForm", "true");
-            router.push("/");
-            return;
-        }
-        const formElement = document.getElementById("biodata-form");
-        if (formElement) {
-            formElement.scrollIntoView({ behavior: "smooth" });
-        }
-    };
+
 
     return (
         <section className="premium-section mt-14 w-full py-16 px-6 sm:px-12">
@@ -172,13 +159,13 @@ export function WhyPeopleLoveUs() {
 
                 {/* Section CTA Button */}
                 <div className="mt-16 w-full flex justify-center pb-2">
-                    <button
-                        onClick={scrollToForm}
+                    <SmartLink
+                        href="/#biodata-form"
                         className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-500 to-rose-500 px-10 py-4 text-lg font-bold text-white shadow-[0_0_20px_rgba(244,63,94,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(244,63,94,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                     >
                         Create Biodata Now
                         <ArrowRight className="w-6 h-6" />
-                    </button>
+                    </SmartLink>
                 </div>
             </div>
         </section>

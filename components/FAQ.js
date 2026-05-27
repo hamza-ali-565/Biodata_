@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 const faqs = [
@@ -60,32 +57,6 @@ const faqs = [
 ];
 
 export function FAQ() {
-    const [openIndexes, setOpenIndexes] = useState([0]); // First one open by default
-
-    const toggleAll = () => {
-        if (openIndexes.length === faqs.length) {
-            setOpenIndexes([]);
-        } else {
-            setOpenIndexes(faqs.map((_, i) => i));
-        }
-    };
-
-    const toggleFAQ = (index) => {
-        setOpenIndexes((prev) => {
-            // If we want accordion style (only one open), we would do this:
-            // return prev.includes(index) ? [] : [index];
-
-            // If we want multi-open ability (better for the Expand All button):
-            if (prev.includes(index)) {
-                return prev.filter((i) => i !== index);
-            } else {
-                return [...prev, index];
-            }
-        });
-    };
-
-    const isAllOpen = openIndexes.length === faqs.length;
-
     return (
         <section id="faq" className="mt-14 w-full mx-auto scroll-mt-24 px-4 py-10 sm:px-6 relative z-10" aria-labelledby="faq-heading">
 
@@ -123,19 +94,10 @@ export function FAQ() {
                 <div className="flex justify-center">
                     <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-rose-500 rounded-full mb-8" />
                 </div>
-
-                <button
-                    onClick={toggleAll}
-                    className="text-sm font-medium text-brand-300 hover:text-brand-200 transition-colors flex items-center gap-2 mx-auto bg-brand-500/10 hover:bg-brand-500/20 px-4 py-2 rounded-full border border-brand-500/20"
-                >
-                    {isAllOpen ? "Collapse All" : "Expand All"}
-                </button>
             </div>
 
             <div className="space-y-4">
                 {faqs.map((faq, index) => {
-                    const isOpen = openIndexes.includes(index);
-
                     return (
                         <article
                             key={index}
@@ -144,25 +106,23 @@ export function FAQ() {
                             itemProp="mainEntity"
                             itemType="https://schema.org/Question"
                         >
-                            <button
-                                onClick={() => toggleFAQ(index)}
-                                className="flex w-full items-center justify-between p-5 md:p-6 text-left focus:outline-none focus-visible:bg-slate-800/50"
-                                aria-expanded={isOpen}
-                            >
-                                <h3
-                                    className="font-semibold text-white pr-4 sm:text-lg"
-                                    itemProp="name"
+                            <details className="group marker:content-none [&::-webkit-details-marker]:hidden">
+                                <summary
+                                    className="flex w-full items-center justify-between p-5 md:p-6 text-left cursor-pointer focus:outline-none focus-visible:bg-slate-800/50"
                                 >
-                                    {faq.question}
-                                </h3>
-                                <div
-                                    className={`flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-800 transition-transform duration-300 ${isOpen ? "rotate-180 bg-brand-500/20 text-brand-400" : "text-slate-400"}`}
-                                >
-                                    <ChevronDown className="w-5 h-5" />
-                                </div>
-                            </button>
+                                    <h3
+                                        className="font-semibold text-white pr-4 sm:text-lg"
+                                        itemProp="name"
+                                    >
+                                        {faq.question}
+                                    </h3>
+                                    <div
+                                        className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-800 transition-transform duration-300 group-open:rotate-180 group-open:bg-brand-500/20 text-slate-400 group-open:text-brand-400"
+                                    >
+                                        <ChevronDown className="w-5 h-5" />
+                                    </div>
+                                </summary>
 
-                            {isOpen && (
                                 <div
                                     id={`faq-answer-${index}`}
                                     itemScope
@@ -222,7 +182,7 @@ export function FAQ() {
                                         </div>
                                     </div>
                                 </div>
-                            )}
+                            </details>
                         </article>
                     );
                 })}

@@ -1,6 +1,5 @@
 import Script from "next/script";
 import { Inter } from "next/font/google";
-import { ScrollMotionProvider } from "../components/ScrollMotionProvider";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
@@ -91,9 +90,9 @@ export default function RootLayout({ children }) {
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-RR32YP6S8H"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -107,11 +106,9 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="min-h-screen bg-slate-950 text-slate-50 antialiased">
-        <ScrollMotionProvider>
           <div className="relative mx-auto flex min-h-screen max-w-[1600px] flex-col bg-slate-950/40 px-4 pb-10 pt-4 sm:px-6 lg:px-8">
             {children}
           </div>
-        </ScrollMotionProvider>
       </body>
     </html>
   );

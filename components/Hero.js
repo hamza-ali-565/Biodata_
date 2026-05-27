@@ -1,37 +1,7 @@
-"use client";
-
-import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { SmartLink } from "./SmartLink";
-import dynamic from "next/dynamic";
-import { useRouter, usePathname } from "next/navigation";
-import { navigateToForm } from "../lib/navigationUtils";
-
-const Hero3D = dynamic(() => import('./Hero3D').then((mod) => mod.Hero3D), {
-  ssr: false,
-});
-
 export function Hero() {
-  const router = useRouter();
-  const pathname = usePathname();
-
-  const heroImages = [
-    "/images/new-templates/beautiful-golden-border-marriage-biodata.webp",
-    "/images/new-templates/beautiful-leafs-effect-marriage-biodata.webp",
-    "/images/new-templates/beautiful-traditional-marriage-biodata.webp",
-    "/images/new-templates/beautiful-green-border-art-marriage-biodata.webp"
-  ];
-
-  const [currentHeroImg, setCurrentHeroImg] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentHeroImg((prev) => (prev + 1) % heroImages.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, []);
-
-  return (
+    return (
     <section
       aria-labelledby="hero-heading"
       className="premium-section relative grid gap-10 px-6 py-10 sm:px-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:py-14"
@@ -61,7 +31,7 @@ export function Hero() {
         </svg>
       </div>
 
-      <Hero3D />
+
       <div className="relative z-10 space-y-6">
         <p className="premium-chip px-3 py-1 text-[11px] font-medium tracking-wide text-brand-200">
           Premium Marriage Biodata Maker
@@ -82,15 +52,12 @@ export function Hero() {
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4">
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              navigateToForm(router, pathname, "biodata-form");
-            }}
+          <SmartLink
+            href="/#biodata-form"
             className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-500 to-rose-500 px-8 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(244,63,94,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(244,63,94,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             Create Biodata
-          </button>
+          </SmartLink>
           <p className="text-xs text-slate-400 font-medium tracking-wide">
             No signup required. Export-ready in a few clicks.
           </p>
@@ -103,10 +70,19 @@ export function Hero() {
         <div className="premium-card-static relative aspect-[1/1.414] w-full max-w-[280px] overflow-hidden">
           <div className="absolute inset-0 w-full h-full transition-opacity duration-700">
             <Image
-              src={heroImages[currentHeroImg]}
+              src="/images/new-templates/beautiful-golden-border-marriage-biodata.webp"
               alt="Premium Marriage Biodata Template"
               fill
-              className="object-cover transition-opacity duration-700"
+              className="object-cover transition-opacity duration-700 hover:opacity-0"
+              priority
+              fetchPriority="high"
+              sizes="280px"
+            />
+            <Image
+              src="/images/new-templates/beautiful-leafs-effect-marriage-biodata.webp"
+              alt="Premium Marriage Biodata Template 2"
+              fill
+              className="object-cover opacity-0 transition-opacity duration-700 hover:opacity-100 absolute inset-0 pointer-events-none"
               priority
               fetchPriority="high"
               sizes="280px"

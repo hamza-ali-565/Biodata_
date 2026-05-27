@@ -1,21 +1,8 @@
-"use client";
-
-import { useRouter } from "next/navigation";
+import { SmartLink } from "./SmartLink";
 
 export function CTASection() {
-    const router = useRouter();
 
-    const scrollToForm = () => {
-        if (window.location.pathname !== "/") {
-            sessionStorage.setItem("scrollToForm", "true");
-            router.push("/");
-            return;
-        }
-        const formElement = document.getElementById("biodata-form");
-        if (formElement) {
-            formElement.scrollIntoView({ behavior: "smooth" });
-        }
-    };
+
 
     return (
         <section className="mt-14 mb-20 w-full mx-auto px-4 sm:px-6 relative z-10">
@@ -61,12 +48,12 @@ export function CTASection() {
                     </p>
 
                     <div className="pt-4">
-                        <button
-                            onClick={scrollToForm}
+                        <SmartLink
+                            href="/#biodata-form"
                             className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-500 to-rose-500 px-10 py-4 text-base font-bold text-white shadow-[0_0_20px_rgba(244,63,94,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(244,63,94,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                         >
                             Create My Biodata
-                        </button>
+                        </SmartLink>
                     </div>
                 </div>
                 </div>

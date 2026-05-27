@@ -140,7 +140,7 @@ export function TemplateCarousel() {
                                 {getVisibleTemplates().map((template) => (
                                     <div
                                         key={`${template.id}-${currentIndex}`}
-                                        className="flex-none w-[260px] md:w-[280px] lg:w-[300px] rounded-2xl border border-white/10 bg-slate-900/60 p-2 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl cursor-pointer relative z-10"
+                                        className="flex-none w-[260px] md:w-[280px] lg:w-[300px] rounded-2xl border border-white/10 bg-slate-900 p-2 transition-transform duration-300 hover:scale-[1.03] hover:-translate-y-1 cursor-pointer relative z-10 will-change-transform"
                                     >
                                         <SmartLink href="/templates" className="block relative aspect-[1/1.414] w-full rounded-xl overflow-hidden bg-slate-950/80 group-hover:bg-slate-900 shadow-inner">
                                             <Image

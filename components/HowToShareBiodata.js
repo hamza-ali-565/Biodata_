@@ -1,5 +1,3 @@
-"use client";
-
 import { DownloadCloud, Mail, Link, UploadCloud, Printer, RefreshCw } from "lucide-react";
 
 const shareSteps = [

@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { Zap, Settings, Layout } from "lucide-react";
 import { SmartLink } from "./SmartLink";

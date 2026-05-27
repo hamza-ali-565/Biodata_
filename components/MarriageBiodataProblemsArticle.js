@@ -1,5 +1,3 @@
-"use client";
-
 import { Download, LayoutGrid, ListOrdered } from "lucide-react";
 
 const subsections = [

@@ -1,14 +1,11 @@
-"use client";
-
 import {
     User, Home, Phone, Sparkles, Clock, ArrowRight,
     MapPin, Calendar, Heart, Briefcase, Activity, Droplets,
     Users, BookOpen, Search, Moon
 } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { SmartLink } from "./SmartLink";
 import Image from "next/image";
 import Link from "next/link";
-import { SmartLink } from "./SmartLink";
 
 const steps = [
     {
@@ -35,19 +32,6 @@ const steps = [
 ];
 
 export function HowToCreateBiodata() {
-    const router = useRouter();
-
-    const scrollToForm = () => {
-        if (window.location.pathname !== "/") {
-            sessionStorage.setItem("scrollToForm", "true");
-            router.push("/");
-            return;
-        }
-        const formElement = document.getElementById("biodata-form");
-        if (formElement) {
-            formElement.scrollIntoView({ behavior: "smooth" });
-        }
-    };
 
     return (
         <section id="how-to-create" className="premium-section mt-14 w-full min-h-[900px] scroll-mt-24 py-24 px-4 sm:px-8 lg:px-12">
@@ -277,8 +261,8 @@ export function HowToCreateBiodata() {
                 <div
                     className="flex justify-center mt-20"
                 >
-                    <button
-                        onClick={scrollToForm}
+                    <SmartLink
+                        href="/#biodata-form"
                         className="group relative inline-flex items-center justify-center gap-3 rounded-full bg-slate-900 border border-brand-500/30 px-10 py-5 text-lg font-bold text-white transition-all hover:scale-105 hover:bg-slate-800 hover:border-brand-500/60 hover:shadow-[0_0_40px_rgba(244,63,94,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 overflow-hidden"
                     >
                         {/* Static Subtle Glow */}
@@ -288,7 +272,7 @@ export function HowToCreateBiodata() {
                             Start Creating Your Biodata Now
                         </span>
                         <ArrowRight className="w-6 h-6 text-rose-300 group-hover:text-white relative z-10 transition-transform group-hover:translate-x-1 duration-300" />
-                    </button>
+                    </SmartLink>
                 </div>
 
             </div>
