@@ -63,7 +63,11 @@ export const THEME_OPTIONS = [
   },
 ];
 
-export const TEMPLATE_DEFINITIONS = [
+export const generateSlug = (name) => {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+};
+
+const RAW_TEMPLATE_DEFINITIONS = [
   { id: "TemplateCrimsonSwirlContrast", name: "Crimson Swirl Contrast", style: "premium", description: "Elegant red swirl flourishes with classic personal, family, and contact blocks.", layout: "TemplateCrimsonSwirlContrast", defaultThemeId: "maroon" },
   { id: "TemplateGreenBorderArt", name: "Green Border Art", style: "premium", description: "Elegant green decorative border with right-side portrait layout.", layout: "TemplateGreenBorderArt", defaultThemeId: "emerald" },
   { id: "TemplateBeautifulGoldenBorder", name: "Beautiful Golden Border", style: "premium", description: "Classic beige biodata with decorative golden border and side photo.", layout: "TemplateBeautifulGoldenBorder", defaultThemeId: "gold" },
@@ -97,3 +101,7 @@ export const TEMPLATE_DEFINITIONS = [
 
 ];
 
+export const TEMPLATE_DEFINITIONS = RAW_TEMPLATE_DEFINITIONS.map(template => ({
+  ...template,
+  slug: generateSlug(template.name)
+}));

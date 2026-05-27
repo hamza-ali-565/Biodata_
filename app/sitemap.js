@@ -74,7 +74,7 @@ function buildStaticEntries() {
 function buildTemplateEntries() {
   const now = new Date();
   return TEMPLATE_DEFINITIONS.map((template) => ({
-    url: toAbsoluteUrl(`/templates/${template.id}`),
+    url: toAbsoluteUrl(`/templates/${template.slug}`),
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.8,

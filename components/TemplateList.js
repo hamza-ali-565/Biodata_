@@ -39,7 +39,7 @@ export function TemplateList({ templates }) {
                   {template.layout}
                 </span>
                 <Link
-                  href={`/templates/${template.id}`}
+                  href={`/templates/${template.slug}`}
                   className="inline-flex items-center justify-center rounded-full bg-white px-5 sm:px-6 lg:px-4 py-2.5 lg:py-2 text-[13px] lg:text-[11px] font-bold text-slate-900 shadow-soft transition lg:hover:scale-105 hover:bg-brand-500 hover:text-white text-center w-full sm:w-auto lg:w-auto"
                 >
                   Open template
