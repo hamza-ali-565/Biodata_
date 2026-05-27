@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { SocialLinks } from "./SocialLinks";
 import { SmartLink } from "./SmartLink";
+import { ScrollToFormButton } from "./ScrollToFormButton";
 
 const quickNavigation = [
   { name: "Home", path: "/" },
@@ -181,13 +182,12 @@ export function Footer() {
                   Start in minutes — choose a template, fill your details, and download instantly.
                 </p>
               </div>
-              <SmartLink
-                href="/#biodata-form"
+              <ScrollToFormButton
                 className="relative inline-flex w-full shrink-0 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-500 to-rose-500 px-8 py-3.5 text-sm font-bold text-white shadow-[0_0_24px_rgba(244,63,94,0.25)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_32px_rgba(244,63,94,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 active:scale-[0.98] lg:w-auto"
               >
                 Get Started For Free
                 <ArrowRight className="h-4 w-4" aria-hidden />
-              </SmartLink>
+              </ScrollToFormButton>
             </div>
 
             {/* Main grid */}

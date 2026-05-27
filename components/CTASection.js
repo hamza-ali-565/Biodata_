@@ -1,4 +1,4 @@
-import { SmartLink } from "./SmartLink";
+import { ScrollToFormButton } from "./ScrollToFormButton";
 
 export function CTASection() {
 
@@ -48,12 +48,11 @@ export function CTASection() {
                     </p>
 
                     <div className="pt-4">
-                        <SmartLink
-                            href="/#biodata-form"
+                        <ScrollToFormButton
                             className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-500 to-rose-500 px-10 py-4 text-base font-bold text-white shadow-[0_0_20px_rgba(244,63,94,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(244,63,94,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                         >
                             Create My Biodata
-                        </SmartLink>
+                        </ScrollToFormButton>
                     </div>
                 </div>
                 </div>

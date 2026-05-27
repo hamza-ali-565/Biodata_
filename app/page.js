@@ -105,7 +105,7 @@ export default function Home() {
           <TemplateCarousel />
         </IntersectionObserverWrapper>
 
-        <IntersectionObserverWrapper fallback={sectionPlaceholder} rootMargin="400px">
+        <IntersectionObserverWrapper id="biodata-form-wrapper" fallback={sectionPlaceholder} rootMargin="400px">
           <BiodataForm />
         </IntersectionObserverWrapper>
 

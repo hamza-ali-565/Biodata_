@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ScrollToFormButton } from "./ScrollToFormButton";
 import { SmartLink } from "./SmartLink";
 export function Hero() {
     return (
@@ -52,12 +53,11 @@ export function Hero() {
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4">
-          <SmartLink
-            href="/#biodata-form"
+          <ScrollToFormButton
             className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-500 to-rose-500 px-8 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(244,63,94,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(244,63,94,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             Create Biodata
-          </SmartLink>
+          </ScrollToFormButton>
           <p className="text-xs text-slate-400 font-medium tracking-wide">
             No signup required. Export-ready in a few clicks.
           </p>

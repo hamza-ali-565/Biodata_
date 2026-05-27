@@ -6,7 +6,9 @@ export function IntersectionObserverWrapper({
   children, 
   fallback = null, 
   rootMargin = "200px", 
-  triggerOnce = true 
+  triggerOnce = true,
+  id,
+  className
 }) {
   const [isIntersecting, setIntersecting] = useState(false);
   const ref = useRef(null);
@@ -37,7 +39,7 @@ export function IntersectionObserverWrapper({
   }, [rootMargin, triggerOnce]);
 
   return (
-    <div ref={ref}>
+    <div ref={ref} id={id} className={className}>
       {isIntersecting ? children : fallback}
     </div>
   );

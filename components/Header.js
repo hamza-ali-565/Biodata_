@@ -33,7 +33,23 @@ export function Header() {
   const handleCreateBiodata = (e) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
-    navigateToForm(router, pathname, "biodata-form");
+    
+    if (pathname === "/") {
+      const section = document.getElementById("biodata-form-wrapper") || document.getElementById("biodata-form");
+      if (section) {
+        const navbarOffset = 100;
+        const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = sectionPosition - navbarOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    } else {
+      sessionStorage.setItem("scrollToForm", "true");
+      router.push("/");
+    }
   };
 
   return (
