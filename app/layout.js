@@ -5,6 +5,10 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
+export const viewport = {
+  themeColor: "#0f172a",
+};
+
 export const metadata = {
   title: "Create & Download Biodata For Marriage Free | Marriage Biodata Hub",
   description:
@@ -24,7 +28,6 @@ export const metadata = {
     canonical: "https://marriagebiodatahub.com",
   },
   category: "lifestyle",
-  themeColor: "#0f172a",
   icons: {
     icon: "/icon.png",
   },

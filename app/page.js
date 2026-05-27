@@ -16,24 +16,7 @@ import { HowToShareBiodata } from "../components/HowToShareBiodata";
 import { DesignTips } from "../components/DesignTips";
 import { CTASection } from "../components/CTASection";
 
-const sectionPlaceholder = (
-  <div
-    className="premium-card-static my-8 h-48 animate-pulse"
-    aria-hidden="true"
-  />
-);
-
-const TemplateCarousel = dynamic(
-  () => import("../components/TemplateCarousel").then((mod) => mod.TemplateCarousel),
-  { loading: () => sectionPlaceholder }
-);
-const BiodataForm = dynamic(
-  () => import("../components/BiodataForm").then((mod) => mod.BiodataForm),
-  { loading: () => sectionPlaceholder }
-);
-const FAQ = dynamic(() => import("../components/FAQ").then((mod) => mod.FAQ), {
-  loading: () => sectionPlaceholder,
-});
+import { TemplateCarousel, BiodataForm, FAQ } from "../components/DynamicHomeComponents";
 
 export const metadata = {
   alternates: {
