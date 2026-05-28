@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 
 export function SocialLinks() {
   return (
@@ -27,6 +27,17 @@ export function SocialLinks() {
         <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path fillRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.237 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.852 0 1.264.64 1.264 1.408 0 .858-.546 2.14-.828 3.33-.236.995.5 1.807 1.48 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.176-4.068-2.845 0-4.515 2.133-4.515 4.339 0 .859.331 1.781.745 2.281a.345.345 0 01.082.326c-.059.245-.189.765-.216.874-.038.144-.128.177-.28.106-1.047-.488-1.701-2.023-1.701-3.252 0-2.647 1.922-5.084 5.552-5.084 2.912 0 5.176 2.077 5.176 4.845 0 2.896-1.823 5.225-4.354 5.225-1.124 0-2.18-.584-2.542-1.274l-.691 2.63c-.25.952-.926 2.14-1.38 2.864 1.04.305 2.143.468 3.275.468 5.523 0 10-4.477 10-10S17.523 2 12 2z" clipRule="evenodd" />
         </svg>
+      </a>
+
+      {/* LinkedIn */}
+      <a
+        href="https://www.linkedin.com/in/marriage-biodata-hub-1b2267412/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-slate-900/50 text-slate-300 hover:border-blue-400 hover:text-blue-400 hover:scale-110 transition-all duration-300 shadow-md"
+        aria-label="Visit our LinkedIn profile"
+      >
+        <Linkedin className="h-5 w-5" />
       </a>
 
       {/* Email / Gmail */}

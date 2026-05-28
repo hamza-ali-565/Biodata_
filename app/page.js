@@ -55,7 +55,8 @@ export default function Home() {
       logo: "https://marriagebiodatahub.com/images/Logo-of-marriage-biodata-hub.webp",
       sameAs: [
         "https://www.facebook.com/profile.php?id=61589515107640",
-        "https://www.pinterest.com/marriagebiodatahub/"
+        "https://www.pinterest.com/marriagebiodatahub/",
+        "https://www.linkedin.com/in/marriage-biodata-hub-1b2267412/"
       ]
     },
     {

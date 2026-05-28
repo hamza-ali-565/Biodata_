@@ -82,6 +82,7 @@ export default function RootLayout({ children }) {
     sameAs: [
       "https://www.facebook.com/profile.php?id=61589515107640",
       "https://www.pinterest.com/marriagebiodatahub/",
+      "https://www.linkedin.com/in/marriage-biodata-hub-1b2267412/",
     ],
   };
 
