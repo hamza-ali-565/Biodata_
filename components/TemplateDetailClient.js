@@ -62,10 +62,30 @@ export function TemplateDetailClient({ templateId }) {
     }, {});
   }, []);
 
-  const handleReset = () => {
+  const resetCustomization = () => {
     setHeadingFontId(FONT_OPTIONS[0].id);
     setBodyFontId(FONT_OPTIONS.find(f => f.category === "Sans-Serif")?.id || FONT_OPTIONS[0].id);
-    setThemeId(template?.defaultThemeId || THEME_OPTIONS[0].id);
+    setThemeId(THEME_OPTIONS[0].id);
+  };
+
+  const handleTemplateChange = (tplId) => {
+    resetCustomization();
+    setSelectedTemplateId(tplId);
+    
+    // Asynchronously update theme to the new template's default after state has reset
+    setTimeout(() => {
+      const newTemplate = TEMPLATE_DEFINITIONS.find((t) => t.id === tplId);
+      if (newTemplate?.defaultThemeId) {
+        setThemeId(newTemplate.defaultThemeId);
+      }
+    }, 0);
+  };
+
+  const handleReset = () => {
+    resetCustomization();
+    setTimeout(() => {
+      setThemeId(template?.defaultThemeId || THEME_OPTIONS[0].id);
+    }, 0);
   };
 
   const handleExport = async (type) => {
@@ -157,7 +177,7 @@ export function TemplateDetailClient({ templateId }) {
             {TEMPLATE_DEFINITIONS.map((tpl) => (
               <button
                 key={tpl.id}
-                onClick={() => setSelectedTemplateId(tpl.id)}
+                onClick={() => handleTemplateChange(tpl.id)}
                 className={`text-left p-4 rounded-2xl border transition-all duration-300 ${selectedTemplateId === tpl.id
                   ? "border-brand-500 bg-brand-500/10 shadow-[0_0_15px_rgba(244,63,94,0.15)]"
                   : "border-white/5 bg-slate-950/50 hover:border-white/20 hover:bg-slate-800/50"
