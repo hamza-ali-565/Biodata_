@@ -1,6 +1,7 @@
+import { createTypographyStyles, getPrimaryHeading } from "../templateTypography";
+
 export function TemplateMinimal({ data, theme, headingFont, bodyFont }) {
-  const headingStyle = { fontFamily: headingFont || "inherit" };
-  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+  const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
 
   if (!data) return null;
   const { personal, family, contact, photoDataUrl } = data;
@@ -16,14 +17,14 @@ export function TemplateMinimal({ data, theme, headingFont, bodyFont }) {
 
       <div className="p-8 pb-4 text-center">
 
-        <div className="text-3xl font-serif" style={{ color: textHeading }}>{personal.name || "Your Name"}</div>
+        <div className="text-3xl font-serif" style={{ ...headingStyle, color: textHeading }} data-typography="heading">{getPrimaryHeading(personal)}</div>
       </div>
 
 
       <div className="p-6 pt-2 grid gap-5 flex-1 text-[11px] leading-relaxed">
         <section>
           <div className="flex items-center gap-2 mb-3">
-            <div className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Personal Details</div>
+            <div className="font-semibold uppercase tracking-wider" style={{ ...headingStyle, color: accent }} data-typography="heading">Personal Details</div>
             <div className="h-px flex-1 opacity-50" style={{ backgroundColor: accentSoft }}></div>
           </div>
           <div className="grid grid-cols-2 gap-x-4 gap-y-2">
@@ -43,7 +44,7 @@ export function TemplateMinimal({ data, theme, headingFont, bodyFont }) {
 
         <section>
           <div className="flex items-center gap-2 mb-3">
-            <div className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Family Details</div>
+            <div className="font-semibold uppercase tracking-wider" style={{ ...headingStyle, color: accent }} data-typography="heading">Family Details</div>
             <div className="h-px flex-1 opacity-50" style={{ backgroundColor: accentSoft }}></div>
           </div>
           <div className="grid gap-2">
@@ -58,7 +59,7 @@ export function TemplateMinimal({ data, theme, headingFont, bodyFont }) {
 
         <section>
           <div className="flex items-center gap-2 mb-3">
-            <div className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Contact</div>
+            <div className="font-semibold uppercase tracking-wider" style={{ ...headingStyle, color: accent }} data-typography="heading">Contact Details</div>
             <div className="h-px flex-1 opacity-50" style={{ backgroundColor: accentSoft }}></div>
           </div>
           <div className="grid gap-2">

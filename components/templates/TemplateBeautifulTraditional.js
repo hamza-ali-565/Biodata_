@@ -1,6 +1,7 @@
+import { createTypographyStyles, getPrimaryHeading } from "../templateTypography";
+
 export function TemplateBeautifulTraditional({ data, theme, headingFont, bodyFont }) {
-  const headingStyle = { fontFamily: headingFont || "inherit" };
-  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+  const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
 
   if (!data) return null;
 
@@ -80,12 +81,12 @@ export function TemplateBeautifulTraditional({ data, theme, headingFont, bodyFon
         </div>
 
         {/* Name */}
-        <div className="mt-4 max-w-[480px] text-center text-[36px] font-bold leading-tight tracking-wide" style={{ color: gold }}>
-          {personal?.name || "Your Name"}
+        <div className="mt-4 max-w-[480px] text-center text-[36px] font-bold leading-tight tracking-wide" style={{ ...headingStyle, color: gold }} data-typography="heading">
+          {getPrimaryHeading(personal)}
         </div>
 
         <div className="mt-6 flex w-full flex-col space-y-6">
-          <Section title="Personal Details" color={gold}>
+          <Section title="Personal Details" color={gold} headingStyle={headingStyle}>
             <div className="space-y-1.5 px-4">
               {personalRows.map(([label, value]) => (
                 <DataRow key={label} label={label} value={value} />
@@ -96,7 +97,7 @@ export function TemplateBeautifulTraditional({ data, theme, headingFont, bodyFon
             </div>
           </Section>
 
-          <Section title="Family Details" color={gold}>
+          <Section title="Family Details" color={gold} headingStyle={headingStyle}>
             <div className="space-y-1.5 px-4">
               {familyRows.map(([label, value]) => (
                 <DataRow key={label} label={label} value={value} />
@@ -107,7 +108,7 @@ export function TemplateBeautifulTraditional({ data, theme, headingFont, bodyFon
             </div>
           </Section>
 
-          <Section title="Contact Details" color={gold}>
+          <Section title="Contact Details" color={gold} headingStyle={headingStyle}>
             <div className="space-y-1.5 px-4">
               {contactRows.map(([label, value], idx) => (
                 <DataRow key={label} label={label} value={value} icon={idx < 3 ? ["phone", "email", "location"][idx] : null} />
@@ -128,12 +129,12 @@ export function TemplateBeautifulTraditional({ data, theme, headingFont, bodyFon
   );
 }
 
-function Section({ title, color, children }) {
+function Section({ title, color, children, headingStyle }) {
   return (
     <section className="w-full">
       <div className="mb-3 flex items-center justify-center">
         <DecorativeLine color={color} />
-        <div className="mx-4 text-[17px] font-bold uppercase tracking-widest" style={{ color }}>
+        <div className="mx-4 text-[17px] font-bold uppercase tracking-widest" style={{ ...headingStyle, color }} data-typography="heading">
           {title}
         </div>
         <DecorativeLine color={color} reversed />

@@ -1,6 +1,7 @@
+import { createTypographyStyles, getPrimaryHeading } from "../templateTypography";
+
 export function TemplateModern({ data, theme, headingFont, bodyFont }) {
-  const headingStyle = { fontFamily: headingFont || "inherit" };
-  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+  const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
 
   if (!data) return null;
   const { personal, family, contact, photoDataUrl } = data;
@@ -23,7 +24,7 @@ export function TemplateModern({ data, theme, headingFont, bodyFont }) {
         )}
 
         <div className="flex-1 text-right">
-          <div className="text-2xl font-bold" style={{ color: textHeading }}>{personal.name || "Your Name"}</div>
+          <div className="text-2xl font-bold" style={{ ...headingStyle, color: textHeading }} data-typography="heading">{getPrimaryHeading(personal)}</div>
           <p className="text-xs text-slate-600 mt-1">{personal.occupation || "Occupation"}</p>
         </div>
       </div>
@@ -32,7 +33,7 @@ export function TemplateModern({ data, theme, headingFont, bodyFont }) {
       <div className="p-6 pt-2 grid gap-5 flex-1 text-[11px] leading-relaxed">
         <section>
           <div className="flex items-center gap-2 mb-3">
-            <div className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Personal Details</div>
+            <div className="font-semibold uppercase tracking-wider" style={{ ...headingStyle, color: accent }} data-typography="heading">Personal Details</div>
             <div className="h-px flex-1 opacity-50" style={{ backgroundColor: accentSoft }}></div>
           </div>
           <div className="grid grid-cols-2 gap-x-4 gap-y-2">
@@ -52,7 +53,7 @@ export function TemplateModern({ data, theme, headingFont, bodyFont }) {
 
         <section>
           <div className="flex items-center gap-2 mb-3">
-            <div className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Family Details</div>
+            <div className="font-semibold uppercase tracking-wider" style={{ ...headingStyle, color: accent }} data-typography="heading">Family Details</div>
             <div className="h-px flex-1 opacity-50" style={{ backgroundColor: accentSoft }}></div>
           </div>
           <div className="grid gap-2">
@@ -67,7 +68,7 @@ export function TemplateModern({ data, theme, headingFont, bodyFont }) {
 
         <section>
           <div className="flex items-center gap-2 mb-3">
-            <div className="font-semibold uppercase tracking-wider" style={{ color: accent }}>Contact</div>
+            <div className="font-semibold uppercase tracking-wider" style={{ ...headingStyle, color: accent }} data-typography="heading">Contact Details</div>
             <div className="h-px flex-1 opacity-50" style={{ backgroundColor: accentSoft }}></div>
           </div>
           <div className="grid gap-2">

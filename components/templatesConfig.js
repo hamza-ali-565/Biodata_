@@ -2,23 +2,23 @@ export const STORAGE_KEY = "biodata-for-marriage:data";
 
 export const FONT_OPTIONS = [
   // Serif Fonts
-  { id: "playfair", label: "Playfair Display", category: "Serif", css: '"Playfair Display", serif' },
-  { id: "merriweather", label: "Merriweather", category: "Serif", css: '"Merriweather", "Georgia", serif' },
+  { id: "playfair", label: "Playfair Display", category: "Serif", css: 'var(--font-playfair-display), "Playfair Display", serif' },
+  { id: "merriweather", label: "Merriweather", category: "Serif", css: 'var(--font-merriweather), "Merriweather", "Georgia", serif' },
   { id: "lora", label: "Lora", category: "Serif", css: '"Lora", serif' },
-  { id: "libre-baskerville", label: "Libre Baskerville", category: "Serif", css: '"Libre Baskerville", "Georgia", serif' },
-  { id: "cormorant-garamond", label: "Cormorant Garamond", category: "Serif", css: '"Cormorant Garamond", serif' },
-  { id: "dm-serif-display", label: "DM Serif Display", category: "Serif", css: '"DM Serif Display", serif' },
-  { id: "roboto-slab", label: "Roboto Slab", category: "Serif", css: '"Roboto Slab", serif' },
+  { id: "libre-baskerville", label: "Libre Baskerville", category: "Serif", css: 'var(--font-libre-baskerville), "Libre Baskerville", "Georgia", serif' },
+  { id: "cormorant-garamond", label: "Cormorant Garamond", category: "Serif", css: 'var(--font-cormorant-garamond), "Cormorant Garamond", serif' },
+  { id: "dm-serif-display", label: "DM Serif Display", category: "Serif", css: 'var(--font-dm-serif-display), "DM Serif Display", serif' },
+  { id: "roboto-slab", label: "Roboto Slab", category: "Serif", css: 'var(--font-roboto-slab), "Roboto Slab", serif' },
   // Traditional / Decorative
-  { id: "cinzel", label: "Cinzel", category: "Traditional", css: '"Cinzel", "Times New Roman", serif' },
+  { id: "cinzel", label: "Cinzel", category: "Traditional", css: 'var(--font-cinzel), "Cinzel", "Times New Roman", serif' },
   // Sans-Serif / Modern
-  { id: "poppins", label: "Poppins", category: "Sans-Serif", css: '"Poppins", system-ui, sans-serif' },
+  { id: "poppins", label: "Poppins", category: "Sans-Serif", css: 'var(--font-poppins), "Poppins", system-ui, sans-serif' },
   { id: "inter", label: "Inter", category: "Sans-Serif", css: '"Inter", system-ui, sans-serif' },
-  { id: "lato", label: "Lato", category: "Sans-Serif", css: '"Lato", system-ui, sans-serif' },
-  { id: "montserrat", label: "Montserrat", category: "Sans-Serif", css: '"Montserrat", system-ui, sans-serif' },
-  { id: "nunito", label: "Nunito", category: "Sans-Serif", css: '"Nunito", system-ui, sans-serif' },
-  { id: "raleway", label: "Raleway", category: "Sans-Serif", css: '"Raleway", system-ui, sans-serif' },
-  { id: "source-sans-pro", label: "Source Sans Pro", category: "Sans-Serif", css: '"Source Sans Pro", system-ui, sans-serif' },
+  { id: "lato", label: "Lato", category: "Sans-Serif", css: 'var(--font-lato), "Lato", system-ui, sans-serif' },
+  { id: "montserrat", label: "Montserrat", category: "Sans-Serif", css: 'var(--font-montserrat), "Montserrat", system-ui, sans-serif' },
+  { id: "nunito", label: "Nunito", category: "Sans-Serif", css: 'var(--font-nunito), "Nunito", system-ui, sans-serif' },
+  { id: "raleway", label: "Raleway", category: "Sans-Serif", css: 'var(--font-raleway), "Raleway", system-ui, sans-serif' },
+  { id: "source-sans-pro", label: "Source Sans Pro", category: "Sans-Serif", css: 'var(--font-source-sans-pro), "Source Sans Pro", system-ui, sans-serif' },
 ];
 
 export const THEME_OPTIONS = [

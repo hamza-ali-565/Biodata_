@@ -1,6 +1,7 @@
+import { createTypographyStyles, getPrimaryHeading } from "../templateTypography";
+
 export function TemplateSeaGreenContrast({ data, theme, headingFont, bodyFont }) {
-  const headingStyle = { fontFamily: headingFont || "inherit" };
-  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+  const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
 
   if (!data) return null;
 
@@ -62,8 +63,8 @@ export function TemplateSeaGreenContrast({ data, theme, headingFont, bodyFont })
         <div className="relative z-10 grid h-full grid-cols-[1.15fr_0.85fr] gap-5">
           <div className="pt-1">
             <div className="text-[30px] font-semibold leading-none text-[#f2f4f3]">-</div>
-            <div className="mt-2 text-[50px] font-bold leading-none text-[#f7f9f8]">
-              {personal?.name || "Your Name"}
+            <div className="mt-2 text-[50px] font-bold leading-none text-[#f7f9f8]" style={headingStyle} data-typography="heading">
+              {getPrimaryHeading(personal)}
             </div>
 
             <div className="mt-6 space-y-2 text-[13px] leading-relaxed">
@@ -104,7 +105,7 @@ export function TemplateSeaGreenContrast({ data, theme, headingFont, bodyFont })
       </section>
 
       <section className="flex-1 bg-[#f7f7f6] px-8 pb-8 pt-6">
-        <div className="text-[17px] font-bold" style={{ color: heading }}>
+        <div className="text-[17px] font-bold" style={{ ...headingStyle, color: heading }} data-typography="heading">
           Family Background
         </div>
         <ul className="mt-3 space-y-2 text-[13px] leading-relaxed text-[#454545]">
@@ -128,7 +129,7 @@ export function TemplateSeaGreenContrast({ data, theme, headingFont, bodyFont })
           )}
         </ul>
 
-        <div className="mt-6 text-[17px] font-bold" style={{ color: heading }}>
+        <div className="mt-6 text-[17px] font-bold" style={{ ...headingStyle, color: heading }} data-typography="heading">
           Contact Details
         </div>
         <div className="mt-3 space-y-1.5 text-[13px] leading-relaxed">

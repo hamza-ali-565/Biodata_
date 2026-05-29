@@ -1,6 +1,7 @@
+import { createTypographyStyles, getPrimaryHeading } from "../templateTypography";
+
 export function TemplateGreenOffWhiteContrast({ data, theme, headingFont, bodyFont }) {
-  const headingStyle = { fontFamily: headingFont || "inherit" };
-  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+  const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
 
   if (!data) return null;
 
@@ -67,8 +68,8 @@ export function TemplateGreenOffWhiteContrast({ data, theme, headingFont, bodyFo
           </div>
 
           <div className="pt-1">
-            <div className="text-[50px] font-semibold leading-none">
-              {personal?.name || "Your Name"}
+            <div className="text-[50px] font-semibold leading-none" style={headingStyle} data-typography="heading">
+              {getPrimaryHeading(personal)}
             </div>
             <div className="mt-2 h-[2px] w-[82px] bg-[#d7ddd5]" />
 
@@ -93,7 +94,7 @@ export function TemplateGreenOffWhiteContrast({ data, theme, headingFont, bodyFo
       </section>
 
       <section className="flex-1 px-8 pb-8 pt-5 text-[#1f1f1f]">
-        <SectionTitle title="Contact Details" color={deepGreen} icon="contact" />
+        <SectionTitle title="Contact Details" color={deepGreen} icon="contact" headingStyle={headingStyle} />
         <div className="mt-3 space-y-1.5 pl-0.5 text-[13px] leading-relaxed">
           {contact?.contactNumber ? (
             <BodyRow icon="phone" label="Phone" value={contact.contactNumber} />
@@ -125,6 +126,7 @@ export function TemplateGreenOffWhiteContrast({ data, theme, headingFont, bodyFo
           color={deepGreen}
           icon="family"
           className="mt-4"
+          headingStyle={headingStyle}
         />
         <div className="mt-3 space-y-1.5 text-[13px] leading-relaxed">
           {familyRows.map(([label, value]) =>
@@ -165,13 +167,13 @@ function HeaderRow({ label, value }) {
   );
 }
 
-function SectionTitle({ title, icon, color, className = "" }) {
+function SectionTitle({ title, icon, color, className = "", headingStyle }) {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border-2" style={{ color, borderColor: color }}>
         <SectionIcon type={icon} />
       </span>
-      <div className="text-[17px] font-bold uppercase tracking-wide" style={{ color }}>
+      <div className="text-[17px] font-bold uppercase tracking-wide" style={{ ...headingStyle, color }} data-typography="heading">
         {title}
       </div>
     </div>

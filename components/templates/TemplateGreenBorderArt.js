@@ -1,6 +1,7 @@
+import { createTypographyStyles, getPrimaryHeading } from "../templateTypography";
+
 export function TemplateGreenBorderArt({ data, theme, headingFont, bodyFont }) {
-  const headingStyle = { fontFamily: headingFont || "inherit" };
-  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+  const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
 
   if (!data) return null;
 
@@ -64,21 +65,21 @@ export function TemplateGreenBorderArt({ data, theme, headingFont, bodyFont }) {
       <SideVine side="right" color={accent} />
 
       <div className="relative z-10 px-8 pt-4">
-        <div className="text-center text-[46px] font-bold uppercase tracking-wide" style={{ color: heading }}>
-          Bio Data
+        <div className="text-center text-[46px] font-bold uppercase tracking-wide" style={{ ...headingStyle, color: heading }} data-typography="heading">
+          {getPrimaryHeading(personal)}
         </div>
         <OrnamentLine color={accent} className="mt-1" />
 
         <div className="mt-4 grid grid-cols-[1.15fr_0.85fr] gap-6">
           <div>
             {hasPersonal ? (
-              <Section title="Personal Details" color={heading} lineColor={accent}>
+              <Section title="Personal Details" color={heading} lineColor={accent} headingStyle={headingStyle}>
                 {personalRows.map(([label, value]) => (
-                  <Row key={label} label={label} value={value} />
+                  <Row key={label} label={label} value={value} bodyStyle={bodyStyle} />
                 ))}
                 {personal?.customFields?.map((field) =>
                   field?.value ? (
-                    <Row key={field.id || field.label} label={field.label} value={field.value} />
+                    <Row key={field.id || field.label} label={field.label} value={field.value} bodyStyle={bodyStyle} />
                   ) : null
                 )}
               </Section>
@@ -104,26 +105,26 @@ export function TemplateGreenBorderArt({ data, theme, headingFont, bodyFont }) {
         </div>
 
         {hasFamily ? (
-          <Section title="Family Details" color={heading} lineColor={accent} className="mt-5">
+          <Section title="Family Details" color={heading} lineColor={accent} className="mt-5" headingStyle={headingStyle}>
             {familyRows.map(([label, value]) => (
-              <Row key={label} label={label} value={value} />
+              <Row key={label} label={label} value={value} bodyStyle={bodyStyle} />
             ))}
             {family?.customFields?.map((field) =>
               field?.value ? (
-                <Row key={field.id || field.label} label={field.label} value={field.value} />
+                <Row key={field.id || field.label} label={field.label} value={field.value} bodyStyle={bodyStyle} />
               ) : null
             )}
           </Section>
         ) : null}
 
         {hasContact ? (
-          <Section title="Contact Details" color={heading} lineColor={accent} className="mt-5">
+          <Section title="Contact Details" color={heading} lineColor={accent} className="mt-5" headingStyle={headingStyle}>
             {contactRows.map(([label, value]) => (
-              <Row key={label} label={label} value={value} />
+              <Row key={label} label={label} value={value} bodyStyle={bodyStyle} />
             ))}
             {contact?.customFields?.map((field) =>
               field?.value ? (
-                <Row key={field.id || field.label} label={field.label} value={field.value} />
+                <Row key={field.id || field.label} label={field.label} value={field.value} bodyStyle={bodyStyle} />
               ) : null
             )}
           </Section>
@@ -133,10 +134,10 @@ export function TemplateGreenBorderArt({ data, theme, headingFont, bodyFont }) {
   );
 }
 
-function Section({ title, color, lineColor, className = "", children }) {
+function Section({ title, color, lineColor, className = "", children, headingStyle }) {
   return (
     <section className={className}>
-      <div className="text-[17px] font-bold uppercase tracking-wide" style={{ color }}>
+      <div className="text-[17px] font-bold uppercase tracking-wide" style={{ ...headingStyle, color }} data-typography="heading">
         {title}
       </div>
       <OrnamentLine color={lineColor} short className="mt-1" />
@@ -145,10 +146,10 @@ function Section({ title, color, lineColor, className = "", children }) {
   );
 }
 
-function Row({ label, value }) {
+function Row({ label, value, bodyStyle }) {
   if (!value) return null;
   return (
-    <div className="flex items-start text-[13px] leading-relaxed">
+    <div className="flex items-start text-[13px] leading-relaxed" style={bodyStyle} data-typography="body">
       <div className="w-[118px] pr-2 font-bold text-[#1f1f1f]">{label}</div>
       <div className="w-4 text-center font-bold">:</div>
       <div className="flex-1 break-words text-[#282828]">{value}</div>

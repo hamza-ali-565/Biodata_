@@ -67,7 +67,12 @@ export function TemplateThumbnail({ templateDefinition }) {
         >
             <div className="absolute top-0 left-1/2 -translate-x-1/2 pt-4 flex justify-center origin-top transform scale-[0.45] sm:scale-[0.50] lg:scale-[0.55]" style={{ width: "450px" }}>
                 <div className="shadow-2xl">
-                    <TemplateComponent data={DEMO_DATA} theme={theme} headingFont='"Playfair Display", serif' bodyFont='"Inter", sans-serif' />
+                    <TemplateComponent
+                        data={DEMO_DATA}
+                        theme={theme}
+                        headingFont='var(--font-playfair-display), "Playfair Display", serif'
+                        bodyFont='"Inter", system-ui, sans-serif'
+                    />
                 </div>
             </div>
 

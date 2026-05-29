@@ -1,6 +1,7 @@
+import { createTypographyStyles, getPrimaryHeading } from "../templateTypography";
+
 export function TemplateMaroonPillars({ data, theme, headingFont, bodyFont }) {
-  const headingStyle = { fontFamily: headingFont || "inherit" };
-  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+  const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
 
     const { personal, family, contact } = data || {};
 
@@ -42,8 +43,8 @@ export function TemplateMaroonPillars({ data, theme, headingFont, bodyFont }) {
                         {/* Header section with Name hidden here if photo is present, or shown if no photo */}
                         {!data?.photoDataUrl && (
                             <div className="text-center md:text-left mb-8">
-                                <div className="text-4xl font-bold uppercase tracking-wider text-white">
-                                    {personal?.name || "Your Name"}
+                                <div className="text-4xl font-bold uppercase tracking-wider text-white" style={headingStyle} data-typography="heading">
+                                    {getPrimaryHeading(personal)}
                                 </div>
                             </div>
                         )}
@@ -92,8 +93,8 @@ export function TemplateMaroonPillars({ data, theme, headingFont, bodyFont }) {
                                     className="w-full h-full object-cover"
                                 />
                             </div>
-                            <div className="text-2xl font-bold uppercase tracking-widest text-center text-white drop-shadow-md">
-                                {personal?.name || "Your Name"}
+                            <div className="text-2xl font-bold uppercase tracking-widest text-center text-white drop-shadow-md" style={headingStyle} data-typography="heading">
+                                {getPrimaryHeading(personal)}
                             </div>
                         </div>
                     )}
@@ -112,7 +113,7 @@ function Section({ title, children, accentColor }) {
                 className="inline-block px-8 py-2.5 rounded-full mb-6 shadow-lg shadow-black/20"
                 style={{ backgroundColor: accentColor }}
             >
-                <div className="text-[16px] font-bold text-white tracking-widest font-serif drop-shadow-sm uppercase">
+                <div className="text-[16px] font-bold text-white tracking-widest font-serif drop-shadow-sm uppercase" data-typography="heading">
                     {title}
                 </div>
             </div>

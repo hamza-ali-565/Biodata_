@@ -29,7 +29,7 @@ export const TemplatePreview = forwardRef(function TemplatePreview(
         "--font-body": bodyFont || "inherit",
         fontFamily: "var(--font-body), system-ui, -apple-system, BlinkMacSystemFont",
       }}
-      className="bg-white"
+      className="biodata-preview bg-white"
     >
       <TemplateComponent data={data} theme={theme} headingFont={headingFont} bodyFont={bodyFont} />
     </div>

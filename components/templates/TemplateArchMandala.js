@@ -1,6 +1,7 @@
+import { createTypographyStyles, getPrimaryHeading } from "../templateTypography";
+
 export function TemplateArchMandala({ data, theme, headingFont, bodyFont }) {
-  const headingStyle = { fontFamily: headingFont || "inherit" };
-  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+  const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
 
     const { personal, family, contact } = data || {};
 
@@ -68,9 +69,10 @@ export function TemplateArchMandala({ data, theme, headingFont, bodyFont }) {
                     {/* Name */}
                     <div
                         className="mt-6 text-3xl md:text-5xl font-bold uppercase tracking-widest text-center"
-                        style={{ color: primaryColor }}
+                        style={{ ...headingStyle, color: primaryColor }}
+                        data-typography="heading"
                     >
-                        {personal?.name || "Your Name"}
+                        {getPrimaryHeading(personal)}
                     </div>
 
                     {/* Ornate Divider */}
