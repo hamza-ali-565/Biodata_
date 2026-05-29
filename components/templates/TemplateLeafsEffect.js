@@ -1,4 +1,7 @@
-export function TemplateLeafsEffect({ data, theme = {}, fontFamily }) {
+export function TemplateLeafsEffect({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
@@ -44,7 +47,7 @@ export function TemplateLeafsEffect({ data, theme = {}, fontFamily }) {
   return (
     <div
       className="relative mx-auto flex min-h-[800px] w-[600px] flex-col overflow-hidden bg-[#f7f7f4] p-6 text-[#242424] shadow-2xl"
-      style={{ fontFamily: fontFamily || '"Times New Roman", serif' }}
+      style={bodyStyle}
     >
       <div className="pointer-events-none absolute inset-[8px] border" style={{ borderColor: `${accent}cc` }} />
       <div className="pointer-events-none absolute inset-[14px] border" style={{ borderColor: `${accent}88` }} />
@@ -56,10 +59,6 @@ export function TemplateLeafsEffect({ data, theme = {}, fontFamily }) {
       <ThinCorner side="bottom-right" color={accent} />
 
       <div className="relative z-10 px-8 pt-4">
-        <div className="text-center text-[45px] font-bold uppercase tracking-wide" style={{ color: heading }}>
-          Biodata
-        </div>
-
         <Section title="Personal Information" color={heading} lineColor={accent} className="mt-2">
           <div className="grid grid-cols-[1.1fr_0.9fr] gap-4">
             <div className="space-y-1.5">

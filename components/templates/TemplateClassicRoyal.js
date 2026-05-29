@@ -1,4 +1,7 @@
-export function TemplateClassicRoyal({ data, theme = {}, fontFamily }) {
+export function TemplateClassicRoyal({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
     const { personal, family, contact } = data || {};
 
     // A classic orange/brown palette from the image
@@ -8,7 +11,7 @@ export function TemplateClassicRoyal({ data, theme = {}, fontFamily }) {
     return (
         <div
             className="relative mx-auto flex min-h-[600px] min-w-[700px] flex-col overflow-hidden shadow-2xl bg-[#fffdf7] p-8 md:p-12"
-            style={{ fontFamily: fontFamily || "inherit" }}
+            style={bodyStyle}
         >
             <div
                 className="relative h-full w-full border-[3px] p-6 sm:p-10"

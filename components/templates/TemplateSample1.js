@@ -1,4 +1,7 @@
-export function TemplateSample1({ data, theme = {}, fontFamily }) {
+export function TemplateSample1({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
     const { personal, family, contact, photoDataUrl } = data || {};
 
     const primaryColor = theme?.accent || "#0066cc"; // The blue header color
@@ -7,7 +10,7 @@ export function TemplateSample1({ data, theme = {}, fontFamily }) {
     return (
         <div
             className="relative mx-auto flex min-h-[800px] w-[600px] flex-col overflow-hidden bg-gradient-to-br from-cyan-400 via-teal-300 to-yellow-300 p-8 sm:p-12 shadow-2xl"
-            style={{ fontFamily: fontFamily || "inherit", color: textColor }}
+            style={{ ...bodyStyle, color: textColor }}
         >
             {/* Outline Border with Diamonds */}
             <div className="absolute inset-4 border border-black pointer-events-none">

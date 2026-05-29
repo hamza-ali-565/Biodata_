@@ -18,7 +18,10 @@ export function TemplateDetailClient({ templateId }) {
   const [selectedTemplateId, setSelectedTemplateId] = useState(initialTemplate.id);
   const template = TEMPLATE_DEFINITIONS.find((t) => t.id === selectedTemplateId) || TEMPLATE_DEFINITIONS[0];
   const [data, setData] = useState(null);
-  const [fontId, setFontId] = useState(FONT_OPTIONS[0].id);
+  const [headingFontId, setHeadingFontId] = useState(FONT_OPTIONS[0].id);
+  const [bodyFontId, setBodyFontId] = useState(
+    FONT_OPTIONS.find(f => f.category === "Sans-Serif")?.id || FONT_OPTIONS[0].id
+  );
   const [themeId, setThemeId] = useState(
     template?.defaultThemeId || THEME_OPTIONS[0].id
   );
@@ -38,14 +41,32 @@ export function TemplateDetailClient({ templateId }) {
     }
   }, []);
 
-  const selectedFont = useMemo(
-    () => FONT_OPTIONS.find((f) => f.id === fontId) || FONT_OPTIONS[0],
-    [fontId]
+  const selectedHeadingFont = useMemo(
+    () => FONT_OPTIONS.find((f) => f.id === headingFontId) || FONT_OPTIONS[0],
+    [headingFontId]
+  );
+  const selectedBodyFont = useMemo(
+    () => FONT_OPTIONS.find((f) => f.id === bodyFontId) || FONT_OPTIONS.find(f => f.category === "Sans-Serif") || FONT_OPTIONS[0],
+    [bodyFontId]
   );
   const selectedTheme = useMemo(
     () => THEME_OPTIONS.find((t) => t.id === themeId) || THEME_OPTIONS[0],
     [themeId]
   );
+
+  const fontCategories = useMemo(() => {
+    return FONT_OPTIONS.reduce((acc, font) => {
+      if (!acc[font.category]) acc[font.category] = [];
+      acc[font.category].push(font);
+      return acc;
+    }, {});
+  }, []);
+
+  const handleReset = () => {
+    setHeadingFontId(FONT_OPTIONS[0].id);
+    setBodyFontId(FONT_OPTIONS.find(f => f.category === "Sans-Serif")?.id || FONT_OPTIONS[0].id);
+    setThemeId(template?.defaultThemeId || THEME_OPTIONS[0].id);
+  };
 
   const handleExport = async (type) => {
     if (!previewRef.current || !data) return;
@@ -157,47 +178,88 @@ export function TemplateDetailClient({ templateId }) {
         <section className="flex-1 flex flex-col bg-slate-900/60 rounded-3xl border border-white/10 px-4 py-6 sm:px-6 sm:py-8 shadow-2xl relative overflow-hidden min-h-0 min-w-0 lg:min-h-[calc(100vh-140px)]">
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-brand-500/5 blur-[100px] pointer-events-none" />
 
-          <div className="flex flex-wrap items-start justify-between gap-6 relative z-10 mb-8">
-            <div className="max-w-xl space-y-2">
-              <p className="text-xs uppercase tracking-[0.2em] text-slate-400">
-                Live Preview
-              </p>
-              <h1 className="text-xl font-bold tracking-tight text-white sm:text-2xl">
-                {template.name}
-              </h1>
-            </div>
-            <div className="flex flex-wrap gap-4 text-xs">
+          <div className="relative z-10 mb-6 bg-slate-900/40 p-5 rounded-2xl border border-white/5 backdrop-blur-sm shadow-xl flex flex-col gap-5">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/5 pb-4">
               <div className="space-y-1">
+                <h1 className="text-xl font-bold tracking-tight text-white sm:text-2xl flex items-center gap-3">
+                  {template.name}
+                  <span className="text-[10px] uppercase tracking-widest bg-brand-500/20 text-brand-300 px-2 py-0.5 rounded-full border border-brand-500/20">Preview</span>
+                </h1>
+                <p className="text-xs text-slate-400">
+                  Customise typography and accent colours to match your style.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={handleReset}
+                className="inline-flex items-center justify-center rounded-lg border border-white/10 bg-slate-800/50 px-3 py-1.5 text-[11px] font-medium text-slate-300 transition-colors hover:bg-slate-700 hover:text-white"
+              >
+                Reset Customization
+              </button>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Heading Font */}
+              <div className="space-y-2">
                 <label className="block text-[11px] font-semibold uppercase tracking-wide text-slate-400">
-                  Font family
+                  Heading Font
                 </label>
                 <select
-                  value={fontId}
-                  onChange={(e) => setFontId(e.target.value)}
-                  className="min-w-[160px] rounded-xl border border-white/10 bg-slate-950 px-3 py-2 text-xs text-slate-50 appearance-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 shadow-inner"
+                  value={headingFontId}
+                  onChange={(e) => setHeadingFontId(e.target.value)}
+                  className="w-full rounded-xl border border-white/10 bg-slate-950/80 px-3 py-2.5 text-xs text-slate-100 appearance-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 shadow-inner transition-colors hover:border-white/20"
                 >
-                  {FONT_OPTIONS.map((font) => (
-                    <option key={font.id} value={font.id}>
-                      {font.label}
-                    </option>
+                  {Object.entries(fontCategories).map(([category, fonts]) => (
+                    <optgroup key={category} label={category} className="bg-slate-900 text-slate-400 font-semibold text-[10px] uppercase tracking-wider">
+                      {fonts.map((font) => (
+                        <option key={font.id} value={font.id} className="text-xs text-slate-100 normal-case tracking-normal">
+                          {font.label}
+                        </option>
+                      ))}
+                    </optgroup>
                   ))}
                 </select>
               </div>
-              <div className="space-y-1">
+
+              {/* Body Font */}
+              <div className="space-y-2">
                 <label className="block text-[11px] font-semibold uppercase tracking-wide text-slate-400">
-                  Colour theme
+                  Body Font
                 </label>
                 <select
-                  value={themeId}
-                  onChange={(e) => setThemeId(e.target.value)}
-                  className="min-w-[160px] rounded-xl border border-white/10 bg-slate-950 px-3 py-2 text-xs text-slate-50 appearance-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 shadow-inner"
+                  value={bodyFontId}
+                  onChange={(e) => setBodyFontId(e.target.value)}
+                  className="w-full rounded-xl border border-white/10 bg-slate-950/80 px-3 py-2.5 text-xs text-slate-100 appearance-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 shadow-inner transition-colors hover:border-white/20"
                 >
-                  {THEME_OPTIONS.map((theme) => (
-                    <option key={theme.id} value={theme.id}>
-                      {theme.label}
-                    </option>
+                  {Object.entries(fontCategories).map(([category, fonts]) => (
+                    <optgroup key={category} label={category} className="bg-slate-900 text-slate-400 font-semibold text-[10px] uppercase tracking-wider">
+                      {fonts.map((font) => (
+                        <option key={font.id} value={font.id} className="text-xs text-slate-100 normal-case tracking-normal">
+                          {font.label}
+                        </option>
+                      ))}
+                    </optgroup>
                   ))}
                 </select>
+              </div>
+
+              {/* Accent Color */}
+              <div className="space-y-2 md:col-span-2 lg:col-span-1">
+                <label className="block text-[11px] font-semibold uppercase tracking-wide text-slate-400 mb-1">
+                  Accent Color
+                </label>
+                <div className="flex flex-wrap gap-2">
+                  {THEME_OPTIONS.map((theme) => (
+                    <button
+                      key={theme.id}
+                      onClick={() => setThemeId(theme.id)}
+                      title={theme.label}
+                      className={`h-7 w-7 rounded-full shadow-md transition-all duration-300 ${themeId === theme.id ? 'scale-125 ring-2 ring-white ring-offset-2 ring-offset-slate-900' : 'hover:scale-110 hover:ring-2 hover:ring-white/50 hover:ring-offset-1 hover:ring-offset-slate-900 opacity-80 hover:opacity-100'}`}
+                      style={{ backgroundColor: theme.previewColor }}
+                      aria-label={`Select ${theme.label} color`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -209,7 +271,8 @@ export function TemplateDetailClient({ templateId }) {
                 data={data}
                 template={template}
                 theme={selectedTheme}
-                fontFamily={selectedFont.css}
+                headingFont={selectedHeadingFont.css}
+                bodyFont={selectedBodyFont.css}
               />
             </ResponsivePreviewScaler>
           </div>

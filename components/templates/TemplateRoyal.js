@@ -1,4 +1,7 @@
-export function TemplateRoyal({ data, theme, fontFamily }) {
+export function TemplateRoyal({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
   if (!data) return null;
   const { personal, family, contact, photoDataUrl } = data;
   const accent = theme?.accent || "#b45309";
@@ -8,7 +11,7 @@ export function TemplateRoyal({ data, theme, fontFamily }) {
   return (
     <div
       className="relative mx-auto flex min-h-[600px] w-[450px] flex-col overflow-hidden bg-white text-slate-900 shadow-2xl "
-      style={{ fontFamily: fontFamily || "inherit", }}
+      style={{ ...bodyStyle, }}
     >
 
       <div className="p-8 pb-4 text-center">
@@ -19,7 +22,6 @@ export function TemplateRoyal({ data, theme, fontFamily }) {
           <div className="w-24 h-32 rounded-lg object-cover overflow-hidden mx-auto mb-4 border-2 bg-slate-100 flex items-center justify-center text-[10px] text-slate-400 border border-dashed border-slate-300">Photo</div>
         )}
 
-        <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-2">Marriage Biodata</p>
         <div className="text-3xl font-serif" style={{ color: textHeading }}>{personal.name || "Your Name"}</div>
       </div>
 

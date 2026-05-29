@@ -1,4 +1,7 @@
-export function TemplateSample2({ data, theme = {}, fontFamily }) {
+export function TemplateSample2({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
     const { personal, family, contact, photoDataUrl } = data || {};
 
     const headerBgColor = theme?.accent || "#fac276"; // Light orange header
@@ -7,7 +10,7 @@ export function TemplateSample2({ data, theme = {}, fontFamily }) {
     return (
         <div
             className="relative mx-auto flex min-h-[800px] w-[600px] flex-col overflow-hidden shadow-2xl bg-[#eff5f7]"
-            style={{ fontFamily: fontFamily || "inherit", color: textColor }}
+            style={{ ...bodyStyle, color: textColor }}
         >
             {/* Background Texture/Watercolor Splashes */}
             <div className="absolute inset-0 pointer-events-none opacity-40">

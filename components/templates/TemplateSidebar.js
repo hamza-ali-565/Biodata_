@@ -1,4 +1,7 @@
-export function TemplateSidebar({ data, theme, fontFamily }) {
+export function TemplateSidebar({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
   if (!data) return null;
   const { personal, family, contact, photoDataUrl } = data;
   const accent = theme?.accent || "#b45309";
@@ -8,12 +11,11 @@ export function TemplateSidebar({ data, theme, fontFamily }) {
   return (
     <div
       className="relative mx-auto flex min-h-[600px] w-[450px] flex-col overflow-hidden bg-white text-slate-900 shadow-2xl "
-      style={{ fontFamily: fontFamily || "inherit", }}
+      style={{ ...bodyStyle, }}
     >
 
       <div className="p-8 pb-4 text-center">
 
-        <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-2">Marriage Biodata</p>
         <div className="text-3xl font-serif" style={{ color: textHeading }}>{personal.name || "Your Name"}</div>
       </div>
 

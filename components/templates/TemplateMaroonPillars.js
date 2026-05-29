@@ -1,4 +1,7 @@
-export function TemplateMaroonPillars({ data, theme = {}, fontFamily }) {
+export function TemplateMaroonPillars({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
     const { personal, family, contact } = data || {};
 
     // High contrast maroon and gold/yellow
@@ -9,7 +12,7 @@ export function TemplateMaroonPillars({ data, theme = {}, fontFamily }) {
     return (
         <div
             className="relative mx-auto flex min-h-[600px] min-w-[700px] flex-col overflow-hidden shadow-2xl"
-            style={{ fontFamily: fontFamily || "inherit", backgroundColor: bgColor }}
+            style={{ ...bodyStyle, backgroundColor: bgColor }}
         >
             <div className="relative w-full min-h-full p-8 sm:p-12">
 

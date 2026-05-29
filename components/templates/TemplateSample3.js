@@ -1,4 +1,7 @@
-export function TemplateSample3({ data, theme = {}, fontFamily }) {
+export function TemplateSample3({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
     const { personal, family, contact, photoDataUrl } = data || {};
 
     const headerBgColor = theme?.accent || "#fbca83"; // Light gold/orange header
@@ -8,7 +11,7 @@ export function TemplateSample3({ data, theme = {}, fontFamily }) {
     return (
         <div
             className="relative mx-auto flex min-h-[800px] w-[600px] flex-col overflow-hidden shadow-2xl bg-[#fdfaf5] p-6"
-            style={{ fontFamily: fontFamily || "inherit", color: textColor }}
+            style={{ ...bodyStyle, color: textColor }}
         >
             {/* Ornate Gold Border */}
             <div

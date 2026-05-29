@@ -1,4 +1,7 @@
-export function TemplateSeaGreenContrast({ data, theme = {}, fontFamily }) {
+export function TemplateSeaGreenContrast({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
@@ -45,7 +48,7 @@ export function TemplateSeaGreenContrast({ data, theme = {}, fontFamily }) {
   return (
     <div
       className="relative mx-auto flex min-h-[800px] w-[600px] flex-col overflow-hidden bg-[#f3f3f1] text-[#2a2a2a] shadow-2xl"
-      style={{ fontFamily: fontFamily || '"Times New Roman", serif' }}
+      style={bodyStyle}
     >
       <section className="relative h-[430px] overflow-hidden px-8 py-8 text-[#eef1ee]">
         <div

@@ -1,4 +1,7 @@
-export function TemplateArchMandala({ data, theme = {}, fontFamily }) {
+export function TemplateArchMandala({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
     const { personal, family, contact } = data || {};
 
     // A regal blue and cream palette
@@ -8,7 +11,7 @@ export function TemplateArchMandala({ data, theme = {}, fontFamily }) {
     return (
         <div
             className="relative mx-auto flex min-h-[600px] min-w-[700px] flex-col overflow-hidden shadow-2xl"
-            style={{ fontFamily: fontFamily || "inherit", backgroundColor: bgColor }}
+            style={{ ...bodyStyle, backgroundColor: bgColor }}
         >
             <div className="relative w-full h-full overflow-hidden">
                 {/* Top Pattern & Arch Mask */}

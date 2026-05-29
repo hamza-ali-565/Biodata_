@@ -1,4 +1,7 @@
-export function TemplateBeautifulGoldenBorder({ data, theme = {}, fontFamily }) {
+export function TemplateBeautifulGoldenBorder({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
@@ -39,7 +42,7 @@ export function TemplateBeautifulGoldenBorder({ data, theme = {}, fontFamily }) 
   return (
     <div
       className="relative mx-auto flex min-h-[800px] w-[600px] flex-col overflow-hidden bg-[#f9f5ee] p-6 text-[#2f2a25] shadow-2xl"
-      style={{ fontFamily: fontFamily || '"Times New Roman", serif' }}
+      style={bodyStyle}
     >
       <div
         className="pointer-events-none absolute inset-[10px] border-4"
@@ -59,12 +62,6 @@ export function TemplateBeautifulGoldenBorder({ data, theme = {}, fontFamily }) 
         <div className="grid grid-cols-[1.45fr_0.95fr] gap-6">
           <div className="pt-5">
             <OrnamentDivider color={accent} compact />
-            <div
-              className="mt-3 text-center text-5xl font-semibold uppercase leading-none tracking-[0.08em]"
-              style={{ color: textHeading }}
-            >
-              Biodata
-            </div>
             <OrnamentDivider color={accent} className="mt-3" />
           </div>
 

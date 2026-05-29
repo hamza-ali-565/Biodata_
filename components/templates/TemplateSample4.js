@@ -1,4 +1,7 @@
-export function TemplateSample4({ data, theme = {}, fontFamily }) {
+export function TemplateSample4({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
     const { personal, family, contact, photoDataUrl } = data || {};
 
     const headerBgColor = theme?.accent || "#d26732"; // Terracotta orange
@@ -9,7 +12,7 @@ export function TemplateSample4({ data, theme = {}, fontFamily }) {
     return (
         <div
             className="relative mx-auto flex min-h-[800px] w-[600px] flex-col overflow-hidden shadow-2xl bg-white p-8 sm:p-12 border-x-4"
-            style={{ fontFamily: fontFamily || "inherit", color: textColor, borderColor: headerBgColor }}
+            style={{ ...bodyStyle, color: textColor, borderColor: headerBgColor }}
         >
             {/* Top Border Ornaments */}
             <div className="absolute top-0 left-0 w-full h-16 pointer-events-none flex justify-between">

@@ -1,4 +1,7 @@
-export function TemplateGreenBorderArt({ data, theme = {}, fontFamily }) {
+export function TemplateGreenBorderArt({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
@@ -48,7 +51,7 @@ export function TemplateGreenBorderArt({ data, theme = {}, fontFamily }) {
   return (
     <div
       className="relative mx-auto flex min-h-[800px] w-[600px] flex-col overflow-hidden bg-[#f8f8f4] p-6 text-[#1f1f1f] shadow-2xl"
-      style={{ fontFamily: fontFamily || '"Times New Roman", serif' }}
+      style={bodyStyle}
     >
       <div className="pointer-events-none absolute inset-[8px] border-2" style={{ borderColor: `${accent}cc` }} />
       <div className="pointer-events-none absolute inset-[14px] border" style={{ borderColor: `${accent}88` }} />

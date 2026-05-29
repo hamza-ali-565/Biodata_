@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import * as Templates from "./templates";
 
 export const TemplatePreview = forwardRef(function TemplatePreview(
-  { data, template, theme, fontFamily },
+  { data, template, theme, headingFont, bodyFont },
   ref
 ) {
   if (!data || !template) {
@@ -25,11 +25,13 @@ export const TemplatePreview = forwardRef(function TemplatePreview(
       ref={ref}
       data-preview-root="true"
       style={{
-        fontFamily: fontFamily || "system-ui, -apple-system, BlinkMacSystemFont",
+        "--font-heading": headingFont || "inherit",
+        "--font-body": bodyFont || "inherit",
+        fontFamily: "var(--font-body), system-ui, -apple-system, BlinkMacSystemFont",
       }}
       className="bg-white"
     >
-      <TemplateComponent data={data} theme={theme} fontFamily={fontFamily} />
+      <TemplateComponent data={data} theme={theme} headingFont={headingFont} bodyFont={bodyFont} />
     </div>
   );
 });

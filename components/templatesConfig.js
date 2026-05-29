@@ -1,66 +1,38 @@
 export const STORAGE_KEY = "biodata-for-marriage:data";
 
 export const FONT_OPTIONS = [
-  {
-    id: "playfair",
-    label: "Playfair Display",
-    css: '"Playfair Display", serif',
-  },
-  { id: "poppins", label: "Poppins", css: '"Poppins", system-ui, sans-serif' },
-  { id: "lora", label: "Lora", css: '"Lora", serif' },
-  {
-    id: "cinzel",
-    label: "Cinzel",
-    css: '"Cinzel", "Times New Roman", serif',
-  },
-  {
-    id: "libre-baskerville",
-    label: "Libre Baskerville",
-    css: '"Libre Baskerville", "Georgia", serif',
-  },
-  {
-    id: "merriweather",
-    label: "Merriweather",
-    css: '"Merriweather", "Georgia", serif',
-  },
+  // Serif Fonts
+  { id: "playfair", label: "Playfair Display", category: "Serif", css: '"Playfair Display", serif' },
+  { id: "merriweather", label: "Merriweather", category: "Serif", css: '"Merriweather", "Georgia", serif' },
+  { id: "lora", label: "Lora", category: "Serif", css: '"Lora", serif' },
+  { id: "libre-baskerville", label: "Libre Baskerville", category: "Serif", css: '"Libre Baskerville", "Georgia", serif' },
+  { id: "cormorant-garamond", label: "Cormorant Garamond", category: "Serif", css: '"Cormorant Garamond", serif' },
+  { id: "dm-serif-display", label: "DM Serif Display", category: "Serif", css: '"DM Serif Display", serif' },
+  { id: "roboto-slab", label: "Roboto Slab", category: "Serif", css: '"Roboto Slab", serif' },
+  // Traditional / Decorative
+  { id: "cinzel", label: "Cinzel", category: "Traditional", css: '"Cinzel", "Times New Roman", serif' },
+  // Sans-Serif / Modern
+  { id: "poppins", label: "Poppins", category: "Sans-Serif", css: '"Poppins", system-ui, sans-serif' },
+  { id: "inter", label: "Inter", category: "Sans-Serif", css: '"Inter", system-ui, sans-serif' },
+  { id: "lato", label: "Lato", category: "Sans-Serif", css: '"Lato", system-ui, sans-serif' },
+  { id: "montserrat", label: "Montserrat", category: "Sans-Serif", css: '"Montserrat", system-ui, sans-serif' },
+  { id: "nunito", label: "Nunito", category: "Sans-Serif", css: '"Nunito", system-ui, sans-serif' },
+  { id: "raleway", label: "Raleway", category: "Sans-Serif", css: '"Raleway", system-ui, sans-serif' },
+  { id: "source-sans-pro", label: "Source Sans Pro", category: "Sans-Serif", css: '"Source Sans Pro", system-ui, sans-serif' },
 ];
 
 export const THEME_OPTIONS = [
-  {
-    id: "gold",
-    label: "Gold",
-    accent: "#b7791f",
-    accentSoft: "#fef3c7",
-    textHeading: "#7c2d12",
-  },
-  {
-    id: "royal-blue",
-    label: "Royal Blue",
-    accent: "#1d4ed8",
-    accentSoft: "#dbeafe",
-    textHeading: "#1e3a8a",
-  },
-  {
-    id: "maroon",
-    label: "Maroon",
-    accent: "#9f1239",
-    accentSoft: "#ffe4e6",
-    textHeading: "#7f1d1d",
-  },
-  {
-    id: "emerald",
-    label: "Emerald Green",
-    accent: "#047857",
-    accentSoft: "#d1fae5",
-    textHeading: "#064e3b",
-  },
-  {
-    id: "classic-black",
-    label: "Classic Black",
-    accent: "#111827",
-    accentSoft: "#e5e7eb",
-    textHeading: "#020617",
-  },
+  { id: "blue", label: "Blue", accent: "#3b82f6", accentSoft: "#dbeafe", textHeading: "#1e3a8a", previewColor: "#3b82f6" },
+  { id: "royal-blue", label: "Royal Blue", accent: "#1d4ed8", accentSoft: "#dbeafe", textHeading: "#1e3a8a", previewColor: "#1d4ed8" },
+  { id: "purple", label: "Purple", accent: "#8b5cf6", accentSoft: "#ede9fe", textHeading: "#5b21b6", previewColor: "#8b5cf6" },
+  { id: "emerald", label: "Emerald", accent: "#10b981", accentSoft: "#d1fae5", textHeading: "#064e3b", previewColor: "#10b981" },
+  { id: "green", label: "Green", accent: "#22c55e", accentSoft: "#dcfce7", textHeading: "#14532d", previewColor: "#22c55e" },
+  { id: "rose", label: "Rose", accent: "#f43f5e", accentSoft: "#ffe4e6", textHeading: "#881337", previewColor: "#f43f5e" },
+  { id: "red", label: "Red", accent: "#ef4444", accentSoft: "#fee2e2", textHeading: "#7f1d1d", previewColor: "#ef4444" },
+  { id: "maroon", label: "Maroon", accent: "#9f1239", accentSoft: "#ffe4e6", textHeading: "#4c0519", previewColor: "#9f1239" },
+  { id: "gold", label: "Gold", accent: "#d97706", accentSoft: "#fef3c7", textHeading: "#78350f", previewColor: "#d97706" },
+  { id: "gray", label: "Gray", accent: "#6b7280", accentSoft: "#f3f4f6", textHeading: "#1f2937", previewColor: "#6b7280" },
+  { id: "classic-black", label: "Classic Black", accent: "#111827", accentSoft: "#e5e7eb", textHeading: "#020617", previewColor: "#111827" },
 ];
 
 export const generateSlug = (name) => {

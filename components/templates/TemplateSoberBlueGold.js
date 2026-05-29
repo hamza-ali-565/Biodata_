@@ -1,4 +1,7 @@
-export function TemplateSoberBlueGold({ data, theme = {}, fontFamily }) {
+export function TemplateSoberBlueGold({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
@@ -44,7 +47,7 @@ export function TemplateSoberBlueGold({ data, theme = {}, fontFamily }) {
   return (
     <div
       className="relative mx-auto flex min-h-[800px] w-[600px] flex-col overflow-hidden bg-[#f8f8f6] p-6 text-[#252525] shadow-2xl"
-      style={{ fontFamily: fontFamily || '"Times New Roman", serif' }}
+      style={bodyStyle}
     >
       <div className="pointer-events-none absolute inset-[8px] border" style={{ borderColor: `${navy}cc` }} />
       <div className="pointer-events-none absolute inset-[14px] border" style={{ borderColor: `${navy}55` }} />
@@ -54,9 +57,6 @@ export function TemplateSoberBlueGold({ data, theme = {}, fontFamily }) {
       <CornerBracket position="bottom-right" color={navy} />
 
       <div className="relative z-10 px-8 pt-3">
-        <div className="text-center text-[46px] font-bold uppercase tracking-wide" style={{ color: navy }}>
-          Biodata
-        </div>
         <OrnamentLine color={gold} className="mt-1" />
 
         <div className="mt-3 grid grid-cols-[1.12fr_0.88fr] gap-5">

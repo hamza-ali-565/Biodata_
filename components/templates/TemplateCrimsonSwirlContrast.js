@@ -1,4 +1,7 @@
-export function TemplateCrimsonSwirlContrast({ data, theme = {}, fontFamily }) {
+export function TemplateCrimsonSwirlContrast({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
@@ -49,7 +52,7 @@ export function TemplateCrimsonSwirlContrast({ data, theme = {}, fontFamily }) {
   return (
     <div
       className="relative mx-auto flex min-h-[800px] w-[600px] flex-col overflow-hidden bg-[#f8f7f5] p-6 text-[#242424] shadow-2xl"
-      style={{ fontFamily: fontFamily || '"Times New Roman", serif' }}
+      style={bodyStyle}
     >
       <div className="pointer-events-none absolute inset-[8px] border" style={{ borderColor: `${accent}cc` }} />
 
@@ -59,10 +62,6 @@ export function TemplateCrimsonSwirlContrast({ data, theme = {}, fontFamily }) {
       <SideSwirls side="right" color={accent} />
 
       <div className="relative z-10 px-8 pt-4">
-        <div className="text-[56px] italic leading-none" style={{ color: heading, fontFamily: '"Playfair Display", serif' }}>
-          Biodata
-        </div>
-
         <Section title="Personal Details" color={heading}>
           <div className="grid grid-cols-[1.1fr_0.9fr] gap-4">
             <div className="space-y-1.5">

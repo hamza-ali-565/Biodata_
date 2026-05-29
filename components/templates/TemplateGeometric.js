@@ -1,4 +1,7 @@
-export function TemplateGeometric({ data, theme, fontFamily }) {
+export function TemplateGeometric({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
   if (!data) return null;
   const { personal, family, contact, photoDataUrl } = data;
   const accent = theme?.accent || "#b45309";
@@ -8,7 +11,7 @@ export function TemplateGeometric({ data, theme, fontFamily }) {
   return (
     <div
       className="relative mx-auto flex min-h-[600px] w-[450px] flex-col overflow-hidden bg-white text-slate-900 shadow-2xl "
-      style={{ fontFamily: fontFamily || "inherit", }}
+      style={{ ...bodyStyle, }}
     >
 
       <div className="p-6 flex flex-row gap-6 items-center bg-slate-50/50">
@@ -20,7 +23,6 @@ export function TemplateGeometric({ data, theme, fontFamily }) {
         )}
 
         <div className="flex-1 text-left">
-          <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Marriage Biodata</p>
           <div className="text-2xl font-bold" style={{ color: textHeading }}>{personal.name || "Your Name"}</div>
           <p className="text-xs text-slate-600 mt-1">{personal.occupation || "Occupation"}</p>
         </div>

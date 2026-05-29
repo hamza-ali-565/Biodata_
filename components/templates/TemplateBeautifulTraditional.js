@@ -1,4 +1,7 @@
-export function TemplateBeautifulTraditional({ data, theme = {}, fontFamily }) {
+export function TemplateBeautifulTraditional({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
@@ -44,8 +47,7 @@ export function TemplateBeautifulTraditional({ data, theme = {}, fontFamily }) {
   return (
     <div
       className="relative mx-auto flex min-h-[800px] w-[600px] flex-col overflow-hidden text-[#f3f4f6] shadow-2xl"
-      style={{
-        fontFamily: fontFamily || '"Playfair Display", "Cinzel", serif',
+      style={{ ...bodyStyle,
         background: `linear-gradient(135deg, ${midGreen} 0%, ${darkGreen} 100%)`,
       }}
     >

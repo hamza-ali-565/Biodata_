@@ -1,4 +1,7 @@
-export function TemplateTwoColumn({ data, theme, fontFamily }) {
+export function TemplateTwoColumn({ data, theme, headingFont, bodyFont }) {
+  const headingStyle = { fontFamily: headingFont || "inherit" };
+  const bodyStyle = { fontFamily: bodyFont || "inherit" };
+
   if (!data) return null;
   const { personal, family, contact, photoDataUrl } = data;
   const accent = theme?.accent || "#b45309";
@@ -8,7 +11,7 @@ export function TemplateTwoColumn({ data, theme, fontFamily }) {
   return (
     <div
       className="relative mx-auto flex min-h-[600px] w-[450px] flex-col overflow-hidden bg-white text-slate-900 shadow-2xl "
-      style={{ fontFamily: fontFamily || "inherit", }}
+      style={{ ...bodyStyle, }}
     >
 
       <div className="flex flex-1">
@@ -21,8 +24,7 @@ export function TemplateTwoColumn({ data, theme, fontFamily }) {
           )}
 
           <div className="text-lg font-bold mt-2" style={{ color: textHeading }}>{personal.name}</div>
-          <p className="text-[10px] uppercase tracking-widest text-slate-600 mt-2">Marriage Biodata</p>
-        </div>
+          </div>
         <div className="w-2/3 p-6">
 
 

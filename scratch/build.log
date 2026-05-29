@@ -1,0 +1,761 @@
+
+> my-app@0.1.0 build
+> next build
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\Cc\OneDrive\Desktop\Backup biodata\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\Cc\OneDrive\Desktop\Backup biodata\Biodata_\pnpm-lock.yaml
+
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 24 errors:
+./Biodata_/components/templates/TemplateArchMandala.js:66:30
+Parsing ecmascript source code failed
+[0m [90m 64 |[39m
+ [90m 65 |[39m                     {[90m/* Name */[39m}
+[31m[1m>[22m[39m[90m 66 |[39m                     [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }}
+ [90m    |[39m                              [31m[1m^[22m[39m
+ [90m 67 |[39m                         className[33m=[39m[32m"mt-6 text-3xl md:text-5xl font-bold uppercase tracking-widest text-center"[39m
+ [90m 68 |[39m                         style[33m=[39m{{ color[33m:[39m primaryColor }}
+ [90m 69 |[39m                     [33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateArchMandala.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateArchMandala.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateBeautifulTraditional.js:81:18
+Parsing ecmascript source code failed
+[0m [90m 79 |[39m
+ [90m 80 |[39m         {[90m/* Name */[39m}
+[31m[1m>[22m[39m[90m 81 |[39m         [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"mt-4 max-w-[480px] text-center text-[36px] font-bold leading-tight tracking-wide"[39m style[33m=[39m{{ color[33m:[39m gold }}[33m>[39m
+ [90m    |[39m                  [31m[1m^[22m[39m
+ [90m 82 |[39m           {personal[33m?[39m[33m.[39mname [33m||[39m [32m"Your Name"[39m}
+ [90m 83 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 84 |[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateBeautifulTraditional.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateBeautifulTraditional.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateCard.js:23:18
+Parsing ecmascript source code failed
+[0m [90m 21 |[39m
+ [90m 22 |[39m         [33m<[39m[33mp[39m className[33m=[39m[32m"text-[10px] uppercase tracking-widest text-slate-500 mb-2"[39m[33m>[39m[33mMarriage[39m [33mBiodata[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+[31m[1m>[22m[39m[90m 23 |[39m         [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"text-3xl font-serif"[39m style[33m=[39m{{ color[33m:[39m textHeading }}[33m>[39m{personal[33m.[39mname [33m||[39m [32m"Your Name"[39m}[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m    |[39m                  [31m[1m^[22m[39m
+ [90m 24 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 25 |[39m
+ [90m 26 |[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateCard.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateCard.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateCentered.js:23:18
+Parsing ecmascript source code failed
+[0m [90m 21 |[39m
+ [90m 22 |[39m         [33m<[39m[33mp[39m className[33m=[39m[32m"text-[10px] uppercase tracking-widest text-slate-500 mb-2"[39m[33m>[39m[33mMarriage[39m [33mBiodata[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+[31m[1m>[22m[39m[90m 23 |[39m         [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"text-3xl font-serif"[39m style[33m=[39m{{ color[33m:[39m textHeading }}[33m>[39m{personal[33m.[39mname [33m||[39m [32m"Your Name"[39m}[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m    |[39m                  [31m[1m^[22m[39m
+ [90m 24 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 25 |[39m
+ [90m 26 |[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateCentered.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateCentered.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateClassic.js:23:18
+Parsing ecmascript source code failed
+[0m [90m 21 |[39m
+ [90m 22 |[39m         [33m<[39m[33mp[39m className[33m=[39m[32m"text-[10px] uppercase tracking-widest text-slate-500 mb-2"[39m[33m>[39m[33mMarriage[39m [33mBiodata[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+[31m[1m>[22m[39m[90m 23 |[39m         [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"text-3xl font-serif"[39m style[33m=[39m{{ color[33m:[39m textHeading }}[33m>[39m{personal[33m.[39mname [33m||[39m [32m"Your Name"[39m}[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m    |[39m                  [31m[1m^[22m[39m
+ [90m 24 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 25 |[39m
+ [90m 26 |[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateClassic.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateClassic.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateDark.js:24:20
+Parsing ecmascript source code failed
+[0m [90m 22 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m"flex-1 text-left"[39m[33m>[39m
+ [90m 23 |[39m           [33m<[39m[33mp[39m className[33m=[39m[32m"text-[10px] uppercase tracking-widest text-slate-500 mb-1"[39m[33m>[39m[33mMarriage[39m [33mBiodata[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+[31m[1m>[22m[39m[90m 24 |[39m           [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"text-2xl font-bold"[39m style[33m=[39m{{ color[33m:[39m textHeading }}[33m>[39m{personal[33m.[39mname [33m||[39m [32m"Your Name"[39m}[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m    |[39m                    [31m[1m^[22m[39m
+ [90m 25 |[39m           [33m<[39m[33mp[39m className[33m=[39m[32m"text-xs text-slate-600 mt-1"[39m[33m>[39m{personal[33m.[39moccupation [33m||[39m [32m"Occupation"[39m}[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+ [90m 26 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 27 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateDark.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateDark.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateElegant.js:24:20
+Parsing ecmascript source code failed
+[0m [90m 22 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m"flex-1 text-left"[39m[33m>[39m
+ [90m 23 |[39m           [33m<[39m[33mp[39m className[33m=[39m[32m"text-[10px] uppercase tracking-widest text-slate-500 mb-1"[39m[33m>[39m[33mMarriage[39m [33mBiodata[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+[31m[1m>[22m[39m[90m 24 |[39m           [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"text-2xl font-bold"[39m style[33m=[39m{{ color[33m:[39m textHeading }}[33m>[39m{personal[33m.[39mname [33m||[39m [32m"Your Name"[39m}[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m    |[39m                    [31m[1m^[22m[39m
+ [90m 25 |[39m           [33m<[39m[33mp[39m className[33m=[39m[32m"text-xs text-slate-600 mt-1"[39m[33m>[39m{personal[33m.[39moccupation [33m||[39m [32m"Occupation"[39m}[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+ [90m 26 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 27 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateElegant.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateElegant.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateFloral.js:24:20
+Parsing ecmascript source code failed
+[0m [90m 22 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m"flex-1 text-right"[39m[33m>[39m
+ [90m 23 |[39m           [33m<[39m[33mp[39m className[33m=[39m[32m"text-[10px] uppercase tracking-widest text-slate-500 mb-1"[39m[33m>[39m[33mMarriage[39m [33mBiodata[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+[31m[1m>[22m[39m[90m 24 |[39m           [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"text-2xl font-bold"[39m style[33m=[39m{{ color[33m:[39m textHeading }}[33m>[39m{personal[33m.[39mname [33m||[39m [32m"Your Name"[39m}[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m    |[39m                    [31m[1m^[22m[39m
+ [90m 25 |[39m           [33m<[39m[33mp[39m className[33m=[39m[32m"text-xs text-slate-600 mt-1"[39m[33m>[39m{personal[33m.[39moccupation [33m||[39m [32m"Occupation"[39m}[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+ [90m 26 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 27 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateFloral.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateFloral.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateGeometric.js:24:20
+Parsing ecmascript source code failed
+[0m [90m 22 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m"flex-1 text-left"[39m[33m>[39m
+ [90m 23 |[39m           [33m<[39m[33mp[39m className[33m=[39m[32m"text-[10px] uppercase tracking-widest text-slate-500 mb-1"[39m[33m>[39m[33mMarriage[39m [33mBiodata[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+[31m[1m>[22m[39m[90m 24 |[39m           [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"text-2xl font-bold"[39m style[33m=[39m{{ color[33m:[39m textHeading }}[33m>[39m{personal[33m.[39mname [33m||[39m [32m"Your Name"[39m}[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m    |[39m                    [31m[1m^[22m[39m
+ [90m 25 |[39m           [33m<[39m[33mp[39m className[33m=[39m[32m"text-xs text-slate-600 mt-1"[39m[33m>[39m{personal[33m.[39moccupation [33m||[39m [32m"Occupation"[39m}[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+ [90m 26 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 27 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateGeometric.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateGeometric.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateGold.js:24:20
+Parsing ecmascript source code failed
+[0m [90m 22 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m"flex-1 text-right"[39m[33m>[39m
+ [90m 23 |[39m           [33m<[39m[33mp[39m className[33m=[39m[32m"text-[10px] uppercase tracking-widest text-slate-500 mb-1"[39m[33m>[39m[33mMarriage[39m [33mBiodata[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+[31m[1m>[22m[39m[90m 24 |[39m           [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"text-2xl font-bold"[39m style[33m=[39m{{ color[33m:[39m textHeading }}[33m>[39m{personal[33m.[39mname [33m||[39m [32m"Your Name"[39m}[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m    |[39m                    [31m[1m^[22m[39m
+ [90m 25 |[39m           [33m<[39m[33mp[39m className[33m=[39m[32m"text-xs text-slate-600 mt-1"[39m[33m>[39m{personal[33m.[39moccupation [33m||[39m [32m"Occupation"[39m}[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+ [90m 26 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 27 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateGold.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateGold.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateGreenOffWhiteContrast.js:67:22
+Parsing ecmascript source code failed
+[0m [90m 65 |[39m
+ [90m 66 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m"pt-1"[39m[33m>[39m
+[31m[1m>[22m[39m[90m 67 |[39m             [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"text-[50px] font-semibold leading-none"[39m[33m>[39m
+ [90m    |[39m                      [31m[1m^[22m[39m
+ [90m 68 |[39m               {personal[33m?[39m[33m.[39mname [33m||[39m [32m"Your Name"[39m}
+ [90m 69 |[39m             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 70 |[39m             [33m<[39m[33mdiv[39m className[33m=[39m[32m"mt-2 h-[2px] w-[82px] bg-[#d7ddd5]"[39m [33m/[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateGreenOffWhiteContrast.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateGreenOffWhiteContrast.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateLuxury.js:24:20
+Parsing ecmascript source code failed
+[0m [90m 22 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m"flex-1 text-left"[39m[33m>[39m
+ [90m 23 |[39m           [33m<[39m[33mp[39m className[33m=[39m[32m"text-[10px] uppercase tracking-widest text-slate-500 mb-1"[39m[33m>[39m[33mMarriage[39m [33mBiodata[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+[31m[1m>[22m[39m[90m 24 |[39m           [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"text-2xl font-bold"[39m style[33m=[39m{{ color[33m:[39m textHeading }}[33m>[39m{personal[33m.[39mname [33m||[39m [32m"Your Name"[39m}[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m    |[39m                    [31m[1m^[22m[39m
+ [90m 25 |[39m           [33m<[39m[33mp[39m className[33m=[39m[32m"text-xs text-slate-600 mt-1"[39m[33m>[39m{personal[33m.[39moccupation [33m||[39m [32m"Occupation"[39m}[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+ [90m 26 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 27 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateLuxury.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateLuxury.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateMaroonPillars.js:42:42
+Parsing ecmascript source code failed
+[0m [90m 40 |[39m                         {[33m![39mdata[33m?[39m[33m.[39mphotoDataUrl [33m&&[39m (
+ [90m 41 |[39m                             [33m<[39m[33mdiv[39m className[33m=[39m[32m"text-center md:text-left mb-8"[39m[33m>[39m
+[31m[1m>[22m[39m[90m 42 |[39m                                 [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"text-4xl font-bold uppercase tracking-wider text-white"[39m[33m>[39m
+ [90m    |[39m                                          [31m[1m^[22m[39m
+ [90m 43 |[39m                                     {personal[33m?[39m[33m.[39mname [33m||[39m [32m"Your Name"[39m}
+ [90m 44 |[39m                                 [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 45 |[39m                             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateMaroonPillars.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateMaroonPillars.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateMinimal.js:17:18
+Parsing ecmascript source code failed
+[0m [90m 15 |[39m
+ [90m 16 |[39m         [33m<[39m[33mp[39m className[33m=[39m[32m"text-[10px] uppercase tracking-widest text-slate-500 mb-2"[39m[33m>[39m[33mMarriage[39m [33mBiodata[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+[31m[1m>[22m[39m[90m 17 |[39m         [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"text-3xl font-serif"[39m style[33m=[39m{{ color[33m:[39m textHeading }}[33m>[39m{personal[33m.[39mname [33m||[39m [32m"Your Name"[39m}[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m    |[39m                  [31m[1m^[22m[39m
+ [90m 18 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 19 |[39m
+ [90m 20 |[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateMinimal.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateMinimal.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateModern.js:24:20
+Parsing ecmascript source code failed
+[0m [90m 22 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m"flex-1 text-right"[39m[33m>[39m
+ [90m 23 |[39m           [33m<[39m[33mp[39m className[33m=[39m[32m"text-[10px] uppercase tracking-widest text-slate-500 mb-1"[39m[33m>[39m[33mMarriage[39m [33mBiodata[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+[31m[1m>[22m[39m[90m 24 |[39m           [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"text-2xl font-bold"[39m style[33m=[39m{{ color[33m:[39m textHeading }}[33m>[39m{personal[33m.[39mname [33m||[39m [32m"Your Name"[39m}[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m    |[39m                    [31m[1m^[22m[39m
+ [90m 25 |[39m           [33m<[39m[33mp[39m className[33m=[39m[32m"text-xs text-slate-600 mt-1"[39m[33m>[39m{personal[33m.[39moccupation [33m||[39m [32m"Occupation"[39m}[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+ [90m 26 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 27 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateModern.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateModern.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateRoyal.js:23:18
+Parsing ecmascript source code failed
+[0m [90m 21 |[39m
+ [90m 22 |[39m         [33m<[39m[33mp[39m className[33m=[39m[32m"text-[10px] uppercase tracking-widest text-slate-500 mb-2"[39m[33m>[39m[33mMarriage[39m [33mBiodata[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+[31m[1m>[22m[39m[90m 23 |[39m         [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"text-3xl font-serif"[39m style[33m=[39m{{ color[33m:[39m textHeading }}[33m>[39m{personal[33m.[39mname [33m||[39m [32m"Your Name"[39m}[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m    |[39m                  [31m[1m^[22m[39m
+ [90m 24 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 25 |[39m
+ [90m 26 |[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateRoyal.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateRoyal.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateSample1.js:69:30
+Parsing ecmascript source code failed
+[0m [90m 67 |[39m                 )}
+ [90m 68 |[39m
+[31m[1m>[22m[39m[90m 69 |[39m                 [33m<[39m[33mSectionstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} title[33m=[39m[32m"PERSONAL DETAILS"[39m bgColor[33m=[39m{primaryColor}[33m>[39m
+ [90m    |[39m                              [31m[1m^[22m[39m
+ [90m 70 |[39m                     {personal[33m?[39m[33m.[39mname [33m?[39m [33m<[39m[33mRow[39m label[33m=[39m[32m"Name"[39m value[33m=[39m{personal[33m.[39mname} [33m/[39m[33m>[39m [33m:[39m [36mnull[39m}
+ [90m 71 |[39m                     {personal[33m?[39m[33m.[39mdateOfBirth [33m?[39m [33m<[39m[33mRow[39m label[33m=[39m[32m"Date of Birth"[39m value[33m=[39m{personal[33m.[39mdateOfBirth} [33m/[39m[33m>[39m [33m:[39m [36mnull[39m}
+ [90m 72 |[39m                     {personal[33m?[39m[33m.[39mtimeOfBirth [33m?[39m [33m<[39m[33mRow[39m label[33m=[39m[32m"Time of Birth"[39m value[33m=[39m{personal[33m.[39mtimeOfBirth} [33m/[39m[33m>[39m [33m:[39m [36mnull[39m}[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateSample1.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateSample1.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateSample2.js:46:30
+Parsing ecmascript source code failed
+[0m [90m 44 |[39m                 )}
+ [90m 45 |[39m
+[31m[1m>[22m[39m[90m 46 |[39m                 [33m<[39m[33mSectionstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} title[33m=[39m[32m"PERSONAL DETAILS"[39m bgColor[33m=[39m{headerBgColor}[33m>[39m
+ [90m    |[39m                              [31m[1m^[22m[39m
+ [90m 47 |[39m                     {personal[33m?[39m[33m.[39mname [33m?[39m [33m<[39m[33mRow[39m label[33m=[39m[32m"Name"[39m value[33m=[39m{personal[33m.[39mname} [33m/[39m[33m>[39m [33m:[39m [36mnull[39m}
+ [90m 48 |[39m                     {personal[33m?[39m[33m.[39mdateOfBirth [33m?[39m [33m<[39m[33mRow[39m label[33m=[39m[32m"Date of Birth"[39m value[33m=[39m{personal[33m.[39mdateOfBirth} [33m/[39m[33m>[39m [33m:[39m [36mnull[39m}
+ [90m 49 |[39m                     {personal[33m?[39m[33m.[39mtimeOfBirth [33m?[39m [33m<[39m[33mRow[39m label[33m=[39m[32m"Time of Birth"[39m value[33m=[39m{personal[33m.[39mtimeOfBirth} [33m/[39m[33m>[39m [33m:[39m [36mnull[39m}[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateSample2.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateSample2.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateSample3.js:117:30
+Parsing ecmascript source code failed
+[0m [90m 115 |[39m                 )}
+ [90m 116 |[39m
+[31m[1m>[22m[39m[90m 117 |[39m                 [33m<[39m[33mSectionstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} title[33m=[39m[32m"PERSONAL DETAILS"[39m bgColor[33m=[39m{headerBgColor}[33m>[39m
+ [90m     |[39m                              [31m[1m^[22m[39m
+ [90m 118 |[39m                     {personal[33m?[39m[33m.[39mname [33m?[39m [33m<[39m[33mRow[39m label[33m=[39m[32m"Name"[39m value[33m=[39m{personal[33m.[39mname} [33m/[39m[33m>[39m [33m:[39m [36mnull[39m}
+ [90m 119 |[39m                     {personal[33m?[39m[33m.[39mdateOfBirth [33m?[39m [33m<[39m[33mRow[39m label[33m=[39m[32m"Date of Birth"[39m value[33m=[39m{personal[33m.[39mdateOfBirth} [33m/[39m[33m>[39m [33m:[39m [36mnull[39m}
+ [90m 120 |[39m                     {personal[33m?[39m[33m.[39mtimeOfBirth [33m?[39m [33m<[39m[33mRow[39m label[33m=[39m[32m"Time of Birth"[39m value[33m=[39m{personal[33m.[39mtimeOfBirth} [33m/[39m[33m>[39m [33m:[39m [36mnull[39m}[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateSample3.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateSample3.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateSample4.js:112:30
+Parsing ecmascript source code failed
+[0m [90m 110 |[39m                 )}
+ [90m 111 |[39m
+[31m[1m>[22m[39m[90m 112 |[39m                 [33m<[39m[33mSectionstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} title[33m=[39m[32m"PERSONAL DETAILS"[39m bgColor[33m=[39m{headerBgColor}[33m>[39m
+ [90m     |[39m                              [31m[1m^[22m[39m
+ [90m 113 |[39m                     {personal[33m?[39m[33m.[39mname [33m?[39m [33m<[39m[33mRow[39m label[33m=[39m[32m"Name"[39m value[33m=[39m{personal[33m.[39mname} [33m/[39m[33m>[39m [33m:[39m [36mnull[39m}
+ [90m 114 |[39m                     {personal[33m?[39m[33m.[39mdateOfBirth [33m?[39m [33m<[39m[33mRow[39m label[33m=[39m[32m"Date of Birth"[39m value[33m=[39m{personal[33m.[39mdateOfBirth} [33m/[39m[33m>[39m [33m:[39m [36mnull[39m}
+ [90m 115 |[39m                     {personal[33m?[39m[33m.[39mtimeOfBirth [33m?[39m [33m<[39m[33mRow[39m label[33m=[39m[32m"Time of Birth"[39m value[33m=[39m{personal[33m.[39mtimeOfBirth} [33m/[39m[33m>[39m [33m:[39m [36mnull[39m}[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateSample4.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateSample4.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateSeaGreenContrast.js:62:22
+Parsing ecmascript source code failed
+[0m [90m 60 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m"pt-1"[39m[33m>[39m
+ [90m 61 |[39m             [33m<[39m[33mdiv[39m className[33m=[39m[32m"text-[30px] font-semibold leading-none text-[#f2f4f3]"[39m[33m>[39m[33m-[39m[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+[31m[1m>[22m[39m[90m 62 |[39m             [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"mt-2 text-[50px] font-bold leading-none text-[#f7f9f8]"[39m[33m>[39m
+ [90m    |[39m                      [31m[1m^[22m[39m
+ [90m 63 |[39m               {personal[33m?[39m[33m.[39mname [33m||[39m [32m"Your Name"[39m}
+ [90m 64 |[39m             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 65 |[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateSeaGreenContrast.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateSeaGreenContrast.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateSidebar.js:17:18
+Parsing ecmascript source code failed
+[0m [90m 15 |[39m
+ [90m 16 |[39m         [33m<[39m[33mp[39m className[33m=[39m[32m"text-[10px] uppercase tracking-widest text-slate-500 mb-2"[39m[33m>[39m[33mMarriage[39m [33mBiodata[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+[31m[1m>[22m[39m[90m 17 |[39m         [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"text-3xl font-serif"[39m style[33m=[39m{{ color[33m:[39m textHeading }}[33m>[39m{personal[33m.[39mname [33m||[39m [32m"Your Name"[39m}[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m    |[39m                  [31m[1m^[22m[39m
+ [90m 18 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 19 |[39m
+ [90m 20 |[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateSidebar.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateSidebar.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateTwoColumn.js:23:20
+Parsing ecmascript source code failed
+[0m [90m 21 |[39m           )}
+ [90m 22 |[39m
+[31m[1m>[22m[39m[90m 23 |[39m           [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"text-lg font-bold mt-2"[39m style[33m=[39m{{ color[33m:[39m textHeading }}[33m>[39m{personal[33m.[39mname}[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m    |[39m                    [31m[1m^[22m[39m
+ [90m 24 |[39m           [33m<[39m[33mp[39m className[33m=[39m[32m"text-[10px] uppercase tracking-widest text-slate-600 mt-2"[39m[33m>[39m[33mMarriage[39m [33mBiodata[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+ [90m 25 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 26 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m"w-2/3 p-6"[39m[33m>[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateTwoColumn.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateTwoColumn.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+./Biodata_/components/templates/TemplateVintage.js:23:18
+Parsing ecmascript source code failed
+[0m [90m 21 |[39m
+ [90m 22 |[39m         [33m<[39m[33mp[39m className[33m=[39m[32m"text-[10px] uppercase tracking-widest text-slate-500 mb-2"[39m[33m>[39m[33mMarriage[39m [33mBiodata[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+[31m[1m>[22m[39m[90m 23 |[39m         [33m<[39m[33mdivstyle[39m[33m=[39m{{ fontFamily[33m:[39m [32m'var(--font-heading)'[39m }} className[33m=[39m[32m"text-3xl font-serif"[39m style[33m=[39m{{ color[33m:[39m textHeading }}[33m>[39m{personal[33m.[39mname [33m||[39m [32m"Your Name"[39m}[33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m    |[39m                  [31m[1m^[22m[39m
+ [90m 24 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 25 |[39m
+ [90m 26 |[39m[0m
+
+Expected '</', got '='
+
+Import traces:
+  Client Component Browser:
+    ./Biodata_/components/templates/TemplateVintage.js [Client Component Browser]
+    ./Biodata_/components/templates/index.js [Client Component Browser]
+    ./Biodata_/components/TemplatePreview.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component Browser]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+  Client Component SSR:
+    ./Biodata_/components/templates/TemplateVintage.js [Client Component SSR]
+    ./Biodata_/components/templates/index.js [Client Component SSR]
+    ./Biodata_/components/TemplatePreview.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Client Component SSR]
+    ./Biodata_/components/TemplateDetailClient.js [Server Component]
+    ./Biodata_/app/templates/[id]/page.js [Server Component]
+
+
+    at <unknown> (./Biodata_/components/templates/TemplateArchMandala.js:66:30)
+    at <unknown> (./Biodata_/components/templates/TemplateBeautifulTraditional.js:81:18)
+    at <unknown> (./Biodata_/components/templates/TemplateCard.js:23:18)
+    at <unknown> (./Biodata_/components/templates/TemplateCentered.js:23:18)
+    at <unknown> (./Biodata_/components/templates/TemplateClassic.js:23:18)
+    at <unknown> (./Biodata_/components/templates/TemplateDark.js:24:20)
+    at <unknown> (./Biodata_/components/templates/TemplateElegant.js:24:20)
+    at <unknown> (./Biodata_/components/templates/TemplateFloral.js:24:20)
+    at <unknown> (./Biodata_/components/templates/TemplateGeometric.js:24:20)
+    at <unknown> (./Biodata_/components/templates/TemplateGold.js:24:20)
+    at <unknown> (./Biodata_/components/templates/TemplateGreenOffWhiteContrast.js:67:22)
+    at <unknown> (./Biodata_/components/templates/TemplateLuxury.js:24:20)
+    at <unknown> (./Biodata_/components/templates/TemplateMaroonPillars.js:42:42)
+    at <unknown> (./Biodata_/components/templates/TemplateMinimal.js:17:18)
+    at <unknown> (./Biodata_/components/templates/TemplateModern.js:24:20)
+    at <unknown> (./Biodata_/components/templates/TemplateRoyal.js:23:18)
+    at <unknown> (./Biodata_/components/templates/TemplateSample1.js:69:30)
+    at <unknown> (./Biodata_/components/templates/TemplateSample2.js:46:30)
+    at <unknown> (./Biodata_/components/templates/TemplateSample3.js:117:30)
+    at <unknown> (./Biodata_/components/templates/TemplateSample4.js:112:30)
+    at <unknown> (./Biodata_/components/templates/TemplateSeaGreenContrast.js:62:22)
+    at <unknown> (./Biodata_/components/templates/TemplateSidebar.js:17:18)
+    at <unknown> (./Biodata_/components/templates/TemplateTwoColumn.js:23:20)
+    at <unknown> (./Biodata_/components/templates/TemplateVintage.js:23:18)
