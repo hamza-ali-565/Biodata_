@@ -4,13 +4,13 @@
 import { ViewportSection } from "../../components/ViewportSection";
 import NextImage from "next/image";
 import Link from "next/link";
-import { 
-  Sparkles, 
-  HeartHandshake, 
-  LayoutTemplate, 
-  Palette, 
-  Type, 
-  FileWarning, 
+import {
+  Sparkles,
+  HeartHandshake,
+  LayoutTemplate,
+  Palette,
+  Type,
+  FileWarning,
   Image as ImageIcon,
   BookOpen,
   Paintbrush,
@@ -27,15 +27,15 @@ export function AnimatedTemplateSections() {
   return (
     <div className="space-y-12 pb-16">
       {/* SECTION 1: HERO */}
-      <section 
+      <section
         className="premium-section px-6 py-12 text-center sm:px-10 sm:py-16"
       >
         <Sparkles className="absolute -left-10 -top-10 h-64 w-64 text-slate-100 opacity-5 rotate-12" />
         <Sparkles className="absolute -right-10 -bottom-10 h-64 w-64 text-slate-100 opacity-5 -rotate-12" />
-        
+
         <div className="relative z-10 mx-auto max-w-3xl">
           <h1 className="text-3xl font-bold tracking-tight text-slate-50 sm:text-5xl lg:text-6xl mb-6 bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
-            Premium Marriage Biodata Formats
+            Premium Biodata Templates for Marraige
           </h1>
           <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
             Premium marriage biodata templates that you can edit, choose the color of your choice, and download for free. A good wedding format design makes a <span className="text-slate-100 font-medium">strong impact</span> when you send your proposal to someone. After choosing your best biodata format, fill it with your complete details because you get connected when you are known.
@@ -44,9 +44,9 @@ export function AnimatedTemplateSections() {
       </section>
 
       {/* TEMPLATE LIST */}
-      <section 
-        initial="hidden" 
-        animate="visible" 
+      <section
+        initial="hidden"
+        animate="visible"
         id="templates-grid"
         className="premium-section px-6 py-8 sm:px-10"
         aria-labelledby="template-library-heading"
@@ -59,15 +59,15 @@ export function AnimatedTemplateSections() {
 
       {/* SECTION 2: IMPORTANCE */}
       <ViewportSection
-       
+
         className="premium-section px-6 py-12 sm:px-10 lg:px-16"
       >
         <HeartHandshake className="absolute right-0 top-1/2 h-96 w-96 -translate-y-1/2 translate-x-1/4 text-slate-100 opacity-5" />
-        
+
         <div className="relative z-10 max-w-3xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-slate-50 sm:text-4xl">
-              Importance of the Marriage Biodata template.
+              Importance of the Marriage Biodata Template
             </h2>
           </div>
           <div className="space-y-6 text-slate-300 leading-relaxed sm:text-lg">
@@ -83,15 +83,15 @@ export function AnimatedTemplateSections() {
 
       {/* SECTION 3: HOW TO SELECT */}
       <ViewportSection
-       
+
         className="premium-section px-6 py-12 sm:px-10 lg:px-16"
       >
         <LayoutTemplate className="absolute left-0 top-1/2 h-[500px] w-[500px] -translate-y-1/2 -translate-x-1/3 text-slate-100 opacity-5" />
-        
+
         <div className="relative z-10 max-w-3xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-slate-50 sm:text-4xl">
-              How to select a premium design biodata format.
+              How to Select a Premium Design Biodata Format
             </h2>
           </div>
           <div className="space-y-6 text-slate-300 leading-relaxed sm:text-lg">
@@ -109,10 +109,10 @@ export function AnimatedTemplateSections() {
       <ViewportSection className="relative px-2 sm:px-0">
         <div className="mb-12 text-center max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-slate-50 sm:text-4xl">
-            Things to Avoid When Selecting a Wedding Biodata Design.
+            Things to Avoid When Selecting a Wedding Biodata Design
           </h2>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10 max-w-5xl mx-auto">
           <div className="premium-card group p-6 sm:p-8">
             <Palette className="h-8 w-8 text-rose-400 mb-4 opacity-70 group-hover:opacity-100 transition-opacity" />
@@ -126,7 +126,7 @@ export function AnimatedTemplateSections() {
             <Type className="h-8 w-8 text-blue-400 mb-4 opacity-70 group-hover:opacity-100 transition-opacity" />
             <h3 className="text-xl font-semibold text-slate-100 mb-3">Use of Difficult font:</h3>
             <p className="text-slate-400 leading-relaxed">
-              A good biodata for marriage is one in which you use a simple and clean font. Stylish fonts may look beautiful, but difficult fonts are hard to read as they reduce the readability, and they just make your matrimonial biodata a mess. So, select decent, readable, and simple fonts so that your marriage biodata is even more interesting.
+              A good biodata template is one in which you use a simple and clean font. Stylish fonts may look beautiful, but difficult fonts are hard to read as they reduce the readability, and they just make your matrimonial biodata a mess. So, select decent, readable, and simple fonts so that your marriage biodata is even more interesting.
             </p>
           </div>
 
@@ -154,14 +154,14 @@ export function AnimatedTemplateSections() {
         className="premium-section px-6 py-12 sm:px-10 lg:px-16"
       >
         <BookOpen className="absolute right-0 bottom-0 h-80 w-80 translate-y-1/4 translate-x-1/4 text-slate-100 opacity-5" />
-        
+
         <div className="relative z-10 max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-50 sm:text-4xl">
-              Examples of Biodata for Marriage.
+              Examples of Wedding Biodata Template
             </h2>
           </div>
-          
+
           <div className="space-y-6">
             <div className="premium-card-static rounded-2xl border-l-4 border-l-emerald-500/50 p-6 hover:border-l-emerald-500">
               <div className="flex items-start gap-4">
@@ -185,7 +185,7 @@ export function AnimatedTemplateSections() {
                 <div>
                   <h3 className="text-lg font-semibold text-slate-100 mb-2">Theme of biodata:</h3>
                   <p className="text-slate-300 leading-relaxed">
-                    It is very important to select a good theme of biodata for marriage. Sending a wedding biodata template to someone is the first step of your new life. So, it should be elegant, well-styled, modern, and eye-pleasing.
+                    It is very important to select a good theme of matrimonial biodata template. Sending a wedding biodata template to someone is the first step of your new life. So, it should be elegant, well-styled, modern, and eye-pleasing.
                   </p>
                 </div>
               </div>
@@ -212,7 +212,7 @@ export function AnimatedTemplateSections() {
       <ViewportSection className="relative pt-12">
         <div className="mb-12 text-center max-w-3xl mx-auto px-4 sm:px-0">
           <h2 className="text-3xl font-bold text-slate-50 sm:text-4xl mb-4">
-            How to Create an Eye-pleasing Biodata Resume for Marriage.
+            How to Create an Eye-pleasing Biodata Resume for Marriage
           </h2>
         </div>
 
@@ -232,11 +232,11 @@ export function AnimatedTemplateSections() {
             </div>
             <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
               <div className="relative h-[300px] w-[220px] rounded-2xl overflow-hidden shadow-2xl border border-white/10 transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                <NextImage 
-                  src="/images/new-templates/beautiful-sober-marriage-biodata.webp" 
-                  alt="Sober Marriage Biodata Template" 
-                  fill 
-                  className="object-cover" 
+                <NextImage
+                  src="/images/new-templates/beautiful-sober-marriage-biodata.webp"
+                  alt="Sober Marriage Biodata Template"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </div>
@@ -246,11 +246,11 @@ export function AnimatedTemplateSections() {
           <div className="premium-section grid grid-cols-1 items-center gap-8 p-6 sm:p-10 lg:grid-cols-2">
             <div className="flex justify-center lg:justify-start">
               <div className="relative h-[250px] w-full max-w-[400px] rounded-2xl overflow-hidden shadow-2xl border border-white/10 hover:scale-105 transition-transform duration-500">
-                <NextImage 
-                  src="/images/how-to-create-marriage-biodata.webp" 
-                  alt="Mobile Friendly Biodata" 
-                  fill 
-                  className="object-cover" 
+                <NextImage
+                  src="/images/how-to-create-marriage-biodata.webp"
+                  alt="Mobile Friendly Biodata"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </div>
@@ -267,7 +267,7 @@ export function AnimatedTemplateSections() {
             <div className="max-w-3xl mx-auto mb-16 text-center">
               <h3 className="text-3xl font-bold text-slate-100 mb-6">Organize information in a beautiful manner:</h3>
               <p className="text-slate-300 leading-relaxed text-lg sm:text-xl">
-                The purpose behind <Link href="/" className="text-blue-400 hover:underline hover:text-blue-300 transition-colors">creating a biodata for marriage</Link> is to portray details of one person to another person. So, the information should be aligned properly. Here are the topics you should cover in creating your marriage biodata:
+                The purpose behind <Link href="/" className="text-blue-400 hover:underline hover:text-blue-300 transition-colors">creating a wedding biodata template </Link> is to portray details of one person to another person. So, the information should be aligned properly. Here are the topics you should cover in creating your marriage biodata:
               </p>
             </div>
 
@@ -276,12 +276,12 @@ export function AnimatedTemplateSections() {
               <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
                 <div className="w-full lg:w-1/2 relative group perspective-1000">
                   <div className="absolute -inset-4 bg-gradient-to-tr from-blue-500/20 to-emerald-500/20 rounded-[2rem] blur-2xl opacity-40 group-hover:opacity-100 transition-opacity duration-700" />
-                  <NextImage 
-                    src="/images/personal detail.webp" 
-                    alt="Personal Details Template" 
-                    width={800} 
-                    height={1130} 
-                    className="w-full h-auto rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 relative z-10 transform group-hover:-translate-y-2 transition-transform duration-500" 
+                  <NextImage
+                    src="/images/personal detail.webp"
+                    alt="Personal Details Template"
+                    width={800}
+                    height={1130}
+                    className="w-full h-auto rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 relative z-10 transform group-hover:-translate-y-2 transition-transform duration-500"
                   />
                 </div>
                 <div className="w-full lg:w-1/2 space-y-6">
@@ -308,12 +308,12 @@ export function AnimatedTemplateSections() {
                 </div>
                 <div className="w-full lg:w-1/2 relative group perspective-1000 order-1 lg:order-2">
                   <div className="absolute -inset-4 bg-gradient-to-tr from-emerald-500/20 to-amber-500/20 rounded-[2rem] blur-2xl opacity-40 group-hover:opacity-100 transition-opacity duration-700" />
-                  <NextImage 
-                    src="/images/Family detail.webp" 
-                    alt="Family Details Template" 
-                    width={800} 
-                    height={1130} 
-                    className="w-full h-auto rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 relative z-10 transform group-hover:-translate-y-2 transition-transform duration-500" 
+                  <NextImage
+                    src="/images/Family detail.webp"
+                    alt="Family Details Template"
+                    width={800}
+                    height={1130}
+                    className="w-full h-auto rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 relative z-10 transform group-hover:-translate-y-2 transition-transform duration-500"
                   />
                 </div>
               </div>
@@ -322,12 +322,12 @@ export function AnimatedTemplateSections() {
               <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
                 <div className="w-full lg:w-1/2 relative group perspective-1000">
                   <div className="absolute -inset-4 bg-gradient-to-tr from-amber-500/20 to-rose-500/20 rounded-[2rem] blur-2xl opacity-40 group-hover:opacity-100 transition-opacity duration-700" />
-                  <NextImage 
-                    src="/images/contact details.webp" 
-                    alt="Contact Details Template" 
-                    width={800} 
-                    height={1130} 
-                    className="w-full h-auto rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 relative z-10 transform group-hover:-translate-y-2 transition-transform duration-500" 
+                  <NextImage
+                    src="/images/contact details.webp"
+                    alt="Contact Details Template"
+                    width={800}
+                    height={1130}
+                    className="w-full h-auto rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 relative z-10 transform group-hover:-translate-y-2 transition-transform duration-500"
                   />
                 </div>
                 <div className="w-full lg:w-1/2 space-y-6">
@@ -348,11 +348,11 @@ export function AnimatedTemplateSections() {
       {/* SECTION 7: ROLE OF COLOR */}
       <ViewportSection className="relative pt-12">
         <Palette className="absolute left-0 top-1/4 h-[600px] w-[600px] -translate-x-1/2 text-rose-500 opacity-5 blur-xl" />
-        
+
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-0">
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-slate-50 sm:text-4xl">
-              Role of color in template design of biodata for marriage.
+              Role of Color in Template Design of Biodata
             </h2>
           </div>
 
@@ -369,7 +369,7 @@ export function AnimatedTemplateSections() {
             <div className="premium-section relative overflow-hidden p-6 sm:p-8">
               <h3 className="text-2xl font-bold text-slate-100 mb-4 relative z-10">Emotional feel:</h3>
               <p className="text-slate-300 leading-relaxed text-lg mb-8 relative z-10">
-                colors have a strong impact on the human mind; you can say that colors have a direct connection to the human brain. Different colors make different feelings in humans, so select good, calm, soft, and professional color combinations while <Link href="/" className="text-blue-400 hover:underline hover:text-blue-300 transition-colors">creating biodata for marriage</Link>. Here are the examples of some colors and the science behind them:
+                colors have a strong impact on the human mind; you can say that colors have a direct connection to the human brain. Different colors make different feelings in humans, so select good, calm, soft, and professional color combinations while <Link href="/" className="text-blue-400 hover:underline hover:text-blue-300 transition-colors">creating biodata</Link>. Here are the examples of some colors and the science behind them:
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 relative z-10">
@@ -415,7 +415,7 @@ export function AnimatedTemplateSections() {
             <div className="premium-card group relative overflow-hidden p-6 sm:p-8">
               <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
-              
+
               <h3 className="text-2xl font-bold text-slate-100 mb-4 relative z-10">traditional and cultural preferences:</h3>
               <p className="text-slate-300 leading-relaxed text-lg relative z-10">
                 It will be a plus point if you show your cultural preferences in your marriage biodata. And using colors is the best option to achieve this. For example, <span className="text-red-400 font-semibold">red color</span> is wedding-related, traditional, and represents luck, <span className="text-rose-600 font-semibold">maroon</span> gives a royal feeling, classy look, and mature design look, and <span className="text-amber-400 font-semibold">golden color</span> will give a luxury feel, celebration touch, and have a very strong cultural impact, especially in wedding-related designs and formats. Because selecting a color is not only for design purposes but also represents tradition, emotion, respect, and wedding feelings
