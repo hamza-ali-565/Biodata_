@@ -35,10 +35,10 @@ export function AnimatedTemplateSections() {
 
         <div className="relative z-10 mx-auto max-w-3xl">
           <h1 className="text-3xl font-bold tracking-tight text-slate-50 sm:text-5xl lg:text-6xl mb-6 bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
-            Premium Biodata Templates for Marraige
+            Premium Biodata Format for Marraige
           </h1>
           <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
-            Premium marriage biodata templates that you can edit, choose the color of your choice, and download for free. A good wedding format design makes a <span className="text-slate-100 font-medium">strong impact</span> when you send your proposal to someone. After choosing your best biodata format, fill it with your complete details because you get connected when you are known.
+            Premium biodata format for marriage that you can edit, choose the color of your choice, and download for free. A good wedding format design makes a <span className="text-slate-100 font-medium">strong impact</span> when you send your proposal to someone. After choosing your best biodata format, fill it with your complete details because you get connected when you are known.
           </p>
         </div>
       </section>
@@ -67,12 +67,12 @@ export function AnimatedTemplateSections() {
         <div className="relative z-10 max-w-3xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-slate-50 sm:text-4xl">
-              Importance of the Marriage Biodata Template
+              Importance of the Biodata Format
             </h2>
           </div>
           <div className="space-y-6 text-slate-300 leading-relaxed sm:text-lg">
             <p>
-              Before we talk about the importance of the Bio data template, first, we should know why people use matrimonial biodata Design? They use it as their marriage resume, just like a professional CV, but in a marriage biodata resume, their intent is different. They make for a person with whom they will start a new journey, a new start, and a new life.
+              Before we talk about the importance of the Bio data template, first, we should know why people use matrimonial biodata Design? They use it as their marriage resume, just like a professional CV, but in a biodata resume, their intent is different. They make for a person with whom they will start a new journey, a new start, and a new life.
             </p>
             <p>
               Now we know the worth and importance of the marriage biodata format and a <Link href="/" className="text-blue-400 hover:underline hover:text-blue-300 transition-colors">platform that provides you multiple free biodata designs</Link>.
@@ -96,7 +96,7 @@ export function AnimatedTemplateSections() {
           </div>
           <div className="space-y-6 text-slate-300 leading-relaxed sm:text-lg">
             <p>
-              A premium marriage biodata template should be simple, readable, have a strong impact, and be eye-pleasing. One should avoid a messy bio data layout because multi-color, dirty layouts, and unpatterned designs are not readable and eye-pleasing. The fonts should not be blurred, and their size should remain constant throughout the whole wedding template.
+              A premium template for biodata should be simple, readable, have a strong impact, and be eye-pleasing. One should avoid a messy bio data layout because multi-color, dirty layouts, and unpatterned designs are not readable and eye-pleasing. The fonts should not be blurred, and their size should remain constant throughout the whole wedding template.
             </p>
             <p>
               Headings in bio data designs play an important role, so they should be relevant to the information you provided in the wedding resume. The style of all headings in the biodata card has the same design and uses the same font family.
@@ -126,7 +126,7 @@ export function AnimatedTemplateSections() {
             <Type className="h-8 w-8 text-blue-400 mb-4 opacity-70 group-hover:opacity-100 transition-opacity" />
             <h3 className="text-xl font-semibold text-slate-100 mb-3">Use of Difficult font:</h3>
             <p className="text-slate-400 leading-relaxed">
-              A good biodata template is one in which you use a simple and clean font. Stylish fonts may look beautiful, but difficult fonts are hard to read as they reduce the readability, and they just make your matrimonial biodata a mess. So, select decent, readable, and simple fonts so that your marriage biodata is even more interesting.
+              A good biodata template is one in which you use a simple and clean font. Stylish fonts may look beautiful, but difficult fonts are hard to read as they reduce the readability, and they just make your matrimonial biodata a mess. So, select decent, readable, and simple fonts so that your wedding biodaa format looks even more interesting.
             </p>
           </div>
 
@@ -134,7 +134,7 @@ export function AnimatedTemplateSections() {
             <FileWarning className="h-8 w-8 text-amber-400 mb-4 opacity-70 group-hover:opacity-100 transition-opacity" />
             <h3 className="text-xl font-semibold text-slate-100 mb-3">Overload biodata with Information:</h3>
             <p className="text-slate-400 leading-relaxed">
-              A marriage biodata format with unnecessary information is not a good option. Instead, information in a marriage format should be relevant, arranged in a well-mannered manner, and to the point. To the point information will make the user understand about you in a very short time, and you will make a good impression in their mind.
+              A biodata format with unnecessary information is not a good option. Instead, information in a marriage format should be relevant, arranged in a well-mannered manner, and to the point. To the point information will make the user understand about you in a very short time, and you will make a good impression in their mind.
             </p>
           </div>
 
@@ -171,7 +171,7 @@ export function AnimatedTemplateSections() {
                 <div>
                   <h3 className="text-lg font-semibold text-slate-100 mb-2">Complete details of yourself:</h3>
                   <p className="text-slate-300 leading-relaxed">
-                    A good marriage biodata should contain all the details. One should mention all the details we discussed earlier, like personal details, family details, contact person details, usage of clear images, and the most important thing is selecting the best biodata template design. When you fill in all the information in the biodata template, it will help the other person to know about you when they read your wedding biodata.
+                    A good biodata format should contain all the details. One should mention all the details we discussed earlier, like personal details, family details, contact person details, usage of clear images, and the most important thing is selecting the best biodata template design. When you fill in all the information in the biodata template, it will help the other person to know about you when they read your wedding biodata.
                   </p>
                 </div>
               </div>
@@ -199,7 +199,7 @@ export function AnimatedTemplateSections() {
                 <div>
                   <h3 className="text-lg font-semibold text-slate-100 mb-2">Marriage biodata format:</h3>
                   <p className="text-slate-300 leading-relaxed">
-                    Another important thing is to select the format of your marriage biodata template. A good template should be designed in such a way that all the information is well displayed, and the spacing between text and label should be balanced. The art of the template should be natural, which reflects your beautiful culture.
+                    Another important thing is to select the format of your biodata. A good template should be designed in such a way that all the information is well displayed, and the spacing between text and label should be balanced. The art of the template should be natural, which reflects your beautiful culture.
                   </p>
                 </div>
               </div>
@@ -267,7 +267,7 @@ export function AnimatedTemplateSections() {
             <div className="max-w-3xl mx-auto mb-16 text-center">
               <h3 className="text-3xl font-bold text-slate-100 mb-6">Organize information in a beautiful manner:</h3>
               <p className="text-slate-300 leading-relaxed text-lg sm:text-xl">
-                The purpose behind <Link href="/" className="text-blue-400 hover:underline hover:text-blue-300 transition-colors">creating a wedding biodata template </Link> is to portray details of one person to another person. So, the information should be aligned properly. Here are the topics you should cover in creating your marriage biodata:
+                The purpose behind <Link href="/" className="text-blue-400 hover:underline hover:text-blue-300 transition-colors">creating a wedding biodata template </Link> is to portray details of one person to another person. So, the information should be aligned properly. Here are the topics you should cover in creating your wedding biodata:
               </p>
             </div>
 
@@ -418,7 +418,7 @@ export function AnimatedTemplateSections() {
 
               <h3 className="text-2xl font-bold text-slate-100 mb-4 relative z-10">traditional and cultural preferences:</h3>
               <p className="text-slate-300 leading-relaxed text-lg relative z-10">
-                It will be a plus point if you show your cultural preferences in your marriage biodata. And using colors is the best option to achieve this. For example, <span className="text-red-400 font-semibold">red color</span> is wedding-related, traditional, and represents luck, <span className="text-rose-600 font-semibold">maroon</span> gives a royal feeling, classy look, and mature design look, and <span className="text-amber-400 font-semibold">golden color</span> will give a luxury feel, celebration touch, and have a very strong cultural impact, especially in wedding-related designs and formats. Because selecting a color is not only for design purposes but also represents tradition, emotion, respect, and wedding feelings
+                It will be a plus point if you show your cultural preferences in your biodata. And using colors is the best option to achieve this. For example, <span className="text-red-400 font-semibold">red color</span> is wedding-related, traditional, and represents luck, <span className="text-rose-600 font-semibold">maroon</span> gives a royal feeling, classy look, and mature design look, and <span className="text-amber-400 font-semibold">golden color</span> will give a luxury feel, celebration touch, and have a very strong cultural impact, especially in wedding-related designs and formats. Because selecting a color is not only for design purposes but also represents tradition, emotion, respect, and wedding feelings
               </p>
             </div>
           </div>
