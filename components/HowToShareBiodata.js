@@ -3,32 +3,32 @@ import { DownloadCloud, Mail, Link, UploadCloud, Printer, RefreshCw } from "luci
 const shareSteps = [
     {
         title: "Download as PDF",
-        description: "Save your high-quality biodata directly to your device in PDF format instantly.",
+        description: "Your biodata is generated as a high-quality PDF — ready to download to your phone or computer in seconds. No blurry images, no layout shifts.",
         icon: DownloadCloud,
     },
     {
-        title: "Share via WhatsApp/Email",
-        description: "Quickly send out your biodata to prospective families globally via your favourite apps.",
+        title: "Share via WhatsApp or Email",
+        description: "Open WhatsApp, attach your PDF, and send. Most Indian families exchange biodatas this way — it takes less than a minute.",
         icon: Mail,
     },
     {
-        title: "Generate a Shareable Link",
-        description: "Copy a secure web link to your digital biodata and share it instantly with anyone.",
+        title: "Share a Private Link",
+        description: "Generate a private link to your biodata that anyone can open on their phone — no PDF download required on their end.",
         icon: Link,
     },
     {
         title: "Upload to Matrimonial Sites",
-        description: "Easily attach your professional biodata to popular platform profiles.",
+        description: "Attach your PDF directly to your Shaadi.com, BharatMatrimony, or Jeevansathi profile. A consistent, well-designed biodata makes your profile stand out.",
         icon: UploadCloud,
     },
     {
-        title: "Print for Physical Sharing",
-        description: "Get crisp, perfectly formatted printouts to share during physical meetings.",
+        title: "Print for In-Person Meetings",
+        description: "Need a physical copy for a pandit, a relative visit, or a marriage bureau meeting? Print directly from the PDF — it's formatted for A4.",
         icon: Printer,
     },
     {
-        title: "Keep Updating Easily",
-        description: "Need to make changes? Access, modify and re-download your updated profile anytime.",
+        title: "Re-download After Editing",
+        description: "Changed your job, your photo, or your partner preferences? Return to the site, update your fields, and download a fresh PDF — your data is still saved.",
         icon: RefreshCw,
     },
 ];
@@ -58,13 +58,13 @@ export function HowToShareBiodata() {
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <div>
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-4 sm:text-4xl">
-                            How to share a biodata for marriage online?
+                            How to share your biodata after downloading
                         </h2>
                         <div className="flex justify-center mb-6">
                             <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-rose-500 rounded-full" />
                         </div>
                         <p className="text-slate-300 text-base md:text-lg leading-relaxed font-medium">
-                            Once your beautiful marriage biodata is ready, getting it into the right hands should be completely seamless. Here is how you can easily and efficiently share your profile with prospective families.
+                            Once your biodata is ready, you have six ways to get it to the right people — from a WhatsApp message to a printed copy for a marriage bureau meeting.
                         </p>
                     </div>
                 </div>

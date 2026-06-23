@@ -30,11 +30,10 @@ export function Hero() {
             Create & Download Biodata For Marriage Free in Minutes
           </h1>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base font-medium">
-            Create your fully customizable marriage biodata instantly with our{" "}
-            <SmartLink href="/templates" className="text-brand-400 hover:text-brand-300 transition-colors">
-              free, elegant, popular, and premium templates
-            </SmartLink>
-            . We’re just 3 steps away from creating a beautiful biodata for marriage fill information, choose a template & download. No login required, as our services are free, and lastly, best of luck with your new chapter.
+            No login. No watermark. Your data never leaves your device. Trusted by families from Delhi to Chennai, Lucknow to Ahmedabad.
+          </p>
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base font-medium">
+            {"Whether you’re a parent in Kanpur creating your daughter’s biodata, or a software engineer in Bengaluru making your own — we’ve designed every template with Indian families in mind. Choose your community, fill in your details, download your PDF, share on WhatsApp."}
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4">

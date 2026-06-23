@@ -2,24 +2,24 @@ import { Download, LayoutGrid, ListOrdered } from "lucide-react";
 
 const subsections = [
     {
-        title: "Biodata Template Options:",
-        body: "On this app, you will get a variety of templates made with different cultural designs. You can make a live preview of them and select your favorite one. Currently,  we are offering 28+  biodata template designs, yes, you read it right, that's a big number because we know what it feels like when you have freedom of choice. You can select premium biodata templates for free according to your culture and society, and download them as well.    ",
+        title: "Limited template choices:",
+        body: "On this site, you'll find 28+ biodata template designs built for different communities and cultural aesthetics. You can preview each one live before selecting, so you know exactly what your PDF will look like. Premium-quality templates are available completely free.",
         icon: LayoutGrid,
         accent: "from-emerald-500/20 via-brand-500/5 to-transparent",
         borderGlow: "group-hover:shadow-[0_0_48px_rgba(16,185,129,0.12)]",
         number: "01",
     },
     {
-        title: "Low-Quality Downloads:",
-        body: "Creating a marriage biodata is not enough, but downloading it in high-quality format is also important because a good design can also look ugly if its quality is not very low. Since we are offering you to download it in PDF and JPEG format, in this case, quality matters a lot because a blurry PDF or Image does not stand out, and we understand that. We are providing a high-quality file download in two different formats because the color, theme, and format design look more attractive in high-quality.",
+        title: "Blurry or low-quality downloads:",
+        body: "A beautifully designed biodata looks unprofessional if the downloaded file is blurry or pixelated. We generate high-quality PDF and JPEG files so your colours, fonts, and layout stay sharp — whether someone views it on a phone or prints it at home.",
         icon: Download,
         accent: "from-sky-500/20 via-violet-500/5 to-transparent",
         borderGlow: "group-hover:shadow-[0_0_48px_rgba(56,189,248,0.12)]",
         number: "02",
     },
     {
-        title: "Difficulty in Organizing Information:",
-        body: "When users handle too many things manually, it becomes very difficult for them to manage them, so some things are automatically managed by the system, and the hierarchy of information is one of them. Organizing information by the system is a good thing, so the user cannot get confused about arranging them, because sometimes we don't know about the thing and become a perfectionist in that thing, we do not take any step, and just delay it. Marriage biodata hub sets the information hierarchy in such a way that the user first enters personal details, then family details, and lastly contact details, and it will be shown in the same hierarchy in the matrimonial biodata template.",
+        title: "Not knowing how to organise information:",
+        body: "Most people are unsure what order to present their details in. Marriage Biodata Hub structures the form so you enter personal details first, then family background, then education and career, then contact details — and your template reflects that same order. No guesswork, no blank staring at a blank page.",
         icon: ListOrdered,
         accent: "from-rose-500/20 via-amber-500/5 to-transparent",
         borderGlow: "group-hover:shadow-[0_0_48px_rgba(244,63,94,0.12)]",
@@ -173,7 +173,7 @@ export function MarriageBiodataProblemsArticle() {
                                 className="text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-5xl lg:text-[3.25rem] lg:leading-[1.08]"
                             >
                                 <span className="bg-gradient-to-r from-white via-emerald-50/90 to-slate-300 bg-clip-text text-transparent">
-                                    Problems while creating marriage biodata online?
+                                    Common problems when creating a biodata — solved
                                 </span>
                             </h2>
 
@@ -189,7 +189,7 @@ export function MarriageBiodataProblemsArticle() {
                             <p
                                 className="mx-auto mt-8 max-w-3xl text-base font-normal leading-[1.88] text-slate-300/95 sm:text-lg sm:leading-[1.92]"
                             >
-                                Many people face problems while creating biodata for marriage, from limited templates to a lack of knowledge of color combinations and what font should be used in the template. It is very annoying if you have very limited choices and you just compromise your biodata just because someone is not providing you with choices. On this platform, you will get full control over template selection, font selection, and color combination.
+                                Most biodata makers give you three templates, no font control, and a blurry download. Here is how we solve the three problems families run into most often.
                             </p>
                         </header>
 

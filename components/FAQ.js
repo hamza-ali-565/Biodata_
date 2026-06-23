@@ -2,57 +2,28 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
     {
-        question: "Do I need design skills to create a good-looking marriage biodata?",
-        answer: "No design skills are required to create a biodata. Simply enter your details, choose a template, and your beautiful marriage biodata will be ready to download in PDF format.",
+        question: "What is a marriage biodata?",
+        answer: "A marriage biodata is a structured one-page document used in Indian arranged marriages. It introduces a bride or groom to a potential match's family, covering personal details, family background, education, career, horoscope information (for Hindu families), and partner preferences. It works like a resume but for the marriage process — and is typically shared via WhatsApp with relatives or uploaded to matrimonial sites like Shaadi.com and BharatMatrimony.",
     },
     {
-        question: "Is it possible to include a profile photo in the biodata?",
-        answer: "Certainly! You can include your profile photo on the first page of your biodata. However, please note that currently, you can only add one photo.",
+        question: "Is Marriage Biodata Hub completely free?",
+        answer: "Yes. You can create your full biodata, choose any template, preview it, and download the PDF completely free — no login, no email, no credit card. Your data is processed in your browser and never stored on our servers.",
     },
     {
-        question: "Do I need to sign up/register in order to create a biodata?",
-        answer: "No, signing up/registration is not required to create your biodata. Simply enter your details, select your preferred template, and your marriage biodata will be ready to download.",
+        question: "Can I edit my biodata after downloading?",
+        answer: "Yes, always. Return to marriagebiodatahub.com on the same device and your information will be restored from your browser's local storage. Update any field and re-download your updated PDF anytime.",
     },
     {
-        question: "What format will I get my biodata in?",
-        answer: "We'll provide your marriage biodata as a high-quality PDF, which you can easily download. This format ensures your biodata looks professional and clear whether you're viewing it on screen or printing it out.",
+        question: "How do I share my marriage biodata on WhatsApp?",
+        answer: "After downloading your PDF, tap the WhatsApp share button on the download screen. This opens WhatsApp with your biodata PDF attached and a ready-to-send message. You can also share the private link we generate — it opens your biodata beautifully on any phone without needing to download a file.",
     },
     {
-        question: "Is it possible to modify the biodata once it is downloaded?",
-        answer: "No, it is not possible to modify the existing biodata as of now. Since we are not storing any information on our end, editing is not possible. You will need to enter the details again and download the biodata if you want to modify anything.",
+        question: "Which Indian communities does Marriage Biodata Hub support?",
+        answer: "We have dedicated templates and fields for Hindu, Muslim, Sikh, Christian, Jain, Marathi, Gujarati, Tamil, Telugu, Bengali, and Punjabi communities. Each template includes the community-specific fields that families actually check — Gotra, Rashi, and Manglik for Hindu families; Sect and Biradari for Muslim families; Kul and Kulswamini for Marathi families; Natchathiram and Rasi for Tamil families.",
     },
     {
-        question: "Is it possible to include custom fields or custom data in my marriage biodata?",
-        answer: "Yes, with our biodata builder you can personalise your information according to your preferences. You can add new fields or modify existing ones to tailor your biodata.",
-    },
-    {
-        question: "Do you have templates for different communities?",
-        answer: "Yes. We offer marriage biodata templates for various communities including Hindu, Muslim, Sikh, Christian, and more. We also provide generic templates suitable for all communities.",
-    },
-    {
-        question: "Can I create my biodata in my native language?",
-        answer: "Absolutely! Our platform supports multiple languages such as Hindi, English, Marathi, Gujarati, and many more.",
-    },
-    {
-        question: "How and where can I reach out for queries or feedback?",
-        answer: "You can contact us anytime by sending an email to marriagebiodatahub@gmail.com.",
-        isHtml: true,
-        htmlAnswer: "You can contact us anytime by sending an email to <a href='mailto:marriagebiodatahub@gmail.com' class='text-brand-400 hover:text-brand-300 underline underline-offset-2'>marriagebiodatahub@gmail.com</a>."
-    },
-    {
-        question: "Can I see examples of marriage biodata formats?",
-        answer: "Yes! You can explore our template collection to see different biodata styles and get inspiration.",
-    },
-    {
-        question: "What makes this biodata maker the best tool to create marriage biodata?",
-        answer: "Our platform focuses on simplicity, design quality, and reliability.",
-        hasList: true,
-        listItems: [
-            "Professionally Designed Templates created with a balance of tradition and modern style.",
-            "Beautiful and intuitive interface that makes biodata creation easy and enjoyable.",
-            "Trusted by thousands of families who use our platform.",
-            "Fast and simple process allowing users to create a professional biodata within minutes."
-        ]
+        question: "Do I need to include a photo in my marriage biodata?",
+        answer: "Yes, if possible. A biodata with a photo receives significantly more responses than one without. Use a recent photo taken in the last 6 months, with a plain or light background, natural lighting, and a clear face. Avoid filters.",
     },
 ];
 
@@ -130,56 +101,7 @@ export function FAQ() {
                                     itemType="https://schema.org/Answer"
                                 >
                                     <div className="px-5 md:px-6 pb-6 pt-0 text-slate-300 leading-relaxed text-sm lg:text-base">
-                                        <div itemProp="text">
-                                            {faq.isHtml ? (
-                                                <p dangerouslySetInnerHTML={{ __html: faq.htmlAnswer }} />
-                                            ) : (
-                                                <p>{faq.answer}</p>
-                                            )}
-
-                                            {faq.hasList && (
-                                                <div className="mt-4 space-y-3">
-                                                    <p>Key highlights:</p>
-                                                    <ul className="list-disc pl-5 space-y-2">
-                                                        {faq.listItems.map((item, i) => {
-                                                            const boldSplit = item.split(" created with ");
-                                                            if (boldSplit.length > 1) {
-                                                                return (
-                                                                    <li key={i}>
-                                                                        <strong className="text-white font-semibold">{boldSplit[0]}</strong> created with {boldSplit[1]}
-                                                                    </li>
-                                                                )
-                                                            }
-                                                            const boldSplit2 = item.split(" that makes ");
-                                                            if (boldSplit2.length > 1) {
-                                                                return (
-                                                                    <li key={i}>
-                                                                        <strong className="text-white font-semibold">{boldSplit2[0]}</strong> that makes {boldSplit2[1]}
-                                                                    </li>
-                                                                )
-                                                            }
-                                                            const boldSplit3 = item.split(" who use ");
-                                                            if (boldSplit3.length > 1) {
-                                                                return (
-                                                                    <li key={i}>
-                                                                        <strong className="text-white font-semibold">{boldSplit3[0]}</strong> who use {boldSplit3[1]}
-                                                                    </li>
-                                                                )
-                                                            }
-                                                            const boldSplit4 = item.split(" allowing users ");
-                                                            if (boldSplit4.length > 1) {
-                                                                return (
-                                                                    <li key={i}>
-                                                                        <strong className="text-white font-semibold">{boldSplit4[0]}</strong> allowing users {boldSplit4[1]}
-                                                                    </li>
-                                                                )
-                                                            }
-                                                            return <li key={i}>{item}</li>
-                                                        })}
-                                                    </ul>
-                                                </div>
-                                            )}
-                                        </div>
+                                        <p itemProp="text">{faq.answer}</p>
                                     </div>
                                 </div>
                             </details>
@@ -200,9 +122,7 @@ export function FAQ() {
                             "name": faq.question,
                             "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": faq.hasList
-                                    ? `${faq.answer} Key highlights: ${faq.listItems.join(' ')}`
-                                    : faq.answer
+                                "text": faq.answer
                             }
                         }))
                     })

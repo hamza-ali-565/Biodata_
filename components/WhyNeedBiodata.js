@@ -34,23 +34,11 @@ export function WhyNeedBiodata() {
             <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center text-center">
                 <div>
                     <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-6 sm:text-4xl leading-tight">
-                        Why I should create a matrimonial biodata format?
+                        Why should I create a marriage biodata?
                     </h2>
 
                     <div className="flex justify-center mb-8">
                         <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-rose-500 rounded-full" />
-                    </div>
-
-                    <div className="space-y-6 text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-medium">
-                        <p>
-                            Getting married is the most important and emotional moment in a person’s life. To make all these things happen, you need a good biodata for marriage because it can make a good impression.
-                        </p>
-                        <p>
-                            Marriage means a new journey that takes you to a new chapter of your life. To make your journey peaceful and make your relationship healthy, you need a good life partner. Having a good life partner can make you mentally and physically healthy.
-                        </p>
-                        <p>
-                            Now you must be thinking, how can I convey my information, which is personal, professional, and family details, to someone? So, you just don’t need to worry about it. Here, you can create your biodata for marriage, as well as matrimonial biodata.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -60,16 +48,16 @@ export function WhyNeedBiodata() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full">
                     {[
                         {
-                            title: "First step toward a new journey:",
-                            content: "Getting married and starting a new life is very important, because you may spend your life alone, but to tackle loneliness, you always need someone who can spend quality time with you, understands you, laughs with you, and makes you feel complete. Creating biodata for marriage is the very first step toward your new life journey that is marriage. That time has gone when you had to go to a computer shop and ask them to create and get a hard copy; now you can create it yourself in just three easy steps, download it, and share it for free.",
+                            title: "First step toward finding a partner:",
+                            content: "A biodata is how families introduce themselves in the arranged marriage process. That time has gone when you had to go to a computer shop and ask them to create and print a hard copy. Now you can create it yourself in three easy steps, download it, and share it for free — in minutes, not days.",
                         },
                         {
-                            title: "Helps to avoid repetition of information:",
-                            content: "When you are making a match through a marriage bureau, you have to share information with them, or if you are finding a match by yourself, in this case, too, you have to convey information repeatedly. Marriage biodata maker helps you save time. For example, you create a marriage biodata and download it in the form of a PDF or image format. Now, you can share that format when needed, no need to type information again and again. The wedding biodata hub not only saves your time but also your efforts, so you do not have to bother yourself by typing information every time someone asks for it.",
+                            title: "Avoid repeating your information:",
+                            content: "Whether you're approaching a marriage bureau or sharing directly with families, you'll be asked the same questions dozens of times. Create your biodata once, download it as a PDF, and share it whenever someone asks. No typing the same details again and again.",
                         },
                         {
-                            title: "Helps you to find a compatible match:",
-                            content: "When you enter all information correctly in the marriage biodata template, the only compatible match contacts you, and no one who does not meet your expectations will contact you. Because you have entered all details about yourself, education, family details, and professional details, the only good match will contact you. This will save you time to handle non-serious matches because they will not bother you after reading your serious details.",
+                            title: "Attract only compatible matches:",
+                            content: "When your biodata clearly states your education, profession, family background, and partner preferences, families who are not a fit will self-select out. You'll spend less time on non-serious inquiries and more time on matches that actually meet your expectations.",
                         }
                     ].map((card, index) => (
                         <div

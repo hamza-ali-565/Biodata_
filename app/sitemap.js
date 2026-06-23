@@ -25,6 +25,41 @@ const STATIC_ROUTES = [
     priority: 0.85,
   },
   {
+    path: "/marriage-biodata-format",
+    changeFrequency: "monthly",
+    priority: 0.95,
+  },
+  {
+    path: "/what-is-marriage-biodata",
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
+  {
+    path: "/hindu-marriage-biodata",
+    changeFrequency: "monthly",
+    priority: 0.88,
+  },
+  {
+    path: "/muslim-biodata-for-marriage",
+    changeFrequency: "monthly",
+    priority: 0.88,
+  },
+  {
+    path: "/hindi-biodata-for-marriage",
+    changeFrequency: "monthly",
+    priority: 0.85,
+  },
+  {
+    path: "/marathi-biodata-for-marriage",
+    changeFrequency: "monthly",
+    priority: 0.85,
+  },
+  {
+    path: "/about-me-for-marriage-biodata",
+    changeFrequency: "monthly",
+    priority: 0.85,
+  },
+  {
     path: "/about-us",
     changeFrequency: "monthly",
     priority: 0.75,

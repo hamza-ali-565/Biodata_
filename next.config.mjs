@@ -108,6 +108,11 @@ const nextConfig = {
         destination: '/blog/:slug',
         permanent: true,
       },
+      {
+        source: '/rishta-biodata',
+        destination: '/muslim-biodata-for-marriage',
+        permanent: true,
+      },
     ];
   },
 };

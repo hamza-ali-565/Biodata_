@@ -29,10 +29,10 @@ export function WhyPeopleLoveUs() {
                                 Trusted Worldwide
                             </div>
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
-                                Why are our marriage biodata being loved by people?
+                                Why Indian Families Choose Marriage Biodata Hub
                             </h2>
                             <p className="text-slate-300 text-lg md:text-xl leading-loose max-w-xl font-medium">
-                                We’re gathering love around the globe because we are secure, we offer free premium templates, we are editable, and we are offering theme color selection.
+                                Three things set us apart: your data stays on your device, every community gets the right fields, and sharing on WhatsApp takes one tap.
                             </p>
                         </div>
 
@@ -93,24 +93,20 @@ export function WhyPeopleLoveUs() {
 
                 {/* New Premium Cards Section */}
                 <div className="mt-20 lg:mt-32 w-full max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 w-full">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full">
                         {[
                             {
-                                title: "Free Premium Templates:",
-                                content: "People love those who create ease for them and add some value to their lives. We are here offering high-quality templates with high-quality design for free. That’s why they love us and want to create their biodata from the marriage biodata hub.",
+                                title: "Your data, your device.",
+                                content: "Unlike most biodata makers that store your family’s details on their servers, Marriage Biodata Hub processes everything in your browser. Close the tab, come back tomorrow — your biodata is still there.",
                             },
                             {
-                                title: "Easy to use:",
-                                content: "Our marriage biodata creator is very easy to use because we are providing a solution in three steps: Enter details, select a template, and download the template for biodata. This pretty fast solution makes us different from other biodata makers. Because we believe in providing solutions and making a small effort to make you happy.",
+                                title: "Built for every Indian community.",
+                                content: "From Gotra and Nakshatra fields for Hindu families, to Sect and Biradari fields for Muslim families, to Kul and Kulswamini for Marathi families — the right fields are already waiting for you.",
                             },
                             {
-                                title: "Data security:",
-                                content: "On this platform, your data will be secure because we are not using any database that can save your information outside of your computer or phone. Your data will be secure because it will be saved in browser storage, which is not accessible by any other person than you. Because we know that someone’s personal information can’t be shared with everyone.",
+                                title: "One click to WhatsApp.",
+                                content: "Most families in India share biodatas through WhatsApp. We’ve made it a single tap — PDF ready, message ready, no compression, no format issues.",
                             },
-                            {
-                                title: "Editable format:",
-                                content: "We have a long discussion above about how our marriage biodata is flexible, so that you can edit your biodata even after closing the browser. Not only can it edit personal information, but it can also change the template without entering information again and again. Because we are humans and humans can make mistakes, and also humans can correct them.",
-                            }
                         ].map((card, index) => (
                             <div
                                 key={index}

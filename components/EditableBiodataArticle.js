@@ -2,24 +2,24 @@ import { FileEdit, LayoutTemplate, Type } from "lucide-react";
 
 const subsections = [
     {
-        title: "How to Edit Text Details:",
-        body: "Suppose you have entered your personal, family, and professional details, and now you want to make some changes, so the question is, how are you going to achieve this? We have two types of cases here. First, you are still in the browser, so you just edit them by simply editing input fields, or if you are on a template page, you can click back to edit details. In the second case, you realize that you need to make some changes after a few days. Here, we provide you with an amazing feature in which we do not delete user information from input fields even after you close your browser, unless the user manually resets it.",
+        title: "How to edit your details:",
+        body: "Suppose you've entered your personal, family, and professional details and now want to make changes. If you're still in the browser, simply update any input field or click back from the template page to edit. If you realize you need changes a few days later, your information is still there — we don't delete data from input fields even after you close the browser, unless you manually reset it.",
         icon: FileEdit,
         accent: "from-brand-500/25 via-brand-500/5 to-transparent",
         borderGlow: "group-hover:shadow-[0_0_48px_rgba(244,63,94,0.14)]",
         number: "01",
     },
     {
-        title: "How to change biodata format design of the same information:",
-        body: "let's say you want to change the biodata format but don't want to enter information again and again, for this case, we are going to discuss some scenarios. After entering details for the first time, you will be navigated to template page to select a template and then you will move to preview page to preview the selected template but for some reason you want to change the theme you don't need to enter information again and select template again we have list down the all templates in preview page so user can select the template from the preview page. Now, if you want to change format and you have closed the browser, you don't need to worry about it, as we have discussed earlier that the information will not be removed until the user hits the reset button, so you can change the theme after closing the browser as well.",
+        title: "How to change your template design without re-entering information:",
+        body: "Let's say you want to switch to a different template but don't want to fill in your details again. After entering your information and selecting a template, you land on the preview page — where all available templates are listed so you can switch without going back to the form. And if you've already closed the browser, don't worry. Your information is saved until you hit the reset button, so you can change your template anytime.",
         icon: LayoutTemplate,
         accent: "from-violet-500/20 via-rose-500/5 to-transparent",
         borderGlow: "group-hover:shadow-[0_0_48px_rgba(139,92,246,0.12)]",
         number: "02",
     },
     {
-        title: "Editable Fonts and Theme:",
-        body: "After entering information and selecting the template, the system will show you its real fonts and theme, which are designed for that originally, but you can also change the fonts and theme of your choice. To change font, you can check the list of font families, which is provided in the preview page in a drop-down list, including font families like Playfair Display, Poppins, Lora,  Cinzel, Libre Baskerville, and Merriweather. In the same way, the marriage biodata hub provides you with the ability to edit the theme color of your choice, which is also provided in the preview page in the form of a drop-down, and the theme colors include: Gold, Royal Blue, Maroon, Emerald Green, and Classic Black.",
+        title: "Editable fonts and theme colours:",
+        body: "After selecting your template, the preview will show you its default fonts and colour theme — but you can change both. To change the font, use the drop-down list on the preview page, which includes Playfair Display, Poppins, Lora, Cinzel, Libre Baskerville, and Merriweather. For theme colour, a separate drop-down lets you choose from Gold, Royal Blue, Maroon, Emerald Green, and Classic Black.",
         icon: Type,
         accent: "from-amber-500/15 via-brand-500/5 to-transparent",
         borderGlow: "group-hover:shadow-[0_0_48px_rgba(251,191,36,0.1)]",
@@ -186,7 +186,7 @@ export function EditableBiodataArticle() {
                                 className="text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-5xl lg:text-[3.25rem] lg:leading-[1.08]"
                             >
                                 <span className="bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">
-                                    Editable biodata for marriage:
+                                    Your biodata, fully editable — anytime
                                 </span>
                             </h2>
 
@@ -205,7 +205,7 @@ export function EditableBiodataArticle() {
                             <p
                                 className="mx-auto mt-8 max-w-3xl text-base font-normal leading-[1.88] text-slate-300/95 sm:text-lg sm:leading-[1.92]"
                             >
-                                A fully customized marriage biodata maker platform offers you to create, edit, and download biodata for marriage. Here, not only is text information editable, but you can also change format style, font family, theme color, and download in a different format. Creating biodata is one thing, but making changes after creating it is another thing; this is very annoying to fill in details again and again. Here we provide you with some genuine solutions to overcome this problem. We make sure to save your data in the browser until you reset it manually.
+                                Not only is your text information editable at any time — you can also change template style, font family, and theme colour without re-entering your details. Your data is saved in your browser until you choose to reset it. Here is exactly how each type of edit works.
                             </p>
                         </header>
 

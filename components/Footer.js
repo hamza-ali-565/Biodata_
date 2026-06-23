@@ -19,8 +19,8 @@ const popularTemplates = [
 ];
 
 const weddingCategories = [
-  { name: "Islamic Themes", path: "/templates" },
-  { name: "Hindu Themes", path: "/templates" },
+  { name: "Islamic Themes", path: "/muslim-biodata-for-marriage" },
+  { name: "Hindu Themes", path: "/hindu-marriage-biodata" },
   { name: "Royal & Elegant", path: "/templates" },
 ];
 
