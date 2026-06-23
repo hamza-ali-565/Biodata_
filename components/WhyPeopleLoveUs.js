@@ -98,22 +98,18 @@ export function WhyPeopleLoveUs() {
                             {
                                 title: "Free Premium Templates:",
                                 content: "People love those who create ease for them and add some value to their lives. We are here offering high-quality templates with high-quality design for free. That’s why they love us and want to create their biodata from the marriage biodata hub.",
-                                delay: 0.1
                             },
                             {
                                 title: "Easy to use:",
                                 content: "Our marriage biodata creator is very easy to use because we are providing a solution in three steps: Enter details, select a template, and download the template for biodata. This pretty fast solution makes us different from other biodata makers. Because we believe in providing solutions and making a small effort to make you happy.",
-                                delay: 0.2
                             },
                             {
                                 title: "Data security:",
                                 content: "On this platform, your data will be secure because we are not using any database that can save your information outside of your computer or phone. Your data will be secure because it will be saved in browser storage, which is not accessible by any other person than you. Because we know that someone’s personal information can’t be shared with everyone.",
-                                delay: 0.3
                             },
                             {
                                 title: "Editable format:",
                                 content: "We have a long discussion above about how our marriage biodata is flexible, so that you can edit your biodata even after closing the browser. Not only can it edit personal information, but it can also change the template without entering information again and again. Because we are humans and humans can make mistakes, and also humans can correct them.",
-                                delay: 0.4
                             }
                         ].map((card, index) => (
                             <div

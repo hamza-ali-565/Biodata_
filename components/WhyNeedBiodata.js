@@ -62,17 +62,14 @@ export function WhyNeedBiodata() {
                         {
                             title: "First step toward a new journey:",
                             content: "Getting married and starting a new life is very important, because you may spend your life alone, but to tackle loneliness, you always need someone who can spend quality time with you, understands you, laughs with you, and makes you feel complete. Creating biodata for marriage is the very first step toward your new life journey that is marriage. That time has gone when you had to go to a computer shop and ask them to create and get a hard copy; now you can create it yourself in just three easy steps, download it, and share it for free.",
-                            delay: 0.1
                         },
                         {
                             title: "Helps to avoid repetition of information:",
                             content: "When you are making a match through a marriage bureau, you have to share information with them, or if you are finding a match by yourself, in this case, too, you have to convey information repeatedly. Marriage biodata maker helps you save time. For example, you create a marriage biodata and download it in the form of a PDF or image format. Now, you can share that format when needed, no need to type information again and again. The wedding biodata hub not only saves your time but also your efforts, so you do not have to bother yourself by typing information every time someone asks for it.",
-                            delay: 0.2
                         },
                         {
                             title: "Helps you to find a compatible match:",
                             content: "When you enter all information correctly in the marriage biodata template, the only compatible match contacts you, and no one who does not meet your expectations will contact you. Because you have entered all details about yourself, education, family details, and professional details, the only good match will contact you. This will save you time to handle non-serious matches because they will not bother you after reading your serious details.",
-                            delay: 0.3
                         }
                     ].map((card, index) => (
                         <div

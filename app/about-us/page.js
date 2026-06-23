@@ -15,7 +15,7 @@ export const metadata = {
   title: 'About Us | Marriage Biodata Hub',
   description: 'Learn about Marriage Biodata Hub, our mission to modernize traditional matrimonial biodata creation, and why thousands choose our platform for elegant, professional profiles.',
   alternates: {
-    canonical: 'https://marriagebiodatahub.com/about-us',
+    canonical: '/about-us',
   },
 };
 

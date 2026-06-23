@@ -191,7 +191,7 @@ export function BiodataForm() {
     const next = [
       ...current,
       {
-        id: `${section}-${Date.now()}`,
+        id: `${section}-${crypto.randomUUID()}`,
         label: "",
         value: "",
       },
@@ -296,7 +296,12 @@ export function BiodataForm() {
         window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
         sessionStorage.setItem("scrollToTemplates", "true");
       } catch (err) {
+        if (err instanceof DOMException && err.name === "QuotaExceededError") {
+          setToastMessage("Storage full — try using a smaller photo and submit again.");
+          return;
+        }
         console.error("Failed to save to localStorage:", err);
+        return;
       }
     }
     router.push("/templates");

@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "Expert guides on marriage biodata templates, design tips for boys and girls, and how to create a premium, readable matrimonial profile.",
   alternates: {
-    canonical: "https://marriagebiodatahub.com/blog",
+    canonical: "/blog",
   },
   openGraph: {
     title: "Marriage Biodata Blog | Marriage Biodata Hub",
@@ -20,8 +20,8 @@ export const metadata = {
   },
 };
 
-export default function BlogListingPage() {
-  const posts = getPostsForListing();
+export default async function BlogListingPage() {
+  const posts = await getPostsForListing();
 
   return (
     <>

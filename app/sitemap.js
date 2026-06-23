@@ -81,8 +81,9 @@ function buildTemplateEntries() {
   }));
 }
 
-function buildBlogEntries() {
-  return getAllPosts().map((post) => ({
+async function buildBlogEntries() {
+  const posts = await getAllPosts();
+  return posts.map((post) => ({
     url: toAbsoluteUrl(`/blog/${post.slug}`),
     lastModified: post.publishedAt ? new Date(post.publishedAt) : new Date(),
     changeFrequency: "monthly",
@@ -93,10 +94,10 @@ function buildBlogEntries() {
 /**
  * @returns {import('next').MetadataRoute.Sitemap}
  */
-export default function sitemap() {
+export default async function sitemap() {
   return dedupeByUrl([
     ...buildStaticEntries(),
     ...buildTemplateEntries(),
-    ...buildBlogEntries(),
+    ...(await buildBlogEntries()),
   ]);
 }

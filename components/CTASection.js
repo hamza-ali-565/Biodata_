@@ -1,4 +1,5 @@
 import { ScrollToFormButton } from "./ScrollToFormButton";
+import { MandalaSVG } from "./MandalaSVG";
 
 export function CTASection() {
 
@@ -16,27 +17,11 @@ export function CTASection() {
 
                 {/* Asian Wedding Theme Background Art: Mandala Motif */}
                 <div className="absolute top-[-10%] left-[-5%] w-48 h-48 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] opacity-[0.03] pointer-events-none rotate-45">
-                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-white" preserveAspectRatio="xMidYMid meet">
-                        <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="1" />
-                        <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
-                        <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="1" />
-                        <path d="M50 20 C65 20 65 35 50 50 C35 35 35 20 50 20 Z" stroke="currentColor" strokeWidth="1" />
-                        <path d="M50 80 C65 80 65 65 50 50 C35 65 35 80 50 80 Z" stroke="currentColor" strokeWidth="1" />
-                        <path d="M20 50 C20 65 35 65 50 50 C35 35 20 35 20 50 Z" stroke="currentColor" strokeWidth="1" />
-                        <path d="M80 50 C80 65 65 65 50 50 C65 35 80 35 80 50 Z" stroke="currentColor" strokeWidth="1" />
-                    </svg>
+                    <MandalaSVG />
                 </div>
 
                 <div className="absolute bottom-[-10%] right-[-5%] w-48 h-48 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] opacity-[0.03] pointer-events-none -rotate-12">
-                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-white" preserveAspectRatio="xMidYMid meet">
-                        <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="1" />
-                        <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
-                        <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="1" />
-                        <path d="M50 20 C65 20 65 35 50 50 C35 35 35 20 50 20 Z" stroke="currentColor" strokeWidth="1" />
-                        <path d="M50 80 C65 80 65 65 50 50 C35 65 35 80 50 80 Z" stroke="currentColor" strokeWidth="1" />
-                        <path d="M20 50 C20 65 35 65 50 50 C35 35 20 35 20 50 Z" stroke="currentColor" strokeWidth="1" />
-                        <path d="M80 50 C80 65 65 65 50 50 C65 35 80 35 80 50 Z" stroke="currentColor" strokeWidth="1" />
-                    </svg>
+                    <MandalaSVG />
                 </div>
 
                 <div className="relative z-10 mx-auto max-w-2xl space-y-6">

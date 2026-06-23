@@ -15,7 +15,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
   if (!post) return { title: "Article Not Found" };
 
   const canonical = `https://marriagebiodatahub.com/blog/${post.slug}`;
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogArticlePage({ params }) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
 
   if (!post) notFound();
 

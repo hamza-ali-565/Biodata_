@@ -2,6 +2,12 @@ import Link from "next/link";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
+export const metadata = {
+  title: "Page Not Found | Marriage Biodata Hub",
+  description: "The page you are looking for does not exist. Return to Marriage Biodata Hub to create your free marriage biodata.",
+  robots: { index: false, follow: true },
+};
+
 export default function NotFound() {
   return (
     <>

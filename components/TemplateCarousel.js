@@ -4,16 +4,17 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { SmartLink } from "./SmartLink";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { MandalaSVG } from "./MandalaSVG";
 
 const templates = [
-    { id: 1, src: "/images/new-templates/beautiful-golden-border-marriage-biodata.webp", alt: "beautiful-golden-border-marriage-biodata", isNew: true },
-    { id: 2, src: "/images/new-templates/beautiful-green-and-off-white-marriage-biodata-contrast.webp", alt: "beautiful-green-and-off-white-marriage-biodata-contrast", isNew: true },
-    { id: 3, src: "/images/new-templates/beautiful-green-border-art-marriage-biodata.webp", alt: "beautiful-green-border-art-marriage-biodata", isNew: true },
-    { id: 4, src: "/images/new-templates/beautiful-leafs-effect-marriage-biodata.webp", alt: "beautiful-leafs-effect-marriage-biodata", isNew: true },
-    { id: 5, src: "/images/new-templates/beautiful-light-green-and-arted-dark-green-marriage-biodata-contrast.webp", alt: "beautiful-light-green-and-arted-dark-green-marriage-biodata-contrast", isNew: true },
-    { id: 6, src: "/images/new-templates/beautiful-sea-green-and-off-white-marriage-biodata-contrast.webp", alt: "beautiful-sea-green-and-off-white-marriage-biodata-contrast", isNew: true },
-    { id: 7, src: "/images/new-templates/beautiful-sober-marriage-biodata.webp", alt: "beautiful-sober-marriage-biodata", isNew: true },
-    { id: 8, src: "/images/new-templates/beautiful-traditional-marriage-biodata.webp", alt: "beautiful-traditional-marriage-biodata", isNew: true },
+    { id: 1, src: "/images/new-templates/beautiful-golden-border-marriage-biodata.webp", alt: "Beautiful Golden Border biodata template", href: "/templates/beautiful-golden-border", isNew: true },
+    { id: 2, src: "/images/new-templates/beautiful-green-and-off-white-marriage-biodata-contrast.webp", alt: "Green Off-White Contrast biodata template", href: "/templates/green-off-white-contrast", isNew: true },
+    { id: 3, src: "/images/new-templates/beautiful-green-border-art-marriage-biodata.webp", alt: "Green Border Art biodata template", href: "/templates/green-border-art", isNew: true },
+    { id: 4, src: "/images/new-templates/beautiful-leafs-effect-marriage-biodata.webp", alt: "Leafs Effect biodata template", href: "/templates/leafs-effect", isNew: true },
+    { id: 5, src: "/images/new-templates/beautiful-light-green-and-arted-dark-green-marriage-biodata-contrast.webp", alt: "Light Green contrast biodata template", href: "/templates/sea-green-contrast", isNew: true },
+    { id: 6, src: "/images/new-templates/beautiful-sea-green-and-off-white-marriage-biodata-contrast.webp", alt: "Sea Green Contrast biodata template", href: "/templates/sea-green-contrast", isNew: true },
+    { id: 7, src: "/images/new-templates/beautiful-sober-marriage-biodata.webp", alt: "Sober Blue Gold biodata template", href: "/templates/sober-blue-gold", isNew: true },
+    { id: 8, src: "/images/new-templates/beautiful-traditional-marriage-biodata.webp", alt: "Beautiful Traditional biodata template", href: "/templates/beautiful-traditional", isNew: true },
 ];
 
 export function TemplateCarousel() {
@@ -78,27 +79,11 @@ export function TemplateCarousel() {
 
             {/* Asian Wedding Theme Background Art: Mandala Motif */}
             <div className="absolute top-[5%] left-[-5%] w-48 h-48 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] opacity-[0.03] pointer-events-none rotate-12">
-                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-white" preserveAspectRatio="xMidYMid meet">
-                    <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="1" />
-                    <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
-                    <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="1" />
-                    <path d="M50 20 C65 20 65 35 50 50 C35 35 35 20 50 20 Z" stroke="currentColor" strokeWidth="1" />
-                    <path d="M50 80 C65 80 65 65 50 50 C35 65 35 80 50 80 Z" stroke="currentColor" strokeWidth="1" />
-                    <path d="M20 50 C20 65 35 65 50 50 C35 35 20 35 20 50 Z" stroke="currentColor" strokeWidth="1" />
-                    <path d="M80 50 C80 65 65 65 50 50 C65 35 80 35 80 50 Z" stroke="currentColor" strokeWidth="1" />
-                </svg>
+                <MandalaSVG />
             </div>
 
             <div className="absolute bottom-[-5%] right-[-5%] w-48 h-48 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] opacity-[0.03] pointer-events-none -rotate-12">
-                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-white" preserveAspectRatio="xMidYMid meet">
-                    <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="1" />
-                    <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 2" />
-                    <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="1" />
-                    <path d="M50 20 C65 20 65 35 50 50 C35 35 35 20 50 20 Z" stroke="currentColor" strokeWidth="1" />
-                    <path d="M50 80 C65 80 65 65 50 50 C35 65 35 80 50 80 Z" stroke="currentColor" strokeWidth="1" />
-                    <path d="M20 50 C20 65 35 65 50 50 C35 35 20 35 20 50 Z" stroke="currentColor" strokeWidth="1" />
-                    <path d="M80 50 C80 65 65 65 50 50 C65 35 80 35 80 50 Z" stroke="currentColor" strokeWidth="1" />
-                </svg>
+                <MandalaSVG />
             </div>
 
             <div className="w-full relative z-10">
@@ -142,7 +127,7 @@ export function TemplateCarousel() {
                                         key={`${template.id}-${currentIndex}`}
                                         className="flex-none w-[260px] md:w-[280px] lg:w-[300px] rounded-2xl border border-white/10 bg-slate-900 p-2 transition-transform duration-300 hover:scale-[1.03] hover:-translate-y-1 cursor-pointer relative z-10 will-change-transform"
                                     >
-                                        <SmartLink href="/templates" className="block relative aspect-[1/1.414] w-full rounded-xl overflow-hidden bg-slate-950/80 group-hover:bg-slate-900 shadow-inner">
+                                        <SmartLink href={template.href} className="block relative aspect-[1/1.414] w-full rounded-xl overflow-hidden bg-slate-950/80 group-hover:bg-slate-900 shadow-inner">
                                             <Image
                                                 src={template.src}
                                                 alt={template.alt}

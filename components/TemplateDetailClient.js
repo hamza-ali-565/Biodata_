@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import Link from "next/link";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { TemplatePreview } from "./TemplatePreview";
 import { ResponsivePreviewScaler } from "./ResponsivePreviewScaler";
+import { TemplateErrorBoundary } from "./TemplateErrorBoundary";
 import {
   STORAGE_KEY,
   TEMPLATE_DEFINITIONS,
@@ -13,17 +13,18 @@ import {
   THEME_OPTIONS,
 } from "./templatesConfig";
 
+const DEFAULT_BODY_FONT_ID =
+  FONT_OPTIONS.find((f) => f.category === "Sans-Serif")?.id || FONT_OPTIONS[0].id;
+
 export function TemplateDetailClient({ templateId }) {
   const initialTemplate = TEMPLATE_DEFINITIONS.find((t) => t.id === templateId) || TEMPLATE_DEFINITIONS[0];
   const [selectedTemplateId, setSelectedTemplateId] = useState(initialTemplate.id);
   const template = TEMPLATE_DEFINITIONS.find((t) => t.id === selectedTemplateId) || TEMPLATE_DEFINITIONS[0];
   const [data, setData] = useState(null);
   const [headingFontId, setHeadingFontId] = useState(FONT_OPTIONS[0].id);
-  const [bodyFontId, setBodyFontId] = useState(
-    FONT_OPTIONS.find(f => f.category === "Sans-Serif")?.id || FONT_OPTIONS[0].id
-  );
+  const [bodyFontId, setBodyFontId] = useState(DEFAULT_BODY_FONT_ID);
   const [themeId, setThemeId] = useState(
-    template?.defaultThemeId || THEME_OPTIONS[0].id
+    initialTemplate?.defaultThemeId || THEME_OPTIONS[0].id
   );
   const [isExporting, setIsExporting] = useState(null);
   const previewRef = useRef(null);
@@ -62,30 +63,18 @@ export function TemplateDetailClient({ templateId }) {
     }, {});
   }, []);
 
-  const resetCustomization = () => {
-    setHeadingFontId(FONT_OPTIONS[0].id);
-    setBodyFontId(FONT_OPTIONS.find(f => f.category === "Sans-Serif")?.id || FONT_OPTIONS[0].id);
-    setThemeId(THEME_OPTIONS[0].id);
-  };
-
   const handleTemplateChange = (tplId) => {
-    resetCustomization();
+    const newTemplate = TEMPLATE_DEFINITIONS.find((t) => t.id === tplId);
     setSelectedTemplateId(tplId);
-    
-    // Asynchronously update theme to the new template's default after state has reset
-    setTimeout(() => {
-      const newTemplate = TEMPLATE_DEFINITIONS.find((t) => t.id === tplId);
-      if (newTemplate?.defaultThemeId) {
-        setThemeId(newTemplate.defaultThemeId);
-      }
-    }, 0);
+    setHeadingFontId(FONT_OPTIONS[0].id);
+    setBodyFontId(DEFAULT_BODY_FONT_ID);
+    setThemeId(newTemplate?.defaultThemeId || THEME_OPTIONS[0].id);
   };
 
   const handleReset = () => {
-    resetCustomization();
-    setTimeout(() => {
-      setThemeId(template?.defaultThemeId || THEME_OPTIONS[0].id);
-    }, 0);
+    setHeadingFontId(FONT_OPTIONS[0].id);
+    setBodyFontId(DEFAULT_BODY_FONT_ID);
+    setThemeId(template?.defaultThemeId || THEME_OPTIONS[0].id);
   };
 
   const handleExport = async (type) => {
@@ -286,14 +275,16 @@ export function TemplateDetailClient({ templateId }) {
 
           <div className="flex-1 min-h-0 flex flex-col bg-slate-950/60 lg:bg-slate-950/40 rounded-2xl border border-white/5 w-full max-w-full h-auto overflow-x-hidden overflow-y-auto overscroll-contain max-h-[min(72dvh,920px)] lg:max-h-none relative z-10 shadow-inner backdrop-blur-[2px] lg:backdrop-blur-none">
             <ResponsivePreviewScaler>
-              <TemplatePreview
-                ref={previewRef}
-                data={data}
-                template={template}
-                theme={selectedTheme}
-                headingFont={selectedHeadingFont.css}
-                bodyFont={selectedBodyFont.css}
-              />
+              <TemplateErrorBoundary>
+                <TemplatePreview
+                  ref={previewRef}
+                  data={data}
+                  template={template}
+                  theme={selectedTheme}
+                  headingFont={selectedHeadingFont.css}
+                  bodyFont={selectedBodyFont.css}
+                />
+              </TemplateErrorBoundary>
             </ResponsivePreviewScaler>
           </div>
 
