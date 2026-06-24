@@ -59,7 +59,7 @@ export function DesignTips() {
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <div>
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-6 sm:text-4xl">
-                            Some design tips to create biodata for marriage
+                            Design tips for a biodata that gets read
                         </h2>
                         <div className="flex justify-center mb-6">
                             <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-rose-500 rounded-full" />

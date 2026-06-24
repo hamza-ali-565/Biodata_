@@ -71,13 +71,13 @@ export function HowToCreateBiodata() {
                     <h2
                         className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-6"
                     >
-                        How to Create a Stunning Marriage Biodata?
+                        How to Create Your Biodata in 3 Steps
                     </h2>
 
                     <p
                         className="text-slate-300 text-base md:text-xl leading-relaxed"
                     >
-                        Building a <SmartLink href="/#biodata-form" className="text-brand-400 hover:text-brand-300 transition-colors">marriage biodata</SmartLink> is very easy if you follow a clear roadmap. Start with your personal details, introduce yourself in this section, then jump to professional details, describe your professional life, and lastly, describe your family details.
+                        Most families finish in under 5 minutes. Fill in three sections — personal details, family background, and contact information — and your PDF is ready.
                     </p>
                 </div>
 

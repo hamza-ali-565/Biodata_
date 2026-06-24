@@ -34,7 +34,7 @@ export function WhyNeedBiodata() {
             <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center text-center">
                 <div>
                     <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-6 sm:text-4xl leading-tight">
-                        Why should I create a marriage biodata?
+                        Why do you need a marriage biodata?
                     </h2>
 
                     <div className="flex justify-center mb-8">

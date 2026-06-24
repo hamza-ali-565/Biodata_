@@ -18,10 +18,11 @@ const popularTemplates = [
   { name: "Premium & Gold", path: "/templates" },
 ];
 
-const weddingCategories = [
-  { name: "Islamic Themes", path: "/muslim-biodata-for-marriage" },
-  { name: "Hindu Themes", path: "/hindu-marriage-biodata" },
-  { name: "Royal & Elegant", path: "/templates" },
+const communityGuides = [
+  { name: "Hindu Marriage Biodata", path: "/hindu-marriage-biodata" },
+  { name: "Muslim Rishta Biodata", path: "/muslim-biodata-for-marriage" },
+  { name: "Shadi Biodata (Hindi)", path: "/hindi-biodata-for-marriage" },
+  { name: "Lagnacha Biodata (Marathi)", path: "/marathi-biodata-for-marriage" },
 ];
 
 const freeResources = [
@@ -29,6 +30,9 @@ const freeResources = [
   { name: "Design Tips", path: "/#design-tips" },
   { name: "How to Create Biodata", path: "/#how-to-create" },
   { name: "FAQ", path: "/#faq" },
+  { name: "Marriage Biodata Format Guide", path: "/marriage-biodata-format" },
+  { name: "What is a Marriage Biodata", path: "/what-is-marriage-biodata" },
+  { name: "About Me Examples", path: "/about-me-for-marriage-biodata" },
 ];
 
 const supportLegal = [
@@ -247,9 +251,9 @@ export function Footer() {
                   </ul>
                 </FooterColumn>
 
-                <FooterColumn title="Wedding Biodata Categories">
+                <FooterColumn title="Community Guides">
                   <ul className="space-y-3">
-                    {weddingCategories.map((item) => (
+                    {communityGuides.map((item) => (
                       <li key={item.name}>
                         <FooterLink href={item.path}>{item.name}</FooterLink>
                       </li>

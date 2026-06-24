@@ -4,16 +4,16 @@ import { Footer } from "../../components/Footer";
 import { ChevronDown } from "lucide-react";
 
 export const metadata = {
-  title: "What is a Marriage Biodata? Complete Answer for Indian Families 2026 | Marriage Biodata Hub",
+  title: "What is a Marriage Biodata? Full Guide | MBH",
   description:
-    "A marriage biodata is a structured one-page document used in Indian arranged marriages. Learn exactly what it contains, how it differs from a CV, and what Indian families actually check first.",
+    "A marriage biodata is a one-page document for Indian arranged marriages. Learn what it includes, how it differs from a CV, and what families check first.",
   alternates: {
     canonical: "/what-is-marriage-biodata",
   },
   openGraph: {
-    title: "What is a Marriage Biodata? Complete Answer for Indian Families 2026",
+    title: "What is a Marriage Biodata? Full Guide | MBH",
     description:
-      "A marriage biodata is a structured one-page document used in Indian arranged marriages. Learn what it contains, how it differs from a CV, and what families check first.",
+      "A marriage biodata is a one-page document for Indian arranged marriages. Learn what it includes, how it differs from a CV, and what families check first.",
     url: "/what-is-marriage-biodata",
     siteName: "Marriage Biodata Hub",
     images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
@@ -22,8 +22,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "What is a Marriage Biodata? Complete Answer 2026",
-    description: "A marriage biodata is a structured one-page document used in Indian arranged marriages.",
+    title: "What is a Marriage Biodata? Full Guide | MBH",
+    description: "A marriage biodata is a one-page document for Indian arranged marriages. Learn what it includes, how it differs from a CV, and what families check first.",
     images: ["/images/og-image.webp"],
   },
 };
@@ -321,6 +321,8 @@ export default function WhatIsMarriageBiodata() {
                 { href: "/marriage-biodata-format", label: "Complete biodata format guide" },
                 { href: "/hindu-marriage-biodata", label: "Hindu marriage biodata" },
                 { href: "/muslim-biodata-for-marriage", label: "Muslim Rishta biodata" },
+                { href: "/hindi-biodata-for-marriage", label: "Hindi shadi biodata" },
+                { href: "/marathi-biodata-for-marriage", label: "Marathi lagnacha biodata" },
                 { href: "/about-me-for-marriage-biodata", label: "About Me examples" },
                 { href: "/templates", label: "Browse templates" },
               ].map(({ href, label }) => (

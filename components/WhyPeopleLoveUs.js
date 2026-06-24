@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { SmartLink } from "./SmartLink";
 import { ScrollToFormButton } from "./ScrollToFormButton";
 
@@ -102,6 +103,12 @@ export function WhyPeopleLoveUs() {
                             {
                                 title: "Built for every Indian community.",
                                 content: "From Gotra and Nakshatra fields for Hindu families, to Sect and Biradari fields for Muslim families, to Kul and Kulswamini for Marathi families — the right fields are already waiting for you.",
+                                links: [
+                                    { href: "/hindu-marriage-biodata", label: "Hindu biodata guide" },
+                                    { href: "/muslim-biodata-for-marriage", label: "Muslim biodata guide" },
+                                    { href: "/marathi-biodata-for-marriage", label: "Marathi biodata guide" },
+                                    { href: "/hindi-biodata-for-marriage", label: "Hindi shadi biodata" },
+                                ],
                             },
                             {
                                 title: "One click to WhatsApp.",
@@ -144,6 +151,15 @@ export function WhyPeopleLoveUs() {
                                     <p className="text-slate-300 text-sm md:text-base leading-relaxed flex-grow font-medium">
                                         {card.content}
                                     </p>
+                                    {card.links && (
+                                        <div className="mt-4 flex flex-wrap gap-2">
+                                            {card.links.map(({ href, label }) => (
+                                                <Link key={href} href={href} className="text-xs text-brand-400 hover:text-brand-300 underline underline-offset-2 transition-colors">
+                                                    {label} →
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         ))}

@@ -4,16 +4,16 @@ import { Footer } from "../../components/Footer";
 import { ChevronDown } from "lucide-react";
 
 export const metadata = {
-  title: "Hindu Marriage Biodata — Complete Format with Gotra, Rashi, Nakshatra & Manglik Guide (2026) | Marriage Biodata Hub",
+  title: "Hindu Marriage Biodata — Gotra, Rashi, Manglik Guide",
   description:
-    "Complete Hindu marriage biodata format guide. What to write in Gotra, Rashi, Nakshatra, Nadi, and Manglik fields — explained in plain language. Free templates for all Hindu communities in India.",
+    "Complete Hindu marriage biodata guide — Gotra, Rashi, Nakshatra, Nadi, Gan and Manglik fields explained simply. Free templates for all Hindu communities.",
   alternates: {
     canonical: "/hindu-marriage-biodata",
   },
   openGraph: {
-    title: "Hindu Marriage Biodata — Complete Format with Gotra, Rashi, Nakshatra & Manglik Guide (2026)",
+    title: "Hindu Marriage Biodata — Gotra, Rashi, Manglik Guide",
     description:
-      "Complete Hindu marriage biodata format guide. Gotra, Rashi, Nakshatra, Nadi, Manglik fields explained in plain language. Free templates for all Hindu communities.",
+      "Complete Hindu marriage biodata guide — Gotra, Rashi, Nakshatra, Nadi, Gan and Manglik fields explained simply. Free templates for all Hindu communities.",
     url: "/hindu-marriage-biodata",
     siteName: "Marriage Biodata Hub",
     images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
@@ -22,8 +22,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hindu Marriage Biodata — Complete Format Guide 2026",
-    description: "What to write in Gotra, Rashi, Nakshatra, Nadi, and Manglik fields — explained in plain language.",
+    title: "Hindu Marriage Biodata — Gotra, Rashi, Manglik Guide",
+    description: "Complete Hindu marriage biodata guide — Gotra, Rashi, Nakshatra, Nadi, Gan and Manglik fields explained simply.",
     images: ["/images/og-image.webp"],
   },
 };
@@ -407,6 +407,7 @@ export default function HinduMarriageBiodata() {
                 { href: "/what-is-marriage-biodata", label: "What is a marriage biodata?" },
                 { href: "/muslim-biodata-for-marriage", label: "Muslim Rishta biodata" },
                 { href: "/marathi-biodata-for-marriage", label: "Marathi Lagnacha biodata" },
+                { href: "/about-me-for-marriage-biodata", label: "About Me examples" },
                 { href: "/templates", label: "Browse templates" },
               ].map(({ href, label }) => (
                 <Link key={href} href={href} className="text-xs rounded-full border border-slate-700 px-4 py-2 text-slate-300 hover:border-brand-500/50 hover:text-white transition-all">

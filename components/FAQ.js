@@ -1,4 +1,5 @@
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 const faqs = [
     {
@@ -20,6 +21,12 @@ const faqs = [
     {
         question: "Which Indian communities does Marriage Biodata Hub support?",
         answer: "We have dedicated templates and fields for Hindu, Muslim, Sikh, Christian, Jain, Marathi, Gujarati, Tamil, Telugu, Bengali, and Punjabi communities. Each template includes the community-specific fields that families actually check — Gotra, Rashi, and Manglik for Hindu families; Sect and Biradari for Muslim families; Kul and Kulswamini for Marathi families; Natchathiram and Rasi for Tamil families.",
+        links: [
+            { href: "/hindu-marriage-biodata", label: "Hindu biodata guide" },
+            { href: "/muslim-biodata-for-marriage", label: "Muslim biodata guide" },
+            { href: "/marathi-biodata-for-marriage", label: "Marathi biodata guide" },
+            { href: "/hindi-biodata-for-marriage", label: "Hindi shadi biodata" },
+        ],
     },
     {
         question: "Do I need to include a photo in my marriage biodata?",
@@ -102,6 +109,15 @@ export function FAQ() {
                                 >
                                     <div className="px-5 md:px-6 pb-6 pt-0 text-slate-300 leading-relaxed text-sm lg:text-base">
                                         <p itemProp="text">{faq.answer}</p>
+                                        {faq.links && (
+                                            <div className="mt-3 flex flex-wrap gap-2">
+                                                {faq.links.map(({ href, label }) => (
+                                                    <Link key={href} href={href} className="text-brand-400 hover:text-brand-300 underline underline-offset-2 transition-colors">
+                                                        {label} →
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             </details>

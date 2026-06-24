@@ -4,16 +4,16 @@ import { Footer } from "../../components/Footer";
 import { ChevronDown } from "lucide-react";
 
 export const metadata = {
-  title: "What to Write in \"About Me\" for Marriage Biodata — 15 Examples 2026 | Marriage Biodata Hub",
+  title: "About Me for Marriage Biodata — 15 Examples | MBH",
   description:
-    "Stuck on the About Me section? 15 real examples for different communities, professions, and tones. Copy, adapt, and make it yours. For Hindu, Muslim, Marathi, Tamil, NRI, and more.",
+    "What to write in About Me for your marriage biodata? 15 real examples for different communities and professions. Copy, adapt, and make it yours.",
   alternates: {
     canonical: "/about-me-for-marriage-biodata",
   },
   openGraph: {
-    title: "What to Write in \"About Me\" for Marriage Biodata — 15 Examples 2026",
+    title: "About Me for Marriage Biodata — 15 Examples | MBH",
     description:
-      "Stuck on the About Me section? 15 real examples for different communities, professions, and tones. Copy, adapt, and make it yours.",
+      "What to write in About Me for your marriage biodata? 15 real examples for different communities and professions. Copy, adapt, and make it yours.",
     url: "/about-me-for-marriage-biodata",
     siteName: "Marriage Biodata Hub",
     images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
@@ -22,8 +22,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "What to Write in \"About Me\" for Marriage Biodata — 15 Examples",
-    description: "15 real About Me examples for different communities, professions, and tones.",
+    title: "About Me for Marriage Biodata — 15 Examples | MBH",
+    description: "15 real examples for different communities and professions. Copy, adapt, and make it yours.",
     images: ["/images/og-image.webp"],
   },
 };

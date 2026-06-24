@@ -4,16 +4,16 @@ import { Footer } from "../../components/Footer";
 import { ChevronDown } from "lucide-react";
 
 export const metadata = {
-  title: "Marriage Biodata Format — Complete Guide for All Indian Communities 2026 | Marriage Biodata Hub",
+  title: "Marriage Biodata Format — Complete Guide 2026 | MBH",
   description:
-    "Everything about marriage biodata format — what to include, community-specific fields, PDF vs Word, free download. Written for Indian families. No jargon, no fluff.",
+    "Complete marriage biodata format guide — all fields, community differences, PDF vs Word. For Hindu, Muslim, Marathi & all Indian families.",
   alternates: {
     canonical: "/marriage-biodata-format",
   },
   openGraph: {
-    title: "Marriage Biodata Format — Complete Guide for All Indian Communities 2026",
+    title: "Marriage Biodata Format — Complete Guide 2026 | MBH",
     description:
-      "Everything about marriage biodata format — what to include, community-specific fields, PDF vs Word, free download. Written for Indian families.",
+      "Complete marriage biodata format guide — all fields, community differences, PDF vs Word. For Hindu, Muslim, Marathi & all Indian families.",
     url: "/marriage-biodata-format",
     siteName: "Marriage Biodata Hub",
     images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
@@ -22,8 +22,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marriage Biodata Format — Complete Guide 2026",
-    description: "Everything about marriage biodata format — sections, community fields, PDF vs Word, free download.",
+    title: "Marriage Biodata Format — Complete Guide 2026 | MBH",
+    description: "Complete marriage biodata format guide — all fields, community differences, PDF vs Word. For Hindu, Muslim, Marathi & all Indian families.",
     images: ["/images/og-image.webp"],
   },
 };

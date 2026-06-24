@@ -58,7 +58,7 @@ export function BenefitsSection() {
                 </div>
                 <div className=" text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-medium mb-15">
                     <p>
-                        In this app, you can easily create your marriage biodata in minutes by using your pc or laptop. We’ve designed our app in such a way that you can get what you want. We are adding multiple values to create your marriage biodata online.
+                        Create your biodata in minutes — on any device. No login, no watermark, no file left on our servers. Download PDF or JPEG and share instantly on WhatsApp.
                     </p>
 
                 </div>

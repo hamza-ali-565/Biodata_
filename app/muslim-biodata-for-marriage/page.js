@@ -4,16 +4,16 @@ import { Footer } from "../../components/Footer";
 import { ChevronDown } from "lucide-react";
 
 export const metadata = {
-  title: "Muslim Biodata for Marriage | Rishta Biodata Format — Complete 2026 Guide | Marriage Biodata Hub",
+  title: "Muslim Biodata for Marriage | Rishta Biodata Guide",
   description:
-    "Complete Muslim marriage biodata and Rishta biodata format. Includes Sect, Biradari, religiosity level fields. Free templates that open with Bismillah. No login required.",
+    "Complete Rishta biodata guide for Muslim families — Sect, Biradari, Bismillah opening. Free templates for Sunni, Shia, Bohra & all communities.",
   alternates: {
     canonical: "/muslim-biodata-for-marriage",
   },
   openGraph: {
-    title: "Muslim Biodata for Marriage | Rishta Biodata Format — Complete 2026 Guide",
+    title: "Muslim Biodata for Marriage | Rishta Biodata Guide",
     description:
-      "Complete Muslim marriage biodata and Rishta biodata format. Sect, Biradari, religiosity fields. Free templates opening with Bismillah.",
+      "Complete Rishta biodata guide for Muslim families — Sect, Biradari, Bismillah opening. Free templates for Sunni, Shia, Bohra & all communities.",
     url: "/muslim-biodata-for-marriage",
     siteName: "Marriage Biodata Hub",
     images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
@@ -22,8 +22,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muslim Biodata for Marriage | Rishta Biodata 2026",
-    description: "Complete Muslim marriage biodata guide. Sect, Biradari, Bismillah opening. Free templates.",
+    title: "Muslim Biodata for Marriage | Rishta Biodata Guide",
+    description: "Complete Rishta biodata guide for Muslim families — Sect, Biradari, Bismillah opening. Free templates.",
     images: ["/images/og-image.webp"],
   },
 };
@@ -316,6 +316,7 @@ export default function MuslimBiodataForMarriage() {
                 { href: "/what-is-marriage-biodata", label: "What is a marriage biodata?" },
                 { href: "/hindu-marriage-biodata", label: "Hindu marriage biodata" },
                 { href: "/hindi-biodata-for-marriage", label: "Hindi biodata (Shadi ka biodata)" },
+                { href: "/about-me-for-marriage-biodata", label: "About Me examples" },
                 { href: "/templates", label: "Browse templates" },
               ].map(({ href, label }) => (
                 <Link key={href} href={href} className="text-xs rounded-full border border-slate-700 px-4 py-2 text-slate-300 hover:border-brand-500/50 hover:text-white transition-all">

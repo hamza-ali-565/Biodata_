@@ -4,16 +4,16 @@ import { Footer } from "../../components/Footer";
 import { ChevronDown } from "lucide-react";
 
 export const metadata = {
-  title: "Lagnacha Biodata Format | लग्नाचा बायोडाटा — Free Marathi Marriage Biodata Maker | Marriage Biodata Hub",
+  title: "Lagnacha Biodata | Marathi Marriage Biodata Guide",
   description:
-    "लग्नाचा बायोडाटा format guide for Marathi families. Includes Kul, Kulswamini, Gotra fields. Free PDF download. For Maratha, Brahmin, CKP, Mali, and all Marathi communities.",
+    "लग्नाचा बायोडाटा guide for Marathi families. Kul, Kulswamini, Gotra fields included. Free PDF download. For Maratha, Brahmin, CKP & all communities.",
   alternates: {
     canonical: "/marathi-biodata-for-marriage",
   },
   openGraph: {
-    title: "Lagnacha Biodata Format | लग्नाचा बायोडाटा — Free Marathi Marriage Biodata Maker",
+    title: "Lagnacha Biodata | Marathi Marriage Biodata Guide",
     description:
-      "Lagnacha biodata format for Marathi families. Kul, Kulswamini, Gotra fields. Free PDF. All Marathi communities.",
+      "Lagnacha biodata guide for Marathi families. Kul, Kulswamini, Gotra fields included. Free PDF. For Maratha, Brahmin, CKP & all communities.",
     url: "/marathi-biodata-for-marriage",
     siteName: "Marriage Biodata Hub",
     images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
@@ -22,8 +22,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lagnacha Biodata Format — Marathi Marriage Biodata Maker",
-    description: "Lagnacha biodata for Marathi families. Kul, Kulswamini, Gotra fields. Free PDF.",
+    title: "Lagnacha Biodata | Marathi Marriage Biodata Guide",
+    description: "Lagnacha biodata for Marathi families. Kul, Kulswamini, Gotra fields included. Free PDF.",
     images: ["/images/og-image.webp"],
   },
 };

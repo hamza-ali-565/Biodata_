@@ -4,16 +4,16 @@ import { Footer } from "../../components/Footer";
 import { ChevronDown } from "lucide-react";
 
 export const metadata = {
-  title: "शादी के लिए बायोडाटा | Shadi Biodata Format — Free Hindi Marriage Biodata Maker | Marriage Biodata Hub",
+  title: "Shadi Biodata Format | Hindi Marriage Biodata Guide",
   description:
-    "शादी का बायोडाटा कैसे बनाएं? Complete shadi biodata format guide for North Indian families. All fields in Hindi. Free PDF download. WhatsApp share in one click. No login.",
+    "शादी के लिए बायोडाटा कैसे बनाएं? Complete shadi biodata format guide for UP, Bihar, Delhi & Rajasthan families. Free PDF. WhatsApp share. No login.",
   alternates: {
     canonical: "/hindi-biodata-for-marriage",
   },
   openGraph: {
-    title: "Shadi Biodata Format — Free Hindi Marriage Biodata Maker",
+    title: "Shadi Biodata Format | Hindi Marriage Biodata Guide",
     description:
-      "Complete shadi biodata format guide for North Indian families. Free PDF download. WhatsApp share in one click.",
+      "Complete shadi biodata format guide for UP, Bihar, Delhi & Rajasthan families. Free PDF. WhatsApp share. No login.",
     url: "/hindi-biodata-for-marriage",
     siteName: "Marriage Biodata Hub",
     images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
@@ -22,8 +22,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shadi Biodata Format — Hindi Marriage Biodata Maker",
-    description: "Complete shadi biodata format for North Indian families. Free PDF. No login.",
+    title: "Shadi Biodata Format | Hindi Marriage Biodata Guide",
+    description: "Complete shadi biodata format for UP, Bihar, Delhi & Rajasthan families. Free PDF. No login.",
     images: ["/images/og-image.webp"],
   },
 };

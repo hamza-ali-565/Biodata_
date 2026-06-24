@@ -9,17 +9,9 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: "Create & Download Biodata For Marriage Free | Marriage Biodata Hub",
+  title: "Free Marriage Biodata Maker — Create & Download | MBH",
   description:
-    "Create beautiful marriage biodata online with modern and traditional templates. Design, customize, and download biodata in minutes.",
-  keywords: [
-    "marriage biodata",
-    "biodata maker",
-    "create biodata online",
-    "marriage resume",
-    "matrimonial biodata",
-    "wedding biodata templates",
-  ],
+    "Create your marriage biodata free in 5 minutes. 28+ templates for Hindu, Muslim, Sikh & all Indian communities. No login. No watermark.",
   authors: [{ name: "Marriage Biodata Hub" }],
   creator: "Marriage Biodata Hub",
   applicationName: "Marriage Biodata Hub",
@@ -32,9 +24,9 @@ export const metadata = {
   },
   metadataBase: new URL("https://marriagebiodatahub.com"),
   openGraph: {
-    title: "Create & Download Biodata For Marriage Free | Marriage Biodata Hub",
+    title: "Free Marriage Biodata Maker — Create & Download | MBH",
     description:
-      "Create beautiful marriage biodata online with modern and traditional templates. Design, customize, and download biodata in minutes.",
+      "Create your marriage biodata free in 5 minutes. 28+ templates for Hindu, Muslim, Sikh & all Indian communities. No login. No watermark.",
     url: "/",
     siteName: "Marriage Biodata Hub",
     images: [
@@ -50,9 +42,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Create & Download Biodata For Marriage Free | Marriage Biodata Hub",
+    title: "Free Marriage Biodata Maker — Create & Download | MBH",
     description:
-      "Create beautiful marriage biodata online with modern and traditional templates. Design, customize, and download biodata in minutes.",
+      "Create your marriage biodata free in 5 minutes. 28+ templates for Hindu, Muslim, Sikh & all Indian communities. No login. No watermark.",
     images: ["/images/og-image.webp"],
   },
   robots: {

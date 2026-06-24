@@ -3,22 +3,22 @@ import { Footer } from "../../components/Footer";
 import { AnimatedTemplateSections } from "./AnimatedTemplateSections";
 
 export const metadata = {
-  title: "Marriage Biodata Templates — Free PDF Download | Hindu, Muslim, Sikh, Marathi & More",
+  title: "Marriage Biodata Templates — Free Download | MBH",
   description:
-    "28 free marriage biodata templates for Hindu, Muslim, Sikh, Marathi, Gujarati, Tamil and all Indian communities. Download PDF instantly. No login. No watermark.",
+    "28 free templates for Hindu, Muslim, Sikh, Marathi, Tamil & all Indian communities. Download PDF instantly. No login. No watermark.",
   alternates: {
     canonical: "/templates",
   },
   openGraph: {
-    title: "Marriage Biodata Templates — Free PDF Download | Hindu, Muslim, Sikh, Marathi & More",
-    description: "28 free marriage biodata templates for Hindu, Muslim, Sikh, Marathi, Gujarati, Tamil and all Indian communities. Download PDF instantly. No login. No watermark.",
+    title: "Marriage Biodata Templates — Free Download | MBH",
+    description: "28 free templates for Hindu, Muslim, Sikh, Marathi, Tamil & all Indian communities. Download PDF instantly. No login. No watermark.",
     url: "/templates",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marriage Biodata Templates — Free PDF Download | Hindu, Muslim, Sikh, Marathi & More",
-    description: "28 free marriage biodata templates for Hindu, Muslim, Sikh, Marathi, Gujarati, Tamil and all Indian communities. Download PDF instantly. No login. No watermark.",
+    title: "Marriage Biodata Templates — Free Download | MBH",
+    description: "28 free templates for Hindu, Muslim, Sikh, Marathi, Tamil & all Indian communities. Download PDF instantly. No login. No watermark.",
   },
 };
 
