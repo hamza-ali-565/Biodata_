@@ -29,7 +29,7 @@ const faqs = [
         ],
     },
     {
-        question: "Do I need to include a photo in my marriage biodata?",
+        question: "Do I need to include a photo in my biodata?",
         answer: "Yes, if possible. A biodata with a photo receives significantly more responses than one without. Use a recent photo taken in the last 6 months, with a plain or light background, natural lighting, and a clear face. Avoid filters.",
     },
 ];

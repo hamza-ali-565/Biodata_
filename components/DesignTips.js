@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const tips = [
     {
-        title: "Marriage Biodata Format With Photo",
+        title: "Biodata With a Photo",
         image: "/images/new-templates/beautiful-green-border-art-marriage-biodata.webp",
         points: [
             "Use a clear, high-resolution, recent photograph.",
@@ -14,7 +14,7 @@ const tips = [
         ]
     },
     {
-        title: "Marriage Biodata Format Without Photo",
+        title: "Biodata Without a Photo",
         image: "/images/new-templates/beautiful-sober-marriage-biodata.webp",
         points: [
             "Opt for a clean, highly text-focused structural layout.",

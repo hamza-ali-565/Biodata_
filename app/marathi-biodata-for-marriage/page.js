@@ -147,7 +147,7 @@ export default function MarathiBiodataForMarriage() {
           </h1>
 
           <AEOBlock>
-            Lagnacha biodata (लग्नाचा बायोडाटा) is the Marathi term for a marriage biodata. Marathi families include
+            Lagnacha biodata (लग्नाचा बायोडाटा) is the Marathi term for a matrimonial profile used in arranged marriages. Marathi families include
             three fields that other communities don't typically use: Kul (कुळ) — the ancestral clan or lineage beyond
             Gotra, Kulswamini (कुलस्वामिनी) — the family deity or goddess, and Mulchi Gavi (मूळ गाव) — the ancestral
             village. These three fields are what distinguish a Marathi biodata from a generic Indian marriage biodata.

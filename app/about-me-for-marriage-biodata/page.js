@@ -34,11 +34,11 @@ const faqs = [
     a: "Write 3–5 sentences covering: one real personality quality with a specific example, a genuine hobby or interest (not a list), a value that matters to you, and briefly what you're looking for in a partner. Avoid generic phrases like \"I am a simple, family-oriented person\" — every biodata has this. Write something specific that only you would write.",
   },
   {
-    q: "How long should the About Me section be in a marriage biodata?",
+    q: "How long should the About Me section be in a biodata?",
     a: "3–5 sentences. No more. Families reviewing multiple biodatas spend 90 seconds per profile. A short, specific, memorable About Me is far more effective than a long paragraph. If you've written more than 5 sentences, edit it down — keep only the most distinctive things about yourself.",
   },
   {
-    q: "What NOT to write in the About Me section of a marriage biodata?",
+    q: "What NOT to write in the About Me section of your biodata?",
     a: "Avoid: generic adjectives without examples (\"simple, honest, caring\"), lists of 10 hobbies without depth, anything about past relationships, requirements that sound demanding, or anything better suited to another section (salary goes in career section, Gotra goes in horoscope section). Also avoid writing in third person — \"She is a calm person\" feels distant. First person (\"I enjoy...\") is warmer.",
   },
   {
@@ -207,7 +207,7 @@ export default function AboutMeForMarriageBiodata() {
           </h1>
 
           <AEOBlock>
-            The About Me section in a marriage biodata should be 3–5 sentences describing your personality, values,
+            The About Me section in your biodata should be 3–5 sentences describing your personality, values,
             lifestyle, and what you're looking for in a partner. Write something specific — a specific hobby, a
             specific value with an example, something real about your family life. Generic phrases like "I am a
             simple, family-oriented person" are forgettable. A specific sentence like "My family eats dinner together
@@ -262,7 +262,7 @@ export default function AboutMeForMarriageBiodata() {
             </div>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-6">15 About Me examples for Indian marriage biodata</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-6">15 About Me examples for Indian matrimonial biodata</h2>
           <p className="text-slate-400 text-sm mb-8">
             Copy any of these, adapt it to your own details, and make it yours. The goal is not to use someone else's
             words — it's to see what specific and honest looks like before you write your own.

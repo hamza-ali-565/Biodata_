@@ -239,7 +239,7 @@ export default function WhatIsMarriageBiodata() {
             </table>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-4">Marriage biodata vs resume vs CV — what's the difference?</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-4">Biodata vs resume vs CV — what's the difference?</h2>
           <p className="text-slate-300 leading-relaxed mb-4">
             <strong className="text-white">Is a biodata the same as a resume?</strong> No. Despite the same word being
             used in job applications in India, a marriage biodata and a resume are completely different documents.
@@ -249,7 +249,7 @@ export default function WhatIsMarriageBiodata() {
               <thead>
                 <tr className="border-b border-slate-800 bg-slate-900/60">
                   <th className="text-left text-slate-300 font-semibold py-3 px-4"></th>
-                  <th className="text-left text-slate-300 font-semibold py-3 px-4">Marriage Biodata</th>
+                  <th className="text-left text-slate-300 font-semibold py-3 px-4">Biodata</th>
                   <th className="text-left text-slate-300 font-semibold py-3 px-4">Resume / CV</th>
                 </tr>
               </thead>
@@ -273,7 +273,7 @@ export default function WhatIsMarriageBiodata() {
             </table>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-4">Marriage biodata vs matrimony site profile — do I need both?</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-4">Biodata vs matrimony site profile — do I need both?</h2>
           <p className="text-slate-300 leading-relaxed mb-4">
             Yes, and they serve different networks. A matrimony site profile (Shaadi.com, BharatMatrimony, Jeevansathi)
             reaches families who are actively searching on that platform. A biodata PDF reaches everyone else —
@@ -285,7 +285,7 @@ export default function WhatIsMarriageBiodata() {
             to any registered user. A biodata is private — shared only with specific people you trust.
           </p>
 
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-4">Who creates the marriage biodata — the candidate or the parents?</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-4">Who creates a biodata — the candidate or the parents?</h2>
           <p className="text-slate-300 leading-relaxed mb-4">
             According to Jeevansathi's 2026 report, 77% of Indian matrimonial profiles are now self-managed by the
             candidate. A decade ago, parents handled almost everything. Today, especially in urban India, the candidate

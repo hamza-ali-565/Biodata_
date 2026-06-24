@@ -214,10 +214,7 @@ export function Footer() {
 
                 <div className="space-y-4">
                   <p className="text-sm font-medium leading-[1.85] text-slate-400 sm:text-base">
-                    A marriage biodata maker app dedicated to providing the easiest way to create your biodata in minutes. We understand why it’s important to find the right match, as it is about to spend the whole life with someone, and creating biodata is the initial stage of this long, beautiful walk. Our app will help you to create biodata in three easy steps: fill, choose, and download.
-                  </p>
-                  <p className="text-sm font-medium leading-[1.85] text-slate-400 sm:text-base">
-                    We have the most popular, elegant, and premium template to make a strong impact. We hope you will enjoy our service, and once again, best of luck with your future endeavor.
+                    Marriage Biodata Hub helps Indian families create beautiful, community-specific biodatas in minutes — free, with no login and no watermark. Built for Hindu, Muslim, Sikh, Marathi, Gujarati, Tamil, and all Indian communities.
                   </p>
                 </div>
 
@@ -241,7 +238,7 @@ export function Footer() {
                   </ul>
                 </FooterColumn>
 
-                <FooterColumn title="Popular Biodata Templates">
+                <FooterColumn title="Popular Templates">
                   <ul className="space-y-3">
                     {popularTemplates.map((item) => (
                       <li key={item.name}>

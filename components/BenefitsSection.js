@@ -8,7 +8,7 @@ const benefits = [
     },
     {
         title: "JPEG/Image format download option",
-        description: "Creating marriage biodata is another thing, and presenting it to someone is another thing. Now, one thing should come to your mind: what to do after creating biodata? How to share it with someone? Don’t worry, we are offering you to download your biodata in JPEG or image format for free.",
+        description: "Creating your biodata is only half the job — sharing it with the right people is the other half. Download as a JPEG image to share instantly on WhatsApp, or send a private link without any app.",
         icon: FileImage,
     },
     {
@@ -49,7 +49,7 @@ export function BenefitsSection() {
                 <div className="text-center mb-7">
                     <div>
                         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-6 sm:text-4xl leading-tight max-w-3xl mx-auto">
-                            Advantages of creating a biodata format online?
+                            Advantages of creating your biodata online?
                         </h2>
                         <div className="flex justify-center">
                             <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-rose-500 rounded-full" />

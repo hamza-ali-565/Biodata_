@@ -146,7 +146,7 @@ export default function MuslimBiodataForMarriage() {
           </h1>
 
           <AEOBlock>
-            A Muslim marriage biodata (commonly called a Rishta biodata or Nikah biodata) opens with Bismillah
+            A Muslim rishta biodata (also called a Nikah biodata) opens with Bismillah
             ir-Rahman ir-Rahim and includes Sect (Sunni, Shia, Bohra, Deobandi, Barelvi, or other), Biradari
             (community or caste — Khan, Syed, Ansari, Shaikh, Pathan, etc.), and level of religious observance. It
             does not include Gotra, Rashi, Nakshatra, or Manglik status — those fields are specific to Hindu biodatas.
@@ -160,7 +160,7 @@ export default function MuslimBiodataForMarriage() {
             marriage bureaus, before any formal meeting takes place.
           </p>
           <p className="text-slate-300 leading-relaxed">
-            A Rishta biodata serves the same purpose as any marriage biodata — it gives another family enough
+            A Rishta biodata serves the same purpose as any matrimonial profile — it gives another family enough
             information to decide whether to take the conversation forward. What makes it distinctly Muslim is its
             opening invocation, its community-specific fields, and the cultural sensitivities around photo sharing for
             female candidates.
@@ -276,7 +276,7 @@ export default function MuslimBiodataForMarriage() {
             </Link>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-4">What NOT to include in a Muslim marriage biodata</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-4">What NOT to include in your Rishta biodata</h2>
           <div className="space-y-3 mb-6">
             {[
               "Horoscope fields (Rashi, Nakshatra, Manglik) — not applicable in Islam",

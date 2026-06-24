@@ -136,7 +136,7 @@ function AEOBlock({ children }) {
 function CTABlock() {
   return (
     <div className="my-12 rounded-2xl border border-rose-500/20 bg-rose-500/5 p-8 text-center">
-      <p className="text-white font-semibold text-lg mb-2">Ready to create your marriage biodata?</p>
+      <p className="text-white font-semibold text-lg mb-2">Ready to create your biodata?</p>
       <p className="text-slate-400 text-sm mb-5">No login. No watermark. Download PDF in 5 minutes.</p>
       <Link
         href="/#biodata-form-wrapper"
@@ -192,12 +192,12 @@ export default function MarriageBiodataFormat() {
           <p className="text-slate-300 leading-relaxed mb-4">
             The word "biodata" is short for biographical data. In the context of Indian arranged marriages, a marriage
             biodata is a structured one-page document that introduces a bride or groom to the other family. Unlike a job
-            resume — which focuses on professional achievements — a marriage biodata covers personal life, family
+            resume — which focuses on professional achievements — it covers personal life, family
             background, community identity, and life values.
           </p>
           <p className="text-slate-300 leading-relaxed mb-4">
             <strong className="text-white">Is a marriage biodata the same as a CV or resume?</strong> No. A resume is
-            for employers. A marriage biodata is for the other family. A resume highlights skills and work experience; a
+            for employers. A biodata is for the other family. A resume highlights skills and work experience; a
             biodata highlights family values, personal character, and life goals. The only overlap is education and
             career — and even those sections carry different weight in each context.
           </p>
@@ -257,7 +257,7 @@ export default function MarriageBiodataFormat() {
             Hindu families, the horoscope section is called Jathagam. Star (Natchathiram) is typically checked before
             Rashi. See:{" "}
             <Link href="/hindu-marriage-biodata" className="text-brand-400 hover:text-brand-300 transition-colors">
-              Complete Hindu Marriage Biodata Guide
+              Complete Hindu Biodata Guide
             </Link>.
           </p>
           <p className="text-slate-300 leading-relaxed">
@@ -413,7 +413,7 @@ export default function MarriageBiodataFormat() {
           </div>
 
           {/* Section 5 — Rejection reasons */}
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mt-14 mb-4">8 things that get marriage biodatas rejected — from real family feedback</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mt-14 mb-4">8 things that get biodatas rejected — from real family feedback</h2>
           <p className="text-slate-300 leading-relaxed mb-6">
             Compiled from Reddit threads (r/delhi, r/RelationshipIndia, r/Arrangedmarriage), Quora answers, and family
             feedback from Indian matrimonial communities.

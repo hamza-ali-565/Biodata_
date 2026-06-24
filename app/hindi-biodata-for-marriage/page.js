@@ -147,7 +147,7 @@ export default function HindiBiodataForMarriage() {
           </h1>
 
           <AEOBlock>
-            Shadi ka biodata (शादी का बायोडाटा) is the Hindi term for a marriage biodata. For North Indian families
+            Shadi ka biodata (शादी का बायोडाटा) is the Hindi term for a matrimonial profile. For North Indian families
             in UP, Bihar, Delhi, Rajasthan, and Madhya Pradesh, it includes personal details, Gotra, Rashi, Nakshatra,
             Manglik status, family background, education, and partner preferences — all on one A4 page. Families in
             these states primarily share biodatas via WhatsApp with relatives, or give a printed copy to the local
@@ -166,7 +166,7 @@ export default function HindiBiodataForMarriage() {
             is like, and whether there's a reason to meet. A well-made shadi biodata does this clearly and respectfully.
           </p>
 
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-4">Shadi ke liye biodata format | Fields in a Hindi Marriage Biodata</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-4">Shadi ke liye biodata format | Hindi Shadi Biodata ke fields</h2>
           <p className="text-slate-300 leading-relaxed mb-5">
             Here is a sample shadi biodata structure with both Hindi and English field names — the format most North
             Indian families recognise and expect.

@@ -97,7 +97,7 @@ export function AnimatedTemplateSections() {
           </nav>
 
           <h1 className="text-3xl font-bold tracking-tight text-slate-50 sm:text-5xl lg:text-6xl mb-6 bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
-            Marriage Biodata Templates — Free Download for All Indian Communities
+            Biodata Templates — Free Download for All Indian Communities
           </h1>
           <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
             28 templates, built for Indian families. Each one is designed for a specific community — Hindu families get Gotra, Rashi, and Nakshatra fields. Muslim families get templates that open with Bismillah and include Sect and Biradari sections. Marathi families have Kul and Kulswamini fields ready. Choose your template, fill your details, download your PDF free — no login, no watermark.
@@ -112,7 +112,7 @@ export function AnimatedTemplateSections() {
         aria-labelledby="template-library-heading"
       >
         <h2 id="template-library-heading" className="sr-only">
-          Browse Marriage Biodata Templates
+          Browse Biodata Templates
         </h2>
         <TemplateList templates={TEMPLATE_DEFINITIONS} />
       </section>
@@ -129,7 +129,7 @@ export function AnimatedTemplateSections() {
             <div className="premium-card-static rounded-2xl p-6">
               <h3 className="text-lg font-semibold text-slate-100 mb-2">Hindu families</h3>
               <p>
-                Our Hindu marriage biodata templates include Gotra, Rashi, Nakshatra, Nadi, Gan, and Manglik status fields by default. South Indian families who need Jathagam format can use the same templates with the Nakshatra field as their primary horoscope reference.{" "}
+                Our Hindu biodata templates include Gotra, Rashi, Nakshatra, Nadi, Gan, and Manglik status fields by default. South Indian families who need Jathagam format can use the same templates with the Nakshatra field as their primary horoscope reference.{" "}
                 <Link href="/hindu-marriage-biodata" className="text-brand-400 hover:underline transition-colors">See Hindu biodata guide →</Link>
               </p>
             </div>
@@ -198,7 +198,7 @@ export function AnimatedTemplateSections() {
       <ViewportSection className="relative px-2 sm:px-0">
         <div className="mb-12 text-center max-w-3xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-slate-50 sm:text-4xl">
-            Four mistakes people make when choosing a marriage biodata template
+            Four mistakes to avoid when choosing your biodata template
           </h2>
         </div>
 
@@ -249,7 +249,7 @@ export function AnimatedTemplateSections() {
       <ViewportSection className="relative pt-12 px-4 sm:px-0">
         <div className="mb-12 text-center max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-slate-50 sm:text-4xl mb-4">
-            What makes a marriage biodata template work on every device?
+            What makes a biodata template work on every device?
           </h2>
         </div>
 
@@ -301,7 +301,7 @@ export function AnimatedTemplateSections() {
         <div className="relative z-10 max-w-3xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-slate-50 sm:text-4xl">
-              Questions about our marriage biodata templates
+              Questions about our biodata templates
             </h2>
             <div className="flex justify-center mt-4">
               <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-rose-500 rounded-full" />

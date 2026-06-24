@@ -19,7 +19,7 @@ const subsections = [
     },
     {
         title: "Not knowing how to organise information:",
-        body: "Most people are unsure what order to present their details in. Marriage Biodata Hub structures the form so you enter personal details first, then family background, then education and career, then contact details — and your template reflects that same order. No guesswork, no blank staring at a blank page.",
+        body: "Most people are unsure what order to present their details in. Our form structures your details so you enter personal information first, then family background, then education and career, then contact details — and your template reflects that same order. No guesswork, no blank staring at a blank page.",
         icon: ListOrdered,
         accent: "from-rose-500/20 via-amber-500/5 to-transparent",
         borderGlow: "group-hover:shadow-[0_0_48px_rgba(244,63,94,0.12)]",

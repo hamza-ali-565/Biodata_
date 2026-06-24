@@ -6,7 +6,7 @@ import { MandalaSVG } from "./MandalaSVG";
 const features = [
     {
         title: "Easy to use",
-        description: <>There is no need to sign up or register. Your <SmartLink href="/#biodata-form" className="text-brand-400 hover:text-brand-300 transition-colors">biodata for marriage</SmartLink> is ready just by entering personal details. And don’t forget to select a <SmartLink href="/templates" className="text-brand-400 hover:text-brand-300 transition-colors">beautiful template</SmartLink>.</>,
+        description: "Your biodata is ready to download the moment you finish filling in your details. No account, no payment.",
         icon: Zap,
         color: "from-amber-400 to-orange-500",
         bg: "bg-amber-500/10"
@@ -47,7 +47,7 @@ export function FeatureBanner() {
             <div className="relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-6">
-                        Why Our Marriage Biodata Builder Different?
+                        Why Our Biodata Builder Is Different?
                     </h2>
                     <div className="mt-4 flex justify-center">
                         <div className="w-16 h-1 bg-gradient-to-r from-brand-500 to-rose-500 rounded-full" />

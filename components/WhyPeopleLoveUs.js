@@ -98,7 +98,7 @@ export function WhyPeopleLoveUs() {
                         {[
                             {
                                 title: "Your data, your device.",
-                                content: "Unlike most biodata makers that store your family’s details on their servers, Marriage Biodata Hub processes everything in your browser. Close the tab, come back tomorrow — your biodata is still there.",
+                                content: "Unlike most biodata makers that store your family’s details on their servers, we process everything in your browser. Close the tab, come back tomorrow — your biodata is still there.",
                             },
                             {
                                 title: "Built for every Indian community.",
