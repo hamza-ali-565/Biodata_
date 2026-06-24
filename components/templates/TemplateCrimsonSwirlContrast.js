@@ -25,6 +25,7 @@ export function TemplateCrimsonSwirlContrast({ data, theme, headingFont, bodyFon
     ["Rashi", personal?.rashi],
     ["Nakshatra", personal?.nakshatra],
     ["Gotra", personal?.gotra],
+    ["Manglik", personal?.manglik],
     ["Place of Birth", personal?.placeOfBirth],
     ["Time of Birth", personal?.timeOfBirth],
     ["Contact No.", contact?.contactNumber],

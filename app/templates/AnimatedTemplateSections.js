@@ -14,11 +14,11 @@ const faqs = [
   },
   {
     q: "Do all templates include Gotra, Rashi, and Nakshatra fields for Hindu families?",
-    a: "Yes. Every template includes the full horoscope section — Gotra, Rashi (Zodiac / Moon Sign), Nakshatra (Birth Star), Nadi, Gan, and Manglik status. If you are from a Muslim family and these fields are not relevant, you can remove or replace them using the custom fields feature. The Beautiful Traditional template is specifically designed for Muslim families with Sect and Biradari fields instead.",
+    a: "Yes. Every template includes the full horoscope section — Gotra, Rashi (Zodiac / Moon Sign), Nakshatra (Birth Star), Nadi, Gan, and Manglik status. If you are from a Muslim family and these fields are not relevant, you can remove or replace them using the custom fields feature. The Hilal template is specifically designed for Muslim families with Sect and Biradari fields instead.",
   },
   {
     q: "Which template is best for sharing on WhatsApp?",
-    a: "Any template works on WhatsApp, but high-contrast designs (dark text on a light background) read most clearly after WhatsApp compresses the PDF. The Modern, Sober Blue Gold, and Sea Green Contrast templates have the best WhatsApp readability based on user feedback. Avoid very dark backgrounds if your biodata will be read primarily on a phone screen.",
+    a: "Any template works on WhatsApp, but high-contrast designs (dark text on a light background) read most clearly after WhatsApp compresses the PDF. The Nutan, Rajasvi, and Neel templates have the best WhatsApp readability based on user feedback. Avoid very dark backgrounds if your biodata will be read primarily on a phone screen.",
   },
   {
     q: "Is there a Marathi lagnacha biodata template with Kul and Kulswamini fields?",
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: "Do you have templates for Christian, Jain, Sikh, or NRI families?",
-    a: "All our templates are fully customizable regardless of community. For Christian families, you can add Church name, Denomination, and Diocese as custom fields. For Jain families, you can add Digambar/Shvetambara and dietary practices. For NRI families, Visa status, Country of residence, and Citizenship fields can be added. For Sikh families, Gurudwara name and Amritdhari status can be included. The Beautiful Traditional template is the most culturally specific — it is designed for Muslim families. All others are community-neutral by design.",
+    a: "All our templates are fully customizable regardless of community. For Christian families, you can add Church name, Denomination, and Diocese as custom fields. For Jain families, you can add Digambar/Shvetambara and dietary practices. For NRI families, Visa status, Country of residence, and Citizenship fields can be added. For Sikh families, Gurudwara name and Amritdhari status can be included. The Hilal template is the most culturally specific — it is designed for Muslim families. All others are community-neutral by design.",
   },
   {
     q: "How many templates do you have, and are new ones added?",
@@ -66,14 +66,14 @@ const mistakes = [
 ];
 
 const familyTable = [
-  { family: "North Indian Hindu (UP, Delhi, Bihar, Rajasthan)", template: "Sober Blue Gold · Crimson Swirl Contrast", why: "Traditional aesthetic, warm colors, formal register" },
-  { family: "Marathi family (Maharashtra)", template: "Beautiful Golden Border · Leafs Effect", why: "Understated elegance, prints well for pandit copies" },
-  { family: "Muslim family (any state)", template: "Beautiful Traditional", why: "Bismillah opening, Islamic motifs, Sect/Biradari fields" },
-  { family: "South Indian family (Tamil, Telugu, Kannada, Kerala)", template: "Green Border Art · Modern", why: "Clean layout, horoscope fields prominent" },
-  { family: "IT professional / urban modern", template: "Modern · Sea Green Contrast · Green Off-White Contrast", why: "Minimal, WhatsApp-friendly, professional look" },
-  { family: "NRI family sharing abroad", template: "Modern · Sober Blue Gold", why: "English-first, clean, works on any screen size" },
-  { family: "Girl's biodata", template: "Leafs Effect · Green Border Art", why: "Softer aesthetic without being overly floral" },
-  { family: "Boy's biodata", template: "Sober Blue Gold · Modern · Green Off-White Contrast", why: "Professional, formal, career-forward layout" },
+  { family: "North Indian Hindu (UP, Delhi, Bihar, Rajasthan)", template: "Rajasvi · Kumkum", why: "Traditional aesthetic, warm colors, formal register" },
+  { family: "Marathi family (Maharashtra)", template: "Kanakamala · Peepal", why: "Understated elegance, prints well for pandit copies" },
+  { family: "Muslim family (any state)", template: "Hilal", why: "Bismillah opening, Islamic motifs, Sect/Biradari fields" },
+  { family: "South Indian family (Tamil, Telugu, Kannada, Kerala)", template: "Tulsi · Nutan", why: "Clean layout, horoscope fields prominent" },
+  { family: "IT professional / urban modern", template: "Nutan · Neel · Shvetambar", why: "Minimal, WhatsApp-friendly, professional look" },
+  { family: "NRI family sharing abroad", template: "Nutan · Rajasvi", why: "English-first, clean, works on any screen size" },
+  { family: "Girl's biodata", template: "Peepal · Tulsi", why: "Softer aesthetic without being overly floral" },
+  { family: "Boy's biodata", template: "Rajasvi · Nutan · Shvetambar", why: "Professional, formal, career-forward layout" },
 ];
 
 export function AnimatedTemplateSections() {
@@ -172,23 +172,23 @@ export function AnimatedTemplateSections() {
             <div className="space-y-4">
               <div className="premium-card-static rounded-xl p-5">
                 <p className="font-semibold text-slate-100 mb-2">If your family is traditional and religious:</p>
-                <p>Choose a template with warmer colors (gold, maroon, deep red) and ornamental borders. Crimson Swirl Contrast and Sober Blue Gold work well. Avoid templates that look too corporate or Western.</p>
+                <p>Choose a template with warmer colors (gold, maroon, deep red) and ornamental borders. Kumkum and Rajasvi work well. Avoid templates that look too corporate or Western.</p>
               </div>
               <div className="premium-card-static rounded-xl p-5">
                 <p className="font-semibold text-slate-100 mb-2">If you are an urban professional sharing on BharatMatrimony or with modern families:</p>
-                <p>Choose the Modern or Sea Green Contrast template. Clean lines, strong photo placement, easy to read on a phone screen.</p>
+                <p>Choose the Nutan or Neel template. Clean lines, strong photo placement, easy to read on a phone screen.</p>
               </div>
               <div className="premium-card-static rounded-xl p-5">
                 <p className="font-semibold text-slate-100 mb-2">If you are sharing primarily on WhatsApp:</p>
-                <p>Any template works, but prefer designs with high contrast between text and background — they hold up better when WhatsApp compresses the PDF for preview. Modern and Sober Blue Gold have the best WhatsApp readability.</p>
+                <p>Any template works, but prefer designs with high contrast between text and background — they hold up better when WhatsApp compresses the PDF for preview. Nutan and Rajasvi have the best WhatsApp readability.</p>
               </div>
               <div className="premium-card-static rounded-xl p-5">
                 <p className="font-semibold text-slate-100 mb-2">If the biodata will be printed:</p>
-                <p>Choose Beautiful Golden Border or Leafs Effect — both are designed with print margins and ink density in mind. Avoid very dark hero backgrounds if you are printing on a standard home printer.</p>
+                <p>Choose Kanakamala or Peepal — both are designed with print margins and ink density in mind. Avoid very dark hero backgrounds if you are printing on a standard home printer.</p>
               </div>
             </div>
             <p className="text-slate-400 text-base">
-              All templates include Gotra, Rashi, Nakshatra, and Manglik fields by default. Muslim families can use the Beautiful Traditional template or switch fields to Sect and Biradari using the custom fields feature.
+              All templates include Gotra, Rashi, Nakshatra, and Manglik fields by default. Muslim families can use the Hilal template or switch fields to Sect and Biradari using the custom fields feature.
             </p>
           </div>
         </div>
@@ -277,7 +277,7 @@ export function AnimatedTemplateSections() {
             <div className="premium-card-static rounded-xl p-6">
               <h3 className="text-lg font-semibold text-slate-100 mb-2">Print</h3>
               <p className="text-slate-400 leading-relaxed">
-                For families that still hand a printed copy to their pandit, community marriage bureau, or relatives at a family function, all templates are print-ready at A4 dimensions with appropriate margins. Ink-heavy dark backgrounds (like the Green Off-White Contrast hero) are flagged in the preview so you can choose a lighter option if printing at home.
+                For families that still hand a printed copy to their pandit, community marriage bureau, or relatives at a family function, all templates are print-ready at A4 dimensions with appropriate margins. Ink-heavy dark backgrounds (like the Shvetambar hero) are flagged in the preview so you can choose a lighter option if printing at home.
               </p>
             </div>
           </div>

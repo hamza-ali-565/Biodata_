@@ -30,15 +30,15 @@ const itemListSchema = {
   "url": "https://marriagebiodatahub.com/templates",
   "numberOfItems": 28,
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Crimson Swirl Contrast", "description": "Deep red and cream design with traditional Indian ornamental swirls. Suited for Hindu and North Indian families.", "url": "https://marriagebiodatahub.com/templates/crimson-swirl-contrast" },
-    { "@type": "ListItem", "position": 2, "name": "Green Border Art", "description": "Decorative green border with clean right-side photo layout. Popular with Maharashtra and South Indian families.", "url": "https://marriagebiodatahub.com/templates/green-border-art" },
-    { "@type": "ListItem", "position": 3, "name": "Beautiful Golden Border", "description": "Warm beige background with gold ornamental border. Designed for traditional Hindu and Marathi families.", "url": "https://marriagebiodatahub.com/templates/beautiful-golden-border" },
-    { "@type": "ListItem", "position": 4, "name": "Leafs Effect", "description": "Subtle green leaf corner artwork with oval photo frame. Natural and modern without being Western.", "url": "https://marriagebiodatahub.com/templates/leafs-effect" },
-    { "@type": "ListItem", "position": 5, "name": "Sea Green Contrast", "description": "Sea-green header panel with clean oval photo. Modern format for IT professionals and urban families.", "url": "https://marriagebiodatahub.com/templates/sea-green-contrast" },
-    { "@type": "ListItem", "position": 6, "name": "Green Off-White Contrast", "description": "Bold dark green header with circular photo cutout. High-contrast design that shares cleanly on WhatsApp.", "url": "https://marriagebiodatahub.com/templates/green-off-white-contrast" },
-    { "@type": "ListItem", "position": 7, "name": "Sober Blue Gold", "description": "Navy blue and gold formal design. Suited for families from UP, Bihar, Delhi and Rajasthan.", "url": "https://marriagebiodatahub.com/templates/sober-blue-gold" },
-    { "@type": "ListItem", "position": 8, "name": "Beautiful Traditional", "description": "Designed for Muslim families with Bismillah calligraphy, Islamic geometric arches, and Sect and Biradari fields.", "url": "https://marriagebiodatahub.com/templates/beautiful-traditional" },
-    { "@type": "ListItem", "position": 9, "name": "Modern", "description": "Minimal clean design with photo-right layout. Most popular with IT professionals and MBAs in metro cities.", "url": "https://marriagebiodatahub.com/templates/modern" }
+    { "@type": "ListItem", "position": 1, "name": "Kumkum", "description": "Deep red and cream design with traditional Indian ornamental swirls. Suited for Hindu and North Indian families.", "url": "https://marriagebiodatahub.com/templates/crimson-swirl-contrast" },
+    { "@type": "ListItem", "position": 2, "name": "Tulsi", "description": "Decorative green border with clean right-side photo layout. Popular with Maharashtra and South Indian families.", "url": "https://marriagebiodatahub.com/templates/green-border-art" },
+    { "@type": "ListItem", "position": 3, "name": "Kanakamala", "description": "Warm beige background with gold ornamental border. Designed for traditional Hindu and Marathi families.", "url": "https://marriagebiodatahub.com/templates/beautiful-golden-border" },
+    { "@type": "ListItem", "position": 4, "name": "Peepal", "description": "Subtle green leaf corner artwork with oval photo frame. Natural and modern without being Western.", "url": "https://marriagebiodatahub.com/templates/leafs-effect" },
+    { "@type": "ListItem", "position": 5, "name": "Neel", "description": "Sea-green header panel with clean oval photo. Modern format for IT professionals and urban families.", "url": "https://marriagebiodatahub.com/templates/sea-green-contrast" },
+    { "@type": "ListItem", "position": 6, "name": "Shvetambar", "description": "Bold dark green header with circular photo cutout. High-contrast design that shares cleanly on WhatsApp.", "url": "https://marriagebiodatahub.com/templates/green-off-white-contrast" },
+    { "@type": "ListItem", "position": 7, "name": "Rajasvi", "description": "Navy blue and gold formal design. Suited for families from UP, Bihar, Delhi and Rajasthan.", "url": "https://marriagebiodatahub.com/templates/sober-blue-gold" },
+    { "@type": "ListItem", "position": 8, "name": "Hilal", "description": "Designed for Muslim families with Bismillah calligraphy, Islamic geometric arches, and Sect and Biradari fields.", "url": "https://marriagebiodatahub.com/templates/beautiful-traditional" },
+    { "@type": "ListItem", "position": 9, "name": "Nutan", "description": "Minimal clean design with photo-right layout. Most popular with IT professionals and MBAs in metro cities.", "url": "https://marriagebiodatahub.com/templates/modern" }
   ]
 };
 
@@ -54,12 +54,12 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "Do all templates include Gotra, Rashi, and Nakshatra fields for Hindu families?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every template includes the full horoscope section — Gotra, Rashi, Nakshatra, Nadi, Gan, and Manglik status. If you are from a Muslim family, you can remove or replace these with Sect and Biradari fields using the custom fields feature. The Beautiful Traditional template is specifically designed for Muslim families." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every template includes the full horoscope section — Gotra, Rashi, Nakshatra, Nadi, Gan, and Manglik status. If you are from a Muslim family, you can remove or replace these with Sect and Biradari fields using the custom fields feature. The Hilal template is specifically designed for Muslim families." }
     },
     {
       "@type": "Question",
       "name": "Which marriage biodata template is best for sharing on WhatsApp?",
-      "acceptedAnswer": { "@type": "Answer", "text": "High-contrast designs with dark text on light backgrounds read most clearly after WhatsApp compresses the PDF. The Modern, Sober Blue Gold, and Sea Green Contrast templates have the best WhatsApp readability. Avoid very dark backgrounds if your biodata will be read primarily on a phone screen." }
+      "acceptedAnswer": { "@type": "Answer", "text": "High-contrast designs with dark text on light backgrounds read most clearly after WhatsApp compresses the PDF. The Nutan, Rajasvi, and Neel templates have the best WhatsApp readability. Avoid very dark backgrounds if your biodata will be read primarily on a phone screen." }
     },
     {
       "@type": "Question",

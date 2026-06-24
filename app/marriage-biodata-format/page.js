@@ -34,8 +34,8 @@ const faqs = [
     a: "A standard Indian marriage biodata format is a one-page document covering personal details (name, DOB, height), horoscope information (Gotra, Rashi, Nakshatra, and Manglik status for Hindu families), family background (parents' names and occupations, siblings), education and career, a short About Me section, partner preferences, and parent contact details. The exact format varies by community — Muslim biodatas include Sect and Biradari instead of horoscope fields, South Indian biodatas include Jathagam (horoscope) with star and rasi, and Marathi biodatas include Kul and Kulswamini.",
   },
   {
-    q: "Can I download a marriage biodata format in Word?",
-    a: "Yes. Marriage Biodata Hub allows you to download your completed biodata as both PDF and Word (.docx) format. PDF is recommended for WhatsApp sharing and matrimonial bureaus — it opens identically on every phone. Word format is useful if you want to make manual edits or submit text to a matrimonial site form.",
+    q: "Can I download a marriage biodata format as PDF?",
+    a: "Yes. Marriage Biodata Hub allows you to download your completed biodata as PDF (recommended for WhatsApp sharing and printing) or JPEG image. PDF is the best format — it opens identically on every phone and preserves the layout exactly.",
   },
   {
     q: "How many pages should a marriage biodata be?",
@@ -486,12 +486,12 @@ export default function MarriageBiodataFormat() {
           </p>
 
           {/* Section 8 — Download */}
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mt-14 mb-4">Free marriage biodata format download — PDF and Word</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mt-14 mb-4">Free marriage biodata format download — PDF and JPEG</h2>
           <p className="text-slate-300 leading-relaxed mb-6">
-            You can create, preview, and download a completed biodata — not a blank template — using our free tool. Both
-            PDF and Word formats are available. PDF is recommended for WhatsApp sharing and matrimonial bureaus. Word
-            format is useful if the recipient wants editable text or needs to submit content to a matrimonial site form.
-            No login, no payment, no watermark.
+            You can create, preview, and download a completed biodata — not a blank template — using our free tool.
+            PDF and JPEG image formats are available. PDF is recommended for WhatsApp sharing and matrimonial bureaus —
+            it preserves the layout exactly on every phone. JPEG is useful when a platform or recipient specifically wants
+            an image file. No login, no payment, no watermark.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <Link

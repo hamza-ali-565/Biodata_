@@ -24,6 +24,7 @@ export function TemplateBeautifulTraditional({ data, theme, headingFont, bodyFon
     ["Rashi", personal?.rashi],
     ["Nakshatra", personal?.nakshatra],
     ["Gotra", personal?.gotra],
+    ["Manglik", personal?.manglik],
     ["Time of Birth", personal?.timeOfBirth],
     ["Education", personal?.education || personal?.bachelors],
   ];

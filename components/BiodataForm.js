@@ -26,6 +26,7 @@ const biodataSchema = z.object({
     complexion: z.string().optional().default(""),
     height: z.string().optional().default(""),
     gotra: z.string().optional().default(""),
+    manglik: z.string().optional().default(""),
     bachelors: z.string().optional().default(""),
     occupation: z.string().optional().default(""),
     customFields: z.array(customFieldSchema).default([]),
@@ -491,6 +492,18 @@ export function BiodataForm() {
             <FieldShell section="personal" fieldKey="gotra" hiddenFields={hiddenFields} onRemove={handleRemoveField}>
               <label htmlFor="gotra" className="block text-xs font-medium text-slate-200">Gotra</label>
               <input id="gotra" type="text" {...register("personal.gotra")} className="w-full rounded-lg border border-white/10 bg-slate-900/80 px-3 py-2 text-xs text-slate-50 placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400" />
+            </FieldShell>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-3">
+            <FieldShell section="personal" fieldKey="manglik" hiddenFields={hiddenFields} onRemove={handleRemoveField}>
+              <label htmlFor="manglik" className="block text-xs font-medium text-slate-200">Manglik Status</label>
+              <select id="manglik" {...register("personal.manglik")} className="w-full rounded-lg border border-white/10 bg-slate-900/80 px-3 py-2 text-xs text-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">
+                <option value="">Select</option>
+                <option value="Yes — Manglik">Yes — Manglik</option>
+                <option value="No — Not Manglik">No — Not Manglik</option>
+                <option value="Partial Manglik">Partial Manglik</option>
+                <option value="Not Known">Not Known</option>
+              </select>
             </FieldShell>
           </div>
           <button

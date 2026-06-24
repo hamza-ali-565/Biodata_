@@ -34,6 +34,7 @@ export function TemplateClassicRoyal({ data, theme, headingFont, bodyFont }) {
                             {personal?.rashi ? <Row label="Rashi" value={personal.rashi} color={primaryColor} /> : null}
                             {personal?.nakshatra ? <Row label="Nakshatra" value={personal.nakshatra} color={primaryColor} /> : null}
                             {personal?.gotra ? <Row label="Gotra" value={personal.gotra} color={primaryColor} /> : null}
+                            {personal?.manglik ? <Row label="Manglik" value={personal.manglik} color={primaryColor} /> : null}
                             {personal?.complexion ? <Row label="Complexion" value={personal.complexion} color={primaryColor} /> : null}
                             {personal?.height ? <Row label="Height" value={personal.height} color={primaryColor} /> : null}
                             {personal?.bachelors ? <Row label="Education" value={personal.bachelors} color={primaryColor} /> : null}

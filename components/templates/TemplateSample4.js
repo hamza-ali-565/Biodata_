@@ -123,6 +123,7 @@ export function TemplateSample4({ data, theme, headingFont, bodyFont }) {
                     {personal?.religion ? <Row label="Religion" value={personal.religion} /> : null}
                     {personal?.caste ? <Row label="Caste" value={personal.caste} /> : null}
                     {personal?.gotra ? <Row label="Gotra" value={personal.gotra} /> : null}
+                    {personal?.manglik ? <Row label="Manglik" value={personal.manglik} /> : null}
                     {personal?.rashi ? <Row label="Rashi" value={personal.rashi} /> : null}
                     {personal?.nakshatra ? <Row label="Nakshatra" value={personal.nakshatra} /> : null}
                     {personal?.manglik !== undefined ? <Row label="Manglik" value={personal.manglik} /> : null}

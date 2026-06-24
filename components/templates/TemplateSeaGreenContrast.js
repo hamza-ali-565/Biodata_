@@ -25,6 +25,7 @@ export function TemplateSeaGreenContrast({ data, theme, headingFont, bodyFont })
     ["Rashi", personal?.rashi],
     ["Nakshatra", personal?.nakshatra],
     ["Gotra", personal?.gotra],
+    ["Manglik", personal?.manglik],
     ["Contact Information", [contact?.contactNumber, contact?.email].filter(Boolean).join(", ")],
     ["Address", contact?.address],
   ];

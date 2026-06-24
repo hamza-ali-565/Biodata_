@@ -38,8 +38,8 @@ const faqs = [
     a: "Kul (कुळ) is your ancestral clan or sub-lineage. Kulswamini (कुलस्वामिनी) is the family goddess associated with your Kul. Different Kuls worship different goddesses — for example, Jadhav Kul worships Tuljabhavani, Bhonsle Kul worships Bhavani. Many Marathi families consider visiting the Kulswamini temple an important part of the wedding ceremony.",
   },
   {
-    q: "Lagnacha biodata Word format madhye download karata yeil ka? (Can I download Lagnacha Biodata in Word format?)",
-    a: "Yes. Our tool lets you download your completed biodata as PDF (recommended for WhatsApp sharing) or Word (.docx) format. For Marathi families, PDF is recommended — it opens identically on all phones, which is important when sharing on WhatsApp.",
+    q: "Lagnacha biodata download karata yeil ka? (Can I download Lagnacha Biodata?)",
+    a: "Yes. Download your completed biodata as PDF (recommended for WhatsApp sharing and printing) or JPEG image format. PDF is strongly recommended for Marathi families — it opens identically on all phones without formatting issues, which matters when sharing on WhatsApp.",
   },
   {
     q: "Lagnacha biodata kiti paananche asave? (How many pages should a Lagnacha Biodata be?)",

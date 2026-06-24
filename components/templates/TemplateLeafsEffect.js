@@ -23,6 +23,7 @@ export function TemplateLeafsEffect({ data, theme, headingFont, bodyFont }) {
     ["Rashi", personal?.rashi],
     ["Nakshatra", personal?.nakshatra],
     ["Gotra", personal?.gotra],
+    ["Manglik", personal?.manglik],
     ["Marital Status", personal?.maritalStatus],
     ["Nationality", personal?.nationality],
   ];

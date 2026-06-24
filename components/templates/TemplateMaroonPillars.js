@@ -56,6 +56,7 @@ export function TemplateMaroonPillars({ data, theme, headingFont, bodyFont }) {
                             {personal?.rashi ? <Row label="Rashi" value={personal.rashi} textColor={textColor} /> : null}
                             {personal?.nakshatra ? <Row label="Nakshatra" value={personal.nakshatra} textColor={textColor} /> : null}
                             {personal?.gotra ? <Row label="Gotra" value={personal.gotra} textColor={textColor} /> : null}
+                            {personal?.manglik ? <Row label="Manglik" value={personal.manglik} textColor={textColor} /> : null}
                             {personal?.complexion ? <Row label="Complexion" value={personal.complexion} textColor={textColor} /> : null}
                             {personal?.height ? <Row label="Height" value={personal.height} textColor={textColor} /> : null}
                             {personal?.bachelors ? <Row label="Education" value={personal.bachelors} textColor={textColor} /> : null}

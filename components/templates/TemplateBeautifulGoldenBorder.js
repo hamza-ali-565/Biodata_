@@ -16,6 +16,7 @@ export function TemplateBeautifulGoldenBorder({ data, theme, headingFont, bodyFo
     ["Rashi", personal?.rashi],
     ["Nakshatra", personal?.nakshatra],
     ["Gotra", personal?.gotra],
+    ["Manglik", personal?.manglik],
     ["Religion", personal?.religion],
     ["Caste", personal?.caste],
     ["Height", personal?.height],

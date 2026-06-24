@@ -17,6 +17,7 @@ export function TemplateGreenOffWhiteContrast({ data, theme, headingFont, bodyFo
     ["Rashi", personal?.rashi],
     ["Nakshatra", personal?.nakshatra],
     ["Gotra", personal?.gotra],
+    ["Manglik", personal?.manglik],
     ["Complexion", personal?.complexion],
     ["Nationality", personal?.nationality],
     ["Religion", personal?.religion],

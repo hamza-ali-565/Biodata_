@@ -40,6 +40,7 @@ export function TemplateClassic({ data, theme, headingFont, bodyFont }) {
             {personal?.rashi ? <p><span className="font-semibold opacity-70">Rashi:</span> {personal.rashi}</p> : null}
             {personal?.nakshatra ? <p><span className="font-semibold opacity-70">Nakshatra:</span> {personal.nakshatra}</p> : null}
             {personal?.gotra ? <p><span className="font-semibold opacity-70">Gotra:</span> {personal.gotra}</p> : null}
+            {personal?.manglik ? <p><span className="font-semibold opacity-70">Manglik:</span> {personal.manglik}</p> : null}
             {personal?.complexion ? <p><span className="font-semibold opacity-70">Complexion:</span> {personal.complexion}</p> : null}
             {personal?.height ? <p><span className="font-semibold opacity-70">Height:</span> {personal.height}</p> : null}
             {personal?.bachelors ? <p><span className="font-semibold opacity-70">Education:</span> {personal.bachelors}</p> : null}
