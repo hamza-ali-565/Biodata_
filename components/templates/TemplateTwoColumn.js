@@ -82,9 +82,7 @@ export function TemplateTwoColumn({ data, theme, headingFont, bodyFont }) {
 
         </div></div>
 
-      <div className="p-3 text-center text-[9px] opacity-40 uppercase tracking-widest bg-slate-50/50 mt-auto">
-        Created with ❤ by Marriage Biodata Hub
-      </div>
+      
     </div>
   );
 }

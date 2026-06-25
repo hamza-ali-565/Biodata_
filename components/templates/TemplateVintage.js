@@ -81,9 +81,7 @@ export function TemplateVintage({ data, theme, headingFont, bodyFont }) {
 
 
 
-      <div className="p-3 text-center text-[9px] opacity-40 uppercase tracking-widest bg-slate-50/50 mt-auto">
-        Created with ❤ by Marriage Biodata Hub
-      </div>
+      
     </div>
   );
 }

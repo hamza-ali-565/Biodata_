@@ -1,3 +1,8 @@
+export { TemplateRoyalEmerald  } from "./TemplateRoyalEmerald";
+export { TemplateNightSky      } from "./TemplateNightSky";
+export { TemplateRishtaNikah   } from "./TemplateRishtaNikah";
+export { TemplatePrabhaat      } from "./TemplatePrabhaat";
+export { TemplateLagnaPatrika  } from "./TemplateLagnaPatrika";
 export { TemplateModern } from "./TemplateModern";
 export { TemplateClassic } from "./TemplateClassic";
 export { TemplateElegant } from "./TemplateElegant";
