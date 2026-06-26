@@ -33,6 +33,9 @@ export const THEME_OPTIONS = [
   { id: "gold", label: "Gold", accent: "#d97706", accentSoft: "#fef3c7", textHeading: "#78350f", previewColor: "#d97706" },
   { id: "gray", label: "Gray", accent: "#6b7280", accentSoft: "#f3f4f6", textHeading: "#1f2937", previewColor: "#6b7280" },
   { id: "classic-black", label: "Classic Black", accent: "#111827", accentSoft: "#e5e7eb", textHeading: "#020617", previewColor: "#111827" },
+  { id: "indigo", label: "Indigo", accent: "#4338ca", accentSoft: "#e0e7ff", textHeading: "#1e1b4b", previewColor: "#4338ca" },
+  { id: "teal",   label: "Teal",   accent: "#0f766e", accentSoft: "#ccfbf1", textHeading: "#0c1a18", previewColor: "#0f766e" },
+  { id: "navy",   label: "Navy",   accent: "#1e3a5f", accentSoft: "#e0eaf5", textHeading: "#0c1a2e", previewColor: "#1e3a5f" },
 ];
 
 export const generateSlug = (name) => {
@@ -41,6 +44,11 @@ export const generateSlug = (name) => {
 
 const RAW_TEMPLATE_DEFINITIONS = [
   
+    { id: "akashdeep",   slug: "akashdeep",   name: "Akashdeep",   layout: "TemplateAkashdeep",   style: "Modern",      description: "Cinematic full-bleed photo header with NRI detail section — the only biodata template designed specifically for Indian families abroad.", defaultThemeId: "indigo" },
+    { id: "kanakambar",  slug: "kanakambar",  name: "Kanakambar",  layout: "TemplateKanakambar",  style: "Traditional", description: "Repeating Kanakambar flower diamond band at top and bottom, ornate corner-bracket photo frame — a festive premium design for Gujarati, Marwari, and Rajasthani families.", defaultThemeId: "gold" },
+    { id: "shilp",       slug: "shilp",       name: "Shilp",       layout: "TemplateShilp",       style: "Traditional", description: "Blue and gold with Ik Onkar watermark and Waheguru blessing — the only Sikh-specific biodata template, built for Punjabi families with the Nishan Sahib colour palette.", defaultThemeId: "blue" },
+    { id: "manasvi",     slug: "manasvi",     name: "Manasvi",     layout: "TemplateManasvi",     style: "Modern",      description: "Ultra-minimal typographic layout — no borders, no SVG decoration, pure type and whitespace. For modern educated professionals who want clean, confident design.", defaultThemeId: "teal" },
+    { id: "udayam",      slug: "udayam",      name: "Udayam",      layout: "TemplateUdayam",      style: "Traditional", description: "Opens with a blessing line, cross watermark, Diocese field — the only Christian-specific biodata template, designed for Catholic, Protestant, and Syrian Christian families.", defaultThemeId: "navy" },
     { id: "royal-emerald", slug: "royal-emerald", name: "Royal Emerald", layout: "TemplateRoyalEmerald", style: "Traditional", description: "Emerald accent pillar with Ganesh invocation — crafted for Hindu, Brahmin, and North Indian families who want a premium, dignified presence.", defaultThemeId: "emerald" },
     { id: "night-sky", slug: "night-sky", name: "Night Sky", layout: "TemplateNightSky", style: "Modern", description: "Navy star-field header with hexagonal photo and contact chips — made for IT professionals, MBA graduates, and NRI families.", defaultThemeId: "blue" },
     { id: "rishta-nikah", slug: "rishta-nikah", name: "Rishta", layout: "TemplateRishtaNikah", style: "Traditional", description: "Opens with Bismillah calligraphy, Sect and Biradari fields, Islamic star motif — built specifically for Muslim families. No horoscope fields.", defaultThemeId: "gold" },

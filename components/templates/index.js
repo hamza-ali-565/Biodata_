@@ -1,3 +1,8 @@
+export { TemplateAkashdeep    } from "./TemplateAkashdeep";
+export { TemplateKanakambar  } from "./TemplateKanakambar";
+export { TemplateShilp       } from "./TemplateShilp";
+export { TemplateManasvi     } from "./TemplateManasvi";
+export { TemplateUdayam      } from "./TemplateUdayam";
 export { TemplateRoyalEmerald  } from "./TemplateRoyalEmerald";
 export { TemplateNightSky      } from "./TemplateNightSky";
 export { TemplateRishtaNikah   } from "./TemplateRishtaNikah";
