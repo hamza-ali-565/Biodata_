@@ -78,12 +78,33 @@ export function TemplateDetailClient({ templateId }) {
   };
 
   const handleExport = async (type) => {
-    if (!previewRef.current || !data) return;
+    if (!data) return;
+    if (type !== "docx" && !previewRef.current) return;
     setIsExporting(type);
 
     await new Promise(resolve => setTimeout(resolve, 100));
 
+    const fileName = `biodata-${data.personal?.name ? data.personal.name.replace(/\s+/g, "-").toLowerCase() : "marriage"}`;
+
     try {
+      if (type === "docx") {
+        const { generateBiodataDocx } = await import("../lib/export/generateBiodataDocx");
+        const blob = await generateBiodataDocx({
+          data,
+          theme: selectedTheme,
+          headingFontId,
+          bodyFontId,
+          templateId: selectedTemplateId,
+        });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = `${fileName}.docx`;
+        link.click();
+        URL.revokeObjectURL(url);
+        return;
+      }
+
       const { toCanvas } = await import("html-to-image");
       const element = previewRef.current.querySelector("[data-preview-root]") || previewRef.current;
       const canvas = await toCanvas(element, {
@@ -91,7 +112,6 @@ export function TemplateDetailClient({ templateId }) {
         backgroundColor: "#ffffff",
       });
       const imageData = canvas.toDataURL("image/jpeg", 1.0);
-      const fileName = `biodata-${data.personal?.name ? data.personal.name.replace(/\\s+/g, '-').toLowerCase() : "marriage"}`;
 
       if (type === "jpeg") {
         const link = document.createElement("a");
@@ -102,17 +122,14 @@ export function TemplateDetailClient({ templateId }) {
         const a4Width = 210;
         const a4Height = 297;
 
-        // Initially scale width to A4 width
         let imgWidth = a4Width;
         let imgHeight = (canvas.height * imgWidth) / canvas.width;
 
-        // If the scaled height exceeds A4 height, scale it down to fit perfectly on A4
         if (imgHeight > a4Height) {
           imgHeight = a4Height;
           imgWidth = (canvas.width * imgHeight) / canvas.height;
         }
 
-        // Center horizontally if scaled down by height
         const xOffset = (a4Width - imgWidth) / 2;
 
         const { default: jsPDF } = await import("jspdf");
@@ -122,16 +139,7 @@ export function TemplateDetailClient({ templateId }) {
           format: "a4",
         });
 
-        pdf.addImage(
-          imageData,
-          "JPEG",
-          xOffset,
-          0, // Top aligned
-          imgWidth,
-          imgHeight,
-          undefined,
-          "FAST"
-        );
+        pdf.addImage(imageData, "JPEG", xOffset, 0, imgWidth, imgHeight, undefined, "FAST");
         pdf.save(`${fileName}.pdf`);
       }
     } catch (err) {
@@ -314,6 +322,14 @@ export function TemplateDetailClient({ templateId }) {
                 className="inline-flex justify-center items-center rounded-full border border-slate-500 bg-slate-900/50 px-6 py-3 sm:py-2.5 text-xs font-semibold text-slate-100 transition hover:border-slate-300 hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-60 w-full sm:w-auto"
               >
                 {isExporting === "jpeg" ? "Processing JPEG…" : "Download JPEG"}
+              </button>
+              <button
+                type="button"
+                onClick={() => handleExport("docx")}
+                disabled={!data || isExporting !== null}
+                className="inline-flex justify-center items-center rounded-full border border-blue-500/50 bg-blue-900/30 px-6 py-3 sm:py-2.5 text-xs font-semibold text-blue-200 transition hover:border-blue-400 hover:bg-blue-900/50 disabled:cursor-not-allowed disabled:opacity-60 w-full sm:w-auto"
+              >
+                {isExporting === "docx" ? "Processing Word…" : "Download Word (.docx)"}
               </button>
             </div>
           </div>

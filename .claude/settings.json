@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const d=require\\('fs'\\);const j=JSON.parse\\(d.readFileSync\\('/dev/stdin','utf8'\\)\\);console.log\\(j.version\\)\")",
+      "Bash(node -e \"const {readFileSync}=require\\('fs'\\); console.log\\(JSON.parse\\(readFileSync\\('node_modules/docx/package.json','utf8'\\)\\).version\\)\")"
+    ]
+  }
+}
