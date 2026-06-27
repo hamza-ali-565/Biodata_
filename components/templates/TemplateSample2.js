@@ -1,3 +1,5 @@
+import { AboutMeSection } from "../templateAboutMe";
+
 export function TemplateSample2({ data, theme, headingFont, bodyFont }) {
   const headingStyle = { fontFamily: headingFont || "inherit" };
   const bodyStyle = { fontFamily: bodyFont || "inherit" };
@@ -86,6 +88,13 @@ export function TemplateSample2({ data, theme, headingFont, bodyFont }) {
                     {contact?.address ? <Row label="Address" value={contact.address} /> : null}
                     {contact?.customFields?.map(f => f.value ? <Row key={f.id} label={f.label} value={f.value} /> : null)}
                 </Section>
+
+                <AboutMeSection
+                    text={personal?.aboutMe}
+                    accent={headerBgColor}
+                    headingStyle={{ fontFamily: headingFont || "inherit" }}
+                    className="mt-5"
+                />
             </div>
 
             <div className="relative z-10 w-full mt-auto pt-6 pb-2 flex justify-center">

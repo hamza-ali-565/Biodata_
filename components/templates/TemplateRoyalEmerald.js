@@ -1,4 +1,5 @@
 import { createTypographyStyles, getPrimaryHeading } from "../templateTypography";
+import { AboutMeSection } from "../templateAboutMe";
 
 export function TemplateRoyalEmerald({ data, theme, headingFont, bodyFont }) {
   const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
@@ -153,7 +154,12 @@ export function TemplateRoyalEmerald({ data, theme, headingFont, bodyFont }) {
           </div>
         </div>
 
-   
+        <AboutMeSection
+          text={personal?.aboutMe}
+          accent={accent}
+          headingStyle={headingStyle}
+          className="mt-5"
+        />
       </div>
     </div>
   );

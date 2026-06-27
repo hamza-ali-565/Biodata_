@@ -150,7 +150,18 @@ export function TemplateLagnaPatrika({ data, theme, headingFont, bodyFont }) {
           )}
         </PatrikaSection>
 
-      
+        {personal?.aboutMe?.trim() && (
+          <PatrikaSection
+            title="माझ्याबद्दल / About Me"
+            accent={accent} heading={heading} headingStyle={headingStyle}
+            className="mt-5"
+          >
+            <p className="text-[12.5px] leading-relaxed text-[#2f2820] whitespace-pre-wrap break-words">
+              {personal.aboutMe}
+            </p>
+          </PatrikaSection>
+        )}
+
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import { createTypographyStyles, getPrimaryHeading } from "../templateTypography";
+import { AboutMeSection } from "../templateAboutMe";
 
 export function TemplateGreenBorderArt({ data, theme, headingFont, bodyFont }) {
   const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
@@ -130,6 +131,13 @@ export function TemplateGreenBorderArt({ data, theme, headingFont, bodyFont }) {
             )}
           </Section>
         ) : null}
+
+        <AboutMeSection
+          text={personal?.aboutMe}
+          accent={accent}
+          headingStyle={headingStyle}
+          className="mt-5"
+        />
       </div>
     </div>
   );

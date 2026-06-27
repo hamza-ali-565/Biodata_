@@ -137,6 +137,17 @@ export function TemplateKanakambar({ data, theme, headingFont, bodyFont }) {
           </KSection>
         </div>
 
+        {/* About Me */}
+        {personal?.aboutMe?.trim() && (
+          <div className="mt-4">
+            <KSection title="About Me" accent={accent} headingStyle={headingStyle}>
+              <p className="text-[12px] leading-relaxed text-[#2f2820] whitespace-pre-wrap break-words">
+                {personal.aboutMe}
+              </p>
+            </KSection>
+          </div>
+        )}
+
       </div>
 
       {/* Bottom Kanakambar band */}

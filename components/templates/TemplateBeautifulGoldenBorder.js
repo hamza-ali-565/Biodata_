@@ -1,3 +1,5 @@
+import { AboutMeSection } from "../templateAboutMe";
+
 export function TemplateBeautifulGoldenBorder({ data, theme, headingFont, bodyFont }) {
   const headingStyle = { fontFamily: headingFont || "inherit" };
   const bodyStyle = { fontFamily: bodyFont || "inherit" };
@@ -128,6 +130,13 @@ export function TemplateBeautifulGoldenBorder({ data, theme, headingFont, bodyFo
             ) : null
           )}
         </TemplateSection>
+
+        <AboutMeSection
+          text={personal?.aboutMe}
+          accent={accent}
+          headingStyle={{ fontFamily: headingFont || "inherit" }}
+          className="mt-6"
+        />
       </div>
     </div>
   );

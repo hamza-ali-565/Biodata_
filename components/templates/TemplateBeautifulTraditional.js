@@ -1,4 +1,5 @@
 import { createTypographyStyles, getPrimaryHeading } from "../templateTypography";
+import { AboutMeSection } from "../templateAboutMe";
 
 export function TemplateBeautifulTraditional({ data, theme, headingFont, bodyFont }) {
   const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
@@ -119,6 +120,13 @@ export function TemplateBeautifulTraditional({ data, theme, headingFont, bodyFon
               )}
             </div>
           </Section>
+
+          <AboutMeSection
+            text={personal?.aboutMe}
+            accent={gold}
+            headingStyle={headingStyle}
+            className="mt-6"
+          />
         </div>
       </div>
 

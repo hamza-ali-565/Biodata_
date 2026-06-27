@@ -1,4 +1,5 @@
 import { createTypographyStyles, getPrimaryHeading } from "../templateTypography";
+import { AboutMeSection } from "../templateAboutMe";
 
 export function TemplateArchMandala({ data, theme, headingFont, bodyFont }) {
   const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
@@ -115,6 +116,13 @@ export function TemplateArchMandala({ data, theme, headingFont, bodyFont }) {
                             {contact?.address ? <Row label="Address" value={contact.address} color={primaryColor} /> : null}
                             {contact?.customFields?.map(f => f.value ? <Row key={f.id} label={f.label} value={f.value} color={primaryColor} /> : null)}
                         </Section>
+
+                        <AboutMeSection
+                            text={personal?.aboutMe}
+                            accent={primaryColor}
+                            headingStyle={headingStyle}
+                            className="mt-6"
+                        />
                     </div>
                 </div>
             </div>

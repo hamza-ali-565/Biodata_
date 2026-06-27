@@ -129,7 +129,15 @@ export function TemplateUdayam({ data, theme, headingFont, bodyFont }) {
           )}
         </USection>
 
-     
+        {/* About Me */}
+        {personal?.aboutMe?.trim() && (
+          <USection title="About Me" accent={accent} headingStyle={headingStyle} className="mt-4">
+            <p className="text-[12px] leading-relaxed text-slate-800 whitespace-pre-wrap break-words">
+              {personal.aboutMe}
+            </p>
+          </USection>
+        )}
+
       </div>
 
       {/* Bottom accent rule */}

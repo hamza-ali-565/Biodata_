@@ -156,7 +156,13 @@ export function TemplateRishtaNikah({ data, theme, headingFont, bodyFont }) {
           </div>
         </RishtaSection>
 
-    
+        {personal?.aboutMe?.trim() && (
+          <RishtaSection title="About Me" accent={accent} headingStyle={headingStyle} className="mt-5">
+            <p className="text-[12.5px] leading-relaxed text-[#2f2a25] whitespace-pre-wrap break-words">
+              {personal.aboutMe}
+            </p>
+          </RishtaSection>
+        )}
       </div>
     </div>
   );

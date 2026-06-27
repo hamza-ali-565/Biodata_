@@ -29,6 +29,7 @@ const biodataSchema = z.object({
     manglik: z.string().optional().default(""),
     bachelors: z.string().optional().default(""),
     occupation: z.string().optional().default(""),
+    aboutMe: z.string().optional().default(""),
     customFields: z.array(customFieldSchema).default([]),
   }),
   family: z.object({
@@ -133,6 +134,7 @@ export function BiodataForm() {
         gotra: "",
         bachelors: "",
         occupation: "",
+        aboutMe: "",
         customFields: [],
       },
       family: {
@@ -505,6 +507,19 @@ export function BiodataForm() {
                 <option value="Not Known">Not Known</option>
               </select>
             </FieldShell>
+          </div>
+          <div className="space-y-1.5">
+            <label htmlFor="aboutMe" className="block text-xs font-medium text-slate-200">
+              About Me
+            </label>
+            <textarea
+              id="aboutMe"
+              rows={4}
+              {...register("personal.aboutMe")}
+              className="w-full rounded-lg border border-white/10 bg-slate-900/80 px-3 py-2 text-xs text-slate-50 placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 resize-none"
+              placeholder="Write a short paragraph about yourself — your personality, hobbies, values, and what you're looking for in a partner."
+            />
+            <p className="text-[11px] text-slate-500">Displayed in your biodata below the contact section. Leave blank to hide it.</p>
           </div>
           <button
             type="button"

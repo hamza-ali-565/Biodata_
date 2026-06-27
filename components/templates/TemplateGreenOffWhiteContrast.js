@@ -1,4 +1,5 @@
 import { createTypographyStyles, getPrimaryHeading } from "../templateTypography";
+import { AboutMeSection } from "../templateAboutMe";
 
 export function TemplateGreenOffWhiteContrast({ data, theme, headingFont, bodyFont }) {
   const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
@@ -150,6 +151,15 @@ export function TemplateGreenOffWhiteContrast({ data, theme, headingFont, bodyFo
             ) : null
           )}
         </div>
+      </section>
+
+      <section className="px-8 pb-4 text-[#1f1f1f]">
+        <AboutMeSection
+          text={personal?.aboutMe}
+          accent={deepGreen}
+          headingStyle={headingStyle}
+          className="mt-4"
+        />
       </section>
 
       <div className="pointer-events-none absolute inset-0 border border-black/5" />

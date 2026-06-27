@@ -1,4 +1,5 @@
 import { createTypographyStyles, getPrimaryHeading } from "../templateTypography";
+import { AboutMeSection } from "../templateAboutMe";
 
 export function TemplateNightSky({ data, theme, headingFont, bodyFont }) {
   const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
@@ -165,7 +166,15 @@ export function TemplateNightSky({ data, theme, headingFont, bodyFont }) {
         </div>
       </div>
 
-    
+      {/* About Me */}
+      {personal?.aboutMe?.trim() && (
+        <div className="border-t px-6 py-4" style={{ borderColor: `${accent}18` }}>
+          <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.15em]"
+             style={{ ...headingStyle, color: accent }} data-typography="heading">About Me</p>
+          <p className="text-[11px] leading-relaxed text-slate-700 whitespace-pre-wrap break-words">{personal.aboutMe}</p>
+        </div>
+      )}
+
     </div>
   );
 }

@@ -129,6 +129,15 @@ export function TemplateShilp({ data, theme, headingFont, bodyFont }) {
           )}
         </ShilpSection>
 
+        {/* About Me */}
+        {personal?.aboutMe?.trim() && (
+          <ShilpSection title="ABOUT ME" accent={accent} headingStyle={headingStyle} className="mt-5">
+            <p className="text-[12.5px] leading-relaxed text-slate-800 whitespace-pre-wrap break-words">
+              {personal.aboutMe}
+            </p>
+          </ShilpSection>
+        )}
+
       </div>
 
       {/* Bottom double rule */}

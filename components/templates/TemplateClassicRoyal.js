@@ -1,3 +1,5 @@
+import { AboutMeSection } from "../templateAboutMe";
+
 export function TemplateClassicRoyal({ data, theme, headingFont, bodyFont }) {
   const headingStyle = { fontFamily: headingFont || "inherit" };
   const bodyStyle = { fontFamily: bodyFont || "inherit" };
@@ -58,6 +60,13 @@ export function TemplateClassicRoyal({ data, theme, headingFont, bodyFont }) {
                             {contact?.address ? <Row label="Address" value={contact.address} color={primaryColor} /> : null}
                             {contact?.customFields?.map(f => f.value ? <Row key={f.id} label={f.label} value={f.value} color={primaryColor} /> : null)}
                         </Section>
+
+                        <AboutMeSection
+                            text={personal?.aboutMe}
+                            accent={primaryColor}
+                            headingStyle={{ fontFamily: headingFont || "inherit" }}
+                            className="mt-5"
+                        />
                     </div>
 
                     {/* Photo Column */}

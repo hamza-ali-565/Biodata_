@@ -1,4 +1,5 @@
 import { createTypographyStyles, getPrimaryHeading } from "../templateTypography";
+import { AboutMeSection } from "../templateAboutMe";
 
 export function TemplateSeaGreenContrast({ data, theme, headingFont, bodyFont }) {
   const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
@@ -143,6 +144,13 @@ export function TemplateSeaGreenContrast({ data, theme, headingFont, bodyFont })
             ) : null
           )}
         </div>
+
+        <AboutMeSection
+          text={personal?.aboutMe}
+          accent={sea}
+          headingStyle={headingStyle}
+          className="mt-6"
+        />
       </section>
     </div>
   );

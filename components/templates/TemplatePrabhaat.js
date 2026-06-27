@@ -1,4 +1,5 @@
 import { createTypographyStyles, getPrimaryHeading } from "../templateTypography";
+import { AboutMeSection } from "../templateAboutMe";
 
 export function TemplatePrabhaat({ data, theme, headingFont, bodyFont }) {
   const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
@@ -148,7 +149,13 @@ export function TemplatePrabhaat({ data, theme, headingFont, bodyFont }) {
           )}
         </PrabSection>
 
-      
+        <AboutMeSection
+          text={personal?.aboutMe}
+          accent={accent}
+          headingStyle={headingStyle}
+          className="mt-5 w-full"
+        />
+
       </div>
     </div>
   );

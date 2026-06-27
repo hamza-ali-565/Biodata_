@@ -1,3 +1,5 @@
+import { AboutMeSection } from "../templateAboutMe";
+
 export function TemplateSoberBlueGold({ data, theme, headingFont, bodyFont }) {
   const headingStyle = { fontFamily: headingFont || "inherit" };
   const bodyStyle = { fontFamily: bodyFont || "inherit" };
@@ -99,6 +101,13 @@ export function TemplateSoberBlueGold({ data, theme, headingFont, bodyFont }) {
             field?.value ? <Row key={field.id || field.label} label={field.label} value={field.value} /> : null
           )}
         </Section>
+
+        <AboutMeSection
+          text={personal?.aboutMe}
+          accent={gold}
+          headingStyle={{ fontFamily: headingFont || "inherit" }}
+          className="mt-5"
+        />
       </div>
     </div>
   );

@@ -115,6 +115,17 @@ export function TemplateManasvi({ data, theme, headingFont, bodyFont }) {
           )}
         </MSection>
 
+        {personal?.aboutMe?.trim() && (
+          <>
+            <div className="my-5 h-px w-full bg-slate-100" />
+            <MSection title="About Me" accent={accent}>
+              <p className="text-[13px] font-medium text-slate-900 whitespace-pre-wrap break-words leading-relaxed">
+                {personal.aboutMe}
+              </p>
+            </MSection>
+          </>
+        )}
+
       </div>
     </div>
   );

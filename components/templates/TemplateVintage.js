@@ -1,4 +1,5 @@
 import { createTypographyStyles, getPrimaryHeading } from "../templateTypography";
+import { AboutMeSection } from "../templateAboutMe";
 
 export function TemplateVintage({ data, theme, headingFont, bodyFont }) {
   const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
@@ -77,6 +78,13 @@ export function TemplateVintage({ data, theme, headingFont, bodyFont }) {
             {contact?.customFields?.map(f => f.value ? <p key={f.id}><span className="font-semibold opacity-70">{f.label}:</span> {f.value}</p> : null)}
           </div>
         </section>
+
+        <AboutMeSection
+          text={personal?.aboutMe}
+          accent={accent}
+          headingStyle={headingStyle}
+          className="mt-5"
+        />
       </div>
 
 

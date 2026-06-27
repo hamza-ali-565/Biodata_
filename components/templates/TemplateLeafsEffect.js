@@ -1,3 +1,5 @@
+import { AboutMeSection } from "../templateAboutMe";
+
 export function TemplateLeafsEffect({ data, theme, headingFont, bodyFont }) {
   const headingStyle = { fontFamily: headingFont || "inherit" };
   const bodyStyle = { fontFamily: bodyFont || "inherit" };
@@ -117,6 +119,13 @@ export function TemplateLeafsEffect({ data, theme, headingFont, bodyFont }) {
             )}
           </div>
         </Section>
+
+        <AboutMeSection
+          text={personal?.aboutMe}
+          accent={accent}
+          headingStyle={{ fontFamily: headingFont || "inherit" }}
+          className="mt-5"
+        />
       </div>
     </div>
   );

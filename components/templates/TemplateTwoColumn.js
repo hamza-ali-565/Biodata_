@@ -1,3 +1,5 @@
+import { AboutMeSection } from "../templateAboutMe";
+
 export function TemplateTwoColumn({ data, theme, headingFont, bodyFont }) {
   const headingStyle = { fontFamily: headingFont || "inherit" };
   const bodyStyle = { fontFamily: bodyFont || "inherit" };
@@ -78,6 +80,13 @@ export function TemplateTwoColumn({ data, theme, headingFont, bodyFont }) {
                 {contact?.customFields?.map(f => f.value ? <p key={f.id}><span className="font-semibold opacity-70">{f.label}:</span> {f.value}</p> : null)}
               </div>
             </section>
+
+            <AboutMeSection
+              text={personal?.aboutMe}
+              accent={accent}
+              headingStyle={{ fontFamily: headingFont || "inherit" }}
+              className="mt-5"
+            />
           </div>
 
         </div></div>
