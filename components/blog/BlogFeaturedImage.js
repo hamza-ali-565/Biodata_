@@ -1,11 +1,10 @@
 "use client";
 
-import { useMemo } from "react";
-import { getBlogImageCandidates } from "../../lib/blog/utils";
 import { BlogImage } from "./BlogImage";
 
+// image is server-resolved to the correct path by resolveBlogImage — trust it directly.
+// No client-side candidate generation needed; it was producing wrong blog-1 fallbacks for every post.
 export function BlogFeaturedImage({
-  slug,
   title,
   image,
   priority = false,
@@ -14,18 +13,11 @@ export function BlogFeaturedImage({
   sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px",
   variant = "featured",
 }) {
-  const candidates = useMemo(() => {
-    const list = image
-      ? [image, ...getBlogImageCandidates(slug, title)]
-      : getBlogImageCandidates(slug, title);
-    return [...new Set(list)];
-  }, [slug, title, image]);
-
   return (
     <BlogImage
-      src={image || candidates[0]}
+      src={image || null}
       alt={title}
-      candidates={candidates}
+      candidates={image ? [image] : []}
       priority={priority}
       sizes={sizes}
       variant={variant}
