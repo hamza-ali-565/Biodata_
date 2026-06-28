@@ -38,3 +38,8 @@ export { TemplateCrimsonSwirlContrast } from "./TemplateCrimsonSwirlContrast";
 export { TemplateSeaGreenContrast } from "./TemplateSeaGreenContrast";
 export { TemplateSoberBlueGold } from "./TemplateSoberBlueGold";
 export { TemplateBeautifulTraditional } from "./TemplateBeautifulTraditional";
+export { TemplatePavitraPatrika  } from "./TemplatePavitraPatrika";
+export { TemplateNoorNikah       } from "./TemplateNoorNikah";
+export { TemplateKonkanKiran     } from "./TemplateKonkanKiran";
+export { TemplateGuruNanak       } from "./TemplateGuruNanak";
+export { TemplateVivahVarta      } from "./TemplateVivahVarta";
