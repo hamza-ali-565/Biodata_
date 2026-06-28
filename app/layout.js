@@ -84,7 +84,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&family=Noto+Nastaliq+Urdu&family=Noto+Sans+Gurmukhi&family=Mukta+Mahee&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&family=Noto+Nastaliq+Urdu&family=Noto+Sans+Gurmukhi&family=Mukta+Mahee&family=Noto+Serif+Devanagari&family=Noto+Sans+Devanagari&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600;700&family=Eczar:wght@400;600;700&family=Hind:wght@400;600&display=swap"
           rel="stylesheet"
         />
         <Script

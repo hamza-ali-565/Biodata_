@@ -43,3 +43,8 @@ export { TemplateNoorNikah       } from "./TemplateNoorNikah";
 export { TemplateKonkanKiran     } from "./TemplateKonkanKiran";
 export { TemplateGuruNanak       } from "./TemplateGuruNanak";
 export { TemplateVivahVarta      } from "./TemplateVivahVarta";
+export { TemplateSanskaarSaathi } from "./TemplateSanskaarSaathi";
+export { TemplateDujiVaari      } from "./TemplateDujiVaari";
+export { TemplateVidyaDhan      } from "./TemplateVidyaDhan";
+export { TemplateGharDwaar      } from "./TemplateGharDwaar";
+export { TemplateAkhandJodi     } from "./TemplateAkhandJodi";
