@@ -323,6 +323,10 @@ export default function HindiBiodataForMarriage() {
                 { href: "/marriage-biodata-format", label: "Complete biodata format guide" },
                 { href: "/hindu-marriage-biodata", label: "Hindu marriage biodata" },
                 { href: "/muslim-biodata-for-marriage", label: "Muslim Rishta biodata" },
+                { href: "/sikh-biodata-for-marriage", label: "Sikh marriage biodata" },
+                { href: "/christian-biodata-for-marriage", label: "Christian marriage biodata" },
+                { href: "/jain-biodata-for-marriage", label: "Jain marriage biodata" },
+                { href: "/nri-biodata-for-marriage", label: "NRI marriage biodata" },
                 { href: "/about-me-for-marriage-biodata", label: "About Me examples" },
                 { href: "/templates", label: "Browse templates" },
               ].map(({ href, label }) => (

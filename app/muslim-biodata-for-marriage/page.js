@@ -316,6 +316,10 @@ export default function MuslimBiodataForMarriage() {
                 { href: "/what-is-marriage-biodata", label: "What is a marriage biodata?" },
                 { href: "/hindu-marriage-biodata", label: "Hindu marriage biodata" },
                 { href: "/hindi-biodata-for-marriage", label: "Hindi biodata (Shadi ka biodata)" },
+                { href: "/sikh-biodata-for-marriage", label: "Sikh marriage biodata" },
+                { href: "/christian-biodata-for-marriage", label: "Christian marriage biodata" },
+                { href: "/jain-biodata-for-marriage", label: "Jain marriage biodata" },
+                { href: "/nri-biodata-for-marriage", label: "NRI marriage biodata" },
                 { href: "/about-me-for-marriage-biodata", label: "About Me examples" },
                 { href: "/templates", label: "Browse templates" },
               ].map(({ href, label }) => (

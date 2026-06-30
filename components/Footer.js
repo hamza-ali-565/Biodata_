@@ -25,6 +25,8 @@ const communityGuides = [
   { name: "Lagnacha Biodata (Marathi)", path: "/marathi-biodata-for-marriage" },
   { name: "Sikh Marriage Biodata", path: "/sikh-biodata-for-marriage" },
   { name: "Christian Marriage Biodata", path: "/christian-biodata-for-marriage" },
+  { name: "Jain Marriage Biodata", path: "/jain-biodata-for-marriage" },
+  { name: "NRI Marriage Biodata", path: "/nri-biodata-for-marriage" },
 ];
 
 const freeResources = [
