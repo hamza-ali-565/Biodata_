@@ -5,26 +5,61 @@ import { BlogPageDecor } from "../../components/blog/BlogDecor";
 import { getPostsForListing } from "../../lib/blog/posts";
 
 export const metadata = {
-  title: "Blog | Marriage Biodata Tips & Template Ideas",
+  title: "Blog | Marriage Biodata Tips & Guide",
   description:
-    "Expert guides on marriage biodata templates, design tips for boys and girls, and how to create a premium, readable matrimonial profile.",
+    "Expert guides on writing, designing, and sharing your marriage biodata. Tips for every Indian community.",
   alternates: {
     canonical: "/blog",
   },
   openGraph: {
-    title: "Marriage Biodata Blog | Marriage Biodata Hub",
+    title: "Blog | Marriage Biodata Tips & Guide",
     description:
-      "Premium tips and creative ideas for marriage biodata templates.",
+      "Expert guides on writing, designing, and sharing your marriage biodata. Tips for every Indian community.",
     url: "/blog",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Marriage Biodata Tips & Guide",
+    description:
+      "Expert guides on writing, designing, and sharing your marriage biodata. Tips for every Indian community.",
+    images: ["/images/og-image.webp"],
+  },
 };
+
+const blogJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Marriage Biodata Hub Blog",
+    description: "Expert guides on writing, designing, and sharing your marriage biodata for every Indian community.",
+    url: "https://www.marriagebiodatahub.com/blog",
+    publisher: {
+      "@type": "Organization",
+      name: "Marriage Biodata Hub",
+      url: "https://www.marriagebiodatahub.com",
+    },
+    inLanguage: "en-IN",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.marriagebiodatahub.com" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.marriagebiodatahub.com/blog" },
+    ],
+  },
+];
 
 export default async function BlogListingPage() {
   const posts = await getPostsForListing();
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+      />
       <Header />
       <main className="blog-editorial-page relative min-h-screen w-full pb-24 font-sans">
         <BlogPageDecor />

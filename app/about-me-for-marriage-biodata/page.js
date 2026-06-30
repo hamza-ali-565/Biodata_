@@ -122,9 +122,9 @@ const jsonLd = [
     publisher: {
       "@type": "Organization",
       name: "Marriage Biodata Hub",
-      logo: { "@type": "ImageObject", url: "https://marriagebiodatahub.com/icon.png" },
+      logo: { "@type": "ImageObject", url: "https://www.marriagebiodatahub.com/icon.png" },
     },
-    mainEntityOfPage: { "@type": "WebPage", "@id": "https://marriagebiodatahub.com/about-me-for-marriage-biodata" },
+    mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.marriagebiodatahub.com/about-me-for-marriage-biodata" },
   },
   {
     "@context": "https://schema.org",
@@ -139,8 +139,8 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://marriagebiodatahub.com" },
-      { "@type": "ListItem", position: 2, name: "About Me for Marriage Biodata", item: "https://marriagebiodatahub.com/about-me-for-marriage-biodata" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.marriagebiodatahub.com" },
+      { "@type": "ListItem", position: 2, name: "About Me for Marriage Biodata", item: "https://www.marriagebiodatahub.com/about-me-for-marriage-biodata" },
     ],
   },
 ];

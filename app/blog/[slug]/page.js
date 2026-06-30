@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
   const post = await getPostBySlug(slug);
   if (!post) return { title: "Article Not Found" };
 
-  const canonical = `https://marriagebiodatahub.com/blog/${post.slug}`;
+  const canonical = `https://www.marriagebiodatahub.com/blog/${post.slug}`;
 
   return {
     title: `${post.title} | MBH`,
@@ -30,7 +30,15 @@ export async function generateMetadata({ params }) {
       url: `/blog/${post.slug}`,
       type: "article",
       publishedTime: post.publishedAt,
-      images: post.image ? [{ url: post.image }] : undefined,
+      images: post.image
+        ? [{ url: post.image }]
+        : [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: post.image ? [post.image] : ["/images/og-image.webp"],
     },
   };
 }
@@ -61,26 +69,61 @@ export default async function BlogArticlePage({ params }) {
     bodySections = [];
   }
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.excerpt,
-    datePublished: post.publishedAt,
-    author: {
-      "@type": "Organization",
-      name: "Marriage Biodata Hub",
+  const BASE = "https://www.marriagebiodatahub.com";
+  const pageUrl = `${BASE}/blog/${post.slug}`;
+
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: post.title,
+      description: post.excerpt,
+      datePublished: post.publishedAt,
+      dateModified: post.updatedAt || post.publishedAt,
+      author: {
+        "@type": "Organization",
+        name: "Marriage Biodata Hub",
+        url: BASE,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "Marriage Biodata Hub",
+        url: BASE,
+        logo: {
+          "@type": "ImageObject",
+          url: `${BASE}/images/Logo-of-marriage-biodata-hub.webp`,
+        },
+      },
+      inLanguage: "en-IN",
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": pageUrl,
+      },
+      ...(post.image ? { image: `${BASE}${post.image}` } : {}),
     },
-    publisher: {
-      "@type": "Organization",
-      name: "Marriage Biodata Hub",
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE },
+        { "@type": "ListItem", position: 2, name: "Blog", item: `${BASE}/blog` },
+        { "@type": "ListItem", position: 3, name: post.title, item: pageUrl },
+      ],
     },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://marriagebiodatahub.com/blog/${post.slug}`,
-    },
-    ...(post.image ? { image: `https://marriagebiodatahub.com${post.image}` } : {}),
-  };
+    ...(post.faqs && post.faqs.length > 0
+      ? [
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: post.faqs.map((f) => ({
+              "@type": "Question",
+              name: f.question,
+              acceptedAnswer: { "@type": "Answer", text: f.answer },
+            })),
+          },
+        ]
+      : []),
+  ];
 
   return (
     <>

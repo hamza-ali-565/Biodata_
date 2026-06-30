@@ -35,59 +35,111 @@ export default function Home() {
   const jsonLd = [
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
+      "@type": "SoftwareApplication",
       name: "Marriage Biodata Hub",
-      description: "Create beautiful, modern marriage biodata cards in minutes. Choose from premium templates, customise details, and download in PDF or JPEG formats.",
-      url: "https://marriagebiodatahub.com",
-      applicationCategory: "UtilityApplication",
-      operatingSystem: "Any",
+      "@id": "https://www.marriagebiodatahub.com/#app",
+      url: "https://www.marriagebiodatahub.com",
+      applicationCategory: "LifestyleApplication",
+      operatingSystem: "Web Browser, Android, iOS",
       offers: {
         "@type": "Offer",
         price: "0",
-        priceCurrency: "USD",
+        priceCurrency: "INR",
+        availability: "https://schema.org/InStock",
       },
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Marriage Biodata Hub",
-      url: "https://marriagebiodatahub.com",
-      logo: "https://marriagebiodatahub.com/images/Logo-of-marriage-biodata-hub.webp",
-      sameAs: [
-        "https://www.facebook.com/profile.php?id=61589515107640",
-        "https://www.pinterest.com/marriagebiodatahub/",
-        "https://www.linkedin.com/in/marriage-biodata-hub-1b2267412/"
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: "Marriage Biodata Hub",
-      url: "https://marriagebiodatahub.com",
+      description: "Free online marriage biodata maker with 28+ templates for Hindu, Muslim, Sikh, Christian, Jain, Marathi, and all Indian communities. No login required. Your data stays in your browser.",
+      inLanguage: "en-IN",
+      publisher: {
+        "@type": "Organization",
+        name: "Marriage Biodata Hub",
+        url: "https://www.marriagebiodatahub.com",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://www.marriagebiodatahub.com/images/Logo-of-marriage-biodata-hub.webp",
+        },
+      },
     },
     {
       "@context": "https://schema.org",
       "@type": "HowTo",
       name: "How to Create a Marriage Biodata",
-      description: "Create your marriage biodata in 3 easy steps.",
+      description: "Create and download a free marriage biodata in 3 steps. Most families finish in under 5 minutes.",
+      totalTime: "PT5M",
       step: [
         {
           "@type": "HowToStep",
-          name: "Fill Details",
-          text: "Enter your personal, family, and contact information into the biodata form."
+          position: 1,
+          name: "Personal Info",
+          text: "Enter your basic details, identity, and physical traits — name, date of birth, height, religion, caste, horoscope details, hobbies, and partner expectations.",
         },
         {
           "@type": "HowToStep",
-          name: "Choose a Template",
-          text: "Select from our premium and elegant biodata templates."
+          position: 2,
+          name: "Family Info",
+          text: "Add details about your parents' names and occupations, number and marital status of siblings, family type (joint or nuclear), and native place.",
         },
         {
           "@type": "HowToStep",
-          name: "Download",
-          text: "Download your completed marriage biodata in PDF or JPEG format."
-        }
-      ]
-    }
+          position: 3,
+          name: "Contact Info",
+          text: "Add the contact number (typically a parent's number), address, and WhatsApp number so interested families can reach you directly.",
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What is a marriage biodata?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A marriage biodata is a structured one-page document used in Indian arranged marriages. It introduces a bride or groom to a potential match's family, covering personal details, family background, education, career, horoscope information (for Hindu families), and partner preferences. It works like a resume but for the marriage process — and is typically shared via WhatsApp with relatives or uploaded to matrimonial sites like Shaadi.com and BharatMatrimony.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is Marriage Biodata Hub completely free?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. You can create your full biodata, choose any template, preview it, and download the PDF completely free — no login, no email, no credit card. Your data is processed in your browser and never stored on our servers.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I edit my biodata after downloading?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, always. Return to marriagebiodatahub.com on the same device and your information will be restored from your browser's local storage. Update any field and re-download your updated PDF anytime.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do I share my marriage biodata on WhatsApp?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "After downloading your PDF, tap the WhatsApp share button on the download screen. This opens WhatsApp with your biodata PDF attached and a ready-to-send message. You can also share the private link we generate — it opens your biodata beautifully on any phone without needing to download a file.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Which Indian communities does Marriage Biodata Hub support?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We have dedicated templates and fields for Hindu, Muslim, Sikh, Christian, Jain, Marathi, Gujarati, Tamil, Telugu, Bengali, and Punjabi communities. Each template includes the community-specific fields that families actually check — Gotra, Rashi, and Manglik for Hindu families; Sect and Biradari for Muslim families; Kul and Kulswamini for Marathi families; Natchathiram and Rasi for Tamil families.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need to include a photo in my biodata?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, if possible. A biodata with a photo receives significantly more responses than one without. Use a recent photo taken in the last 6 months, with a plain or light background, natural lighting, and a clear face. Avoid filters.",
+          },
+        },
+      ],
+    },
   ];
 
   return (

@@ -63,9 +63,9 @@ const jsonLd = [
     publisher: {
       "@type": "Organization",
       name: "Marriage Biodata Hub",
-      logo: { "@type": "ImageObject", url: "https://marriagebiodatahub.com/icon.png" },
+      logo: { "@type": "ImageObject", url: "https://www.marriagebiodatahub.com/icon.png" },
     },
-    mainEntityOfPage: { "@type": "WebPage", "@id": "https://marriagebiodatahub.com/muslim-biodata-for-marriage" },
+    mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.marriagebiodatahub.com/muslim-biodata-for-marriage" },
   },
   {
     "@context": "https://schema.org",
@@ -80,8 +80,8 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://marriagebiodatahub.com" },
-      { "@type": "ListItem", position: 2, name: "Muslim Biodata for Marriage", item: "https://marriagebiodatahub.com/muslim-biodata-for-marriage" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.marriagebiodatahub.com" },
+      { "@type": "ListItem", position: 2, name: "Muslim Biodata for Marriage", item: "https://www.marriagebiodatahub.com/muslim-biodata-for-marriage" },
     ],
   },
 ];

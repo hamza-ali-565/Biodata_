@@ -4,6 +4,6 @@ export default function robots() {
             userAgent: "*",
             allow: "/",
         },
-        sitemap: "https://marriagebiodatahub.com/sitemap.xml",
+        sitemap: "https://www.marriagebiodatahub.com/sitemap.xml",
     };
 }

@@ -27,18 +27,18 @@ const itemListSchema = {
   "@type": "ItemList",
   "name": "Marriage Biodata Templates",
   "description": "Free marriage biodata templates for Hindu, Muslim, Sikh, Marathi, Gujarati, Tamil and all Indian communities",
-  "url": "https://marriagebiodatahub.com/templates",
+  "url": "https://www.marriagebiodatahub.com/templates",
   "numberOfItems": 28,
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Kumkum", "description": "Deep red and cream design with traditional Indian ornamental swirls. Suited for Hindu and North Indian families.", "url": "https://marriagebiodatahub.com/templates/crimson-swirl-contrast" },
-    { "@type": "ListItem", "position": 2, "name": "Tulsi", "description": "Decorative green border with clean right-side photo layout. Popular with Maharashtra and South Indian families.", "url": "https://marriagebiodatahub.com/templates/green-border-art" },
-    { "@type": "ListItem", "position": 3, "name": "Kanakamala", "description": "Warm beige background with gold ornamental border. Designed for traditional Hindu and Marathi families.", "url": "https://marriagebiodatahub.com/templates/beautiful-golden-border" },
-    { "@type": "ListItem", "position": 4, "name": "Peepal", "description": "Subtle green leaf corner artwork with oval photo frame. Natural and modern without being Western.", "url": "https://marriagebiodatahub.com/templates/leafs-effect" },
-    { "@type": "ListItem", "position": 5, "name": "Neel", "description": "Sea-green header panel with clean oval photo. Modern format for IT professionals and urban families.", "url": "https://marriagebiodatahub.com/templates/sea-green-contrast" },
-    { "@type": "ListItem", "position": 6, "name": "Shvetambar", "description": "Bold dark green header with circular photo cutout. High-contrast design that shares cleanly on WhatsApp.", "url": "https://marriagebiodatahub.com/templates/green-off-white-contrast" },
-    { "@type": "ListItem", "position": 7, "name": "Rajasvi", "description": "Navy blue and gold formal design. Suited for families from UP, Bihar, Delhi and Rajasthan.", "url": "https://marriagebiodatahub.com/templates/sober-blue-gold" },
-    { "@type": "ListItem", "position": 8, "name": "Hilal", "description": "Designed for Muslim families with Bismillah calligraphy, Islamic geometric arches, and Sect and Biradari fields.", "url": "https://marriagebiodatahub.com/templates/beautiful-traditional" },
-    { "@type": "ListItem", "position": 9, "name": "Nutan", "description": "Minimal clean design with photo-right layout. Most popular with IT professionals and MBAs in metro cities.", "url": "https://marriagebiodatahub.com/templates/modern" }
+    { "@type": "ListItem", "position": 1, "name": "Kumkum", "description": "Deep red and cream design with traditional Indian ornamental swirls. Suited for Hindu and North Indian families.", "url": "https://www.marriagebiodatahub.com/templates/crimson-swirl-contrast" },
+    { "@type": "ListItem", "position": 2, "name": "Tulsi", "description": "Decorative green border with clean right-side photo layout. Popular with Maharashtra and South Indian families.", "url": "https://www.marriagebiodatahub.com/templates/green-border-art" },
+    { "@type": "ListItem", "position": 3, "name": "Kanakamala", "description": "Warm beige background with gold ornamental border. Designed for traditional Hindu and Marathi families.", "url": "https://www.marriagebiodatahub.com/templates/beautiful-golden-border" },
+    { "@type": "ListItem", "position": 4, "name": "Peepal", "description": "Subtle green leaf corner artwork with oval photo frame. Natural and modern without being Western.", "url": "https://www.marriagebiodatahub.com/templates/leafs-effect" },
+    { "@type": "ListItem", "position": 5, "name": "Neel", "description": "Sea-green header panel with clean oval photo. Modern format for IT professionals and urban families.", "url": "https://www.marriagebiodatahub.com/templates/sea-green-contrast" },
+    { "@type": "ListItem", "position": 6, "name": "Shvetambar", "description": "Bold dark green header with circular photo cutout. High-contrast design that shares cleanly on WhatsApp.", "url": "https://www.marriagebiodatahub.com/templates/green-off-white-contrast" },
+    { "@type": "ListItem", "position": 7, "name": "Rajasvi", "description": "Navy blue and gold formal design. Suited for families from UP, Bihar, Delhi and Rajasthan.", "url": "https://www.marriagebiodatahub.com/templates/sober-blue-gold" },
+    { "@type": "ListItem", "position": 8, "name": "Hilal", "description": "Designed for Muslim families with Bismillah calligraphy, Islamic geometric arches, and Sect and Biradari fields.", "url": "https://www.marriagebiodatahub.com/templates/beautiful-traditional" },
+    { "@type": "ListItem", "position": 9, "name": "Nutan", "description": "Minimal clean design with photo-right layout. Most popular with IT professionals and MBAs in metro cities.", "url": "https://www.marriagebiodatahub.com/templates/modern" }
   ]
 };
 
@@ -88,8 +88,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://marriagebiodatahub.com" },
-    { "@type": "ListItem", "position": 2, "name": "Marriage Biodata Templates", "item": "https://marriagebiodatahub.com/templates" }
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.marriagebiodatahub.com" },
+    { "@type": "ListItem", "position": 2, "name": "Marriage Biodata Templates", "item": "https://www.marriagebiodatahub.com/templates" }
   ]
 };
 

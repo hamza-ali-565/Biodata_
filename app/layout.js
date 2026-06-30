@@ -16,13 +16,13 @@ export const metadata = {
   creator: "Marriage Biodata Hub",
   applicationName: "Marriage Biodata Hub",
   alternates: {
-    canonical: "https://marriagebiodatahub.com",
+    canonical: "https://www.marriagebiodatahub.com",
   },
   category: "lifestyle",
   icons: {
     icon: "/icon.png",
   },
-  metadataBase: new URL("https://marriagebiodatahub.com"),
+  metadataBase: new URL("https://www.marriagebiodatahub.com"),
   openGraph: {
     title: "Free Marriage Biodata Maker — Create & Download | MBH",
     description:
@@ -64,19 +64,44 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Marriage Biodata Hub",
-    url: "https://marriagebiodatahub.com",
-    logo: "https://marriagebiodatahub.com/icon.png",
-    email: "marriagebiodatahub@gmail.com",
-    sameAs: [
-      "https://www.facebook.com/profile.php?id=61589515107640",
-      "https://www.pinterest.com/marriagebiodatahub/",
-      "https://www.linkedin.com/in/marriage-biodata-hub-1b2267412/",
-    ],
-  };
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.marriagebiodatahub.com/#organization",
+      name: "Marriage Biodata Hub",
+      url: "https://www.marriagebiodatahub.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.marriagebiodatahub.com/images/Logo-of-marriage-biodata-hub.webp",
+        width: 640,
+        height: 640,
+      },
+      description: "Free online marriage biodata maker for all Indian communities. 28+ templates. No login. No watermark.",
+      email: "marriagebiodatahub@gmail.com",
+      sameAs: [
+        "https://www.facebook.com/profile.php?id=61589515107640",
+        "https://www.pinterest.com/marriagebiodatahub/",
+        "https://www.linkedin.com/in/marriage-biodata-hub-1b2267412/",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: "marriagebiodatahub@gmail.com",
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://www.marriagebiodatahub.com/#website",
+      name: "Marriage Biodata Hub",
+      url: "https://www.marriagebiodatahub.com",
+      inLanguage: "en-IN",
+      publisher: {
+        "@id": "https://www.marriagebiodatahub.com/#organization",
+      },
+    },
+  ];
 
   return (
     <html lang="en" className={inter.className}>
