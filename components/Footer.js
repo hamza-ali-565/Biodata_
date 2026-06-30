@@ -23,6 +23,8 @@ const communityGuides = [
   { name: "Muslim Rishta Biodata", path: "/muslim-biodata-for-marriage" },
   { name: "Shadi Biodata (Hindi)", path: "/hindi-biodata-for-marriage" },
   { name: "Lagnacha Biodata (Marathi)", path: "/marathi-biodata-for-marriage" },
+  { name: "Sikh Marriage Biodata", path: "/sikh-biodata-for-marriage" },
+  { name: "Christian Marriage Biodata", path: "/christian-biodata-for-marriage" },
 ];
 
 const freeResources = [

@@ -24,6 +24,8 @@ const faqs = [
         links: [
             { href: "/hindu-marriage-biodata", label: "Hindu biodata guide" },
             { href: "/muslim-biodata-for-marriage", label: "Muslim biodata guide" },
+            { href: "/sikh-biodata-for-marriage", label: "Sikh biodata guide" },
+            { href: "/christian-biodata-for-marriage", label: "Christian biodata guide" },
             { href: "/marathi-biodata-for-marriage", label: "Marathi biodata guide" },
             { href: "/hindi-biodata-for-marriage", label: "Hindi shadi biodata" },
         ],
