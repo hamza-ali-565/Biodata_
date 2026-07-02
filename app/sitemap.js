@@ -94,6 +94,48 @@ const STATIC_ROUTES = [
     lastmod: "2026-07-01",
   },
   {
+    path: "/biodata-for-marriage-in-delhi",
+    changeFrequency: "monthly",
+    priority: 0.8,
+    lastmod: "2026-07-01",
+  },
+  {
+    path: "/biodata-for-marriage-in-mumbai",
+    changeFrequency: "monthly",
+    priority: 0.8,
+    lastmod: "2026-07-01",
+  },
+  {
+    path: "/biodata-for-marriage-in-pune",
+    changeFrequency: "monthly",
+    priority: 0.8,
+    lastmod: "2026-07-01",
+  },
+  {
+    path: "/biodata-for-marriage-in-chennai",
+    changeFrequency: "monthly",
+    priority: 0.8,
+    lastmod: "2026-07-01",
+  },
+  {
+    path: "/biodata-for-marriage-in-hyderabad",
+    changeFrequency: "monthly",
+    priority: 0.8,
+    lastmod: "2026-07-01",
+  },
+  {
+    path: "/biodata-for-marriage-in-bengaluru",
+    changeFrequency: "monthly",
+    priority: 0.8,
+    lastmod: "2026-07-01",
+  },
+  {
+    path: "/biodata-for-marriage-in-kolkata",
+    changeFrequency: "monthly",
+    priority: 0.8,
+    lastmod: "2026-07-01",
+  },
+  {
     path: "/about-us",
     changeFrequency: "monthly",
     priority: 0.75,

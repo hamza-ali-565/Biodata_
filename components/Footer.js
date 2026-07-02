@@ -29,6 +29,16 @@ const communityGuides = [
   { name: "NRI Marriage Biodata", path: "/nri-biodata-for-marriage" },
 ];
 
+const biodataByCity = [
+  { name: "Biodata in Delhi", path: "/biodata-for-marriage-in-delhi" },
+  { name: "Biodata in Mumbai", path: "/biodata-for-marriage-in-mumbai" },
+  { name: "Biodata in Pune", path: "/biodata-for-marriage-in-pune" },
+  { name: "Biodata in Chennai", path: "/biodata-for-marriage-in-chennai" },
+  { name: "Biodata in Hyderabad", path: "/biodata-for-marriage-in-hyderabad" },
+  { name: "Biodata in Bengaluru", path: "/biodata-for-marriage-in-bengaluru" },
+  { name: "Biodata in Kolkata", path: "/biodata-for-marriage-in-kolkata" },
+];
+
 const freeResources = [
   { name: "Blog", path: "/blog" },
   { name: "Design Tips", path: "/#design-tips" },
@@ -231,7 +241,7 @@ export function Footer() {
               </div>
 
               {/* Link columns */}
-              <div className="grid grid-cols-2 gap-8 sm:gap-10 md:grid-cols-4 lg:col-span-7">
+              <div className="grid grid-cols-2 gap-8 sm:gap-10 md:grid-cols-4 lg:col-span-7 xl:grid-cols-5">
                 <FooterColumn title="Quick Navigation">
                   <ul className="space-y-3">
                     {quickNavigation.map((item) => (
@@ -256,6 +266,16 @@ export function Footer() {
                   <ul className="space-y-3">
                     {communityGuides.map((item) => (
                       <li key={item.name}>
+                        <FooterLink href={item.path}>{item.name}</FooterLink>
+                      </li>
+                    ))}
+                  </ul>
+                </FooterColumn>
+
+                <FooterColumn title="Biodata by City">
+                  <ul className="space-y-3">
+                    {biodataByCity.map((item) => (
+                      <li key={item.path}>
                         <FooterLink href={item.path}>{item.name}</FooterLink>
                       </li>
                     ))}
