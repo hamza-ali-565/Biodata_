@@ -171,9 +171,7 @@ export function TemplatePavitraPatrika({ data, theme, headingFont, bodyFont }) {
 
         <AboutMeSection text={personal?.aboutMe} accent={accent} headingStyle={headingStyle} className="mt-4" />
 
-        <p className="text-center text-[9px] mt-4 opacity-40" style={{ color: charcoal }}>
-          Created with ♥ by Marriage Biodata Hub
-        </p>
+      
       </div>
     </div>
   );

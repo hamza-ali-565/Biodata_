@@ -344,7 +344,6 @@ export function TemplateSanskaarSaathi({ data, theme, headingFont, bodyFont }) {
           )}
         </div>
 
-        <p className="text-center text-[9px] mt-4 mb-3 opacity-30">Created with ♥ by Marriage Biodata Hub</p>
       </div>
     </div>
   );

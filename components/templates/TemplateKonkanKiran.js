@@ -150,9 +150,7 @@ export function TemplateKonkanKiran({ data, theme, headingFont, bodyFont }) {
 
         <AboutMeSection text={personal?.aboutMe} accent={blue} headingStyle={headingStyle} className="mt-4" />
 
-        <p className="text-center text-[9px] mt-5 opacity-30">
-          Created with ♥ by Marriage Biodata Hub
-        </p>
+      
       </div>
     </div>
   );

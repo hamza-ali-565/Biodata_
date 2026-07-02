@@ -1,18 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowUp, ChevronDown, Sparkles } from "lucide-react";
 import { SocialLinks } from "./SocialLinks";
 import { SmartLink } from "./SmartLink";
 import { ScrollToFormButton } from "./ScrollToFormButton";
 
-const quickNavigation = [
+const exploreLinks = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about-us" },
   { name: "Template Library", path: "/templates" },
   { name: "Biodata Builder", path: "/#biodata-form" },
-];
-
-const popularTemplates = [
   { name: "Traditional Biodata", path: "/templates" },
   { name: "Modern & Minimalist", path: "/templates" },
   { name: "Premium & Gold", path: "/templates" },
@@ -58,12 +55,19 @@ const supportLegal = [
 
 function FooterColumn({ title, children }) {
   return (
-    <div className="space-y-5">
-      <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-300/90 sm:text-xs">
-        {title}
-      </p>
-      {children}
-    </div>
+    <details
+      open
+      className="group/col border-b border-white/[0.06] pb-5 lg:border-0 lg:pb-0"
+    >
+      <summary className="flex cursor-pointer list-none items-center justify-between py-1 marker:content-none [&::-webkit-details-marker]:hidden lg:cursor-default lg:pointer-events-none lg:py-0">
+        <span className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-brand-300/90 sm:text-xs">
+          <span className="h-1 w-1 rounded-full bg-gradient-to-r from-brand-500 to-rose-500" aria-hidden />
+          {title}
+        </span>
+        <ChevronDown className="h-4 w-4 shrink-0 text-slate-500 transition-transform duration-300 group-open/col:rotate-180 lg:hidden" aria-hidden />
+      </summary>
+      <div className="mt-4 lg:mt-5">{children}</div>
+    </details>
   );
 }
 
@@ -241,21 +245,11 @@ export function Footer() {
               </div>
 
               {/* Link columns */}
-              <div className="grid grid-cols-2 gap-8 sm:gap-10 md:grid-cols-4 lg:col-span-7 xl:grid-cols-5">
-                <FooterColumn title="Quick Navigation">
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-8 lg:col-span-7 lg:grid-cols-4 lg:gap-8">
+                <FooterColumn title="Explore">
                   <ul className="space-y-3">
-                    {quickNavigation.map((item) => (
-                      <li key={item.path}>
-                        <FooterLink href={item.path}>{item.name}</FooterLink>
-                      </li>
-                    ))}
-                  </ul>
-                </FooterColumn>
-
-                <FooterColumn title="Popular Templates">
-                  <ul className="space-y-3">
-                    {popularTemplates.map((item) => (
-                      <li key={item.name}>
+                    {exploreLinks.map((item, i) => (
+                      <li key={`${item.path}-${i}`}>
                         <FooterLink href={item.path}>{item.name}</FooterLink>
                       </li>
                     ))}
@@ -314,12 +308,24 @@ export function Footer() {
 
             {/* Bottom bar */}
             <div className="flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 md:flex-row">
-              <p className="text-center text-sm font-medium text-slate-500 md:text-left">
-                © {new Date().getFullYear()} Marriage Biodata Hub. All rights reserved.
-              </p>
-              <p className="text-center text-xs text-slate-600 md:text-right">
-                Crafted for beautiful matrimonial introductions worldwide.
-              </p>
+              <div className="flex flex-col items-center gap-1 text-center md:items-start md:text-left">
+                <p className="text-sm font-medium text-slate-500">
+                  © {new Date().getFullYear()} Marriage Biodata Hub. All rights reserved.
+                </p>
+                <p className="text-xs text-slate-600">
+                  Crafted for beautiful matrimonial introductions worldwide.
+                </p>
+              </div>
+
+              <a
+                href="#top"
+                className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-semibold text-slate-400 transition-all duration-300 hover:border-brand-500/30 hover:bg-brand-500/10 hover:text-white"
+              >
+                Back to top
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/5 transition-transform duration-300 group-hover:-translate-y-0.5">
+                  <ArrowUp className="h-3.5 w-3.5" aria-hidden />
+                </span>
+              </a>
             </div>
           </div>
         </div>

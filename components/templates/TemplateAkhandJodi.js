@@ -210,7 +210,6 @@ export function TemplateAkhandJodi({ data, theme, headingFont, bodyFont }) {
         )}
       </div>
 
-      <p className="text-center text-[9px] mb-3 opacity-30">Created with ♥ by Marriage Biodata Hub</p>
     </div>
   );
 }

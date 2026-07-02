@@ -218,7 +218,6 @@ export function TemplateVivahVarta({ data, theme, headingFont, bodyFont }) {
 
         <AboutMeSection text={personal?.aboutMe} accent={navy} headingStyle={headingStyle} className="mt-4" />
 
-        <p className="text-center text-[9px] mt-4 opacity-30">Created with ♥ by Marriage Biodata Hub</p>
       </div>
     </div>
   );

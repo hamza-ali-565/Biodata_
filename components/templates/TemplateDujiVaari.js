@@ -249,7 +249,6 @@ export function TemplateDujiVaari({ data, theme, headingFont, bodyFont }) {
           )}
         </div>
 
-        <p className="text-center text-[9px] mt-4 opacity-30">Created with ♥ by Marriage Biodata Hub</p>
       </div>
     </div>
   );
