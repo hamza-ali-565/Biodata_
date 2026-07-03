@@ -12,7 +12,7 @@ export const viewport = {
 export const metadata = {
   title: "Free Marriage Biodata Maker — Create & Download | MBH",
   description:
-    "Create your marriage biodata free in 5 minutes. 28+ templates for Hindu, Muslim, Sikh & all Indian communities. No login. No watermark.",
+    "Create your marriage biodata free in 5 minutes. 40+ templates for Hindu, Muslim, Sikh & all Indian communities. No login. No watermark.",
   authors: [{ name: "Marriage Biodata Hub" }],
   creator: "Marriage Biodata Hub",
   applicationName: "Marriage Biodata Hub",
@@ -27,7 +27,7 @@ export const metadata = {
   openGraph: {
     title: "Free Marriage Biodata Maker — Create & Download | MBH",
     description:
-      "Create your marriage biodata free in 5 minutes. 28+ templates for Hindu, Muslim, Sikh & all Indian communities. No login. No watermark.",
+      "Create your marriage biodata free in 5 minutes. 40+ templates for Hindu, Muslim, Sikh & all Indian communities. No login. No watermark.",
     url: "/",
     siteName: "Marriage Biodata Hub",
     images: [
@@ -45,7 +45,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Free Marriage Biodata Maker — Create & Download | MBH",
     description:
-      "Create your marriage biodata free in 5 minutes. 28+ templates for Hindu, Muslim, Sikh & all Indian communities. No login. No watermark.",
+      "Create your marriage biodata free in 5 minutes. 40+ templates for Hindu, Muslim, Sikh & all Indian communities. No login. No watermark.",
     images: ["/images/og-image.webp"],
   },
   robots: {
@@ -78,7 +78,7 @@ export default function RootLayout({ children }) {
         width: 640,
         height: 640,
       },
-      description: "Free online marriage biodata maker for all Indian communities. 28+ templates. No login. No watermark.",
+      description: "Free online marriage biodata maker for all Indian communities. 40+ templates. No login. No watermark.",
       email: "marriagebiodatahub@gmail.com",
       sameAs: [
         "https://www.facebook.com/profile.php?id=61589515107640",

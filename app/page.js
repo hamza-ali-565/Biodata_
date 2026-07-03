@@ -48,7 +48,7 @@ export default function Home() {
         priceCurrency: "INR",
         availability: "https://schema.org/InStock",
       },
-      description: "Free online marriage biodata maker with 28+ templates for Hindu, Muslim, Sikh, Christian, Jain, Marathi, and all Indian communities. No login required. Your data stays in your browser.",
+      description: "Free online marriage biodata maker with 40+ templates for Hindu, Muslim, Sikh, Christian, Jain, Marathi, and all Indian communities. No login required. Your data stays in your browser.",
       inLanguage: "en-IN",
       publisher: {
         "@type": "Organization",

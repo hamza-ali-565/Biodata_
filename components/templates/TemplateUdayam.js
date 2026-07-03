@@ -7,7 +7,6 @@ export function TemplateUdayam({ data, theme, headingFont, bodyFont }) {
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
   const accent     = theme?.accent      || "#1e3a5f";
-  const accentSoft = theme?.accentSoft  || "#e0eaf5";
   const heading    = theme?.textHeading || "#0c1a2e";
 
   const blessingField = (personal?.customFields || []).find(f => f.label === "Blessing");

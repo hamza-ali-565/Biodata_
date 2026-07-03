@@ -5,6 +5,7 @@ export function TemplateMaroonPillars({ data, theme, headingFont, bodyFont }) {
   const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
 
     const { personal, family, contact } = data || {};
+    const hasPhoto = !!data?.photoDataUrl;
 
     // High contrast maroon and gold/yellow
     const bgColor = theme?.accent || "#6b2c2c"; // Deep maroon red
@@ -92,7 +93,7 @@ export function TemplateMaroonPillars({ data, theme, headingFont, bodyFont }) {
                     </div>
 
                     {/* Photo Column */}
-                    {data?.photoDataUrl && (
+                    {hasPhoto && (
                         <div className="md:w-[280px] flex-shrink-0 flex flex-col items-center mb-8 md:mb-0">
                             <div className="w-[180px] h-[180px] rounded-full overflow-hidden border-[4px] shadow-2xl mb-6 relative z-10" style={{ borderColor: accentColor }}>
                                 {/* eslint-disable-next-line @next/next/no-img-element */}

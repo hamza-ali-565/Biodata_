@@ -61,29 +61,30 @@ export function TemplateBeautifulTraditional({ data, theme, headingFont, bodyFon
 
       <div className="relative z-10 flex flex-col items-center px-8 pb-12 pt-[110px]">
         {/* Profile Picture */}
-        <div className="relative flex justify-center">
-          <div 
-            className="relative z-10 h-[140px] w-[140px] overflow-hidden rounded-full border-[3px] shadow-lg"
-            style={{ borderColor: gold, backgroundColor: '#0f3a2c' }}
-          >
-            {photoDataUrl ? (
-              // eslint-disable-next-line @next/next/no-img-element
+        {photoDataUrl ? (
+          <div className="relative flex justify-center">
+            <div
+              className="relative z-10 h-[140px] w-[140px] overflow-hidden rounded-full border-[3px] shadow-lg"
+              style={{ borderColor: gold, backgroundColor: '#0f3a2c' }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={photoDataUrl}
                 alt={personal?.name || "Profile"}
                 className="h-full w-full object-cover"
               />
-            ) : (
-              <div className="flex h-full w-full items-center justify-center text-[11px] uppercase tracking-wider text-[#9aa7a1]">
-                Photo
-              </div>
-            )}
+            </div>
+            <GoldenSparkles color={gold} />
           </div>
-          <GoldenSparkles color={gold} />
-        </div>
+        ) : (
+          <div className="relative flex justify-center">
+            <span style={{ color: gold, fontSize: "26px", lineHeight: 1 }}>✦</span>
+            <GoldenSparkles color={gold} />
+          </div>
+        )}
 
         {/* Name */}
-        <div className="mt-4 max-w-[480px] text-center text-[36px] font-bold leading-tight tracking-wide" style={{ ...headingStyle, color: gold }} data-typography="heading">
+        <div className={`max-w-[480px] text-center font-bold leading-tight tracking-wide ${photoDataUrl ? "mt-4 text-[36px]" : "mt-3 text-[40px]"}`} style={{ ...headingStyle, color: gold }} data-typography="heading">
           {getPrimaryHeading(personal)}
         </div>
 

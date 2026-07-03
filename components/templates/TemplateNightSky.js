@@ -7,6 +7,7 @@ export function TemplateNightSky({ data, theme, headingFont, bodyFont }) {
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
+  const hasPhoto = !!photoDataUrl;
   const accent     = theme?.accent      || "#1e40af";
   const accentSoft = theme?.accentSoft  || "#dbeafe";
   const heading    = theme?.textHeading || "#0f172a";
@@ -55,30 +56,25 @@ export function TemplateNightSky({ data, theme, headingFont, bodyFont }) {
         }}
       >
         {/* Hexagonal photo */}
-        <div className="flex-shrink-0">
-          <div
-            className="h-[138px] w-[120px] overflow-hidden bg-slate-700"
-            style={{
-              clipPath: "polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)",
-            }}
-          >
-            {photoDataUrl ? (
-              // eslint-disable-next-line @next/next/no-img-element
+        {hasPhoto && (
+          <div className="flex-shrink-0">
+            <div
+              className="h-[138px] w-[120px] overflow-hidden bg-slate-700"
+              style={{
+                clipPath: "polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)",
+              }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={photoDataUrl} alt={personal?.name || "Profile"}
                    className="h-full w-full object-cover" />
-            ) : (
-              <div className="flex h-full w-full items-center justify-center
-                              text-[9px] uppercase tracking-wider text-slate-400">
-                Photo
-              </div>
-            )}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Name block */}
         <div className="min-w-0 flex-1">
           <div
-            className="text-[27px] font-bold leading-tight text-white"
+            className={hasPhoto ? "text-[27px] font-bold leading-tight text-white" : "text-[31px] font-bold leading-tight text-white"}
             style={headingStyle}
             data-typography="heading"
           >

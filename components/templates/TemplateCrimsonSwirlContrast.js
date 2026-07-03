@@ -66,7 +66,24 @@ export function TemplateCrimsonSwirlContrast({ data, theme, headingFont, bodyFon
 
       <div className="relative z-10 px-8 pt-4">
         <Section title="Personal Details" color={heading}>
-          <div className="grid grid-cols-[1.1fr_0.9fr] gap-4">
+          {photoDataUrl ? (
+            <div className="grid grid-cols-[1.1fr_0.9fr] gap-4">
+              <div className="space-y-1.5">
+                {personalRows.map(([label, value]) => (
+                  <Row key={label} label={label} value={value} />
+                ))}
+                {personal?.customFields?.map((field) =>
+                  field?.value ? <Row key={field.id || field.label} label={field.label} value={field.value} /> : null
+                )}
+              </div>
+              <div className="flex justify-end pt-1">
+                <div className="h-[252px] w-[198px] overflow-hidden rounded-[999px] border-2 bg-[#e4e3df]" style={{ borderColor: `${accent}cc` }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={photoDataUrl} alt={personal?.name || "Profile"} className="h-full w-full object-cover" />
+                </div>
+              </div>
+            </div>
+          ) : (
             <div className="space-y-1.5">
               {personalRows.map(([label, value]) => (
                 <Row key={label} label={label} value={value} />
@@ -75,17 +92,7 @@ export function TemplateCrimsonSwirlContrast({ data, theme, headingFont, bodyFon
                 field?.value ? <Row key={field.id || field.label} label={field.label} value={field.value} /> : null
               )}
             </div>
-            <div className="flex justify-end pt-1">
-              <div className="h-[252px] w-[198px] overflow-hidden rounded-[999px] border-2 bg-[#e4e3df]" style={{ borderColor: `${accent}cc` }}>
-                {photoDataUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={photoDataUrl} alt={personal?.name || "Profile"} className="h-full w-full object-cover" />
-                ) : (
-                  <div className="flex h-full w-full items-center justify-center text-[10px] uppercase tracking-wider text-[#7d7d72]">Photo</div>
-                )}
-              </div>
-            </div>
-          </div>
+          )}
         </Section>
 
         <Section title="Family Details" color={heading} className="mt-5">

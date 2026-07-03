@@ -100,7 +100,7 @@ export function TemplateVivahVarta({ data, theme, headingFont, bodyFont }) {
           {/* Left: name + details */}
           <div className="flex-1">
             <div className="flex items-center gap-3 flex-wrap">
-              <div className="text-[28px] font-bold leading-tight"
+              <div className={photoDataUrl ? "text-[28px] font-bold leading-tight" : "text-[31px] font-bold leading-tight"}
                    style={{ ...headingStyle, color: heading }} data-typography="heading">
                 {getPrimaryHeading(personal)}
               </div>
@@ -117,23 +117,21 @@ export function TemplateVivahVarta({ data, theme, headingFont, bodyFont }) {
           </div>
 
           {/* Right: rounded rectangle photo */}
-          <div className="flex-shrink-0"
-               style={{
-                 width: 100, height: 120,
-                 borderRadius: 8,
-                 border: `2px solid ${navy}`,
-                 boxShadow: "0 2px 8px rgba(30,45,74,0.15)",
-                 overflow: "hidden",
-                 backgroundColor: `${navy}18`,
-                 display: "flex", alignItems: "center", justifyContent: "center",
-               }}>
-            {photoDataUrl ? (
-              // eslint-disable-next-line @next/next/no-img-element
+          {photoDataUrl && (
+            <div className="flex-shrink-0"
+                 style={{
+                   width: 100, height: 120,
+                   borderRadius: 8,
+                   border: `2px solid ${navy}`,
+                   boxShadow: "0 2px 8px rgba(30,45,74,0.15)",
+                   overflow: "hidden",
+                   backgroundColor: `${navy}18`,
+                   display: "flex", alignItems: "center", justifyContent: "center",
+                 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={photoDataUrl} alt={personal?.name || "Profile"} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-            ) : (
-              <span style={{ fontSize: "9px", color: navy, textTransform: "uppercase", letterSpacing: "0.05em" }}>Photo</span>
-            )}
-          </div>
+            </div>
+          )}
         </div>
 
         {/* Gold rule below header */}

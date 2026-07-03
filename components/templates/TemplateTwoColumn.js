@@ -22,10 +22,10 @@ export function TemplateTwoColumn({ data, theme, headingFont, bodyFont }) {
           {photoDataUrl ? (
             <img src={photoDataUrl} alt="Profile" className="w-32 h-40 rounded-xl object-cover mb-4 shadow-lg" style={{ borderColor: accent }} />
           ) : (
-            <div className="w-32 h-40 rounded-xl object-cover mb-4 shadow-lg bg-slate-100 flex items-center justify-center text-[10px] text-slate-400 border border-dashed border-slate-300">Photo</div>
+            <span style={{ color: accent, fontSize: "20px", lineHeight: 1, marginBottom: "12px" }}>✦</span>
           )}
 
-          <div className="text-lg font-bold mt-2" style={{ color: textHeading }}>{personal.name}</div>
+          <div className={`font-bold mt-2 ${photoDataUrl ? "text-lg" : "text-xl"}`} style={{ color: textHeading }}>{personal.name}</div>
           </div>
         <div className="w-2/3 p-6">
 

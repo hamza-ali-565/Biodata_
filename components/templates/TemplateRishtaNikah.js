@@ -6,6 +6,7 @@ export function TemplateRishtaNikah({ data, theme, headingFont, bodyFont }) {
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
+  const hasPhoto = !!photoDataUrl;
   const accent     = theme?.accent      || "#b45309";
   const accentSoft = theme?.accentSoft  || "#fef3c7";
   const heading    = theme?.textHeading || "#1c1008";
@@ -88,8 +89,8 @@ export function TemplateRishtaNikah({ data, theme, headingFont, bodyFont }) {
         </div>
 
         {/* Photo + Name */}
-        <div className="flex items-start gap-6 mb-5">
-          {photoDataUrl && (
+        <div className={hasPhoto ? "flex items-start gap-6 mb-5" : "text-center mb-5"}>
+          {hasPhoto && (
             <div className="flex-shrink-0 text-center">
               <div
                 className="h-[190px] w-[150px] overflow-hidden rounded-[8px] border-2 bg-[#e8e1d5]"
@@ -104,9 +105,9 @@ export function TemplateRishtaNikah({ data, theme, headingFont, bodyFont }) {
               </p>
             </div>
           )}
-          <div className="flex-1">
+          <div className={hasPhoto ? "flex-1" : ""}>
             <div
-              className="text-[26px] font-bold leading-tight"
+              className={hasPhoto ? "text-[26px] font-bold leading-tight" : "text-[30px] font-bold leading-tight"}
               style={{ ...headingStyle, color: heading }}
               data-typography="heading"
             >

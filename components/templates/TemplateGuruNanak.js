@@ -8,6 +8,7 @@ export function TemplateGuruNanak({ data, theme, headingFont, bodyFont }) {
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
+  const hasPhoto = !!photoDataUrl;
   const saffron = theme?.accent      || "#FF6B00";
   const blue    = theme?.textHeading || "#1B3A6B";
   const bg      = "#FFFFFF";
@@ -76,23 +77,22 @@ export function TemplateGuruNanak({ data, theme, headingFont, bodyFont }) {
 
         {/* Left saffron panel */}
         <div style={{ flexShrink: 0, width: "80px", backgroundColor: saffron, display: "flex", flexDirection: "column", alignItems: "center", padding: "16px 0" }}>
-          {/* Circular photo */}
-          <div style={{
-            width: 60, height: 60, borderRadius: "50%",
-            border: "3px solid white",
-            outline: `2px solid ${blue}`,
-            overflow: "hidden",
-            backgroundColor: `${blue}33`,
-            display: "flex", alignItems: "center", justifyContent: "center",
-            flexShrink: 0,
-          }}>
-            {photoDataUrl ? (
-              // eslint-disable-next-line @next/next/no-img-element
+          {hasPhoto ? (
+            <div style={{
+              width: 60, height: 60, borderRadius: "50%",
+              border: "3px solid white",
+              outline: `2px solid ${blue}`,
+              overflow: "hidden",
+              backgroundColor: `${blue}33`,
+              display: "flex", alignItems: "center", justifyContent: "center",
+              flexShrink: 0,
+            }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={photoDataUrl} alt={personal?.name || "Profile"} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-            ) : (
-              <span style={{ fontSize: "8px", color: "white", textAlign: "center", padding: "2px" }}>Photo</span>
-            )}
-          </div>
+            </div>
+          ) : (
+            <span style={{ color: "white", fontSize: "18px", lineHeight: 1 }}>ੴ</span>
+          )}
 
           {/* Vertical name */}
           <div style={{

@@ -6,8 +6,8 @@ export function TemplateLagnaPatrika({ data, theme, headingFont, bodyFont }) {
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
+  const hasPhoto = !!photoDataUrl;
   const accent     = theme?.accent      || "#b45309";
-  const accentSoft = theme?.accentSoft  || "#fef3c7";
   const heading    = theme?.textHeading || "#1a3a1a";
 
   const personalRows = [
@@ -87,23 +87,28 @@ export function TemplateLagnaPatrika({ data, theme, headingFont, bodyFont }) {
         </div>
 
         {/* Name + Photo */}
-        <div className="flex items-start gap-6 mb-5">
-          <div className="flex-1">
+        <div className={`flex items-start mb-5 ${hasPhoto ? "gap-6" : "flex-col items-center text-center"}`}>
+          <div className={hasPhoto ? "flex-1" : "flex-1 w-full"}>
             <div
-              className="text-[26px] font-bold leading-tight"
+              className={hasPhoto ? "text-[26px] font-bold leading-tight" : "text-[29px] font-bold leading-tight text-center"}
               style={{ ...headingStyle, color: heading }}
               data-typography="heading"
             >
               {getPrimaryHeading(personal)}
             </div>
             {personal?.occupation && (
-              <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">
+              <p className={`mt-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500 ${hasPhoto ? "" : "text-center"}`}>
                 {personal.occupation}
               </p>
             )}
+            {!hasPhoto && (
+              <div className="mt-2 flex justify-center">
+                <div className="h-[1.5px] w-[28px]" style={{ backgroundColor: accent }} />
+              </div>
+            )}
           </div>
 
-          {photoDataUrl && (
+          {hasPhoto && (
             <div
               className="h-[196px] w-[150px] flex-shrink-0 overflow-hidden rounded-[6px] border-2 bg-[#e8e1d5]"
               style={{ borderColor: `${accent}bb` }}

@@ -16,16 +16,14 @@ export function TemplateDark({ data, theme, headingFont, bodyFont }) {
       style={{ ...bodyStyle, }}
     >
 
-      <div className="p-6 flex flex-row gap-6 items-center bg-slate-50/50">
+      <div className={`p-6 flex flex-row gap-6 items-center bg-slate-50/50 ${photoDataUrl ? "" : "justify-center text-center"}`}>
 
-        {photoDataUrl ? (
+        {photoDataUrl && (
           <img src={photoDataUrl} alt="Profile" className="w-24 h-32 rounded-lg object-cover overflow-hidden" style={{ borderColor: accent }} />
-        ) : (
-          <div className="w-24 h-32 rounded-lg object-cover overflow-hidden bg-slate-100 flex items-center justify-center text-[10px] text-slate-400 border border-dashed border-slate-300">Photo</div>
         )}
 
-        <div className="flex-1 text-left">
-          <div className="text-2xl font-bold" style={{ ...headingStyle, color: textHeading }} data-typography="heading">{getPrimaryHeading(personal)}</div>
+        <div className={photoDataUrl ? "flex-1 text-left" : "text-center"}>
+          <div className={`font-bold ${photoDataUrl ? "text-2xl" : "text-3xl"}`} style={{ ...headingStyle, color: textHeading }} data-typography="heading">{getPrimaryHeading(personal)}</div>
           <p className="text-xs text-slate-600 mt-1">{personal.occupation || "Occupation"}</p>
         </div>
       </div>

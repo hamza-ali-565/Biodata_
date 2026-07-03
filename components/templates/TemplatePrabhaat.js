@@ -7,6 +7,7 @@ export function TemplatePrabhaat({ data, theme, headingFont, bodyFont }) {
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
+  const hasPhoto = !!photoDataUrl;
   const accent     = theme?.accent      || "#7f1d1d";
   const accentSoft = theme?.accentSoft  || "#fee2e2";
   const heading    = theme?.textHeading || "#3b0a0a";
@@ -69,30 +70,29 @@ export function TemplatePrabhaat({ data, theme, headingFont, bodyFont }) {
       <div className="relative z-10 flex w-full flex-col items-center px-9 py-7">
 
         {/* Mandala + Photo */}
-        <div className="relative mb-3 flex items-center justify-center">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <LotusMandala color={accent} size={196} />
-          </div>
-          <div
-            className="relative z-10 h-[118px] w-[118px] overflow-hidden rounded-full border-2 bg-[#e8e4dc]"
-            style={{ borderColor: `${accent}cc` }}
-          >
-            {photoDataUrl ? (
-              // eslint-disable-next-line @next/next/no-img-element
+        {hasPhoto ? (
+          <div className="relative mb-3 flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <LotusMandala color={accent} size={196} />
+            </div>
+            <div
+              className="relative z-10 h-[118px] w-[118px] overflow-hidden rounded-full border-2 bg-[#e8e4dc]"
+              style={{ borderColor: `${accent}cc` }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={photoDataUrl} alt={personal?.name || "Profile"}
                    className="h-full w-full object-cover" />
-            ) : (
-              <div className="flex h-full w-full items-center justify-center
-                              text-[9px] uppercase tracking-wider text-[#7a6a5a]">
-                Photo
-              </div>
-            )}
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="relative mb-2 flex items-center justify-center">
+            <LotusMandala color={accent} size={72} />
+          </div>
+        )}
 
         {/* Name + subtitle */}
         <div
-          className="mt-1 text-center text-[26px] font-bold leading-tight"
+          className={hasPhoto ? "mt-1 text-center text-[26px] font-bold leading-tight" : "mt-1 text-center text-[30px] font-bold leading-tight"}
           style={{ ...headingStyle, color: heading }}
           data-typography="heading"
         >

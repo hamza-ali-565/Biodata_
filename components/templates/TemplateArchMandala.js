@@ -59,17 +59,12 @@ export function TemplateArchMandala({ data, theme, headingFont, bodyFont }) {
                             style={{ borderColor: bgColor }}
                         />
                     ) : (
-                        <div
-                            className="w-[200px] h-[200px] rounded-full border-[6px] bg-slate-200 flex items-center justify-center z-20"
-                            style={{ borderColor: bgColor }}
-                        >
-                            <span className="text-slate-400">Photo</span>
-                        </div>
+                        <span className="z-20" style={{ color: primaryColor, fontSize: "28px", lineHeight: 1 }}>❖</span>
                     )}
 
                     {/* Name */}
                     <div
-                        className="mt-6 text-3xl md:text-5xl font-bold uppercase tracking-widest text-center"
+                        className={`text-3xl md:text-5xl font-bold uppercase tracking-widest text-center ${data?.photoDataUrl ? "mt-6" : "mt-4"}`}
                         style={{ ...headingStyle, color: primaryColor }}
                         data-typography="heading"
                     >

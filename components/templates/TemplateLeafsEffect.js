@@ -7,6 +7,7 @@ export function TemplateLeafsEffect({ data, theme, headingFont, bodyFont }) {
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
+  const hasPhoto = !!photoDataUrl;
   const accent = theme?.accent || "#596533";
   const heading = theme?.textHeading || "#303820";
 
@@ -63,7 +64,7 @@ export function TemplateLeafsEffect({ data, theme, headingFont, bodyFont }) {
 
       <div className="relative z-10 px-8 pt-4">
         <Section title="Personal Information" color={heading} lineColor={accent} className="mt-2">
-          <div className="grid grid-cols-[1.1fr_0.9fr] gap-4">
+          <div className={hasPhoto ? "grid grid-cols-[1.1fr_0.9fr] gap-4" : "grid grid-cols-1"}>
             <div className="space-y-1.5">
               {personalRows.map(([label, value]) => (
                 <Row key={label} label={label} value={value} />
@@ -75,22 +76,18 @@ export function TemplateLeafsEffect({ data, theme, headingFont, bodyFont }) {
               )}
             </div>
 
-            <div className="flex justify-end pt-2">
-              <div className="h-[250px] w-[190px] overflow-hidden rounded-[999px] border-[3px] bg-[#e5e5df]" style={{ borderColor: `${accent}bb` }}>
-                {photoDataUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
+            {hasPhoto && (
+              <div className="flex justify-end pt-2">
+                <div className="h-[250px] w-[190px] overflow-hidden rounded-[999px] border-[3px] bg-[#e5e5df]" style={{ borderColor: `${accent}bb` }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={photoDataUrl}
                     alt={personal?.name || "Profile"}
                     className="h-full w-full object-cover"
                   />
-                ) : (
-                  <div className="flex h-full w-full items-center justify-center text-[10px] uppercase tracking-wider text-[#7d7d72]">
-                    Photo
-                  </div>
-                )}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </Section>
 

@@ -7,7 +7,6 @@ export function TemplateShilp({ data, theme, headingFont, bodyFont }) {
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
   const accent     = theme?.accent      || "#1d4ed8";
-  const accentSoft = theme?.accentSoft  || "#dbeafe";
   const heading    = theme?.textHeading || "#1e3a5f";
 
   const personalRows = [
@@ -75,28 +74,25 @@ export function TemplateShilp({ data, theme, headingFont, bodyFont }) {
         {/* Photo + Name header */}
         <div className="flex items-center gap-6 mb-5 p-4 rounded-xl"
              style={{ backgroundColor: `${accent}08`, border: `1px solid ${accent}18` }}>
-          <div
-            className="h-[110px] w-[110px] overflow-hidden rounded-full border-[3px] flex-shrink-0 bg-slate-200"
-            style={{ borderColor: accent }}
-          >
-            {photoDataUrl ? (
-              // eslint-disable-next-line @next/next/no-img-element
+          {photoDataUrl && (
+            <div
+              className="h-[110px] w-[110px] overflow-hidden rounded-full border-[3px] flex-shrink-0 bg-slate-200"
+              style={{ borderColor: accent }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={photoDataUrl} alt={personal?.name || "Profile"}
                    className="h-full w-full object-cover" />
-            ) : (
-              <div className="flex h-full w-full items-center justify-center
-                              text-[9px] uppercase tracking-wider text-slate-400">Photo</div>
-            )}
-          </div>
-          <div>
+            </div>
+          )}
+          <div className={photoDataUrl ? "" : "flex-1 text-center"}>
             <div
-              className="text-[26px] font-bold leading-tight"
+              className={photoDataUrl ? "text-[26px] font-bold leading-tight" : "text-[29px] font-bold leading-tight"}
               style={{ ...headingStyle, color: heading }}
               data-typography="heading"
             >
               {getPrimaryHeading(personal)}
             </div>
-            <div className="mt-1 flex items-center gap-2 text-[11px] text-slate-500">
+            <div className={`mt-1 flex items-center gap-2 text-[11px] text-slate-500 ${photoDataUrl ? "" : "justify-center"}`}>
               {personal?.occupation && <span>{personal.occupation}</span>}
               {personal?.placeOfBirth && (
                 <><span style={{ color: accent }}>·</span><span>{personal.placeOfBirth}</span></>

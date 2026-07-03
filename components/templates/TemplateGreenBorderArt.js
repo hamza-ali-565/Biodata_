@@ -7,6 +7,7 @@ export function TemplateGreenBorderArt({ data, theme, headingFont, bodyFont }) {
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
+  const hasPhoto = !!photoDataUrl;
   const accent = theme?.accent || "#4d6225";
   const heading = theme?.textHeading || "#1e3a22";
 
@@ -72,7 +73,7 @@ export function TemplateGreenBorderArt({ data, theme, headingFont, bodyFont }) {
         </div>
         <OrnamentLine color={accent} className="mt-1" />
 
-        <div className="mt-4 grid grid-cols-[1.15fr_0.85fr] gap-6">
+        <div className={hasPhoto ? "mt-4 grid grid-cols-[1.15fr_0.85fr] gap-6" : "mt-4"}>
           <div>
             {hasPersonal ? (
               <Section title="Personal Details" color={heading} lineColor={accent} headingStyle={headingStyle}>
@@ -88,22 +89,18 @@ export function TemplateGreenBorderArt({ data, theme, headingFont, bodyFont }) {
             ) : null}
           </div>
 
-          <div className="pt-2">
-            <div className="mx-auto h-[270px] w-[202px] overflow-hidden rounded-[16px] border-2 bg-[#e5e5df]" style={{ borderColor: `${accent}cc` }}>
-              {photoDataUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
+          {hasPhoto && (
+            <div className="pt-2">
+              <div className="mx-auto h-[270px] w-[202px] overflow-hidden rounded-[16px] border-2 bg-[#e5e5df]" style={{ borderColor: `${accent}cc` }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={photoDataUrl}
                   alt={personal?.name || "Profile"}
                   className="h-full w-full object-cover"
                 />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center text-[10px] uppercase tracking-wider text-[#7a7a70]">
-                  Photo
-                </div>
-              )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         {hasFamily ? (

@@ -6,6 +6,7 @@ export function TemplateModern({ data, theme, headingFont, bodyFont }) {
 
   if (!data) return null;
   const { personal, family, contact, photoDataUrl } = data;
+  const hasPhoto = !!photoDataUrl;
   const accent = theme?.accent || "#b45309";
   const accentSoft = theme?.accentSoft || "#fef3c7";
   const textHeading = theme?.textHeading || "#1f2937";
@@ -16,16 +17,14 @@ export function TemplateModern({ data, theme, headingFont, bodyFont }) {
       style={{ ...bodyStyle, borderLeft: `12px solid ${accent}` }}
     >
 
-      <div className="p-6 flex flex-row-reverse gap-6 items-center bg-slate-50/50">
+      <div className={hasPhoto ? "p-6 flex flex-row-reverse gap-6 items-center bg-slate-50/50" : "p-6 bg-slate-50/50 text-center"}>
 
-        {photoDataUrl ? (
+        {hasPhoto && (
           <img src={photoDataUrl} alt="Profile" className="w-24 h-32 rounded-lg object-cover overflow-hidden" style={{ borderColor: accent }} />
-        ) : (
-          <div className="w-24 h-32 rounded-lg object-cover overflow-hidden bg-slate-100 flex items-center justify-center text-[10px] text-slate-400 border border-dashed border-slate-300">Photo</div>
         )}
 
-        <div className="flex-1 text-right">
-          <div className="text-2xl font-bold" style={{ ...headingStyle, color: textHeading }} data-typography="heading">{getPrimaryHeading(personal)}</div>
+        <div className={hasPhoto ? "flex-1 text-right" : ""}>
+          <div className={hasPhoto ? "text-2xl font-bold" : "text-3xl font-bold"} style={{ ...headingStyle, color: textHeading }} data-typography="heading">{getPrimaryHeading(personal)}</div>
           <p className="text-xs text-slate-600 mt-1">{personal.occupation || "Occupation"}</p>
         </div>
       </div>

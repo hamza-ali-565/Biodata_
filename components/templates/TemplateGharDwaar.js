@@ -40,8 +40,8 @@ export function TemplateGharDwaar({ data, theme, headingFont, bodyFont }) {
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
+  const hasPhoto = !!photoDataUrl;
   const terracotta = theme?.accent      || "#A0522D";
-  const fieldGreen = theme?.accentSoft  ? theme.accentSoft : "#4A7C59";
   const heading    = theme?.textHeading || "#A0522D";
   const bg         = "#FAF3E0";
 
@@ -118,7 +118,7 @@ export function TemplateGharDwaar({ data, theme, headingFont, bodyFont }) {
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1">
             <div
-              className="text-[26px] font-bold leading-tight"
+              className={hasPhoto ? "text-[26px] font-bold leading-tight" : "text-[29px] font-bold leading-tight"}
               style={{ ...headingStyle, color: heading }}
               data-typography="heading"
             >
@@ -143,33 +143,28 @@ export function TemplateGharDwaar({ data, theme, headingFont, bodyFont }) {
             </div>
           </div>
 
-          {/* Photo */}
-          <div
-            className="flex-shrink-0"
-            style={{
-              width: 100,
-              height: 120,
-              border: `2px solid ${terracotta}`,
-              overflow: "hidden",
-              backgroundColor: `${terracotta}12`,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            {photoDataUrl ? (
-              // eslint-disable-next-line @next/next/no-img-element
+          {hasPhoto && (
+            <div
+              className="flex-shrink-0"
+              style={{
+                width: 100,
+                height: 120,
+                border: `2px solid ${terracotta}`,
+                overflow: "hidden",
+                backgroundColor: `${terracotta}12`,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={photoDataUrl}
                 alt={personal?.name || "Profile"}
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
-            ) : (
-              <span style={{ fontSize: "9px", color: terracotta, textTransform: "uppercase", letterSpacing: "0.05em" }}>
-                Photo
-              </span>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </div>
 

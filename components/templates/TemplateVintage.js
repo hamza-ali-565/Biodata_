@@ -21,10 +21,10 @@ export function TemplateVintage({ data, theme, headingFont, bodyFont }) {
         {photoDataUrl ? (
           <img src={photoDataUrl} alt="Profile" className="w-24 h-32 rounded-lg object-cover overflow-hidden mx-auto mb-4 border-2" style={{ borderColor: accent }} />
         ) : (
-          <div className="w-24 h-32 rounded-lg object-cover overflow-hidden mx-auto mb-4 border-2 bg-slate-100 flex items-center justify-center text-[10px] text-slate-400 border border-dashed border-slate-300">Photo</div>
+          <span style={{ color: accent, fontSize: "22px", lineHeight: 1, display: "block", marginBottom: "12px" }}>❋</span>
         )}
 
-        <div className="text-3xl font-serif" style={{ ...headingStyle, color: textHeading }} data-typography="heading">{getPrimaryHeading(personal)}</div>
+        <div className={`font-serif ${photoDataUrl ? "text-3xl" : "text-4xl"}`} style={{ ...headingStyle, color: textHeading }} data-typography="heading">{getPrimaryHeading(personal)}</div>
       </div>
 
 

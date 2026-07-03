@@ -62,7 +62,7 @@ export function TemplateSoberBlueGold({ data, theme, headingFont, bodyFont }) {
       <div className="relative z-10 px-8 pt-3">
         <OrnamentLine color={gold} className="mt-1" />
 
-        <div className="mt-3 grid grid-cols-[1.12fr_0.88fr] gap-5">
+        <div className={photoDataUrl ? "mt-3 grid grid-cols-[1.12fr_0.88fr] gap-5" : "mt-3"}>
           <Section title="Personal Details" headingColor={navy} lineColor={gold}>
             {personalRows.map(([label, value]) => (
               <Row key={label} label={label} value={value} />
@@ -72,16 +72,14 @@ export function TemplateSoberBlueGold({ data, theme, headingFont, bodyFont }) {
             )}
           </Section>
 
-          <div className="pt-1">
-            <div className="mx-auto h-[296px] w-[210px] overflow-hidden rounded-[22px] border-2 bg-[#e3e1dd]" style={{ borderColor: `${gold}dd` }}>
-              {photoDataUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
+          {photoDataUrl && (
+            <div className="pt-1">
+              <div className="mx-auto h-[296px] w-[210px] overflow-hidden rounded-[22px] border-2 bg-[#e3e1dd]" style={{ borderColor: `${gold}dd` }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={photoDataUrl} alt={personal?.name || "Profile"} className="h-full w-full object-cover" />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center text-[10px] uppercase tracking-wider text-[#77726b]">Photo</div>
-              )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         <Section title="Family Details" headingColor={navy} lineColor={gold} className="mt-5">

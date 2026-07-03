@@ -218,48 +218,39 @@ function CandidateColumn({
   photoDataUrl, name, dob, gender, education, occupation, employer,
   aboutMe, seeking, customFields, gold, headingStyle, isCandidate2,
 }) {
+  const hasPhoto = !!photoDataUrl;
+
   return (
     <div className="flex flex-col items-center pt-2">
-      {/* Circular photo */}
-      <div
-        style={{
-          width: 80,
-          height: 80,
-          borderRadius: "50%",
-          border: `2px solid ${gold}`,
-          overflow: "hidden",
-          backgroundColor: `${gold}20`,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexShrink: 0,
-        }}
-      >
-        {photoDataUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
+      {hasPhoto ? (
+        <div
+          style={{
+            width: 80,
+            height: 80,
+            borderRadius: "50%",
+            border: `2px solid ${gold}`,
+            overflow: "hidden",
+            backgroundColor: `${gold}20`,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexShrink: 0,
+          }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={photoDataUrl}
             alt={name || "Profile"}
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
-        ) : (
-          <div className="text-center" style={{ padding: 4 }}>
-            {isCandidate2 ? (
-              <span style={{ fontSize: "7px", color: gold, opacity: 0.8, lineHeight: 1.3 }}>
-                Photo Available on Request
-              </span>
-            ) : (
-              <span style={{ fontSize: "8px", color: gold, opacity: 0.6, textTransform: "uppercase" }}>
-                Photo
-              </span>
-            )}
-          </div>
-        )}
-      </div>
+        </div>
+      ) : (
+        <span style={{ color: gold, fontSize: "13px", lineHeight: 1 }}>❖</span>
+      )}
 
       {/* Name */}
       <div
-        className="text-[16px] font-bold mt-2 text-center"
+        className={`font-bold text-center ${hasPhoto ? "text-[16px] mt-2" : "text-[19px] mt-2"}`}
         style={{ ...headingStyle, color: gold }}
         data-typography="heading"
       >

@@ -6,6 +6,7 @@ export function TemplatePavitraPatrika({ data, theme, headingFont, bodyFont }) {
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
+  const hasPhoto = !!photoDataUrl;
   const accent  = theme?.accent      || "#B5451B";
   const gold    = theme?.accentSoft  ? theme.accentSoft : "#D4920A";
   const heading = theme?.textHeading || "#B5451B";
@@ -79,7 +80,7 @@ export function TemplatePavitraPatrika({ data, theme, headingFont, bodyFont }) {
         <div className="flex items-start gap-4 mb-4">
           <div className="flex-1 flex flex-col items-center">
             <KalashSVG accent={accent} />
-            <div className="mt-2 text-[28px] font-bold text-center leading-tight"
+            <div className={hasPhoto ? "mt-2 text-[28px] font-bold text-center leading-tight" : "mt-2 text-[32px] font-bold text-center leading-tight"}
                  style={{ ...headingStyle, color: heading }} data-typography="heading">
               {getPrimaryHeading(personal)}
             </div>
@@ -88,9 +89,11 @@ export function TemplatePavitraPatrika({ data, theme, headingFont, bodyFont }) {
             </div>
           </div>
           {/* Lotus photo frame */}
-          <div className="flex-shrink-0 mt-2">
-            <LotusPhotoFrame photoDataUrl={photoDataUrl} accent={accent} name={personal?.name} />
-          </div>
+          {hasPhoto && (
+            <div className="flex-shrink-0 mt-2">
+              <LotusPhotoFrame photoDataUrl={photoDataUrl} accent={accent} name={personal?.name} />
+            </div>
+          )}
         </div>
 
         <BindiDivider accent={accent} />
@@ -280,15 +283,8 @@ function LotusPhotoFrame({ photoDataUrl, accent, name }) {
         className="absolute rounded-full overflow-hidden"
         style={{ top: cy - r, left: cx - r, width: r * 2, height: r * 2 }}
       >
-        {photoDataUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={photoDataUrl} alt={name || "Profile"} className="w-full h-full object-cover" />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center text-[9px] uppercase tracking-wider"
-               style={{ backgroundColor: `${accent}22`, color: accent }}>
-            Photo
-          </div>
-        )}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={photoDataUrl} alt={name || "Profile"} className="w-full h-full object-cover" />
       </div>
     </div>
   );

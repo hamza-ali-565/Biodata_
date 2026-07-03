@@ -5,6 +5,7 @@ export function TemplateSample1({ data, theme, headingFont, bodyFont }) {
   const bodyStyle = { fontFamily: bodyFont || "inherit" };
 
     const { personal, family, contact, photoDataUrl } = data || {};
+    const hasPhoto = !!photoDataUrl;
 
     const primaryColor = theme?.accent || "#0066cc"; // The blue header color
     const textColor = theme?.textHeading || "#000000";
@@ -61,8 +62,7 @@ export function TemplateSample1({ data, theme, headingFont, bodyFont }) {
             {/* Inner Content Boundary */}
             <div className="relative z-10 w-full flex flex-col pt-8 space-y-8">
 
-                {/* If a photo exists, let's put it at the very top, centered, as a nice touch even though the sample didn't have it explicitly shown */}
-                {photoDataUrl && (
+                {hasPhoto && (
                     <div className="flex justify-center mb-4">
                         <div className="w-32 h-32 overflow-hidden border-2 border-white shadow-md">
                             {/* eslint-disable-next-line @next/next/no-img-element */}

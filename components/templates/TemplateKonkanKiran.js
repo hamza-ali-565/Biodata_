@@ -92,9 +92,15 @@ export function TemplateKonkanKiran({ data, theme, headingFont, bodyFont }) {
         </div>
 
         {/* Oval photo centred */}
-        <div className="flex justify-center mt-4 mb-4">
-          <OvalPhoto photoDataUrl={photoDataUrl} blue={blue} name={personal?.name} />
-        </div>
+        {photoDataUrl ? (
+          <div className="flex justify-center mt-4 mb-4">
+            <OvalPhoto photoDataUrl={photoDataUrl} blue={blue} name={personal?.name} />
+          </div>
+        ) : (
+          <div className="flex justify-center mt-3 mb-3">
+            <SmallCross blue={blue} size={14} />
+          </div>
+        )}
 
         <CrossDivider blue={blue} className="mb-4" />
 
@@ -237,12 +243,8 @@ function OvalPhoto({ photoDataUrl, blue, name }) {
         display: "flex", alignItems: "center", justifyContent: "center",
       }}
     >
-      {photoDataUrl ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={photoDataUrl} alt={name || "Profile"} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-      ) : (
-        <span style={{ fontSize: "9px", textTransform: "uppercase", color: blue, letterSpacing: "0.05em" }}>Photo</span>
-      )}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={photoDataUrl} alt={name || "Profile"} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
     </div>
   );
 }

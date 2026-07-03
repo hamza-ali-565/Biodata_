@@ -7,6 +7,7 @@ export function TemplateGreenOffWhiteContrast({ data, theme, headingFont, bodyFo
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
+  const hasPhoto = !!photoDataUrl;
   const deepGreen = theme?.textHeading || "#173d2a";
   const forest = theme?.accent || "#1e4d35";
 
@@ -51,26 +52,22 @@ export function TemplateGreenOffWhiteContrast({ data, theme, headingFont, bodyFo
               "radial-gradient(circle at 20% 40%, #255f3f 0%, #0c2d1f 38%, #051b12 100%)",
           }}
         />
-        <div className="relative z-10 grid h-full grid-cols-[240px_1fr] gap-7">
-          <div className="flex items-start pt-1">
-            <div className="h-[240px] w-[240px] overflow-hidden rounded-full border-4 border-[#e6e6de] bg-[#dbdbd7]">
-              {photoDataUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
+        <div className={`relative z-10 grid h-full gap-7 ${hasPhoto ? "grid-cols-[240px_1fr]" : "grid-cols-1"}`}>
+          {hasPhoto && (
+            <div className="flex items-start pt-1">
+              <div className="h-[240px] w-[240px] overflow-hidden rounded-full border-4 border-[#e6e6de] bg-[#dbdbd7]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={photoDataUrl}
                   alt={personal?.name || "Profile"}
                   className="h-full w-full object-cover"
                 />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center text-[10px] uppercase tracking-wider text-[#5f5f5f]">
-                  Photo
-                </div>
-              )}
+              </div>
             </div>
-          </div>
+          )}
 
           <div className="pt-1">
-            <div className="text-[50px] font-semibold leading-none" style={headingStyle} data-typography="heading">
+            <div className={hasPhoto ? "text-[50px] font-semibold leading-none" : "text-[54px] font-semibold leading-none"} style={headingStyle} data-typography="heading">
               {getPrimaryHeading(personal)}
             </div>
             <div className="mt-2 h-[2px] w-[82px] bg-[#d7ddd5]" />

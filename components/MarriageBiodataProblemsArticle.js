@@ -3,7 +3,7 @@ import { Download, LayoutGrid, ListOrdered } from "lucide-react";
 const subsections = [
     {
         title: "Limited template choices:",
-        body: "On this site, you'll find 28+ biodata template designs built for different communities and cultural aesthetics. You can preview each one live before selecting, so you know exactly what your PDF will look like. Premium-quality templates are available completely free.",
+        body: "On this site, you'll find 40+ biodata template designs built for different communities and cultural aesthetics. You can preview each one live before selecting, so you know exactly what your PDF will look like. Premium-quality templates are available completely free.",
         icon: LayoutGrid,
         accent: "from-emerald-500/20 via-brand-500/5 to-transparent",
         borderGlow: "group-hover:shadow-[0_0_48px_rgba(16,185,129,0.12)]",

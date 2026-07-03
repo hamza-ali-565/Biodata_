@@ -6,6 +6,7 @@ export function TemplateManasvi({ data, theme, headingFont, bodyFont }) {
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
+  const hasPhoto = !!photoDataUrl;
   const accent     = theme?.accent      || "#0f766e";
   const accentSoft = theme?.accentSoft  || "#ccfbf1";
   const heading    = theme?.textHeading || "#0c1a18";
@@ -57,10 +58,10 @@ export function TemplateManasvi({ data, theme, headingFont, bodyFont }) {
       <div className="px-10 py-8">
 
         {/* Name + Photo header */}
-        <div className="flex items-start justify-between gap-6 mb-1">
+        <div className={hasPhoto ? "flex items-start justify-between gap-6 mb-1" : "mb-1"}>
           <div className="flex-1">
             <div
-              className="text-[32px] font-bold leading-none"
+              className={hasPhoto ? "text-[32px] font-bold leading-none" : "text-[36px] font-bold leading-none"}
               style={{ ...headingStyle, color: heading }}
               data-typography="heading"
             >
@@ -76,7 +77,7 @@ export function TemplateManasvi({ data, theme, headingFont, bodyFont }) {
             </div>
           </div>
 
-          {photoDataUrl && (
+          {hasPhoto && (
             <div className="flex-shrink-0 h-[96px] w-[76px] overflow-hidden rounded-[4px] bg-slate-100">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={photoDataUrl} alt={personal?.name || "Profile"}

@@ -28,7 +28,7 @@ export function TemplateClassicRoyal({ data, theme, headingFont, bodyFont }) {
                 {/* Header Section Removed */}
                 <div className="flex flex-col md:flex-row gap-8">
                     {/* Details Column */}
-                    <div className="flex-1 space-y-8">
+                    <div className={data?.photoDataUrl ? "flex-1 space-y-8" : "flex-1 space-y-8 w-full"}>
                         <Section title="PERSONAL DETAILS" color={primaryColor}>
                             {personal?.dateOfBirth ? <Row label="Date of Birth" value={personal.dateOfBirth} color={primaryColor} /> : null}
                             {personal?.timeOfBirth ? <Row label="Time of Birth" value={personal.timeOfBirth} color={primaryColor} /> : null}

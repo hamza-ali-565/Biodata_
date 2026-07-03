@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     q: "How many templates do you have, and are new ones added?",
-    a: "We currently have 28 templates across traditional, modern, elegant, and community-specific styles. New templates are added each season — typically before the November–February peak wedding season (Dev Uthani Ekadashi onwards) and before the April–June season (Akshaya Tritiya onwards). Follow us on Pinterest or Instagram to see new templates as they are released.",
+    a: "We currently have 40+ templates across traditional, modern, elegant, and community-specific styles. New templates are added each season — typically before the November–February peak wedding season (Dev Uthani Ekadashi onwards) and before the April–June season (Akshaya Tritiya onwards). Follow us on Pinterest or Instagram to see new templates as they are released.",
   },
 ];
 
@@ -100,7 +100,7 @@ export function AnimatedTemplateSections() {
             Biodata Templates — Free Download for All Indian Communities
           </h1>
           <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
-            28 templates, built for Indian families. Each one is designed for a specific community — Hindu families get Gotra, Rashi, and Nakshatra fields. Muslim families get templates that open with Bismillah and include Sect and Biradari sections. Marathi families have Kul and Kulswamini fields ready. Choose your template, fill your details, download your PDF free — no login, no watermark.
+            40+ templates, built for Indian families. Each one is designed for a specific community — Hindu families get Gotra, Rashi, and Nakshatra fields. Muslim families get templates that open with Bismillah and include Sect and Biradari sections. Marathi families have Kul and Kulswamini fields ready. Choose your template, fill your details, download your PDF free — no login, no watermark.
           </p>
         </div>
       </section>

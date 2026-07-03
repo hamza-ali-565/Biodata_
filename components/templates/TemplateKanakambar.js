@@ -6,6 +6,7 @@ export function TemplateKanakambar({ data, theme, headingFont, bodyFont }) {
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
+  const hasPhoto = !!photoDataUrl;
   const accent     = theme?.accent      || "#92400e";
   const accentSoft = theme?.accentSoft  || "#fef3c7";
   const heading    = theme?.textHeading || "#451a03";
@@ -84,27 +85,21 @@ export function TemplateKanakambar({ data, theme, headingFont, bodyFont }) {
         {/* Photo + Personal row */}
         <div className="flex gap-6 items-start">
 
-          {/* Ornate photo frame */}
-          <div className="flex-shrink-0 relative">
-            <div className="relative h-[192px] w-[152px]">
-              <CornerBracket pos="top-left"     c={accent} />
-              <CornerBracket pos="top-right"    c={accent} />
-              <CornerBracket pos="bottom-left"  c={accent} />
-              <CornerBracket pos="bottom-right" c={accent} />
-              <div className="absolute inset-[10px] overflow-hidden rounded-[2px] bg-[#e5ddd0]">
-                {photoDataUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
+          {hasPhoto && (
+            <div className="flex-shrink-0 relative">
+              <div className="relative h-[192px] w-[152px]">
+                <CornerBracket pos="top-left"     c={accent} />
+                <CornerBracket pos="top-right"    c={accent} />
+                <CornerBracket pos="bottom-left"  c={accent} />
+                <CornerBracket pos="bottom-right" c={accent} />
+                <div className="absolute inset-[10px] overflow-hidden rounded-[2px] bg-[#e5ddd0]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={photoDataUrl} alt={personal?.name || "Profile"}
                        className="h-full w-full object-cover" />
-                ) : (
-                  <div className="flex h-full w-full items-center justify-center
-                                  text-[9px] uppercase tracking-wider text-[#8a7860]">
-                    Photo
-                  </div>
-                )}
+                </div>
               </div>
             </div>
-          </div>
+          )}
 
           {/* Personal details */}
           <div className="flex-1">

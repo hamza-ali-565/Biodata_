@@ -80,10 +80,10 @@ export function TemplateDujiVaari({ data, theme, headingFont, bodyFont }) {
     >
       {/* Header */}
       <div className="px-7 pt-7 pb-4">
-        <div className="flex items-start justify-between gap-4">
-          <div className="flex-1">
+        <div className={`flex items-start gap-4 ${photoDataUrl ? "justify-between" : "justify-center text-center"}`}>
+          <div className={photoDataUrl ? "flex-1" : ""}>
             <div
-              className="text-[28px] font-bold leading-tight"
+              className={`font-bold leading-tight ${photoDataUrl ? "text-[28px]" : "text-[32px]"}`}
               style={{ ...headingStyle, color: heading }}
               data-typography="heading"
             >
@@ -101,33 +101,29 @@ export function TemplateDujiVaari({ data, theme, headingFont, bodyFont }) {
           </div>
 
           {/* Oval photo */}
-          <div
-            className="flex-shrink-0"
-            style={{
-              width: 100,
-              height: 120,
-              borderRadius: "50% / 40%",
-              border: `2px solid ${green}`,
-              overflow: "hidden",
-              backgroundColor: `${green}18`,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            {photoDataUrl ? (
-              // eslint-disable-next-line @next/next/no-img-element
+          {photoDataUrl && (
+            <div
+              className="flex-shrink-0"
+              style={{
+                width: 100,
+                height: 120,
+                borderRadius: "50% / 40%",
+                border: `2px solid ${green}`,
+                overflow: "hidden",
+                backgroundColor: `${green}18`,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={photoDataUrl}
                 alt={personal?.name || "Profile"}
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
-            ) : (
-              <span style={{ fontSize: "9px", color: green, textTransform: "uppercase", letterSpacing: "0.05em" }}>
-                Photo
-              </span>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </div>
 

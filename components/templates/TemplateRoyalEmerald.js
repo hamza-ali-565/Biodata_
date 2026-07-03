@@ -7,6 +7,7 @@ export function TemplateRoyalEmerald({ data, theme, headingFont, bodyFont }) {
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
+  const hasPhoto = !!photoDataUrl;
   const accent     = theme?.accent      || "#065f46";
   const accentSoft = theme?.accentSoft  || "#d1fae5";
   const heading    = theme?.textHeading || "#022c16";
@@ -96,7 +97,7 @@ export function TemplateRoyalEmerald({ data, theme, headingFont, bodyFont }) {
         <DiamondRule color={accent} className="my-4" />
 
         {/* Personal + Photo row */}
-        <div className="flex gap-5">
+        <div className={hasPhoto ? "flex gap-5" : ""}>
           <div className="flex-1">
             <SectionTitle title="Personal Details" accent={accent} headingStyle={headingStyle} />
             <div className="mt-2.5 space-y-1.5">
@@ -109,23 +110,18 @@ export function TemplateRoyalEmerald({ data, theme, headingFont, bodyFont }) {
             </div>
           </div>
 
-          <div className="mt-7 flex-shrink-0">
-            <div
-              className="h-[220px] w-[168px] overflow-hidden rounded-[12px] border-2 bg-[#e8e5df]"
-              style={{ borderColor: `${accent}cc` }}
-            >
-              {photoDataUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
+          {hasPhoto && (
+            <div className="mt-7 flex-shrink-0">
+              <div
+                className="h-[220px] w-[168px] overflow-hidden rounded-[12px] border-2 bg-[#e8e5df]"
+                style={{ borderColor: `${accent}cc` }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={photoDataUrl} alt={personal?.name || "Profile"}
                      className="h-full w-full object-cover" />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center
-                                text-[10px] uppercase tracking-wider text-[#7a7060]">
-                  Photo
-                </div>
-              )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         {/* Family */}

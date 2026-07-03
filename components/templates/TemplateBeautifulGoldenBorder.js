@@ -62,32 +62,33 @@ export function TemplateBeautifulGoldenBorder({ data, theme, headingFont, bodyFo
       <CornerOrnament position="bottom-right" color={accent} />
 
       <div className="relative z-10 mt-2 px-6">
-        <div className="grid grid-cols-[1.45fr_0.95fr] gap-6">
-          <div className="pt-5">
-            <OrnamentDivider color={accent} compact />
-            <OrnamentDivider color={accent} className="mt-3" />
-          </div>
+        {photoDataUrl ? (
+          <div className="grid grid-cols-[1.45fr_0.95fr] gap-6">
+            <div className="pt-5">
+              <OrnamentDivider color={accent} compact />
+              <OrnamentDivider color={accent} className="mt-3" />
+            </div>
 
-          <div>
-            <div
-              className="mx-auto h-[252px] w-[192px] overflow-hidden rounded-[20px] border-2 bg-[#e8e1d7]"
-              style={{ borderColor: "#8c5e36" }}
-            >
-              {photoDataUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
+            <div>
+              <div
+                className="mx-auto h-[252px] w-[192px] overflow-hidden rounded-[20px] border-2 bg-[#e8e1d7]"
+                style={{ borderColor: "#8c5e36" }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={photoDataUrl}
                   alt={personal?.name || "Profile"}
                   className="h-full w-full object-cover"
                 />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center text-[10px] uppercase tracking-wider text-[#7f6e5b]">
-                  Photo
-                </div>
-              )}
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <div className="pt-5">
+            <OrnamentDivider color={accent} />
+            <OrnamentDivider color={accent} className="mt-3" />
+          </div>
+        )}
 
         <TemplateSection title="Personal Details" color={textHeading} lineColor={accent} className="mt-4">
           {personalRows.map(([label, value]) => (

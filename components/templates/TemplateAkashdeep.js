@@ -51,53 +51,67 @@ export function TemplateAkashdeep({ data, theme, headingFont, bodyFont }) {
     ["Address",        contact?.address],
   ];
 
+  const hasPhoto = !!photoDataUrl;
+
   return (
     <div
       className="relative mx-auto flex min-h-[800px] w-[600px] flex-col overflow-hidden bg-white shadow-2xl"
       style={bodyStyle}
     >
-      {/* Full-bleed photo header */}
-      <div className="relative h-[220px] w-full overflow-hidden bg-slate-700 flex-shrink-0">
-        {photoDataUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
+      {hasPhoto ? (
+        /* Full-bleed photo header */
+        <div className="relative h-[220px] w-full overflow-hidden bg-slate-700 flex-shrink-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={photoDataUrl}
             alt={personal?.name || "Profile"}
             className="h-full w-full object-cover"
           />
-        ) : (
-          <div className="h-full w-full flex items-center justify-center bg-slate-800">
-            <svg viewBox="0 0 24 24" className="w-16 h-16 text-slate-600" fill="currentColor">
-              <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
-            </svg>
-          </div>
-        )}
 
-        {/* Gradient scrim */}
-        <div
-          className="absolute inset-0"
-          style={{ background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 50%, transparent 100%)" }}
-        />
-
-        {/* Name over photo */}
-        <div className="absolute bottom-0 left-0 px-6 pb-4">
+          {/* Gradient scrim */}
           <div
-            className="text-[28px] font-bold leading-tight text-white drop-shadow-sm"
-            style={headingStyle}
+            className="absolute inset-0"
+            style={{ background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 50%, transparent 100%)" }}
+          />
+
+          {/* Name over photo */}
+          <div className="absolute bottom-0 left-0 px-6 pb-4">
+            <div
+              className="text-[28px] font-bold leading-tight text-white drop-shadow-sm"
+              style={headingStyle}
+              data-typography="heading"
+            >
+              {getPrimaryHeading(personal)}
+            </div>
+            <div className="mt-1 flex items-center gap-2 text-[11px] text-white/75">
+              {personal?.occupation && <span>{personal.occupation}</span>}
+              {personal?.nationality && (
+                <><span className="opacity-50">·</span><span>{personal.nationality}</span></>
+              )}
+            </div>
+          </div>
+
+          <div className="absolute top-0 right-0 h-[4px] w-[120px]" style={{ backgroundColor: accent }} />
+        </div>
+      ) : (
+        /* Photo-free header */
+        <div className="relative w-full flex-shrink-0 px-6 pb-5 pt-8 text-center" style={{ backgroundColor: accentSoft }}>
+          <div
+            className="text-[34px] font-bold leading-tight"
+            style={{ ...headingStyle, color: heading }}
             data-typography="heading"
           >
             {getPrimaryHeading(personal)}
           </div>
-          <div className="mt-1 flex items-center gap-2 text-[11px] text-white/75">
+          <div className="mt-1.5 flex items-center justify-center gap-2 text-[11px]" style={{ color: accent }}>
             {personal?.occupation && <span>{personal.occupation}</span>}
             {personal?.nationality && (
               <><span className="opacity-50">·</span><span>{personal.nationality}</span></>
             )}
           </div>
+          <div className="absolute top-0 right-0 h-[4px] w-[120px]" style={{ backgroundColor: accent }} />
         </div>
-
-        <div className="absolute top-0 right-0 h-[4px] w-[120px]" style={{ backgroundColor: accent }} />
-      </div>
+      )}
 
       {/* Accent divider */}
       <div className="h-[3px] w-full flex-shrink-0" style={{ backgroundColor: accent }} />

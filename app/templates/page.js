@@ -79,7 +79,7 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "How many marriage biodata templates do you have?",
-      "acceptedAnswer": { "@type": "Answer", "text": "We currently have 28 templates across traditional, modern, elegant, and community-specific styles. New templates are added each season — before the November to February peak wedding season and before the April to June season around Akshaya Tritiya." }
+      "acceptedAnswer": { "@type": "Answer", "text": "We currently have 40+ templates across traditional, modern, elegant, and community-specific styles. New templates are added each season — before the November to February peak wedding season and before the April to June season around Akshaya Tritiya." }
     }
   ]
 };

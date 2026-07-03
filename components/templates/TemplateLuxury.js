@@ -9,6 +9,7 @@ export function TemplateLuxury({ data, theme, headingFont, bodyFont }) {
   const accent = theme?.accent || "#b45309";
   const accentSoft = theme?.accentSoft || "#fef3c7";
   const textHeading = theme?.textHeading || "#1f2937";
+  const hasPhoto = !!photoDataUrl;
 
   return (
     <div
@@ -16,17 +17,16 @@ export function TemplateLuxury({ data, theme, headingFont, bodyFont }) {
       style={{ ...bodyStyle, border: `4px double ${accent}` }}
     >
 
-      <div className="p-6 flex flex-row gap-6 items-center bg-slate-50/50">
+      <div className={`p-6 flex gap-6 items-center bg-slate-50/50 ${hasPhoto ? "flex-row" : "flex-col text-center"}`}>
 
-        {photoDataUrl ? (
+        {hasPhoto && (
           <img src={photoDataUrl} alt="Profile" className="w-24 h-32 rounded-lg object-cover overflow-hidden" style={{ borderColor: accent }} />
-        ) : (
-          <div className="w-24 h-32 rounded-lg object-cover overflow-hidden bg-slate-100 flex items-center justify-center text-[10px] text-slate-400 border border-dashed border-slate-300">Photo</div>
         )}
 
-        <div className="flex-1 text-left">
-          <div className="text-2xl font-bold" style={{ ...headingStyle, color: textHeading }} data-typography="heading">{getPrimaryHeading(personal)}</div>
+        <div className={hasPhoto ? "flex-1 text-left" : "flex-1 text-center"}>
+          <div className={hasPhoto ? "text-2xl font-bold" : "text-[26px] font-bold"} style={{ ...headingStyle, color: textHeading }} data-typography="heading">{getPrimaryHeading(personal)}</div>
           <p className="text-xs text-slate-600 mt-1">{personal.occupation || "Occupation"}</p>
+          {!hasPhoto && <div className="mt-2 text-sm" style={{ color: accent }}>✦</div>}
         </div>
       </div>
 

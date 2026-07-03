@@ -62,10 +62,14 @@ export function TemplateSeaGreenContrast({ data, theme, headingFont, bodyFont })
           }}
         />
 
-        <div className="relative z-10 grid h-full grid-cols-[1.15fr_0.85fr] gap-5">
+        <div className={`relative z-10 grid h-full gap-5 ${photoDataUrl ? "grid-cols-[1.15fr_0.85fr]" : "grid-cols-1"}`}>
           <div className="pt-1">
             <div className="text-[30px] font-semibold leading-none text-[#f2f4f3]">-</div>
-            <div className="mt-2 text-[50px] font-bold leading-none text-[#f7f9f8]" style={headingStyle} data-typography="heading">
+            <div
+              className={`mt-2 font-bold leading-none text-[#f7f9f8] ${photoDataUrl ? "text-[50px]" : "text-[54px]"}`}
+              style={headingStyle}
+              data-typography="heading"
+            >
               {getPrimaryHeading(personal)}
             </div>
 
@@ -87,22 +91,18 @@ export function TemplateSeaGreenContrast({ data, theme, headingFont, bodyFont })
             </div>
           </div>
 
-          <div className="flex items-center justify-end">
-            <div className="h-[264px] w-[200px] overflow-hidden rounded-[999px] border-2 border-[#d8ddd8] bg-[#d9ddda]">
-              {photoDataUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
+          {photoDataUrl && (
+            <div className="flex items-center justify-end">
+              <div className="h-[264px] w-[200px] overflow-hidden rounded-[999px] border-2 border-[#d8ddd8] bg-[#d9ddda]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={photoDataUrl}
                   alt={personal?.name || "Profile"}
                   className="h-full w-full object-cover"
                 />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center text-[10px] uppercase tracking-wider text-[#6a7370]">
-                  Photo
-                </div>
-              )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </section>
 

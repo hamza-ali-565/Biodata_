@@ -5,7 +5,7 @@ export function TemplateMinimal({ data, theme, headingFont, bodyFont }) {
   const { headingStyle, bodyStyle } = createTypographyStyles(headingFont, bodyFont);
 
   if (!data) return null;
-  const { personal, family, contact, photoDataUrl } = data;
+  const { personal, family, contact } = data;
   const accent = theme?.accent || "#b45309";
   const accentSoft = theme?.accentSoft || "#fef3c7";
   const textHeading = theme?.textHeading || "#1f2937";

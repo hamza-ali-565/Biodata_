@@ -6,6 +6,7 @@ export function TemplateNoorNikah({ data, theme, headingFont, bodyFont }) {
   if (!data) return null;
 
   const { personal = {}, family = {}, contact = {}, photoDataUrl } = data;
+  const hasPhoto = !!photoDataUrl;
   const teal    = theme?.accent      || "#0F4C5C";
   const gold    = theme?.accentSoft  ? theme.accentSoft : "#C9A84C";
   const heading = theme?.textHeading || "#0F4C5C";
@@ -74,7 +75,7 @@ export function TemplateNoorNikah({ data, theme, headingFont, bodyFont }) {
                  style={{ fontFamily: "'Noto Nastaliq Urdu', 'Scheherazade New', serif", color: teal, lineHeight: 1.8 }}>
                 بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
               </p>
-              <div className="text-[26px] font-bold text-center mt-1"
+              <div className={hasPhoto ? "text-[26px] font-bold text-center mt-1" : "text-[30px] font-bold text-center mt-1"}
                    style={{ ...headingStyle, color: heading }} data-typography="heading">
                 {getPrimaryHeading(personal)}
               </div>
@@ -84,9 +85,11 @@ export function TemplateNoorNikah({ data, theme, headingFont, bodyFont }) {
             </div>
 
             {/* Right: Hexagonal photo */}
-            <div className="flex-shrink-0">
-              <HexPhoto photoDataUrl={photoDataUrl} teal={teal} name={personal?.name} />
-            </div>
+            {hasPhoto && (
+              <div className="flex-shrink-0">
+                <HexPhoto photoDataUrl={photoDataUrl} teal={teal} name={personal?.name} />
+              </div>
+            )}
           </div>
         </div>
 
@@ -148,9 +151,6 @@ export function TemplateNoorNikah({ data, theme, headingFont, bodyFont }) {
           </div>
           {contact?.customFields?.map((f) =>
             f?.value ? <Row key={f.id || f.label} label={f.label} value={f.value} accent={teal} /> : null
-          )}
-          {!photoDataUrl && (
-            <p className="text-[10px] mt-2 italic" style={{ color: teal, opacity: 0.7 }}>Photo shared on request</p>
           )}
         </div>
 
@@ -222,46 +222,24 @@ function IslamicStar({ size, color, opacity, filled }) {
 
 function HexPhoto({ photoDataUrl, teal, name }) {
   const size = 130;
-  const clipId = "hexClip_noor";
   return (
     <div className="relative" style={{ width: size, height: size }}>
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="absolute inset-0" aria-hidden="true">
-        <defs>
-          <clipPath id={clipId}>
-            <polygon points={`${size/2},0 ${size},${size*0.25} ${size},${size*0.75} ${size/2},${size} 0,${size*0.75} 0,${size*0.25}`} />
-          </clipPath>
-        </defs>
-        {photoDataUrl ? null : (
-          <polygon
-            points={`${size/2},0 ${size},${size*0.25} ${size},${size*0.75} ${size/2},${size} 0,${size*0.75} 0,${size*0.25}`}
-            fill={`${teal}22`} stroke={teal} strokeWidth="2"
-          />
-        )}
         <polygon
           points={`${size/2},0 ${size},${size*0.25} ${size},${size*0.75} ${size/2},${size} 0,${size*0.75} 0,${size*0.25}`}
           fill="none" stroke={teal} strokeWidth="2"
         />
       </svg>
-      {photoDataUrl ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={photoDataUrl}
-          alt={name || "Profile"}
-          style={{
-            position: "absolute", inset: 0, width: "100%", height: "100%",
-            objectFit: "cover",
-            clipPath: `polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)`,
-          }}
-        />
-      ) : (
-        <div style={{
-          position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center",
-          fontSize: "9px", textTransform: "uppercase", color: teal, letterSpacing: "0.05em",
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={photoDataUrl}
+        alt={name || "Profile"}
+        style={{
+          position: "absolute", inset: 0, width: "100%", height: "100%",
+          objectFit: "cover",
           clipPath: `polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)`,
-        }}>
-          Photo
-        </div>
-      )}
+        }}
+      />
     </div>
   );
 }
