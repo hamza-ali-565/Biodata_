@@ -2,7 +2,9 @@
 
 import { LayoutTemplate, User, Users, Camera, Download, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 import { MandalaSVG } from "./MandalaSVG";
+import { navigateToForm } from "../lib/navigationUtils";
 
 const steps = [
   {
@@ -38,6 +40,8 @@ const steps = [
 ];
 
 export function HowItWorks() {
+  const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <section
@@ -129,7 +133,7 @@ export function HowItWorks() {
 
           onClick={(e) => {
             e.preventDefault();
-            document.getElementById("biodata-form")?.scrollIntoView({ behavior: "smooth" });
+            navigateToForm(router, pathname);
           }}
           className="group relative inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-500 to-rose-500 px-8 py-4 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-brand-500/25"
         >

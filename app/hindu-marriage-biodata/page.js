@@ -3,6 +3,7 @@ import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { ChevronDown } from "lucide-react";
 
+import { SmartLink } from "../../components/SmartLink";
 export const metadata = {
   title: "Hindu Marriage Biodata — Gotra, Rashi, Manglik Guide",
   description:
@@ -232,7 +233,11 @@ export default function HinduMarriageBiodata() {
             </p>
             <div className="rounded-xl bg-brand-500/10 border border-brand-500/20 p-4 text-sm text-slate-300 mt-3">
               <strong className="text-brand-300">How to find your Rashi:</strong> Use your exact date, time, and place
-              of birth in a Vedic astrology calculator. Don't use your Western sun sign — it's often different.
+              of birth in a Vedic astrology calculator. Don't use your Western sun sign — it's often different. If you
+              don't know your Rashi and Nakshatra, use our free{" "}
+              <Link href="/horoscope-calculator" className="text-brand-300 underline hover:text-brand-200">
+                horoscope calculator
+              </Link>.
             </div>
           </div>
 
@@ -295,12 +300,11 @@ export default function HinduMarriageBiodata() {
               Our templates have all horoscope fields pre-built — Gotra, Rashi, Nakshatra, Nadi, Gan, and Manglik.
               You fill in the values; we format everything perfectly.
             </p>
-            <Link
-              href="/#biodata-form-wrapper"
+            <SmartLink href="/#biodata-form-wrapper"
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-500 to-rose-500 px-8 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(244,63,94,0.3)] transition-all hover:scale-105"
             >
               Create My Hindu Biodata — Free →
-            </Link>
+            </SmartLink>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-4">Hindu marriage biodata format by community — sub-caste differences</h2>

@@ -5,6 +5,7 @@ import { Footer } from "../components/Footer";
 import { Hero } from "../components/Hero";
 import { HowToCreateBiodata } from "../components/HowToCreateBiodata";
 import { IntersectionObserverWrapper } from "../components/IntersectionObserverWrapper";
+import { AutoScrollTrigger } from "../components/AutoScrollTrigger";
 
 import { BiodataFormatExplanation } from "../components/BiodataFormatExplanation";
 import { EditableBiodataArticle } from "../components/EditableBiodataArticle";
@@ -150,6 +151,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Header />
+      <AutoScrollTrigger />
       <main className="flex-1">
         <Hero />
         <HowToCreateBiodata />

@@ -46,6 +46,12 @@ const STATIC_ROUTES = [
     lastmod: "2026-07-01",
   },
   {
+    path: "/horoscope-calculator",
+    changeFrequency: "monthly",
+    priority: 0.9,
+    lastmod: "2026-07-01",
+  },
+  {
     path: "/muslim-biodata-for-marriage",
     changeFrequency: "monthly",
     priority: 0.9,

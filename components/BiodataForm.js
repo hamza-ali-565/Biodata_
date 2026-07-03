@@ -6,7 +6,6 @@ import { AlertTriangle, CheckCircle2, Trash2 } from "lucide-react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
-import { useHomeAutoScroll } from "../lib/navigationUtils";
 import NextImage from "next/image";
 
 const customFieldSchema = z.object({
@@ -159,8 +158,6 @@ export function BiodataForm() {
   const personalCustomFields = watch("personal.customFields");
   const familyCustomFields = watch("family.customFields");
   const contactCustomFields = watch("contact.customFields");
-
-  useHomeAutoScroll();
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -396,7 +393,7 @@ export function BiodataForm() {
         noValidate
       >
         {/* Personal details */}
-        <fieldset className="premium-card-static space-y-4 p-5 sm:p-6">
+        <fieldset id="personal-details-section" className="premium-card-static space-y-4 p-5 sm:p-6 scroll-mt-24">
           <legend className="px-2 text-sm font-semibold text-slate-100">
             Personal details
           </legend>

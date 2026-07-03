@@ -3,6 +3,7 @@ import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { ChevronDown } from "lucide-react";
 
+import { SmartLink } from "../../components/SmartLink";
 export const metadata = {
   title: "Marriage Biodata Format — Complete Guide 2026 | MBH",
   description:
@@ -138,12 +139,11 @@ function CTABlock() {
     <div className="my-12 rounded-2xl border border-rose-500/20 bg-rose-500/5 p-8 text-center">
       <p className="text-white font-semibold text-lg mb-2">Ready to create your biodata?</p>
       <p className="text-slate-400 text-sm mb-5">No login. No watermark. Download PDF in 5 minutes.</p>
-      <Link
-        href="/#biodata-form-wrapper"
+      <SmartLink href="/#biodata-form-wrapper"
         className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-500 to-rose-500 px-8 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(244,63,94,0.3)] transition-all hover:scale-105"
       >
         Create My Free Biodata →
-      </Link>
+      </SmartLink>
     </div>
   );
 }
@@ -494,12 +494,11 @@ export default function MarriageBiodataFormat() {
             an image file. No login, no payment, no watermark.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <Link
-              href="/#biodata-form-wrapper"
+            <SmartLink href="/#biodata-form-wrapper"
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-500 to-rose-500 px-8 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(244,63,94,0.3)] transition-all hover:scale-105"
             >
               Create and Download Free PDF →
-            </Link>
+            </SmartLink>
             <Link
               href="/templates"
               className="inline-flex items-center justify-center rounded-full border border-slate-700 px-8 py-3 text-sm font-semibold text-slate-300 hover:border-brand-500/50 hover:text-white transition-all"

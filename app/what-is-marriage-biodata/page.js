@@ -3,6 +3,7 @@ import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { ChevronDown } from "lucide-react";
 
+import { SmartLink } from "../../components/SmartLink";
 export const metadata = {
   title: "What is a Marriage Biodata? Full Guide | MBH",
   description:
@@ -303,12 +304,11 @@ export default function WhatIsMarriageBiodata() {
           <div className="my-12 rounded-2xl border border-rose-500/20 bg-rose-500/5 p-8 text-center">
             <p className="text-white font-semibold text-lg mb-2">Ready to create your marriage biodata?</p>
             <p className="text-slate-400 text-sm mb-5">No login. No watermark. Download PDF in 5 minutes.</p>
-            <Link
-              href="/#biodata-form-wrapper"
+            <SmartLink href="/#biodata-form-wrapper"
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-500 to-rose-500 px-8 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(244,63,94,0.3)] transition-all hover:scale-105"
             >
               Create My Free Biodata →
-            </Link>
+            </SmartLink>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-bold text-white mt-14 mb-2">Frequently asked questions</h2>

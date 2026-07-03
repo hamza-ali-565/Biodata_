@@ -3,6 +3,7 @@ import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { ChevronDown } from "lucide-react";
 
+import { SmartLink } from "../../components/SmartLink";
 export const metadata = {
   title: "NRI Marriage Biodata — Format for Indians Abroad",
   description:
@@ -468,12 +469,11 @@ City:               Brampton, Canada / Chandigarh, India`}</pre>
               Fill in your details from wherever you are, download your PDF, and share with families in India and
               abroad in one click. No login. No watermark.
             </p>
-            <Link
-              href="/#biodata-form-wrapper"
+            <SmartLink href="/#biodata-form-wrapper"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-500 to-rose-500 px-8 py-3.5 text-sm font-bold text-white shadow-[0_0_24px_rgba(244,63,94,0.25)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_32px_rgba(244,63,94,0.4)]"
             >
               Create My NRI Biodata — Free
-            </Link>
+            </SmartLink>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-4">Frequently Asked Questions</h2>

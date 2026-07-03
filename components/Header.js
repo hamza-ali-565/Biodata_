@@ -5,11 +5,12 @@ import { SmartLink } from "./SmartLink";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { navigateToForm } from "../lib/navigationUtils";
+import { navigateToForm, FORM_TARGET_ID, FORM_ANCHOR_ID } from "../lib/navigationUtils";
 
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/templates", label: "Templates" },
+  { href: "/horoscope-calculator", label: "Horoscope Calculator" },
   { href: "/blog", label: "Blog" },
 ];
 
@@ -33,23 +34,7 @@ export function Header() {
   const handleCreateBiodata = (e) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
-    
-    if (pathname === "/") {
-      const section = document.getElementById("biodata-form-wrapper") || document.getElementById("biodata-form");
-      if (section) {
-        const navbarOffset = 100;
-        const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
-        const offsetPosition = sectionPosition - navbarOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-      }
-    } else {
-      sessionStorage.setItem("scrollToForm", "true");
-      router.push("/");
-    }
+    navigateToForm(router, pathname, FORM_TARGET_ID, FORM_ANCHOR_ID);
   };
 
   return (

@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
+import { navigateToForm, FORM_TARGET_ID, FORM_ANCHOR_ID } from "../lib/navigationUtils";
+
+const FORM_HASH_IDS = new Set(["biodata-form-wrapper", "biodata-form"]);
 
 export function ClientHashLink({ href, className, children, ...props }) {
   const router = useRouter();
@@ -11,12 +14,10 @@ export function ClientHashLink({ href, className, children, ...props }) {
     if (href.startsWith("/#")) {
       e.preventDefault();
       const id = href.replace("/#", "");
-      if (pathname === "/") {
-        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      if (FORM_HASH_IDS.has(id)) {
+        navigateToForm(router, pathname, FORM_TARGET_ID, FORM_ANCHOR_ID);
       } else {
-        sessionStorage.setItem("scrollToForm", "true"); // for backward compatibility in page.js
-        sessionStorage.setItem("scrollToId", id);
-        router.push("/");
+        navigateToForm(router, pathname, id);
       }
     }
   };

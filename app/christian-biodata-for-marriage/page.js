@@ -3,6 +3,7 @@ import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { ChevronDown } from "lucide-react";
 
+import { SmartLink } from "../../components/SmartLink";
 export const metadata = {
   title: "Christian Marriage Biodata — Format & Free Templates",
   description:
@@ -449,12 +450,11 @@ City:               Kottayam, Kerala`}
               horoscope section that doesn't belong in a Christian biodata. No login. Free PDF download. Works for Goan
               Catholic, Kerala Christian, Mangalorean, CSI, CNI, and Anglo-Indian families.
             </p>
-            <Link
-              href="/#biodata-form-wrapper"
+            <SmartLink href="/#biodata-form-wrapper"
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-500 to-rose-500 px-8 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(244,63,94,0.3)] transition-all hover:scale-105"
             >
               Create My Christian Biodata — Free →
-            </Link>
+            </SmartLink>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-2">Frequently asked questions</h2>

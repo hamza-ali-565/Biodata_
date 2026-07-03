@@ -3,6 +3,7 @@ import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { ChevronDown } from "lucide-react";
 
+import { SmartLink } from "../../components/SmartLink";
 export const metadata = {
   title: "Jain Marriage Biodata — Format & Free Templates",
   description:
@@ -460,12 +461,11 @@ City:               Jaipur, Rajasthan`}</pre>
               Our form includes Sect, Gotra, and dietary observance fields specifically for Jain families.
               Jai Jinendra opening. No login. Free PDF. Download and share via WhatsApp in minutes.
             </p>
-            <Link
-              href="/#biodata-form-wrapper"
+            <SmartLink href="/#biodata-form-wrapper"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-500 to-rose-500 px-8 py-3.5 text-sm font-bold text-white shadow-[0_0_24px_rgba(244,63,94,0.25)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_32px_rgba(244,63,94,0.4)]"
             >
               Create My Jain Biodata — Free
-            </Link>
+            </SmartLink>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-4">Frequently Asked Questions</h2>
