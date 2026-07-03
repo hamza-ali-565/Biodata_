@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { useForm } from "react-hook-form";
 import { AlertTriangle, CheckCircle2, Trash2 } from "lucide-react";
 import { z } from "zod";
@@ -697,7 +698,7 @@ export function BiodataForm() {
       )}
 
       {/* Remove required field confirmation */}
-      {isRemoveModalOpen && (
+      {isRemoveModalOpen && createPortal(
         <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
           <div
             onClick={() => {
@@ -738,11 +739,12 @@ export function BiodataForm() {
                 </div>
               </div>
             </div>
-          </div>
-        )}
+          </div>,
+        document.body
+      )}
 
       {/* Confirmation Modal */}
-      {isResetModalOpen && (
+      {isResetModalOpen && createPortal(
         <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
           <div
             onClick={() => setIsResetModalOpen(false)}
@@ -779,8 +781,9 @@ export function BiodataForm() {
                 </div>
               </div>
             </div>
-          </div>
-        )}
+          </div>,
+        document.body
+      )}
     </section>
   );
 }
