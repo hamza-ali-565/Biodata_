@@ -1,5 +1,6 @@
 import Script from "next/script";
 import { Inter } from "next/font/google";
+import RouteLoader from "@/components/RouteLoader";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
@@ -130,6 +131,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="min-h-screen bg-slate-950 text-slate-50 antialiased">
+          <RouteLoader />
           <div className="relative mx-auto flex min-h-screen max-w-[1600px] flex-col bg-slate-950/40 px-4 pb-10 pt-4 sm:px-6 lg:px-8">
             {children}
           </div>
