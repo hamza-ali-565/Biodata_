@@ -44,6 +44,7 @@ const freeResources = [
   { name: "Marriage Biodata Format Guide", path: "/marriage-biodata-format" },
   { name: "What is a Marriage Biodata", path: "/what-is-marriage-biodata" },
   { name: "About Me Examples", path: "/about-me-for-marriage-biodata" },
+  { name: "Hobbies for Biodata", path: "/hobbies-for-marriage-biodata" },
 ];
 
 const supportLegal = [
