@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { TemplatePreview } from "./TemplatePreview";
+import { ExportCanvas } from "./ExportCanvas";
 import { ResponsivePreviewScaler } from "./ResponsivePreviewScaler";
 import { TemplateErrorBoundary } from "./TemplateErrorBoundary";
 import {
@@ -27,7 +28,7 @@ export function TemplateDetailClient({ templateId }) {
     initialTemplate?.defaultThemeId || THEME_OPTIONS[0].id
   );
   const [isExporting, setIsExporting] = useState(null);
-  const previewRef = useRef(null);
+  const exportRef = useRef(null);
 
   // Load saved data
   useEffect(() => {
@@ -79,7 +80,7 @@ export function TemplateDetailClient({ templateId }) {
 
   const handleExport = async (type) => {
     if (!data) return;
-    if (type !== "docx" && !previewRef.current) return;
+    if (type !== "docx" && !exportRef.current) return;
     setIsExporting(type);
 
     await new Promise(resolve => setTimeout(resolve, 100));
@@ -105,13 +106,10 @@ export function TemplateDetailClient({ templateId }) {
         return;
       }
 
-      const { toCanvas } = await import("html-to-image");
-      const element = previewRef.current.querySelector("[data-preview-root]") || previewRef.current;
-      const canvas = await toCanvas(element, {
-        pixelRatio: 2,
-        backgroundColor: "#ffffff",
-      });
-      const imageData = canvas.toDataURL("image/jpeg", 1.0);
+      const { renderNodeToA4Canvas, A4_WIDTH_MM } = await import("../lib/export/renderNodeToA4Canvas");
+      const node = exportRef.current.querySelector("[data-export-root]") || exportRef.current;
+      const canvas = await renderNodeToA4Canvas(node);
+      const imageData = canvas.toDataURL("image/jpeg", 0.95);
 
       if (type === "jpeg") {
         const link = document.createElement("a");
@@ -119,27 +117,20 @@ export function TemplateDetailClient({ templateId }) {
         link.download = `${fileName}.jpeg`;
         link.click();
       } else {
-        const a4Width = 210;
-        const a4Height = 297;
-
-        let imgWidth = a4Width;
-        let imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-        if (imgHeight > a4Height) {
-          imgHeight = a4Height;
-          imgWidth = (canvas.width * imgHeight) / canvas.height;
-        }
-
-        const xOffset = (a4Width - imgWidth) / 2;
+        // Width is always locked to the true A4 width; height is derived
+        // from the content's natural aspect ratio, so the PDF page grows
+        // with the biodata instead of being cropped or letterboxed.
+        const imgWidthMM = A4_WIDTH_MM;
+        const imgHeightMM = (canvas.height / canvas.width) * imgWidthMM;
 
         const { default: jsPDF } = await import("jspdf");
         const pdf = new jsPDF({
           orientation: "portrait",
           unit: "mm",
-          format: "a4",
+          format: [imgWidthMM, imgHeightMM],
         });
 
-        pdf.addImage(imageData, "JPEG", xOffset, 0, imgWidth, imgHeight, undefined, "FAST");
+        pdf.addImage(imageData, "JPEG", 0, 0, imgWidthMM, imgHeightMM, undefined, "FAST");
         pdf.save(`${fileName}.pdf`);
       }
     } catch (err) {
@@ -285,7 +276,6 @@ export function TemplateDetailClient({ templateId }) {
             <ResponsivePreviewScaler>
               <TemplateErrorBoundary>
                 <TemplatePreview
-                  ref={previewRef}
                   data={data}
                   template={template}
                   theme={selectedTheme}
@@ -295,6 +285,15 @@ export function TemplateDetailClient({ templateId }) {
               </TemplateErrorBoundary>
             </ResponsivePreviewScaler>
           </div>
+
+          <ExportCanvas
+            ref={exportRef}
+            data={data}
+            template={template}
+            theme={selectedTheme}
+            headingFont={selectedHeadingFont.css}
+            bodyFont={selectedBodyFont.css}
+          />
 
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs relative z-10 border-t border-white/10 pt-6 w-full">
             <button
