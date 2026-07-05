@@ -94,7 +94,7 @@ export default async function BlogArticlePage({ params }) {
           url: `${BASE}/images/Logo-of-marriage-biodata-hub.webp`,
         },
       },
-      inLanguage: "en-IN",
+      inLanguage: post.inLanguage || "en-IN",
       mainEntityOfPage: {
         "@type": "WebPage",
         "@id": pageUrl,
