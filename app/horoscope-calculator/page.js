@@ -10,7 +10,7 @@ export const metadata = {
   description:
     "Find your Rashi, Nakshatra, Nadi, Gan, and Manglik status free. Enter date, time, and place of birth — results formatted exactly for your marriage biodata.",
   alternates: {
-    canonical: "/horoscope-calculator",
+    canonical: "https://www.marriagebiodatahub.com/horoscope-calculator",
   },
   openGraph: {
     title: "Horoscope Calculator for Marriage Biodata — Free",

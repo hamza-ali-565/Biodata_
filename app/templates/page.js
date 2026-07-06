@@ -7,7 +7,7 @@ export const metadata = {
   description:
     "28 free templates for Hindu, Muslim, Sikh, Marathi, Tamil & all Indian communities. Download PDF instantly. No login. No watermark.",
   alternates: {
-    canonical: "/templates",
+    canonical: "https://www.marriagebiodatahub.com/templates",
   },
   openGraph: {
     title: "Marriage Biodata Templates — Free Download | MBH",

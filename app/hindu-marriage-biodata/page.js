@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "Complete Hindu marriage biodata guide — Gotra, Rashi, Nakshatra, Nadi, Gan and Manglik fields explained simply. Free templates for all Hindu communities.",
   alternates: {
-    canonical: "/hindu-marriage-biodata",
+    canonical: "https://www.marriagebiodatahub.com/hindu-marriage-biodata",
   },
   openGraph: {
     title: "Hindu Marriage Biodata — Gotra, Rashi, Manglik Guide",

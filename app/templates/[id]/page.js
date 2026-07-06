@@ -24,7 +24,7 @@ export async function generateMetadata({ params }) {
   const safeDescription = template?.description || "Premium marriage biodata template with modern, customisable design.";
   // Always use the canonical slug URL
   const canonicalId = template ? template.slug : templateId;
-  const url = `https://marriagebiodatahub.com/templates/${canonicalId}`;
+  const url = `https://www.marriagebiodatahub.com/templates/${canonicalId}`;
 
   return {
     title: `${safeName} | Marriage Biodata Hub`,

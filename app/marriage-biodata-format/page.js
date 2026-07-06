@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "Complete marriage biodata format guide — all fields, community differences, PDF vs Word. For Hindu, Muslim, Marathi & all Indian families.",
   alternates: {
-    canonical: "/marriage-biodata-format",
+    canonical: "https://www.marriagebiodatahub.com/marriage-biodata-format",
   },
   openGraph: {
     title: "Marriage Biodata Format — Complete Guide 2026 | MBH",

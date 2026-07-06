@@ -8,7 +8,7 @@ export const metadata = {
   description:
     "Complete Rishta biodata guide for Muslim families — Sect, Biradari, Bismillah opening. Free templates for Sunni, Shia, Bohra & all communities.",
   alternates: {
-    canonical: "/muslim-biodata-for-marriage",
+    canonical: "https://www.marriagebiodatahub.com/muslim-biodata-for-marriage",
   },
   openGraph: {
     title: "Muslim Biodata for Marriage | Rishta Biodata Guide",

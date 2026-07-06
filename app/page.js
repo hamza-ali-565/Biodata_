@@ -24,7 +24,7 @@ import { TemplateCarousel, BiodataForm } from "../components/DynamicHomeComponen
 
 export const metadata = {
   alternates: {
-    canonical: "/",
+    canonical: "https://www.marriagebiodatahub.com",
   },
 };
 

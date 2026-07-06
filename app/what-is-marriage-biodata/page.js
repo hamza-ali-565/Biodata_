@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "A marriage biodata is a one-page document for Indian arranged marriages. Learn what it includes, how it differs from a CV, and what families check first.",
   alternates: {
-    canonical: "/what-is-marriage-biodata",
+    canonical: "https://www.marriagebiodatahub.com/what-is-marriage-biodata",
   },
   openGraph: {
     title: "What is a Marriage Biodata? Full Guide | MBH",

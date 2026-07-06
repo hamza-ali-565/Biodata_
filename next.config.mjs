@@ -90,6 +90,17 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'marriagebiodatahub.com',
+          },
+        ],
+        destination: 'https://www.marriagebiodatahub.com/:path*',
+        permanent: true,
+      },
+      {
         source: '/template',
         destination: '/templates',
         permanent: true,

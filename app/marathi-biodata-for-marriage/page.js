@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "लग्नाचा बायोडाटा guide for Marathi families. Kul, Kulswamini, Gotra fields included. Free PDF download. For Maratha, Brahmin, CKP & all communities.",
   alternates: {
-    canonical: "/marathi-biodata-for-marriage",
+    canonical: "https://www.marriagebiodatahub.com/marathi-biodata-for-marriage",
   },
   openGraph: {
     title: "Lagnacha Biodata | Marathi Marriage Biodata Guide",

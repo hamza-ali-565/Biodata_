@@ -8,7 +8,7 @@ export const metadata = {
   title: "Contact Us | Marriage Biodata Hub",
   description: "Get in touch with the Marriage Biodata Hub team for support, feature requests, or inquiries. We are here to help you craft the perfect marriage profile.",
   alternates: {
-    canonical: "/contact-us",
+    canonical: "https://www.marriagebiodatahub.com/contact-us",
   },
 };
 

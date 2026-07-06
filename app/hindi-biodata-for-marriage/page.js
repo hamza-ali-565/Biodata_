@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "शादी के लिए बायोडाटा कैसे बनाएं? Complete shadi biodata format guide for UP, Bihar, Delhi & Rajasthan families. Free PDF. WhatsApp share. No login.",
   alternates: {
-    canonical: "/hindi-biodata-for-marriage",
+    canonical: "https://www.marriagebiodatahub.com/hindi-biodata-for-marriage",
   },
   openGraph: {
     title: "Shadi Biodata Format | Hindi Marriage Biodata Guide",

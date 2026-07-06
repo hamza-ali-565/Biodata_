@@ -2,7 +2,7 @@ export const metadata = {
   title: 'Terms & Conditions | Marriage Biodata Hub',
   description: 'Read the Terms & Conditions for using Marriage Biodata Hub. Learn about our guidelines, user responsibilities, and how we protect your matrimonial biodata experience.',
   alternates: {
-    canonical: '/terms-and-conditions',
+    canonical: 'https://www.marriagebiodatahub.com/terms-and-conditions',
   },
 };
 

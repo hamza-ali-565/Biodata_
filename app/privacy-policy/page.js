@@ -5,7 +5,7 @@ export const metadata = {
   title: "Privacy Policy | Marriage Biodata Hub",
   description: "Read the Privacy Policy for Marriage Biodata Hub. We prioritize your privacy with local storage data management.",
   alternates: {
-    canonical: "/privacy-policy",
+    canonical: "https://www.marriagebiodatahub.com/privacy-policy",
   },
 };
 

@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "Expert guides on writing, designing, and sharing your marriage biodata. Tips for every Indian community.",
   alternates: {
-    canonical: "/blog",
+    canonical: "https://www.marriagebiodatahub.com/blog",
   },
   openGraph: {
     title: "Blog | Marriage Biodata Tips & Guide",
