@@ -193,6 +193,8 @@ export default function MuslimBiodataForMarriage() {
               {
                 label: "Biradari (community / caste)",
                 desc: "Muslim social structure in India includes Biradari — community or clan divisions. Common Biradaris: Syed (descendants of the Prophet ﷺ), Sheikh (converts or traders), Khan (Pathan/Pashtun origin), Ansari (weavers), Qureshi (butchers), Malik, Mughal, Rajput (converted). Some families prioritise Biradari matching; others are more open. Write yours honestly — \"open to all Biradaris\" is also acceptable.",
+                readMoreHref: "/blog/what-is-biradari-in-muslim-biodata",
+                readMoreLabel: "Read our full Biradari guide",
               },
               {
                 label: "Religious observance level",
@@ -202,10 +204,18 @@ export default function MuslimBiodataForMarriage() {
                 label: "Privacy note for female candidates",
                 desc: "In many Muslim families, the photograph of the daughter or sister is not included in biodatas that go to unknown recipients. Instead, the photo is shared privately only after initial interest is confirmed. Our tool supports this — the photo field is optional. You can create a complete biodata without a photo and add it later for specific recipients.",
               },
-            ].map(({ label, desc }) => (
+            ].map(({ label, desc, readMoreHref, readMoreLabel }) => (
               <div key={label} className="rounded-xl bg-slate-900/60 border border-slate-800 p-5">
                 <p className="font-semibold text-white mb-2">{label}</p>
                 <p className="text-slate-300 text-sm leading-relaxed">{desc}</p>
+                {readMoreHref && (
+                  <Link
+                    href={readMoreHref}
+                    className="mt-3 inline-block text-sm font-medium text-emerald-300/90 underline-offset-4 hover:text-emerald-200 hover:underline"
+                  >
+                    {readMoreLabel} →
+                  </Link>
+                )}
               </div>
             ))}
           </div>

@@ -44,6 +44,29 @@ function SectionBlock({ section, slug, title }) {
           ))}
         </ul>
       );
+    case "table":
+      return (
+        <div className="blog-table-wrapper">
+          <table className="blog-table">
+            <thead>
+              <tr>
+                {section.headers.map((header, i) => (
+                  <th key={i}>{header}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {section.rows.map((row, i) => (
+                <tr key={i}>
+                  {row.map((cell, j) => (
+                    <td key={j}>{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
     default:
       return null;
   }

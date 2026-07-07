@@ -279,6 +279,26 @@ body {
     @apply mt-14 border-t border-white/[0.08] pt-10 text-lg leading-relaxed text-slate-400;
   }
 
+  .blog-table-wrapper {
+    @apply my-10 w-full overflow-x-auto rounded-2xl border border-white/[0.08] sm:my-12;
+  }
+
+  .blog-table {
+    @apply w-full min-w-[560px] border-collapse text-left text-sm;
+  }
+
+  .blog-table th {
+    @apply border-b border-white/[0.08] bg-white/[0.04] px-4 py-3 font-semibold text-white;
+  }
+
+  .blog-table td {
+    @apply border-b border-white/[0.05] px-4 py-3 text-slate-300/95;
+  }
+
+  .blog-table tr:last-child td {
+    @apply border-b-0;
+  }
+
   .blog-inline-link {
     @apply font-medium text-emerald-300/90 underline-offset-4 transition-colors hover:text-emerald-200 hover:underline;
   }
