@@ -1,6 +1,6 @@
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
-import { BlogCard } from "../../components/blog/BlogCard";
+import { BlogListClient } from "../../components/blog/BlogListClient";
 import { BlogPageDecor } from "../../components/blog/BlogDecor";
 import { getPostsForListing } from "../../lib/blog/posts";
 
@@ -80,7 +80,7 @@ export default async function BlogListingPage() {
               <span className="h-1 w-8 rounded-full bg-brand-500/80" />
             </div>
             <p className="blog-listing-subtitle mt-6 max-w-3xl">
-              Design inspiration, template ideas, and practical advice for creating a biodata that feels premium and gets read.
+              Practical guides on writing, designing, and sharing your marriage biodata — for every Indian community.
             </p>
           </header>
 
@@ -90,19 +90,7 @@ export default async function BlogListingPage() {
                 New articles coming soon.
               </p>
             ) : (
-              <div className="flex flex-col gap-10 lg:gap-14">
-                {posts.map((post, index) => (
-                  <BlogCard
-                    key={post.slug}
-                    slug={post.slug}
-                    title={post.title}
-                    excerpt={post.excerpt}
-                    image={post.image}
-                    publishedAt={post.publishedAt}
-                    featured={index === 0}
-                  />
-                ))}
-              </div>
+              <BlogListClient posts={posts} />
             )}
           </div>
         </div>

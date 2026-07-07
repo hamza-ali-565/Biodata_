@@ -7,7 +7,9 @@ import { BlogArticleHero } from "../../../components/blog/BlogArticleHero";
 import { BlogArticleBody } from "../../../components/blog/BlogArticleBody";
 import { BlogTableOfContents } from "../../../components/blog/BlogTableOfContents";
 import { BlogPageDecor } from "../../../components/blog/BlogDecor";
-import { getPostBySlug, getAllSlugs } from "../../../lib/blog/posts";
+import { ReadingProgress } from "../../../components/blog/ReadingProgress";
+import { RelatedPosts } from "../../../components/blog/RelatedPosts";
+import { getPostBySlug, getAllSlugs, getPostsForListing } from "../../../lib/blog/posts";
 
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -21,7 +23,7 @@ export async function generateMetadata({ params }) {
   const canonical = `https://www.marriagebiodatahub.com/blog/${post.slug}`;
 
   return {
-    title: `${post.title} | MBH`,
+    title: `${post.title} | Marriage Biodata Hub`,
     description: post.excerpt,
     alternates: { canonical },
     openGraph: {
@@ -48,6 +50,8 @@ export default async function BlogArticlePage({ params }) {
   const post = await getPostBySlug(slug);
 
   if (!post) notFound();
+
+  const allPosts = await getPostsForListing();
 
   // Extract the first paragraph(s) before any heading to use as the introduction
   let introduction = null;
@@ -127,6 +131,7 @@ export default async function BlogArticlePage({ params }) {
 
   return (
     <>
+      <ReadingProgress />
       <Header />
       <main className="blog-editorial-page relative min-h-screen w-full pb-24 font-sans">
         <BlogPageDecor />
@@ -153,6 +158,8 @@ export default async function BlogArticlePage({ params }) {
               introduction={introduction}
               image={post.image}
               publishedAt={post.publishedAt}
+              category={post.category}
+              readTime={post.readTime}
             />
 
             <div className="blog-article-layout mt-12 lg:mt-16">
@@ -168,6 +175,11 @@ export default async function BlogArticlePage({ params }) {
                         sections={bodySections}
                         slug={post.slug}
                         title={post.title}
+                      />
+                      <RelatedPosts
+                        currentSlug={post.slug}
+                        currentCategory={post.category}
+                        allPosts={allPosts}
                       />
                     </div>
                   </div>

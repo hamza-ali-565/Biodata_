@@ -1,9 +1,12 @@
 import { Calendar } from "lucide-react";
 import { BlogFeaturedImage } from "./BlogFeaturedImage";
 import { formatBlogDate } from "../../lib/blog/utils";
+import { CATEGORY_LABELS, CATEGORY_COLORS } from "../../lib/blog/constants";
 
-export function BlogArticleHero({ slug, title, introduction, image, publishedAt }) {
+export function BlogArticleHero({ slug, title, introduction, image, publishedAt, category, readTime }) {
   const dateLabel = formatBlogDate(publishedAt);
+  const categoryLabel = category ? CATEGORY_LABELS[category] : null;
+  const categoryColor = category ? CATEGORY_COLORS[category] : null;
 
   return (
     <header className="blog-article-hero">
@@ -22,10 +25,19 @@ export function BlogArticleHero({ slug, title, introduction, image, publishedAt 
       </div>
 
       <div className="blog-article-hero-meta mt-8 lg:mt-10">
+        {categoryLabel && (
+          <span className={`category-label mb-4 ${categoryColor}`}>{categoryLabel}</span>
+        )}
         {dateLabel && (
           <p className="mb-4 flex items-center gap-2 text-sm font-medium text-slate-400 sm:text-base">
             <Calendar className="h-4 w-4 text-emerald-400/80" aria-hidden />
             <time dateTime={publishedAt}>{dateLabel}</time>
+            {readTime && (
+              <>
+                <span aria-hidden>&middot;</span>
+                <span>{readTime} min read</span>
+              </>
+            )}
           </p>
         )}
         <h1 className="blog-article-title" itemProp="headline">
