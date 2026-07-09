@@ -217,7 +217,12 @@ export default function MarathiBiodataForMarriage() {
             </div>
             <p className="text-slate-300 text-sm leading-relaxed">
               Knowing the Kulswamini often gives a family additional context about geographic origin and community
-              background.
+              background. For a full explanation of what Kulswamini means, how it differs from Kul and Gotra, and
+              the most common Kulswaminis across Maharashtra, see our{" "}
+              <Link href="/blog/what-is-kulswamini-in-marathi-biodata" className="text-amber-400 hover:text-amber-300 underline">
+                dedicated Kulswamini guide
+              </Link>
+              .
             </p>
           </div>
 

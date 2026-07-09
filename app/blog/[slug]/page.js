@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
   const canonical = `https://www.marriagebiodatahub.com/blog/${post.slug}`;
 
   return {
-    title: `${post.title} | Marriage Biodata Hub`,
+    title: `${post.metaTitle || post.title} | Marriage Biodata Hub`,
     description: post.excerpt,
     alternates: { canonical },
     openGraph: {
