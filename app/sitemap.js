@@ -49,13 +49,13 @@ const STATIC_ROUTES = [
     path: "/marriage-biodata-format-2026",
     changeFrequency: "monthly",
     priority: 0.9,
-    lastmod: "2026-08-01",
+    lastmod: "2026-07-10",
   },
   {
     path: "/wedding-season-2026-biodata-checklist",
     changeFrequency: "monthly",
     priority: 0.9,
-    lastmod: "2026-08-01",
+    lastmod: "2026-07-10",
   },
   {
     path: "/horoscope-calculator",

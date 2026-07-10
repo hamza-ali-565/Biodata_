@@ -55,8 +55,8 @@ const jsonLd = [
     headline: "Marriage Biodata Format 2026 — What's Changed and What Works This Wedding Season",
     description:
       "An updated guide to the marriage biodata format for 2026 — what has genuinely changed in how Indian families create and share biodatas this year, what has stayed the same, and a complete section-by-section reference for the current wedding season.",
-    datePublished: "2026-08-01",
-    dateModified: "2026-08-01",
+    datePublished: "2026-07-10",
+    dateModified: "2026-07-10",
     author: { "@type": "Organization", name: "Marriage Biodata Hub" },
     publisher: {
       "@type": "Organization",
@@ -134,7 +134,7 @@ export default function MarriageBiodataFormat2026() {
           </nav>
 
           <div className="mb-3 flex items-center gap-3 text-xs text-slate-500">
-            <span>Last updated: August 2026</span>
+            <span>Last updated: July 2026</span>
             <span>·</span>
             <span>9 min read</span>
           </div>

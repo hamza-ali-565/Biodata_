@@ -55,8 +55,8 @@ const jsonLd = [
     headline: "Wedding Season 2026-27 Biodata Checklist — When to Start and What to Have Ready",
     description:
       "A timing guide for the 2026-27 Indian wedding season — when biodata exchange typically begins for each community, key auspicious date windows, and a complete checklist for having your biodata ready before the season starts.",
-    datePublished: "2026-08-01",
-    dateModified: "2026-08-01",
+    datePublished: "2026-07-10",
+    dateModified: "2026-07-10",
     author: { "@type": "Organization", name: "Marriage Biodata Hub" },
     publisher: {
       "@type": "Organization",
@@ -134,7 +134,7 @@ export default function WeddingSeason2026BiodataChecklist() {
           </nav>
 
           <div className="mb-3 flex items-center gap-3 text-xs text-slate-500">
-            <span>Last updated: August 2026</span>
+            <span>Last updated: July 2026</span>
             <span>·</span>
             <span>8 min read</span>
           </div>
@@ -290,7 +290,7 @@ export default function WeddingSeason2026BiodataChecklist() {
           <h2 className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-4">Suggested timeline — working backward from your target season</h2>
           <div className="space-y-3 mb-6">
             {[
-              { label: "Targeting November-December 2026 wedding (early season)", points: ["Biodata ready and circulating by: August 2026", "Meetings and initial conversations: September-October 2026", "Engagement/formal agreement: October-November 2026"] },
+              { label: "Targeting November-December 2026 wedding (early season)", points: ["Biodata ready and circulating by: July 2026", "Meetings and initial conversations: September-October 2026", "Engagement/formal agreement: October-November 2026"] },
               { label: "Targeting January-February 2027 wedding (post-Kharmas window)", points: ["Biodata ready and circulating by: September-October 2026", "Meetings and initial conversations: November-December 2026", "Engagement/formal agreement: December 2026-January 2027"] },
               { label: "Targeting Akshaya Tritiya 2027 (late April)", points: ["Biodata ready and circulating by: September-October 2026 (earliest, given high demand for this specific date)", "Meetings and initial conversations: November 2026-February 2027", "Engagement/formal agreement: February-March 2027"] },
             ].map(({ label, points }) => (
