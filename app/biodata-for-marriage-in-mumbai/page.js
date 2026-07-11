@@ -237,6 +237,7 @@ export default function BiodataForMarriageInMumbai() {
             <div className="flex flex-wrap gap-3">
               {[
                 { href: "/marathi-biodata-for-marriage", label: "Marathi Lagnacha biodata" },
+                { href: "/gujarati-biodata-for-marriage", label: "Gujarati marriage biodata" },
                 { href: "/jain-biodata-for-marriage", label: "Jain marriage biodata" },
                 { href: "/muslim-biodata-for-marriage", label: "Muslim Rishta biodata" },
                 { href: "/nri-biodata-for-marriage", label: "NRI marriage biodata" },

@@ -241,6 +241,7 @@ export default function BiodataForMarriageInKolkata() {
             <div className="flex flex-wrap gap-3">
               {[
                 { href: "/hindu-marriage-biodata", label: "Hindu marriage biodata" },
+                { href: "/bengali-biodata-for-marriage", label: "Bengali marriage biodata" },
                 { href: "/jain-biodata-for-marriage", label: "Jain marriage biodata" },
                 { href: "/muslim-biodata-for-marriage", label: "Muslim Rishta biodata" },
                 { href: "/biodata-for-marriage-in-delhi", label: "Biodata in Delhi" },

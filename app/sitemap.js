@@ -82,6 +82,36 @@ const STATIC_ROUTES = [
     lastmod: "2026-07-01",
   },
   {
+    path: "/tamil-biodata-for-marriage",
+    changeFrequency: "monthly",
+    priority: 0.9,
+    lastmod: "2026-08-15",
+  },
+  {
+    path: "/telugu-biodata-for-marriage",
+    changeFrequency: "monthly",
+    priority: 0.9,
+    lastmod: "2026-08-15",
+  },
+  {
+    path: "/bengali-biodata-for-marriage",
+    changeFrequency: "monthly",
+    priority: 0.9,
+    lastmod: "2026-08-15",
+  },
+  {
+    path: "/gujarati-biodata-for-marriage",
+    changeFrequency: "monthly",
+    priority: 0.9,
+    lastmod: "2026-08-15",
+  },
+  {
+    path: "/punjabi-biodata-for-marriage",
+    changeFrequency: "monthly",
+    priority: 0.9,
+    lastmod: "2026-08-15",
+  },
+  {
     path: "/sikh-biodata-for-marriage",
     changeFrequency: "monthly",
     priority: 0.9,

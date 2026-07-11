@@ -512,6 +512,7 @@ City:               Ludhiana, Punjab`}
                 { href: "/muslim-biodata-for-marriage", label: "Muslim Rishta biodata" },
                 { href: "/christian-biodata-for-marriage", label: "Christian marriage biodata" },
                 { href: "/jain-biodata-for-marriage", label: "Jain marriage biodata" },
+                { href: "/punjabi-biodata-for-marriage", label: "Punjabi marriage biodata" },
                 { href: "/nri-biodata-for-marriage", label: "NRI marriage biodata" },
                 { href: "/about-me-for-marriage-biodata", label: "About Me examples" },
                 { href: "/templates", label: "Browse templates" },

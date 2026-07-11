@@ -238,6 +238,7 @@ export default function BiodataForMarriageInChennai() {
             <div className="flex flex-wrap gap-3">
               {[
                 { href: "/hindu-marriage-biodata", label: "Hindu marriage biodata" },
+                { href: "/tamil-biodata-for-marriage", label: "Tamil marriage biodata" },
                 { href: "/christian-biodata-for-marriage", label: "Christian marriage biodata" },
                 { href: "/muslim-biodata-for-marriage", label: "Muslim Rishta biodata" },
                 { href: "/biodata-for-marriage-in-bengaluru", label: "Biodata in Bengaluru" },

@@ -242,6 +242,7 @@ export default function BiodataForMarriageInDelhi() {
                 { href: "/hindu-marriage-biodata", label: "Hindu marriage biodata" },
                 { href: "/muslim-biodata-for-marriage", label: "Muslim Rishta biodata" },
                 { href: "/sikh-biodata-for-marriage", label: "Sikh marriage biodata" },
+                { href: "/punjabi-biodata-for-marriage", label: "Punjabi marriage biodata" },
                 { href: "/biodata-for-marriage-in-mumbai", label: "Biodata in Mumbai" },
                 { href: "/biodata-for-marriage-in-kolkata", label: "Biodata in Kolkata" },
                 { href: "/blog/how-to-share-marriage-biodata-on-whatsapp", label: "Sharing biodata on WhatsApp" },

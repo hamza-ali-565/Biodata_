@@ -241,6 +241,7 @@ export default function BiodataForMarriageInHyderabad() {
               {[
                 { href: "/muslim-biodata-for-marriage", label: "Muslim Rishta biodata" },
                 { href: "/hindu-marriage-biodata", label: "Hindu marriage biodata" },
+                { href: "/telugu-biodata-for-marriage", label: "Telugu marriage biodata" },
                 { href: "/nri-biodata-for-marriage", label: "NRI marriage biodata" },
                 { href: "/biodata-for-marriage-in-bengaluru", label: "Biodata in Bengaluru" },
                 { href: "/biodata-for-marriage-in-chennai", label: "Biodata in Chennai" },
