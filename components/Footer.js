@@ -47,6 +47,7 @@ const freeResources = [
   { name: "How to Create Biodata", path: "/#how-to-create" },
   { name: "FAQ", path: "/#faq" },
   { name: "Marriage Biodata FAQ (50 Qs)", path: "/marriage-biodata-faq" },
+  { name: "Biodata Samples Gallery", path: "/biodata-samples" },
   { name: "Marriage Biodata Format Guide", path: "/marriage-biodata-format" },
   { name: "Biodata Format 2026", path: "/marriage-biodata-format-2026" },
   { name: "Wedding Season 2026 Checklist", path: "/wedding-season-2026-biodata-checklist" },

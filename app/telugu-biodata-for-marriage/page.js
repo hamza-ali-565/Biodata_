@@ -223,6 +223,7 @@ export default function TeluguBiodataForMarriage() {
                 { href: "/blog/what-is-nakshatra-in-marriage-biodata", label: "What is Nakshatra" },
                 { href: "/horoscope-calculator", label: "Horoscope calculator" },
                 { href: "/marriage-biodata-format", label: "Complete biodata format guide" },
+                { href: "/biodata-samples", label: "See real Telugu biodata samples" },
               ].map(({ href, label }) => (
                 <Link key={href} href={href} className="text-xs rounded-full border border-slate-700 px-4 py-2 text-slate-300 hover:border-brand-500/50 hover:text-white transition-all">
                   {label}

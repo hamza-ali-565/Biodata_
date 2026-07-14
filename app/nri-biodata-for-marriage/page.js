@@ -490,6 +490,7 @@ City:               Brampton, Canada / Chandigarh, India`}</pre>
               { href: "/blog/marriage-biodata-for-girl", label: "Marriage biodata for girl" },
               { href: "/blog/how-to-write-about-me-in-marriage-biodata", label: "How to write About Me" },
               { href: "/about-me-for-marriage-biodata", label: "About Me examples" },
+              { href: "/biodata-samples", label: "See real NRI biodata samples" },
               { href: "/templates", label: "Browse templates" },
             ].map(({ href, label }) => (
               <Link

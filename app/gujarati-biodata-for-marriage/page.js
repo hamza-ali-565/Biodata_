@@ -223,6 +223,7 @@ export default function GujaratiBiodataForMarriage() {
                 { href: "/biodata-for-marriage-in-mumbai", label: "Biodata in Mumbai" },
                 { href: "/horoscope-calculator", label: "Horoscope calculator" },
                 { href: "/marriage-biodata-format", label: "Complete biodata format guide" },
+                { href: "/biodata-samples", label: "See real Gujarati biodata samples" },
               ].map(({ href, label }) => (
                 <Link key={href} href={href} className="text-xs rounded-full border border-slate-700 px-4 py-2 text-slate-300 hover:border-brand-500/50 hover:text-white transition-all">
                   {label}

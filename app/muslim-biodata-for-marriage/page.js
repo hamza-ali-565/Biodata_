@@ -331,6 +331,7 @@ export default function MuslimBiodataForMarriage() {
                 { href: "/jain-biodata-for-marriage", label: "Jain marriage biodata" },
                 { href: "/nri-biodata-for-marriage", label: "NRI marriage biodata" },
                 { href: "/about-me-for-marriage-biodata", label: "About Me examples" },
+                { href: "/biodata-samples", label: "See real Muslim biodata samples" },
                 { href: "/templates", label: "Browse templates" },
               ].map(({ href, label }) => (
                 <Link key={href} href={href} className="text-xs rounded-full border border-slate-700 px-4 py-2 text-slate-300 hover:border-brand-500/50 hover:text-white transition-all">

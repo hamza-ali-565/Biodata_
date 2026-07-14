@@ -102,6 +102,9 @@ export function AnimatedTemplateSections() {
           <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
             40+ templates, built for Indian families. Each one is designed for a specific community — Hindu families get Gotra, Rashi, and Nakshatra fields. Muslim families get templates that open with Bismillah and include Sect and Biradari sections. Marathi families have Kul and Kulswamini fields ready. Choose your template, fill your details, download your PDF free — no login, no watermark.
           </p>
+          <Link href="/biodata-samples" className="mt-4 inline-block text-sm font-semibold text-brand-300 underline underline-offset-4 hover:text-brand-200 transition-colors">
+            See filled examples before you start →
+          </Link>
         </div>
       </section>
 
