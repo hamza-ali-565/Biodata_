@@ -184,7 +184,15 @@ export default function WeddingSeason2026BiodataChecklist() {
               weddings are paused across most communities. Devuthani Ekadashi (also called
               Prabodhini Ekadashi or Tulsi Vivah) marks Vishnu's symbolic awakening and
               the reopening of the wedding season. This is the single most significant
-              date on the Hindu wedding calendar — the season genuinely begins here.
+              date on the Hindu wedding calendar — the season genuinely begins here. See
+              our{" "}
+              <Link href="/blog/devuthani-ekadashi-2026-biodata-guide" className="text-brand-300 underline hover:text-brand-200">
+                complete Devuthani Ekadashi guide
+              </Link>{" "}
+              and what to do with your biodata during{" "}
+              <Link href="/blog/what-to-do-during-chaturmas-biodata" className="text-brand-300 underline hover:text-brand-200">
+                the Chaturmas pause itself
+              </Link>.
             </p>
             <div className="rounded-xl bg-brand-500/10 border border-brand-500/20 p-4 text-sm text-slate-300">
               <strong className="text-brand-300">What this means for biodata timing:</strong> Families targeting an early-season
@@ -225,7 +233,10 @@ export default function WeddingSeason2026BiodataChecklist() {
               significant "self-auspicious" date on the entire Hindu calendar, meaning
               no muhurta calculation is required at all — the day itself is considered
               universally auspicious. In states like Rajasthan, mass weddings happen on
-              this single day. Extremely high venue demand.
+              this single day. Extremely high venue demand. See our{" "}
+              <Link href="/blog/akshaya-tritiya-biodata-checklist" className="text-brand-300 underline hover:text-brand-200">
+                complete Akshaya Tritiya timeline guide
+              </Link>.
             </p>
             <div className="rounded-xl bg-brand-500/10 border border-brand-500/20 p-4 text-sm text-slate-300">
               <strong className="text-brand-300">What this means for biodata timing:</strong> Families targeting Akshaya Tritiya
