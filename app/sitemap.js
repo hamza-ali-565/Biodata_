@@ -220,6 +220,12 @@ const STATIC_ROUTES = [
     lastmod: "2026-08-10",
   },
   {
+    path: "/ai-biodata-generator",
+    changeFrequency: "weekly",
+    priority: 0.9,
+    lastmod: "2026-08-15",
+  },
+  {
     path: "/about-us",
     changeFrequency: "monthly",
     priority: 0.75,

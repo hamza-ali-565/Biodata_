@@ -56,6 +56,7 @@ const freeResources = [
   { name: "Wedding Season 2026 Checklist", path: "/wedding-season-2026-biodata-checklist" },
   { name: "What is a Marriage Biodata", path: "/what-is-marriage-biodata" },
   { name: "About Me Examples", path: "/about-me-for-marriage-biodata" },
+  { name: "AI Biodata Generator", path: "/ai-biodata-generator" },
   { name: "Hobbies for Biodata", path: "/hobbies-for-marriage-biodata" },
 ];
 

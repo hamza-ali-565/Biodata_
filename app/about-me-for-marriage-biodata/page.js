@@ -356,6 +356,7 @@ export default function AboutMeForMarriageBiodata() {
             <div className="flex flex-wrap gap-3">
               {[
                 { href: "/blog/how-to-write-about-me-in-marriage-biodata", label: "How to write About Me from scratch" },
+                { href: "/ai-biodata-generator", label: "Try the AI Biodata Generator" },
                 { href: "/hobbies-for-marriage-biodata", label: "Hobbies for marriage biodata" },
                 { href: "/marriage-biodata-format", label: "Complete biodata format guide" },
                 { href: "/what-is-marriage-biodata", label: "What is a marriage biodata?" },
