@@ -471,6 +471,7 @@ City:               Kottayam, Kerala`}
                 { href: "/sikh-biodata-for-marriage", label: "Sikh marriage biodata" },
                 { href: "/jain-biodata-for-marriage", label: "Jain marriage biodata" },
                 { href: "/nri-biodata-for-marriage", label: "NRI marriage biodata" },
+                { href: "/biodata-for-marriage-in-kochi", label: "Biodata in Kochi" },
                 { href: "/about-me-for-marriage-biodata", label: "About Me examples" },
                 { href: "/biodata-samples", label: "See real Christian biodata samples" },
                 { href: "/templates", label: "Browse templates" },

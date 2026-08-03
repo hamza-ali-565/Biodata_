@@ -29,6 +29,8 @@ const communityGuides = [
   { name: "Christian Marriage Biodata", path: "/christian-biodata-for-marriage" },
   { name: "Jain Marriage Biodata", path: "/jain-biodata-for-marriage" },
   { name: "NRI Marriage Biodata", path: "/nri-biodata-for-marriage" },
+  { name: "Kannada Marriage Biodata", path: "/kannada-biodata-for-marriage" },
+  { name: "Buddhist Marriage Biodata", path: "/buddhist-biodata-for-marriage" },
 ];
 
 const biodataByCity = [
@@ -39,6 +41,7 @@ const biodataByCity = [
   { name: "Biodata in Hyderabad", path: "/biodata-for-marriage-in-hyderabad" },
   { name: "Biodata in Bengaluru", path: "/biodata-for-marriage-in-bengaluru" },
   { name: "Biodata in Kolkata", path: "/biodata-for-marriage-in-kolkata" },
+  { name: "Biodata in Kochi", path: "/biodata-for-marriage-in-kochi" },
 ];
 
 const freeResources = [

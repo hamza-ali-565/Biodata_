@@ -482,6 +482,7 @@ City:               Jaipur, Rajasthan`}</pre>
               { href: "/christian-biodata-for-marriage", label: "Christian marriage biodata" },
               { href: "/gujarati-biodata-for-marriage", label: "Gujarati marriage biodata" },
               { href: "/nri-biodata-for-marriage", label: "NRI marriage biodata" },
+              { href: "/buddhist-biodata-for-marriage", label: "Buddhist marriage biodata" },
               { href: "/about-me-for-marriage-biodata", label: "About Me examples" },
               { href: "/biodata-samples", label: "See real Jain biodata samples" },
               { href: "/templates", label: "Browse templates" },

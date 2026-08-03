@@ -243,6 +243,7 @@ export default function BiodataForMarriageInBengaluru() {
                 { href: "/hindu-marriage-biodata", label: "Hindu marriage biodata" },
                 { href: "/christian-biodata-for-marriage", label: "Christian marriage biodata" },
                 { href: "/nri-biodata-for-marriage", label: "NRI marriage biodata" },
+                { href: "/kannada-biodata-for-marriage", label: "Kannada marriage biodata" },
                 { href: "/biodata-for-marriage-in-chennai", label: "Biodata in Chennai" },
                 { href: "/biodata-for-marriage-in-hyderabad", label: "Biodata in Hyderabad" },
                 { href: "/marriage-biodata-format", label: "Complete biodata format guide" },

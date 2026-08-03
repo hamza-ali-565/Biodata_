@@ -415,6 +415,8 @@ export default function HinduMarriageBiodata() {
                 { href: "/christian-biodata-for-marriage", label: "Christian marriage biodata" },
                 { href: "/jain-biodata-for-marriage", label: "Jain marriage biodata" },
                 { href: "/nri-biodata-for-marriage", label: "NRI marriage biodata" },
+                { href: "/buddhist-biodata-for-marriage", label: "Buddhist marriage biodata" },
+                { href: "/kannada-biodata-for-marriage", label: "Kannada marriage biodata" },
                 { href: "/about-me-for-marriage-biodata", label: "About Me examples" },
                 { href: "/biodata-samples", label: "See real Hindu biodata samples" },
                 { href: "/templates", label: "Browse templates" },

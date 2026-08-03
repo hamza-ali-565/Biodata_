@@ -202,6 +202,24 @@ const STATIC_ROUTES = [
     lastmod: "2026-07-01",
   },
   {
+    path: "/biodata-for-marriage-in-kochi",
+    changeFrequency: "monthly",
+    priority: 0.8,
+    lastmod: "2026-08-10",
+  },
+  {
+    path: "/kannada-biodata-for-marriage",
+    changeFrequency: "monthly",
+    priority: 0.9,
+    lastmod: "2026-08-10",
+  },
+  {
+    path: "/buddhist-biodata-for-marriage",
+    changeFrequency: "monthly",
+    priority: 0.9,
+    lastmod: "2026-08-10",
+  },
+  {
     path: "/about-us",
     changeFrequency: "monthly",
     priority: 0.75,
